@@ -47,8 +47,7 @@
 {
     NSPoint point = NSPointFromString([dict objectForKey:@"frameOrigin"]);
     NSSize size = NSSizeFromString([dict objectForKey:@"frameSize"]);
-    NSRect rect = NSRectFromCGRect(CGRectMake(point.x, point.y, size.width, size.height));
-    [output appendFormat:@"%@ *instance = [[%@ alloc] initWithFrame:%@];\n", klass, klass, NSStringFromRect(rect)];
+    [output appendFormat:@"%@ *instance = [[%@ alloc] initWithFrame:CGRectMake(%1.1f, %1.1f, %1.1f, %1.1f)];\n", klass, klass, point.x, point.y, size.width, size.height];
 }
 
 - (void)properties

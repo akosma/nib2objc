@@ -8,9 +8,10 @@ int main (int argc, const char * argv[])
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
     // Verify that we have the required number of parameters in the command line
-    if (argc != 3)
+    if (argc != 2)
     {
-        printf("This utility requires a valid NIB file path as first parameter, and an output file name as second parameter.\n");
+        printf("This utility requires a valid NIB file path as parameter.\n");
+        [pool drain];
         return 0;
     }
     
@@ -22,28 +23,16 @@ int main (int argc, const char * argv[])
     if (!fileExists || isDirectory)
     {
         printf("This utility requires a valid NIB file path as parameter.\n");
+        [pool drain];
         return 0;
     }
 
-    // Test that the output file does not exist
-    NSString *outputFile = [NSString stringWithCString:argv[2]];
-    fileExists = [manager fileExistsAtPath:outputFile];
-    if (fileExists)
-    {
-        printf("The output file already exists! Please select another name for the output file.\n");
-        return 0;
-    }
-    
-    // Read the input NIB file and create an NSDictionary
-    NSDictionary *dict = getDictionaryFromNIB(nibFile);
-    
-    // Process the NSDictionary and generate the output file
-    NSString *contents = processDictionary(dict);
-    
-    // Save the output file to disk
-    NSError *error = nil;
-    [contents writeToFile:outputFile atomically:YES encoding:NSUTF8StringEncoding error:&error];
-    [error release];
+    // Use a Processor instance to generate the source code file 
+    // and redirect the output to the standard output stream
+    Processor *processor = [[Processor alloc] init];
+    processor.input = nibFile;
+    printf([processor.output UTF8String]);
+    [processor release];
 
     [pool drain];
     return 0;

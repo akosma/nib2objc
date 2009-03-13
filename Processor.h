@@ -8,10 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-NSDictionary *getPropertyList(NSData *data);
+@interface Processor : NSObject
+{
+@private
+    NSDictionary *dictionary;
+    NSMutableString *output;
+    NSMutableData *data;
+    NSString *filename;
+}
 
-NSDictionary *getDictionaryFromNIB(NSString *nibFile);
+@property (nonatomic, retain) NSString *input;
+@property (nonatomic, readonly) NSString *output;
 
-NSString *getText(NSData *data);
+- (NSString *)inputAsText;
+- (NSDictionary *)inputAsDictionary;
 
-NSString *processDictionary(NSDictionary *dict);
+@end
+

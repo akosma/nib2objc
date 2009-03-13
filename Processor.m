@@ -7,6 +7,17 @@
 //
 
 #import "Processor.h"
+#import "UIViewProcessor.h"
+
+static Class getProcessorClass(NSString *className)
+{
+    Class returnClass = [NSNull class];
+    if ([className isEqualToString:@"IBUIView"])
+    {
+        returnClass = [UIViewProcessor class];
+    }
+    return returnClass;
+}
 
 @interface Processor (Private)
 
@@ -109,23 +120,16 @@
     for (NSDictionary *key in objects)
     {
         id object = [objects objectForKey:key];
-        NSString *klass = [[object objectForKey:@"class"] stringByReplacingOccurrencesOfString:@"IB" 
-                                                                                    withString:@""];
-        [output appendFormat:@"%@ *instance = [[%@ alloc] init];\n", klass, klass];
-        for (id item in object)
+        NSString *klass = [object objectForKey:@"class"];
+
+        Class processorClass = getProcessorClass(klass);
+        if (![processorClass isEqual:[NSNull class]])
         {
-            id value = [object objectForKey:item];
-            if ([value isKindOfClass:[NSNumber class]])
-            {
-                [output appendFormat:@"instance.%@ = %@;\n", item, value];
-            }
-            else if ([value isKindOfClass:[NSString class]])
-            {
-                [output appendFormat:@"instance.%@ = @\"%@\";\n", item, value];
-            }
+            id processor = [[processorClass alloc] init];
+            [processor process:object into:output];
+            [processor release];
+            [output appendString:@"\n"];
         }
-        
-        [output appendString:@"\n"];
     }
 }
 

@@ -1,10 +1,11 @@
+#include <stdio.h>
 #import <Foundation/Foundation.h>
 
 NSDictionary *getPropertyList(NSData *data);
 NSDictionary *getDictionaryFromNIB(NSString *nibFile);
 NSString *getText(NSData *data);
 
-// Call this program using "build/Debug/nib2objc ../../TestViewController.xib" during development.
+// Call this program using "build/Debug/nib2objc TestViewController.xib" during development.
 int main (int argc, const char * argv[]) 
 {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -12,7 +13,7 @@ int main (int argc, const char * argv[])
     // Verify that we have the required number of parameters in the command line
     if (argc != 2)
     {
-        NSLog(@"This utility requires a valid NIB file path as parameter.");
+        printf("This utility requires a valid NIB file path as parameter.\n");
         return 0;
     }
     
@@ -23,12 +24,12 @@ int main (int argc, const char * argv[])
     BOOL fileExists = [manager fileExistsAtPath:nibFile isDirectory:&isDirectory];
     if (!fileExists || isDirectory)
     {
-        NSLog(@"This utility requires a valid NIB file path as parameter.");
+        printf("This utility requires a valid NIB file path as parameter.\n");
         return 0;
     }
     
     NSDictionary *dict = getDictionaryFromNIB(nibFile);
-    NSLog(@"items: %d", [[dict objectForKey:@"com.apple.ibtool.document.hierarchy"] count]);
+    printf("items: %d\n", [[dict objectForKey:@"com.apple.ibtool.document.hierarchy"] count]);
 
     [pool drain];
     return 0;

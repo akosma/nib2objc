@@ -1,23 +1,20 @@
 #include <stdio.h>
 #import <Foundation/Foundation.h>
+#include "Processor.h"
 
-NSDictionary *getPropertyList(NSData *data);
-NSDictionary *getDictionaryFromNIB(NSString *nibFile);
-NSString *getText(NSData *data);
-
-// Call this program using "build/Debug/nib2objc TestViewController.xib" during development.
+// Call this program using "build/Debug/nib2objc TestViewController.xib Output.m" during development.
 int main (int argc, const char * argv[]) 
 {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
     // Verify that we have the required number of parameters in the command line
-    if (argc != 2)
+    if (argc != 3)
     {
-        printf("This utility requires a valid NIB file path as parameter.\n");
+        printf("This utility requires a valid NIB file path as first parameter, and an output file name as second parameter.\n");
         return 0;
     }
     
-    // Test that the file exists, and that it is not a directory
+    // Test that the input file exists, and that it is not a directory
     NSString *nibFile = [NSString stringWithCString:argv[1]];
     NSFileManager *manager = [NSFileManager defaultManager];
     BOOL isDirectory = NO;
@@ -27,58 +24,27 @@ int main (int argc, const char * argv[])
         printf("This utility requires a valid NIB file path as parameter.\n");
         return 0;
     }
+
+    // Test that the output file does not exist
+    NSString *outputFile = [NSString stringWithCString:argv[2]];
+    fileExists = [manager fileExistsAtPath:outputFile];
+    if (fileExists)
+    {
+        printf("The output file already exists! Please select another name for the output file.\n");
+        return 0;
+    }
     
+    // Read the input NIB file and create an NSDictionary
     NSDictionary *dict = getDictionaryFromNIB(nibFile);
-    printf("items: %d\n", [[dict objectForKey:@"com.apple.ibtool.document.hierarchy"] count]);
+    
+    // Process the NSDictionary and generate the output file
+    NSString *contents = processDictionary(dict);
+    
+    // Save the output file to disk
+    NSError *error = nil;
+    [contents writeToFile:outputFile atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    [error release];
 
     [pool drain];
     return 0;
-}
-
-NSDictionary *getPropertyList(NSData *data)
-{
-    NSString *errorStr = nil;
-    NSPropertyListFormat format;
-    NSDictionary *propertyList = [NSPropertyListSerialization propertyListFromData:data
-                                                                  mutabilityOption:NSPropertyListImmutable
-                                                                            format:&format
-                                                                  errorDescription:&errorStr];
-    [errorStr release];
-    return propertyList;
-}
-
-NSString *getText(NSData *data)
-{
-    return [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-}
-
-NSDictionary *getDictionaryFromNIB(NSString *nibFile)
-{
-    // Build the NSTask that will run the ibtool utility
-    NSArray *arguments = [NSArray arrayWithObjects:nibFile, @"--objects", 
-                          @"--hierarchy", @"--connections", @"--classes", nil];
-    NSTask *task = [[NSTask alloc] init];
-    NSPipe *pipe = [NSPipe pipe];
-    NSFileHandle *readHandle = [pipe fileHandleForReading];
-    NSData *data = nil;
-    NSMutableData *output = [[NSMutableData alloc] init];
-    
-    [task setLaunchPath:@"/usr/bin/ibtool"];
-    [task setArguments:arguments];
-    [task setStandardOutput:pipe];
-    [task launch];
-    
-    while ((data = [readHandle availableData]) && [data length]) 
-    {
-        [output appendData:data];
-    }
-    
-    // This dictionary is ready to be parsed, and it contains
-    // everything we need from the NIB file.
-    NSDictionary *dict = getPropertyList(output);
-    
-    [output release];
-    [task release];
-    
-    return dict;
 }

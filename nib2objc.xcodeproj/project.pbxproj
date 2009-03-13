@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AD51EAC0F6AE451002D7519 /* Processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD51EAB0F6AE451002D7519 /* Processor.m */; };
 		8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* nib2objc.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,8 @@
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* nib2objc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nib2objc_Prefix.pch; sourceTree = "<group>"; };
 		3AD51E600F6ABD0A002D7519 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		3AD51EAA0F6AE451002D7519 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		3AD51EAB0F6AE451002D7519 /* Processor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Processor.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* nib2objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nib2objc; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,6 +62,8 @@
 			children = (
 				32A70AAB03705E1F00C91783 /* nib2objc_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* nib2objc.m */,
+				3AD51EAA0F6AE451002D7519 /* Processor.h */,
+				3AD51EAB0F6AE451002D7519 /* Processor.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */,
+				3AD51EAC0F6AE451002D7519 /* Processor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,10 @@
 {
 @protected
     NSString *klass;
+    NSDictionary *dict;
+    NSMutableString *output;
 }
 
-- (void)process:(NSDictionary *)dict into:(NSMutableString *)output;
+- (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString;
 
 @end

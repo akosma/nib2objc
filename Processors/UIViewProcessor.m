@@ -8,6 +8,14 @@
 
 #import "UIViewProcessor.h"
 
+@interface UIViewProcessor (Private)
+
+- (void)constructor;
+- (void)properties;
+
+@end
+
+
 @implementation UIViewProcessor
 
 - (id)init
@@ -24,15 +32,33 @@
     [super dealloc];
 }
 
-- (void)process:(NSDictionary *)dict into:(NSMutableString *)output
+- (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString
 {
-    [output appendFormat:@"%@ *instance = [[%@ alloc] init];\n", klass, klass];
+    dict = dictionary;
+    output = outputString;
+    [self constructor];
+    [self properties];
+}
+
+#pragma mark -
+#pragma mark Private methods
+
+- (void)constructor
+{
+    NSPoint point = NSPointFromString([dict objectForKey:@"frameOrigin"]);
+    NSSize size = NSSizeFromString([dict objectForKey:@"frameSize"]);
+    NSRect rect = NSRectFromCGRect(CGRectMake(point.x, point.y, size.width, size.height));
+    [output appendFormat:@"%@ *instance = [[%@ alloc] initWithFrame:%@];\n", klass, klass, NSStringFromRect(rect)];
+}
+
+- (void)properties
+{
     for (id item in dict)
     {
         id value = [dict objectForKey:item];
         if ([value isKindOfClass:[NSNumber class]])
         {
-            [output appendFormat:@"instance.%@ = %@;\n", item, value];
+            [output appendFormat:@"instance.%@ = %@;\n", item, [NSString stringWithCString:[value objCType]]];
         }
         else if ([value isKindOfClass:[NSString class]])
         {

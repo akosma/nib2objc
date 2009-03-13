@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #include "Processor.h"
 
-// Call this program using "build/Debug/nib2objc TestViewController.xib Output.m" during development.
+// Call this program using "build/Debug/nib2objc TestViewController.xib" during development.
 int main (int argc, const char * argv[]) 
 {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];

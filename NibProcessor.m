@@ -115,16 +115,15 @@ static Class getProcessorClass(NSString *className)
 
 - (void)process
 {
-    [output release];
-    output = [[NSMutableString alloc] init];
-    //    NSDictionary *classes = [dict objectForKey:@"com.apple.ibtool.document.classes"];
-    //    NSDictionary *connections = [dict objectForKey:@"com.apple.ibtool.document.connections"];
-    //    NSArray *hierarchy = [dict objectForKey:@"com.apple.ibtool.document.hierarchy"];
-    NSDictionary *objects = [dictionary objectForKey:@"com.apple.ibtool.document.objects"];
+    //    NSDictionary *nibClasses = [dict objectForKey:@"com.apple.ibtool.document.classes"];
+    //    NSDictionary *nibConnections = [dict objectForKey:@"com.apple.ibtool.document.connections"];
+    //    NSArray *nibHierarchy = [dict objectForKey:@"com.apple.ibtool.document.hierarchy"];
+    NSDictionary *nibObjects = [dictionary objectForKey:@"com.apple.ibtool.document.objects"];
+    NSMutableDictionary *objects = [[NSMutableDictionary alloc] init];
     
-    for (NSDictionary *key in objects)
+    for (NSDictionary *key in nibObjects)
     {
-        id object = [objects objectForKey:key];
+        id object = [nibObjects objectForKey:key];
         NSString *klass = [object objectForKey:@"class"];
 
         Class processorClass = getProcessorClass(klass);
@@ -136,11 +135,31 @@ static Class getProcessorClass(NSString *className)
         {
             UIViewProcessor *processor = [[processorClass alloc] init];
             processor.instanceName = @"instance";
-            [processor processDictionary:object into:output];
+            NSDictionary *dict = [processor processObject:object];
+            [objects setObject:dict forKey:key];
             [processor release];
-            [output appendString:@"\n"];
         }
     }
+    
+    [output release];
+    output = [[NSMutableString alloc] init];
+    for (NSDictionary *identifier in objects)
+    {
+        id object = [objects objectForKey:identifier];
+        
+        for (NSString *key in object)
+        {
+            id value = [object objectForKey:key];
+            if (![value isEqualToString:@"NULL"])
+            {
+                [output appendFormat:@"%@ = %@;\n", key, value];
+            }
+        }
+        [output appendString:@"\n"];    
+    }
+    
+    [objects release];
+    objects = nil;
 }
 
 @end

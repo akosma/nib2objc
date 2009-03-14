@@ -7,6 +7,9 @@
 //
 
 #import "UITextFieldProcessor.h"
+#import "NSString+Nib2ObjcExtensions.h"
+#import "NSNumber+Nib2ObjcExtensions.h"
+#import "NSDictionary+Nib2ObjcExtensions.h"
 
 @implementation UITextFieldProcessor
 
@@ -24,48 +27,56 @@
     [super dealloc];
 }
 
-- (void)processUnknownProperty:(id)item value:(id)value
+- (void)processKey:(id)item value:(id)value
 {
-    [super processUnknownProperty:item value:value];
     if ([item isEqualToString:@"text"])
     {
-        [output appendFormat:@"%@.text = %@;\n", instanceName, value];
+        NSString *stringOutput = [value quotedAsCodeString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"placeholder"])
     {
-        [output appendFormat:@"%@.placeholder = %@;\n", instanceName, value];
+        NSString *stringOutput = [value quotedAsCodeString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"textAlignment"])
     {
-        [output appendFormat:@"%@.textAlignment = %@;\n", instanceName, [self textAlignmentFromValue:value]];
+        NSString *stringOutput = [value textAlignmentString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"textColor"])
     {
-        [output appendFormat:@"%@.textColor = %@;\n", instanceName, [self colorFromValue:value]];
+        NSString *stringOutput = [value colorString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"font"])
     {
-        [output appendFormat:@"%@.font = %@;\n", instanceName, [self fontFromValue:value]];
+        NSString *stringOutput = [value fontString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"borderStyle"])
     {
-        [output appendFormat:@"%@.borderStyle = %@\n", instanceName, [self borderStyleFromValue:value]];
+        NSString *stringOutput = [value borderStyleString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"clearsOnBeginEditing"])
     {
-        [output appendFormat:@"%@.clearsOnBeginEditing = %@\n", instanceName, [self booleanFromValue:value]];
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"adjustsFontSizeToFitWidth"])
     {
-        [output appendFormat:@"%@.adjustsFontSizeToFitWidth = %@\n", instanceName, [self booleanFromValue:value]];
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"minimumFontSize"])
     {
-        [output appendFormat:@"%@.minimumFontSize = %1.1f\n", instanceName, [value floatValue]];
+        NSString *stringOutput = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
+        [output setObject:stringOutput forKey:item];
     }
     else
     {
-        [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];    
+        [super processKey:item value:value];
     }
 }
 

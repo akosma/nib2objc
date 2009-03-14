@@ -12,26 +12,15 @@
 {
 @protected
     NSString *klass;
-    NSMutableString *output;
     NSString *instanceName;
-    NSDictionary *dict;
+    NSDictionary *input;
+    NSMutableDictionary *output;
 }
 
-@property (nonatomic, retain) NSString *instanceName;
+@property (nonatomic, copy) NSString *instanceName;
 
-- (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString;
+- (NSDictionary *)processObject:(NSDictionary *)object;
 
-- (void)processUnknownProperty:(id)item value:(id)value;
-
-- (NSString *)rectFromPoint:(NSString *)pointString size:(NSString *)sizeString;
-- (NSString *)colorFromValue:(NSString *)colorString;
-- (NSString *)contentModeFromValue:(NSNumber *)contentMode;
-- (NSString *)booleanFromValue:(NSNumber *)boolean;
-- (NSString *)autoresizingMaskFromValue:(NSNumber *)autoresizingMask;
-- (NSString *)textAlignmentFromValue:(NSNumber *)textAlignment;
-- (NSString *)fontFromValue:(NSDictionary *)font;
-- (NSString *)borderStyleFromValue:(NSNumber *)borderStyle;
-- (NSString *)contentHorizontalAlignmentForValue:(NSNumber *)contentHorizontalAlignment;
-- (NSString *)contentVerticalAlignmentForValue:(NSNumber *)contentVerticalAlignment;
+- (void)processKey:(id)item value:(id)value;
 
 @end

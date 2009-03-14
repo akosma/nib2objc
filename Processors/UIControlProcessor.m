@@ -7,31 +7,41 @@
 //
 
 #import "UIControlProcessor.h"
+#import "NSString+Nib2ObjcExtensions.h"
+#import "NSNumber+Nib2ObjcExtensions.h"
 
 @implementation UIControlProcessor
 
-- (void)processUnknownProperty:(id)item value:(id)value
+- (void)processKey:(id)item value:(id)value
 {
-    [super processUnknownProperty:item value:value];
     if ([item isEqualToString:@"contentHorizontalAlignment"])
     {
-        [output appendFormat:@"%@.contentHorizontalAlignment = %@;\n", instanceName, [self contentHorizontalAlignmentForValue:value]];
+        NSString *stringOutput = [value contentHorizontalAlignmentString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"contentVerticalAlignment"])
     {
-        [output appendFormat:@"%@.contentVerticalAlignment = %@;\n", instanceName, [self contentVerticalAlignmentForValue:value]];
+        NSString *stringOutput = [value contentVerticalAlignmentString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"enabled"])
     {
-        [output appendFormat:@"%@.enabled = %@\n", instanceName, [self booleanFromValue:value]];
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"highlighted"])
     {
-        [output appendFormat:@"%@.highlighted = %@\n", instanceName, [self booleanFromValue:value]];
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"selected"])
     {
-        [output appendFormat:@"%@.selected = %@\n", instanceName, [self booleanFromValue:value]];
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:item];
+    }
+    else
+    {
+        [super processKey:item value:value];
     }
 }
 

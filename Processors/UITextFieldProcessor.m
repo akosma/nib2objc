@@ -26,6 +26,7 @@
 
 - (void)processUnknownProperty:(id)item value:(id)value
 {
+    [super processUnknownProperty:item value:value];
     if ([item isEqualToString:@"text"])
     {
         [output appendFormat:@"%@.text = %@;\n", instanceName, value];

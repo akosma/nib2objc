@@ -1,12 +1,12 @@
 //
-//  Processor.m
+//  NibProcessor.m
 //  nib2objc
 //
 //  Created by Adrian on 3/13/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "Processor.h"
+#import "NibProcessor.h"
 #import "UIViewProcessor.h"
 #import "UITextFieldProcessor.h"
 
@@ -24,7 +24,7 @@ static Class getProcessorClass(NSString *className)
     return returnClass;
 }
 
-@interface Processor (Private)
+@interface NibProcessor (Private)
 
 - (void)getDictionaryFromNIB;
 - (void)process;
@@ -32,7 +32,7 @@ static Class getProcessorClass(NSString *className)
 @end
 
 
-@implementation Processor
+@implementation NibProcessor
 
 @dynamic input;
 @synthesize output;

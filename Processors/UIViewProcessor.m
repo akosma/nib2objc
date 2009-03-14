@@ -12,7 +12,6 @@
 
 - (void)constructor;
 - (void)properties;
-- (void)processUnknownProperty:(id)item value:(id)value;
 
 @end
 
@@ -270,6 +269,60 @@
     return value;
 }
 
+- (NSString *)contentHorizontalAlignmentForValue:(NSNumber *)contentHorizontalAlignment
+{
+    NSString *value = @"";
+    switch ([contentHorizontalAlignment intValue])
+    {
+        case 0:
+            value = @"UIControlContentHorizontalAlignmentCenter";
+            break;
+            
+        case 1:
+            value = @"UIControlContentHorizontalAlignmentLeft";
+            break;
+            
+        case 2:
+            value = @"UIControlContentHorizontalAlignmentRight";
+            break;
+            
+        case 3:
+            value = @"UIControlContentHorizontalAlignmentFill";
+            break;
+
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)contentVerticalAlignmentForValue:(NSNumber *)contentVerticalAlignment
+{
+    NSString *value = @"";
+    switch ([contentVerticalAlignment intValue])
+    {
+        case 0:
+            value = @"UIControlContentVerticalAlignmentCenter";
+            break;
+            
+        case 1:
+            value = @"UIControlContentVerticalAlignmentTop";
+            break;
+            
+        case 2:
+            value = @"UIControlContentVerticalAlignmentBottom";
+            break;
+            
+        case 3:
+            value = @"UIControlContentVerticalAlignmentFill";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 #pragma mark -
 #pragma mark Private methods
 
@@ -284,63 +337,64 @@
     for (id item in dict)
     {
         id value = [dict objectForKey:item];
-        
-        if ([item isEqualToString:@"alpha"])
-        {
-            [output appendFormat:@"%@.alpha = %1.1f;\n", instanceName, [value floatValue]];
-        }
-        else if ([item isEqualToString:@"hidden"])
-        {
-            [output appendFormat:@"%@.hidden = %@;\n", instanceName, [self booleanFromValue:value]];
-        }
-        else if ([item isEqualToString:@"opaqueForDevice"])
-        {
-            [output appendFormat:@"%@.opaque = %@;\n", instanceName, [self booleanFromValue:value]];
-        }
-        else if ([item isEqualToString:@"clipsSubviews"])
-        {
-            [output appendFormat:@"%@.clipsToBounds = %@;\n", instanceName, [self booleanFromValue:value]];
-        }
-        else if ([item isEqualToString:@"clearsContextBeforeDrawing"])
-        {
-            [output appendFormat:@"%@.clearsContextBeforeDrawing = %@;\n", instanceName, [self booleanFromValue:value]];
-        }
-        else if ([item isEqualToString:@"userInteractionEnabled"])
-        {
-            [output appendFormat:@"%@.userInteractionEnabled = %@;\n", instanceName, [self booleanFromValue:value]];
-        }
-        else if ([item isEqualToString:@"multipleTouchEnabled"])
-        {
-            [output appendFormat:@"%@.multipleTouchEnabled = %@;\n", instanceName, [self booleanFromValue:value]];
-        }
-        else if ([item isEqualToString:@"tag"])
-        {
-            [output appendFormat:@"%@.tag = %d;\n", instanceName, [value intValue]];
-        }
-        else if ([item isEqualToString:@"backgroundColor"])
-        {
-            [output appendFormat:@"%@.backgroundColor = %@;\n", instanceName, [self colorFromValue:value]];
-        }
-        else if ([item isEqualToString:@"contentMode"])
-        {
-            [output appendFormat:@"%@.contentMode = %@;\n", instanceName, [self contentModeFromValue:value]];
-        }
-        else if ([item isEqualToString:@"autoresizingMask"])
-        {
-            [output appendFormat:@"%@.autoresizingMask = %@;\n", instanceName, [self autoresizingMaskFromValue:value]];
-        }
-        else
-        {
-            [self processUnknownProperty:item value:value];
-        }
+        [self processUnknownProperty:item value:value];
     }
 }
 
 - (void)processUnknownProperty:(id)item value:(id)value
 {
     // Subclasses can override this method for their own properties.
-    // Uncomment this to see what's being skipped
-    // [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];    
+    // In those cases, call [super processUnknownProperty:item value:value];
+    // to be sure that mother classes do their work.
+    if ([item isEqualToString:@"alpha"])
+    {
+        [output appendFormat:@"%@.alpha = %1.1f;\n", instanceName, [value floatValue]];
+    }
+    else if ([item isEqualToString:@"hidden"])
+    {
+        [output appendFormat:@"%@.hidden = %@;\n", instanceName, [self booleanFromValue:value]];
+    }
+    else if ([item isEqualToString:@"opaqueForDevice"])
+    {
+        [output appendFormat:@"%@.opaque = %@;\n", instanceName, [self booleanFromValue:value]];
+    }
+    else if ([item isEqualToString:@"clipsSubviews"])
+    {
+        [output appendFormat:@"%@.clipsToBounds = %@;\n", instanceName, [self booleanFromValue:value]];
+    }
+    else if ([item isEqualToString:@"clearsContextBeforeDrawing"])
+    {
+        [output appendFormat:@"%@.clearsContextBeforeDrawing = %@;\n", instanceName, [self booleanFromValue:value]];
+    }
+    else if ([item isEqualToString:@"userInteractionEnabled"])
+    {
+        [output appendFormat:@"%@.userInteractionEnabled = %@;\n", instanceName, [self booleanFromValue:value]];
+    }
+    else if ([item isEqualToString:@"multipleTouchEnabled"])
+    {
+        [output appendFormat:@"%@.multipleTouchEnabled = %@;\n", instanceName, [self booleanFromValue:value]];
+    }
+    else if ([item isEqualToString:@"tag"])
+    {
+        [output appendFormat:@"%@.tag = %d;\n", instanceName, [value intValue]];
+    }
+    else if ([item isEqualToString:@"backgroundColor"])
+    {
+        [output appendFormat:@"%@.backgroundColor = %@;\n", instanceName, [self colorFromValue:value]];
+    }
+    else if ([item isEqualToString:@"contentMode"])
+    {
+        [output appendFormat:@"%@.contentMode = %@;\n", instanceName, [self contentModeFromValue:value]];
+    }
+    else if ([item isEqualToString:@"autoresizingMask"])
+    {
+        [output appendFormat:@"%@.autoresizingMask = %@;\n", instanceName, [self autoresizingMaskFromValue:value]];
+    }
+    else
+    {
+        // Uncomment this to see what's being skipped
+        // [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];
+    }
 }
 
 @end

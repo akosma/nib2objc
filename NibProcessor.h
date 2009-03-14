@@ -1,5 +1,5 @@
 //
-//  Processor.h
+//  NibProcessor.h
 //  nib2objc
 //
 //  Created by Adrian on 3/13/09.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Processor : NSObject
+@interface NibProcessor : NSObject
 {
 @private
     NSDictionary *dictionary;

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #import <Foundation/Foundation.h>
-#include "Processor.h"
+#include "NibProcessor.h"
 
 // Call this program using "build/Debug/nib2objc TestViewController.xib" during development.
 int main (int argc, const char * argv[]) 
@@ -29,7 +29,7 @@ int main (int argc, const char * argv[])
 
     // Use a Processor instance to generate the source code file 
     // and redirect the output to the standard output stream
-    Processor *processor = [[Processor alloc] init];
+    NibProcessor *processor = [[NibProcessor alloc] init];
     processor.input = nibFile;
     printf([processor.output UTF8String]);
     [processor release];

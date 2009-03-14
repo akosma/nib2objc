@@ -20,6 +20,9 @@
 @property (nonatomic, retain) NSString *instanceName;
 
 - (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString;
+
+- (void)processUnknownProperty:(id)item value:(id)value;
+
 - (NSString *)rectFromPoint:(NSString *)pointString size:(NSString *)sizeString;
 - (NSString *)colorFromValue:(NSString *)colorString;
 - (NSString *)contentModeFromValue:(NSNumber *)contentMode;
@@ -28,5 +31,7 @@
 - (NSString *)textAlignmentFromValue:(NSNumber *)textAlignment;
 - (NSString *)fontFromValue:(NSDictionary *)font;
 - (NSString *)borderStyleFromValue:(NSNumber *)borderStyle;
+- (NSString *)contentHorizontalAlignmentForValue:(NSNumber *)contentHorizontalAlignment;
+- (NSString *)contentVerticalAlignmentForValue:(NSNumber *)contentVerticalAlignment;
 
 @end

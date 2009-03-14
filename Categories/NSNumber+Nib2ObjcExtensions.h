@@ -18,5 +18,10 @@
 - (NSString *)borderStyleString;
 - (NSString *)contentHorizontalAlignmentString;
 - (NSString *)contentVerticalAlignmentString;
+- (NSString *)keyboardAppearanceString;
+- (NSString *)returnKeyTypeString;
+- (NSString *)autocapitalizationTypeString;
+- (NSString *)autocorrectionTypeString;
+- (NSString *)keyboardTypeString;
 
 @end

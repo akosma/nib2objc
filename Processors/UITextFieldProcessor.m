@@ -74,6 +74,41 @@
         NSString *stringOutput = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
         [output setObject:stringOutput forKey:item];
     }
+    else if ([item isEqualToString:@"textInputTraits.enablesReturnKeyAutomatically"])
+    {
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:@"enablesReturnKeyAutomatically"];
+    }
+    else if ([item isEqualToString:@"textInputTraits.secureTextEntry"])
+    {
+        NSString *stringOutput = [value booleanString];
+        [output setObject:stringOutput forKey:@"secureTextEntry"];
+    }
+    else if ([item isEqualToString:@"textInputTraits.keyboardAppearance"])
+    {
+        NSString *stringOutput = [value keyboardAppearanceString];
+        [output setObject:stringOutput forKey:@"keyboardAppearance"];
+    }
+    else if ([item isEqualToString:@"textInputTraits.returnKeyType"])
+    {
+        NSString *stringOutput = [value returnKeyTypeString];
+        [output setObject:stringOutput forKey:@"returnKeyType"];
+    }
+    else if ([item isEqualToString:@"textInputTraits.autocapitalizationType"])
+    {
+        NSString *stringOutput = [value autocapitalizationTypeString];
+        [output setObject:stringOutput forKey:@"autocapitalizationType"];
+    }
+    else if ([item isEqualToString:@"textInputTraits.autocorrectionType"])
+    {
+        NSString *stringOutput = [value autocorrectionTypeString];
+        [output setObject:stringOutput forKey:@"autocorrectionType"];
+    }
+    else if ([item isEqualToString:@"textInputTraits.keyboardType"])
+    {
+        NSString *stringOutput = [value keyboardTypeString];
+        [output setObject:stringOutput forKey:@"keyboardType"];
+    }
     else
     {
         [super processKey:item value:value];

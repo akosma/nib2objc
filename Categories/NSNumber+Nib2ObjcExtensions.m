@@ -237,4 +237,171 @@
     return value;
 }
 
+- (NSString *)keyboardAppearanceString
+{
+    NSString *value = @"";
+    switch ([self intValue])
+    {
+        case 0:
+            value = @"UIKeyboardAppearanceDefault";
+            break;
+        
+        case 1:
+            value = @"UIKeyboardAppearanceAlert";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)returnKeyTypeString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIReturnKeyDefault";
+            break;
+
+        case 1:
+            value = @"UIReturnKeyGo";
+            break;
+            
+        case 2:
+            value = @"UIReturnKeyGoogle";
+            break;
+            
+        case 3:
+            value = @"UIReturnKeyJoin";
+            break;
+            
+        case 4:
+            value = @"UIReturnKeyNext";
+            break;
+            
+        case 5:
+            value = @"UIReturnKeyRoute";
+            break;
+            
+        case 6:
+            value = @"UIReturnKeySearch";
+            break;
+            
+        case 7:
+            value = @"UIReturnKeySend";
+            break;
+            
+        case 8:
+            value = @"UIReturnKeyYahoo";
+            break;
+            
+        case 9:
+            value = @"UIReturnKeyDone";
+            break;
+            
+        case 10:
+            value = @"UIReturnKeyEmergencyCall";
+            break;
+
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)autocapitalizationTypeString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITextAutocapitalizationTypeNone";
+            break;
+            
+        case 1:
+            value = @"UITextAutocapitalizationTypeWords";
+            break;
+            
+        case 2:
+            value = @"UITextAutocapitalizationTypeSentences";
+            break;
+            
+        case 3:
+            value = @"UITextAutocapitalizationTypeAllCharacters";
+            break;
+
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)autocorrectionTypeString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITextAutocorrectionTypeDefault";
+            break;
+            
+        case 1:
+            value = @"UITextAutocorrectionTypeNo";
+            break;
+            
+        case 2:
+            value = @"UITextAutocorrectionTypeYes";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)keyboardTypeString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIKeyboardTypeDefault";
+            break;
+            
+        case 1:
+            value = @"UIKeyboardTypeASCIICapable";
+            break;
+            
+        case 2:
+            value = @"UIKeyboardTypeNumbersAndPunctuation";
+            break;
+            
+        case 3:
+            value = @"UIKeyboardTypeURL";
+            break;
+            
+        case 4:
+            value = @"UIKeyboardTypeNumberPad";
+            break;
+            
+        case 5:
+            value = @"UIKeyboardTypePhonePad";
+            break;
+            
+        case 6:
+            value = @"UIKeyboardTypeNamePhonePad";
+            break;
+            
+        case 7:
+            value = @"UIKeyboardTypeEmailAddress";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

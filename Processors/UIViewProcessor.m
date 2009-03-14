@@ -68,54 +68,54 @@
     // Subclasses can override this method for their own properties.
     // In those cases, call [super processUnknownProperty:item value:value];
     // to be sure that mother classes do their work too.
-    NSString *stringObject = @"NULL";
+    id object = value;
     if ([item isEqualToString:@"alpha"])
     {
-        stringObject = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
+        object = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
     }
     else if ([item isEqualToString:@"hidden"])
     {
-        stringObject = [value booleanString];
+        object = [value booleanString];
     }
     else if ([item isEqualToString:@"opaqueForDevice"])
     {
-        stringObject = [value booleanString];
+        object = [value booleanString];
         item = @"opaque";
     }
     else if ([item isEqualToString:@"clipsSubviews"])
     {
-        stringObject = [value booleanString];
+        object = [value booleanString];
         item = @"clipsToBounds";
     }
     else if ([item isEqualToString:@"clearsContextBeforeDrawing"])
     {
-        stringObject = [value booleanString];
+        object = [value booleanString];
     }
     else if ([item isEqualToString:@"userInteractionEnabled"])
     {
-        stringObject = [value booleanString];
+        object = [value booleanString];
     }
     else if ([item isEqualToString:@"multipleTouchEnabled"])
     {
-        stringObject = [value booleanString];
+        object = [value booleanString];
     }
     else if ([item isEqualToString:@"tag"])
     {
-        stringObject = [NSString stringWithFormat:@"%d", [value intValue]];
+        object = [NSString stringWithFormat:@"%d", [value intValue]];
     }
     else if ([item isEqualToString:@"backgroundColor"])
     {
-        stringObject = [value colorString];
+        object = [value colorString];
     }
     else if ([item isEqualToString:@"contentMode"])
     {
-        stringObject = [value contentModeString];
+        object = [value contentModeString];
     }
     else if ([item isEqualToString:@"autoresizingMask"])
     {
-        stringObject = [value autoresizingMaskString];
+        object = [value autoresizingMaskString];
     }
-    [output setObject:stringObject forKey:item];
+    [output setObject:object forKey:item];
 }
 
 @end

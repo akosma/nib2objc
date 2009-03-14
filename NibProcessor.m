@@ -150,10 +150,12 @@ static Class getProcessorClass(NSString *className)
         for (NSString *key in object)
         {
             id value = [object objectForKey:key];
-            if (![value isEqualToString:@"NULL"])
-            {
-                [output appendFormat:@"%@ = %@;\n", key, value];
-            }
+            [output appendFormat:@"%@ = %@;\n", key, value];
+
+//            if (![value isEqualToString:@"NULL"])
+//            {
+//                [output appendFormat:@"%@ = %@;\n", key, value];
+//            }
         }
         [output appendString:@"\n"];    
     }

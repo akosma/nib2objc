@@ -62,7 +62,7 @@
 					<object class="IBUIButton" id="638669474">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{204, 103}, {72, 37}}</string>
+						<string key="NSFrame">{{167, 65}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -114,34 +114,37 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<float key="IBUIProgress">5.000000e-01</float>
 					</object>
-					<object class="IBUISlider" id="280491719">
-						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{155, 337}, {118, 23}}</string>
-						<reference key="NSSuperview" ref="774585933"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<float key="IBUIValue">5.000000e-01</float>
-					</object>
-					<object class="IBUISwitch" id="269437373">
-						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{93, 391}, {94, 27}}</string>
-						<reference key="NSSuperview" ref="774585933"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<bool key="IBUIOn">YES</bool>
-					</object>
 					<object class="IBUIView" id="186562161">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">272</int>
-						<string key="NSFrame">{{134, 210}, {160, 230}}</string>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUISlider" id="280491719">
+								<reference key="NSNextResponder" ref="186562161"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{8, 101}, {118, 23}}</string>
+								<reference key="NSSuperview" ref="186562161"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<bool key="IBUIMultipleTouchEnabled">YES</bool>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<float key="IBUIValue">5.000000e-01</float>
+							</object>
+							<object class="IBUISwitch" id="269437373">
+								<reference key="NSNextResponder" ref="186562161"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{30, 165}, {94, 27}}</string>
+								<reference key="NSSuperview" ref="186562161"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<bool key="IBUIMultipleTouchEnabled">YES</bool>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<bool key="IBUIOn">YES</bool>
+							</object>
+						</object>
+						<string key="NSFrame">{{146, 210}, {160, 230}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -149,9 +152,42 @@
 						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-						<float key="IBUIAlpha">6.971831e-01</float>
+						<float key="IBUIAlpha">6.408451e-01</float>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<int key="IBUITag">12</int>
+					</object>
+					<object class="IBUITableViewCell" id="152538522">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIView" id="61252461">
+								<reference key="NSNextResponder" ref="152538522"/>
+								<int key="NSvFlags">256</int>
+								<string key="NSFrameSize">{210, 43}</string>
+								<reference key="NSSuperview" ref="152538522"/>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MCAwAA</bytes>
+								</object>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">4</int>
+								<bool key="IBUIMultipleTouchEnabled">YES</bool>
+							</object>
+						</object>
+						<string key="NSFrame">{{33, 118}, {249, 44}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MSAwAA</bytes>
+						</object>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<int key="IBUISeparatorStyle">1</int>
+						<int key="IBUIEditingStyle">2</int>
+						<int key="IBUIAccessoryType">2</int>
+						<reference key="IBUIContentView" ref="61252461"/>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -205,11 +241,10 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="738228584"/>
-							<reference ref="638669474"/>
 							<reference ref="180749592"/>
 							<reference ref="921225608"/>
-							<reference ref="280491719"/>
-							<reference ref="269437373"/>
+							<reference ref="638669474"/>
+							<reference ref="152538522"/>
 							<reference ref="186562161"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
@@ -235,19 +270,29 @@
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">14</int>
+						<reference key="object" ref="186562161"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="280491719"/>
+							<reference ref="269437373"/>
+						</object>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">15</int>
+						<reference key="object" ref="152538522"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
 						<reference key="object" ref="280491719"/>
-						<reference key="parent" ref="774585933"/>
+						<reference key="parent" ref="186562161"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
 						<reference key="object" ref="269437373"/>
-						<reference key="parent" ref="774585933"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="186562161"/>
-						<reference key="parent" ref="774585933"/>
+						<reference key="parent" ref="186562161"/>
 					</object>
 				</object>
 			</object>
@@ -262,6 +307,7 @@
 					<string>12.IBPluginDependency</string>
 					<string>13.IBPluginDependency</string>
 					<string>14.IBPluginDependency</string>
+					<string>15.IBPluginDependency</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -271,6 +317,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TestViewController</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -302,7 +349,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">14</int>
+			<int key="maxID">15</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

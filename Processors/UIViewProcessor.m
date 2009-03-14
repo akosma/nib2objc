@@ -65,7 +65,11 @@
     // In those cases, call [super processUnknownProperty:item value:value];
     // to be sure that mother classes do their work too.
     id object = [NSString stringWithFormat:@"// unknown property: %@", value];
-    if ([item isEqualToString:@"alpha"])
+    if ([item isEqualToString:@"class"])
+    {
+        object = klass;
+    }
+    else if ([item isEqualToString:@"alpha"])
     {
         object = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
     }

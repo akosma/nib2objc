@@ -11,6 +11,20 @@
 
 @implementation UIProgressViewProcessor
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        klass = @"UIProgressView";
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
 - (void)processKey:(id)item value:(id)value
 {
     if ([item isEqualToString:@"progress"])

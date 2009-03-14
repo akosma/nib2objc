@@ -11,6 +11,20 @@
 
 @implementation UISwitchProcessor
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        klass = @"UISwitch";
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
 - (void)processKey:(id)item value:(id)value
 {
     if ([item isEqualToString:@"on"])

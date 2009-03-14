@@ -13,6 +13,20 @@
 
 @implementation UILabelProcessor
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        klass = @"UILabel";
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
 - (void)processKey:(id)item value:(id)value
 {
     if ([item isEqualToString:@"text"])
@@ -71,6 +85,11 @@
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"shadowColor"])
+    {
+        NSString *stringOutput = [value colorString];
+        [output setObject:stringOutput forKey:item];
+    }
+    else if ([item isEqualToString:@"highlightedColor"])
     {
         NSString *stringOutput = [value colorString];
         [output setObject:stringOutput forKey:item];

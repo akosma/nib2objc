@@ -404,4 +404,25 @@
     return value;
 }
 
+- (NSString *)progressViewStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIProgressViewStyleDefault";
+            break;
+            
+        case 1:
+            value = @"UIProgressViewStyleBar";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+    
+}
+
+
 @end

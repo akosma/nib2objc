@@ -23,5 +23,6 @@
 - (NSString *)autocapitalizationTypeString;
 - (NSString *)autocorrectionTypeString;
 - (NSString *)keyboardTypeString;
+- (NSString *)progressViewStyleString;
 
 @end

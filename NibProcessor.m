@@ -9,6 +9,7 @@
 #import "NibProcessor.h"
 #import "UIViewProcessor.h"
 #import "UITextFieldProcessor.h"
+#import "UIProgressViewProcessor.h"
 
 static Class getProcessorClass(NSString *className)
 {
@@ -20,6 +21,10 @@ static Class getProcessorClass(NSString *className)
     else if ([className isEqualToString:@"IBUITextField"])
     {
         returnClass = [UITextFieldProcessor class];
+    }
+    else if ([className isEqualToString:@"IBUIProgressView"])
+    {
+        returnClass = [UIProgressViewProcessor class];
     }
     return returnClass;
 }

@@ -12,6 +12,7 @@
 		3A0516090F6BC8270049FCB8 /* NSNumber+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0516080F6BC8270049FCB8 /* NSNumber+Nib2ObjcExtensions.m */; };
 		3A05160F0F6BC9850049FCB8 /* NSString+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A05160E0F6BC9850049FCB8 /* NSString+Nib2ObjcExtensions.m */; };
 		3A0516180F6BCAC60049FCB8 /* NSDictionary+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0516170F6BCAC60049FCB8 /* NSDictionary+Nib2ObjcExtensions.m */; };
+		3A0517010F6BDFA90049FCB8 /* UIProgressViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517000F6BDFA90049FCB8 /* UIProgressViewProcessor.m */; };
 		3AC911CE0F6B99C700057BCD /* UITextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */; };
 		3AD51EDD0F6AF0D1002D7519 /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD51EDC0F6AF0D1002D7519 /* UIViewProcessor.m */; };
 		8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* nib2objc.m */; settings = {ATTRIBUTES = (); }; };
@@ -44,6 +45,8 @@
 		3A05160E0F6BC9850049FCB8 /* NSString+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
 		3A0516160F6BCAC60049FCB8 /* NSDictionary+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
 		3A0516170F6BCAC60049FCB8 /* NSDictionary+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
+		3A0516FF0F6BDFA90049FCB8 /* UIProgressViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIProgressViewProcessor.h; sourceTree = "<group>"; };
+		3A0517000F6BDFA90049FCB8 /* UIProgressViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIProgressViewProcessor.m; sourceTree = "<group>"; };
 		3AC911CC0F6B99C700057BCD /* UITextFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldProcessor.h; sourceTree = "<group>"; };
 		3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldProcessor.m; sourceTree = "<group>"; };
 		3AD51E600F6ABD0A002D7519 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				3A0515C90F6BBA140049FCB8 /* UIControlProcessor.m */,
 				3AC911CC0F6B99C700057BCD /* UITextFieldProcessor.h */,
 				3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */,
+				3A0516FF0F6BDFA90049FCB8 /* UIProgressViewProcessor.h */,
+				3A0517000F6BDFA90049FCB8 /* UIProgressViewProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				3A0516090F6BC8270049FCB8 /* NSNumber+Nib2ObjcExtensions.m in Sources */,
 				3A05160F0F6BC9850049FCB8 /* NSString+Nib2ObjcExtensions.m in Sources */,
 				3A0516180F6BCAC60049FCB8 /* NSDictionary+Nib2ObjcExtensions.m in Sources */,
+				3A0517010F6BDFA90049FCB8 /* UIProgressViewProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

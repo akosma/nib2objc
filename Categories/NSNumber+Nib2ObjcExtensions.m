@@ -504,4 +504,39 @@
     return value;
 }
 
+- (NSString *)buttonTypeString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIButtonTypeCustom";
+            break;
+            
+        case 1:
+            value = @"UIButtonTypeRoundedRect";
+            break;
+            
+        case 2:
+            value = @"UIButtonTypeDetailDisclosure";
+            break;
+            
+        case 3:
+            value = @"UIButtonTypeInfoLight";
+            break;
+            
+        case 4:
+            value = @"UIButtonTypeInfoDark";
+            break;
+            
+        case 5:
+            value = @"UIButtonTypeContactAdd";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

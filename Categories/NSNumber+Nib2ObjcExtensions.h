@@ -27,5 +27,6 @@
 - (NSString *)baselineAdjustmentString;
 - (NSString *)lineBreakModeString;
 - (NSString *)activityIndicatorViewStyleString;
+- (NSString *)buttonTypeString;
 
 @end

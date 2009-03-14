@@ -15,6 +15,7 @@
 #import "UILabelProcessor.h"
 #import "UIActivityIndicatorViewProcessor.h"
 #import "UIPageControlProcessor.h"
+#import "UIButtonProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -128,6 +129,7 @@
         else if ([klass isEqualToString:@"IBUILabel"]) processor = [[UILabelProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIActivityIndicatorView"]) processor = [[UIActivityIndicatorViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIPageControl"]) processor = [[UIPageControlProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUIButton"]) processor = [[UIButtonProcessor alloc] init];
 
         if (processor == nil)
         {
@@ -152,7 +154,14 @@
         for (NSString *key in object)
         {
             id value = [object objectForKey:key];
-            [output appendFormat:@"%@ = %@;\n", key, value];
+            if ([key hasPrefix:@"__method__"])
+            {
+                [output appendFormat:@"[instance_%@ %@];\n", identifier, value];
+            }
+            else
+            {
+                [output appendFormat:@"instance_%@.%@ = %@;\n", identifier, key, value];
+            }
         }
         [output appendString:@"\n"];    
     }

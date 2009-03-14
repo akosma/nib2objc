@@ -101,7 +101,7 @@
     }
     else if ([item isEqualToString:@"tag"])
     {
-        stringObject = [NSString stringWithFormat:@"%d", instanceName, [value intValue]];
+        stringObject = [NSString stringWithFormat:@"%d", [value intValue]];
     }
     else if ([item isEqualToString:@"backgroundColor"])
     {

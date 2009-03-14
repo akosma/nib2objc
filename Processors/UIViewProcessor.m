@@ -12,6 +12,7 @@
 
 - (void)constructor;
 - (void)properties;
+- (void)processUnknownProperty:(id)item value:(id)value;
 
 @end
 
@@ -143,6 +144,9 @@
         case 12:
             value = @"UIViewContentModeBottomRight";
             break;
+            
+        default:
+            break;
     }
     return value;
 }
@@ -209,6 +213,63 @@
     return value;
 }
 
+- (NSString *)textAlignmentFromValue:(NSNumber *)textAlignment
+{
+    NSString *value = @"";
+    switch ([textAlignment intValue])
+    {
+        case 0:
+            value = @"UITextAlignmentLeft";
+            break;
+
+        case 1:
+            value = @"UITextAlignmentCenter";
+            break;
+
+        case 2:
+            value = @"UITextAlignmentRight";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)fontFromValue:(NSDictionary *)font
+{
+    NSString *name = [font objectForKey:@"Name"];
+    float size = [[font objectForKey:@"Size"] floatValue];
+    return [NSString stringWithFormat:@"[UIFont fontWithName:@\"%@\" size:%1.3f]", name, size];
+}
+
+- (NSString *)borderStyleFromValue:(NSNumber *)borderStyle
+{
+    NSString *value = @"";
+    switch ([borderStyle intValue])
+    {
+        case 0:
+            value = @"UITextBorderStyleNone";
+            break;
+            
+        case 1:
+            value = @"UITextBorderStyleLine";
+            break;
+            
+        case 2:
+            value = @"UITextBorderStyleBezel";
+            break;
+            
+        case 3:
+            value = @"UITextBorderStyleRoundedRect";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 #pragma mark -
 #pragma mark Private methods
 
@@ -270,10 +331,16 @@
         }
         else
         {
-            // Uncomment this to see what's being skipped
-            // [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];
+            [self processUnknownProperty:item value:value];
         }
     }
+}
+
+- (void)processUnknownProperty:(id)item value:(id)value
+{
+    // Subclasses can override this method for their own properties.
+    // Uncomment this to see what's being skipped
+    // [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];    
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AC911CE0F6B99C700057BCD /* UITextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */; };
 		3AD51EAC0F6AE451002D7519 /* Processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD51EAB0F6AE451002D7519 /* Processor.m */; };
 		3AD51EDD0F6AF0D1002D7519 /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD51EDC0F6AF0D1002D7519 /* UIViewProcessor.m */; };
 		8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* nib2objc.m */; settings = {ATTRIBUTES = (); }; };
@@ -29,6 +30,8 @@
 		08FB7796FE84155DC02AAC07 /* nib2objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nib2objc.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* nib2objc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nib2objc_Prefix.pch; sourceTree = "<group>"; };
+		3AC911CC0F6B99C700057BCD /* UITextFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldProcessor.h; sourceTree = "<group>"; };
+		3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldProcessor.m; sourceTree = "<group>"; };
 		3AD51E600F6ABD0A002D7519 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		3AD51EAA0F6AE451002D7519 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
 		3AD51EAB0F6AE451002D7519 /* Processor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Processor.m; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 			children = (
 				3AD51EDB0F6AF0D1002D7519 /* UIViewProcessor.h */,
 				3AD51EDC0F6AF0D1002D7519 /* UIViewProcessor.m */,
+				3AC911CC0F6B99C700057BCD /* UITextFieldProcessor.h */,
+				3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */,
 				3AD51EAC0F6AE451002D7519 /* Processor.m in Sources */,
 				3AD51EDD0F6AF0D1002D7519 /* UIViewProcessor.m in Sources */,
+				3AC911CE0F6B99C700057BCD /* UITextFieldProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,9 +12,9 @@
 {
 @protected
     NSString *klass;
-    NSDictionary *dict;
     NSMutableString *output;
     NSString *instanceName;
+    NSDictionary *dict;
 }
 
 @property (nonatomic, retain) NSString *instanceName;
@@ -25,5 +25,8 @@
 - (NSString *)contentModeFromValue:(NSNumber *)contentMode;
 - (NSString *)booleanFromValue:(NSNumber *)boolean;
 - (NSString *)autoresizingMaskFromValue:(NSNumber *)autoresizingMask;
+- (NSString *)textAlignmentFromValue:(NSNumber *)textAlignment;
+- (NSString *)fontFromValue:(NSDictionary *)font;
+- (NSString *)borderStyleFromValue:(NSNumber *)borderStyle;
 
 @end

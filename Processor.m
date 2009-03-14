@@ -8,6 +8,7 @@
 
 #import "Processor.h"
 #import "UIViewProcessor.h"
+#import "UITextFieldProcessor.h"
 
 static Class getProcessorClass(NSString *className)
 {
@@ -15,6 +16,10 @@ static Class getProcessorClass(NSString *className)
     if ([className isEqualToString:@"IBUIView"])
     {
         returnClass = [UIViewProcessor class];
+    }
+    else if ([className isEqualToString:@"IBUITextField"])
+    {
+        returnClass = [UITextFieldProcessor class];
     }
     return returnClass;
 }

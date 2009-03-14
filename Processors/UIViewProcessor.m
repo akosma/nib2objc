@@ -50,7 +50,7 @@
     return [NSString stringWithFormat:@"CGRectMake(%1.1f, %1.1f, %1.1f, %1.1f)", point.x, point.y, size.width, size.height];
 }
 
-- (NSString *)colorFromDescription:(NSString *)colorString
+- (NSString *)colorFromValue:(NSString *)colorString
 {
     NSMutableString *color = [[NSMutableString alloc] init];
     if ([colorString hasPrefix:@"NSCalibratedRGBColorSpace"])
@@ -87,10 +87,10 @@
     return colorReturn;
 }
 
-- (NSString *)contentModeFromValue:(NSInteger)contentMode
+- (NSString *)contentModeFromValue:(NSNumber *)contentMode
 {
     NSString *value = @"";
-    switch (contentMode)
+    switch ([contentMode intValue])
     {
         case 0:
             value = @"UIViewContentModeScaleToFill";
@@ -147,6 +147,11 @@
     return value;
 }
 
+- (NSString *)booleanFromValue:(NSNumber *)boolean
+{
+    return ([boolean boolValue] == 1) ? @"YES" : @"NO";
+}
+
 #pragma mark -
 #pragma mark Private methods
 
@@ -168,11 +173,27 @@
         }
         else if ([item isEqualToString:@"hidden"])
         {
-            [output appendFormat:@"%@.hidden = %@;\n", instanceName, ([value boolValue] == 1) ? @"YES" : @"NO"];
+            [output appendFormat:@"%@.hidden = %@;\n", instanceName, [self booleanFromValue:value]];
         }
         else if ([item isEqualToString:@"opaqueForDevice"])
         {
-            [output appendFormat:@"%@.opaque = %@;\n", instanceName, ([value boolValue] == 1) ? @"YES" : @"NO"];
+            [output appendFormat:@"%@.opaque = %@;\n", instanceName, [self booleanFromValue:value]];
+        }
+        else if ([item isEqualToString:@"clipsSubviews"])
+        {
+            [output appendFormat:@"%@.clipsToBounds = %@;\n", instanceName, [self booleanFromValue:value]];
+        }
+        else if ([item isEqualToString:@"clearsContextBeforeDrawing"])
+        {
+            [output appendFormat:@"%@.clearsContextBeforeDrawing = %@;\n", instanceName, [self booleanFromValue:value]];
+        }
+        else if ([item isEqualToString:@"userInteractionEnabled"])
+        {
+            [output appendFormat:@"%@.userInteractionEnabled = %@;\n", instanceName, [self booleanFromValue:value]];
+        }
+        else if ([item isEqualToString:@"multipleTouchEnabled"])
+        {
+            [output appendFormat:@"%@.multipleTouchEnabled = %@;\n", instanceName, [self booleanFromValue:value]];
         }
         else if ([item isEqualToString:@"tag"])
         {
@@ -180,25 +201,16 @@
         }
         else if ([item isEqualToString:@"backgroundColor"])
         {
-            [output appendFormat:@"%@.backgroundColor = %@;\n", instanceName, [self colorFromDescription:value]];
+            [output appendFormat:@"%@.backgroundColor = %@;\n", instanceName, [self colorFromValue:value]];
         }
         else if ([item isEqualToString:@"contentMode"])
         {
-            [output appendFormat:@"%@.contentMode = %@;\n", instanceName, [self contentModeFromValue:[value intValue]]];
+            [output appendFormat:@"%@.contentMode = %@;\n", instanceName, [self contentModeFromValue:value]];
         }
         else
         {
-            [output appendFormat:@"// property skipped: %@ = %@\n", item, value];
+            [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];
         }
-        
-//        if ([value isKindOfClass:[NSNumber class]])
-//        {
-//            [output appendFormat:@"%@.%@ = %@;\n", instanceName, item, [NSString stringWithCString:[value objCType]]];
-//        }
-//        else if ([value isKindOfClass:[NSString class]])
-//        {
-//            [output appendFormat:@"%@.%@ = @\"%@\";\n", instanceName, item, value];
-//        }
     }
 }
 

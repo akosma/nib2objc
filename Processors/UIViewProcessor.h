@@ -21,7 +21,8 @@
 
 - (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString;
 - (NSString *)rectFromPoint:(NSString *)pointString size:(NSString *)sizeString;
-- (NSString *)colorFromDescription:(NSString *)colorString;
-- (NSString *)contentModeFromValue:(NSInteger)contentMode;
+- (NSString *)colorFromValue:(NSString *)colorString;
+- (NSString *)contentModeFromValue:(NSNumber *)contentMode;
+- (NSString *)booleanFromValue:(NSNumber *)boolean;
 
 @end

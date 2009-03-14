@@ -24,5 +24,6 @@
 - (NSString *)colorFromValue:(NSString *)colorString;
 - (NSString *)contentModeFromValue:(NSNumber *)contentMode;
 - (NSString *)booleanFromValue:(NSNumber *)boolean;
+- (NSString *)autoresizingMaskFromValue:(NSNumber *)autoresizingMask;
 
 @end

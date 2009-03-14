@@ -152,6 +152,63 @@
     return ([boolean boolValue] == 1) ? @"YES" : @"NO";
 }
 
+- (NSString *)autoresizingMaskFromValue:(NSNumber *)autoresizingMask
+{
+    // From the documentation
+    enum 
+    {
+        UIViewAutoresizingNone                 = 0,
+        UIViewAutoresizingFlexibleLeftMargin   = 1 << 0,
+        UIViewAutoresizingFlexibleWidth        = 1 << 1,
+        UIViewAutoresizingFlexibleRightMargin  = 1 << 2,
+        UIViewAutoresizingFlexibleTopMargin    = 1 << 3,
+        UIViewAutoresizingFlexibleHeight       = 1 << 4,
+        UIViewAutoresizingFlexibleBottomMargin = 1 << 5
+    };
+    
+    NSUInteger mask = [autoresizingMask intValue];
+    NSMutableString *maskValue = [[NSMutableString alloc] init];
+    
+    if (mask == UIViewAutoresizingNone) 
+    {
+        [maskValue appendString:@"UIViewAutoresizingNone"];
+    }
+    if ((mask & UIViewAutoresizingFlexibleLeftMargin) == UIViewAutoresizingFlexibleLeftMargin)
+    {
+        if ([maskValue length] > 0) [maskValue appendString:@" | "];
+        [maskValue appendString:@"UIViewAutoresizingFlexibleLeftMargin"];
+    }
+    if ((mask & UIViewAutoresizingFlexibleWidth) == UIViewAutoresizingFlexibleWidth)
+    {
+        if ([maskValue length] > 0) [maskValue appendString:@" | "];
+        [maskValue appendString:@"UIViewAutoresizingFlexibleWidth"];
+    }
+    if ((mask & UIViewAutoresizingFlexibleRightMargin) == UIViewAutoresizingFlexibleRightMargin)
+    {
+        if ([maskValue length] > 0) [maskValue appendString:@" | "];
+        [maskValue appendString:@"UIViewAutoresizingFlexibleRightMargin"];
+    }
+    if ((mask & UIViewAutoresizingFlexibleTopMargin) == UIViewAutoresizingFlexibleTopMargin)
+    {
+        if ([maskValue length] > 0) [maskValue appendString:@" | "];
+        [maskValue appendString:@"UIViewAutoresizingFlexibleTopMargin"];
+    }
+    if ((mask & UIViewAutoresizingFlexibleHeight) == UIViewAutoresizingFlexibleHeight)
+    {
+        if ([maskValue length] > 0) [maskValue appendString:@" | "];
+        [maskValue appendString:@"UIViewAutoresizingFlexibleHeight"];
+    }
+    if ((mask & UIViewAutoresizingFlexibleBottomMargin) == UIViewAutoresizingFlexibleBottomMargin)
+    {
+        if ([maskValue length] > 0) [maskValue appendString:@" | "];
+        [maskValue appendString:@"UIViewAutoresizingFlexibleBottomMargin"];
+    }
+    
+    NSString *value = [maskValue copy];
+    [maskValue release];
+    return value;
+}
+
 #pragma mark -
 #pragma mark Private methods
 
@@ -207,9 +264,14 @@
         {
             [output appendFormat:@"%@.contentMode = %@;\n", instanceName, [self contentModeFromValue:value]];
         }
+        else if ([item isEqualToString:@"autoresizingMask"])
+        {
+            [output appendFormat:@"%@.autoresizingMask = %@;\n", instanceName, [self autoresizingMaskFromValue:value]];
+        }
         else
         {
-            [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];
+            // Uncomment this to see what's being skipped
+            // [output appendFormat:@"/* property skipped: %@ = %@ */\n", item, value];
         }
     }
 }

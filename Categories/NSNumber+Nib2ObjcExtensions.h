@@ -24,5 +24,7 @@
 - (NSString *)autocorrectionTypeString;
 - (NSString *)keyboardTypeString;
 - (NSString *)progressViewStyleString;
+- (NSString *)baselineAdjustmentString;
+- (NSString *)lineBreakModeString;
 
 @end

@@ -11,6 +11,7 @@
 @interface NSString (Nib2ObjcExtensions)
 
 + (NSString *)rectStringFromPoint:(NSString *)pointString size:(NSString *)sizeString;
++ (NSString *)sizeStringFromSize:(NSString *)sizeString;
 - (NSString *)colorString;
 - (NSString *)quotedAsCodeString;
 

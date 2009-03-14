@@ -421,8 +421,64 @@
             break;
     }
     return value;
-    
 }
 
+- (NSString *)baselineAdjustmentString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIBaselineAdjustmentAlignBaselines";
+            break;
+            
+        case 1:
+            value = @"UIBaselineAdjustmentAlignCenters";
+            break;
+            
+        case 2:
+            value = @"UIBaselineAdjustmentNone";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)lineBreakModeString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UILineBreakModeWordWrap";
+            break;
+
+        case 1:
+            value = @"UILineBreakModeCharacterWrap";
+            break;
+
+        case 2:
+            value = @"UILineBreakModeClip";
+            break;
+
+        case 3:
+            value = @"UILineBreakModeHeadTruncation";
+            break;
+
+        case 4:
+            value = @"UILineBreakModeTailTruncation";
+            break;
+
+        case 5:
+            value = @"UILineBreakModeMiddleTruncation";
+            break;
+
+        default:
+            break;
+    }
+    return value;
+}
 
 @end

@@ -17,6 +17,12 @@
     return [NSString stringWithFormat:@"CGRectMake(%1.1f, %1.1f, %1.1f, %1.1f)", point.x, point.y, size.width, size.height];
 }
 
++ (NSString *)sizeStringFromSize:(NSString *)sizeString
+{
+    NSSize size = NSSizeFromString(sizeString);
+    return [NSString stringWithFormat:@"CGSizeMake(%1.1f, %1.1f)", size.width, size.height];
+}
+
 - (NSString *)colorString
 {
     NSMutableString *color = [[[NSMutableString alloc] init] autorelease];

@@ -12,6 +12,7 @@
 #import "UIProgressViewProcessor.h"
 #import "UISwitchProcessor.h"
 #import "UISliderProcessor.h"
+#import "UILabelProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -122,6 +123,7 @@
         else if ([klass isEqualToString:@"IBUIProgressView"]) processor = [[UIProgressViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUISwitch"]) processor = [[UISwitchProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUISlider"]) processor = [[UISliderProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUILabel"]) processor = [[UILabelProcessor alloc] init];
         
         if (processor == nil)
         {

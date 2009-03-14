@@ -14,8 +14,13 @@
     NSString *klass;
     NSDictionary *dict;
     NSMutableString *output;
+    NSString *instanceName;
 }
 
+@property (nonatomic, retain) NSString *instanceName;
+
 - (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString;
+- (NSString *)rectFromPoint:(NSString *)pointString size:(NSString *)sizeString;
+- (NSString *)colorFromDescription:(NSString *)colorString;
 
 @end

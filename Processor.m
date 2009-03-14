@@ -126,6 +126,7 @@ static Class getProcessorClass(NSString *className)
         if (![processorClass isEqual:[NSNull class]])
         {
             UIViewProcessor *processor = [[processorClass alloc] init];
+            processor.instanceName = @"instance";
             [processor processDictionary:object into:output];
             [processor release];
             [output appendString:@"\n"];

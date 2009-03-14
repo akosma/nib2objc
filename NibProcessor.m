@@ -16,6 +16,7 @@
 #import "UIActivityIndicatorViewProcessor.h"
 #import "UIPageControlProcessor.h"
 #import "UIButtonProcessor.h"
+#import "UISegmentedControlProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -130,13 +131,14 @@
         else if ([klass isEqualToString:@"IBUIActivityIndicatorView"]) processor = [[UIActivityIndicatorViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIPageControl"]) processor = [[UIPageControlProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIButton"]) processor = [[UIButtonProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUISegmentedControl"]) processor = [[UISegmentedControlProcessor alloc] init];
 
         if (processor == nil)
         {
-            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-            [dict setObject:klass forKey:@"// unknown object (yet)"];
-            [objects setObject:dict forKey:key];
-            [dict release];
+//            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//            [dict setObject:klass forKey:@"// unknown object (yet)"];
+//            [objects setObject:dict forKey:key];
+//            [dict release];
         }
         else
         {

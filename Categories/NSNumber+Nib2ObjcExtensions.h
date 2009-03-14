@@ -28,5 +28,6 @@
 - (NSString *)lineBreakModeString;
 - (NSString *)activityIndicatorViewStyleString;
 - (NSString *)buttonTypeString;
+- (NSString *)segmentedControlStyleString;
 
 @end

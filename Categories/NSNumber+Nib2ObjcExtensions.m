@@ -539,4 +539,27 @@
     return value;
 }
 
+- (NSString *)segmentedControlStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UISegmentedControlStylePlain";
+            break;
+            
+        case 1:
+            value = @"UISegmentedControlStyleBordered";
+            break;
+            
+        case 2:
+            value = @"UISegmentedControlStyleBar";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

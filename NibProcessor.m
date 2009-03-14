@@ -22,6 +22,7 @@
 
 - (void)getDictionaryFromNIB;
 - (void)process;
+- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView;
 
 @end
 
@@ -111,7 +112,6 @@
 {
     //    NSDictionary *nibClasses = [dict objectForKey:@"com.apple.ibtool.document.classes"];
     //    NSDictionary *nibConnections = [dict objectForKey:@"com.apple.ibtool.document.connections"];
-    //    NSArray *nibHierarchy = [dict objectForKey:@"com.apple.ibtool.document.hierarchy"];
     NSDictionary *nibObjects = [dictionary objectForKey:@"com.apple.ibtool.document.objects"];
     NSMutableDictionary *objects = [[NSMutableDictionary alloc] init];
     
@@ -185,8 +185,31 @@
         [output appendString:@"\n"];    
     }
     
+    // Now that the objects are created, recreate the hierarchy of the NIB
+    NSArray *nibHierarchy = [dictionary objectForKey:@"com.apple.ibtool.document.hierarchy"];
+    for (NSDictionary *item in nibHierarchy)
+    {
+        int currentView = [[item objectForKey:@"object-id"] intValue];
+        [self parseChildren:item ofCurrentView:currentView];
+    }
+    
     [objects release];
     objects = nil;
+}
+
+- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView
+{
+    NSArray *children = [dict objectForKey:@"children"];
+    if (children != nil)
+    {
+        for (NSDictionary *subitem in children)
+        {
+            int subview = [[subitem objectForKey:@"object-id"] intValue];
+            [self parseChildren:subitem ofCurrentView:subview];
+            [output appendFormat:@"[view%d addSubview:view%d];\n", currentView, subview];
+            [output appendFormat:@"[view%d release];\n", subview];
+        }
+    }
 }
 
 @end

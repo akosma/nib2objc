@@ -74,10 +74,10 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUIHighlightedTitle"/>
-						<string key="IBUIDisabledTitle"/>
-						<string key="IBUISelectedTitle"/>
-						<string key="IBUINormalTitle"/>
+						<string key="IBUIHighlightedTitle">Test</string>
+						<string key="IBUIDisabledTitle">Test</string>
+						<string key="IBUISelectedTitle">Test</string>
+						<string key="IBUINormalTitle">Test</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -197,7 +197,7 @@
 						<int key="IBUIAccessoryType">2</int>
 						<reference key="IBUIContentView" ref="872270536"/>
 					</object>
-					<object class="IBUIActivityIndicatorView" id="726731371">
+					<object class="IBUIActivityIndicatorView" id="841341478">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{48, 334}, {20, 20}}</string>
@@ -208,6 +208,19 @@
 						<bool key="IBUIHidesWhenStopped">NO</bool>
 						<bool key="IBUIAnimating">YES</bool>
 						<int key="IBUIStyle">2</int>
+					</object>
+					<object class="IBUIPageControl" id="621038011">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">1316</int>
+						<object class="NSPSMatrix" key="NSFrameMatrix"/>
+						<string key="NSFrame">{{49, 392}, {38, 36}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUINumberOfPages">3</int>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -266,7 +279,8 @@
 							<reference ref="638669474"/>
 							<reference ref="189682818"/>
 							<reference ref="186562161"/>
-							<reference ref="726731371"/>
+							<reference ref="841341478"/>
+							<reference ref="621038011"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -317,7 +331,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">18</int>
-						<reference key="object" ref="726731371"/>
+						<reference key="object" ref="841341478"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">19</int>
+						<reference key="object" ref="621038011"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</object>
@@ -335,6 +354,7 @@
 					<string>14.IBPluginDependency</string>
 					<string>15.IBPluginDependency</string>
 					<string>18.IBPluginDependency</string>
+					<string>19.IBPluginDependency</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -344,6 +364,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TestViewController</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -377,7 +398,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">18</int>
+			<int key="maxID">19</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

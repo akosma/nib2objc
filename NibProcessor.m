@@ -14,6 +14,7 @@
 #import "UISliderProcessor.h"
 #import "UILabelProcessor.h"
 #import "UIActivityIndicatorViewProcessor.h"
+#import "UIPageControlProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -126,7 +127,8 @@
         else if ([klass isEqualToString:@"IBUISlider"]) processor = [[UISliderProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUILabel"]) processor = [[UILabelProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIActivityIndicatorView"]) processor = [[UIActivityIndicatorViewProcessor alloc] init];
-        
+        else if ([klass isEqualToString:@"IBUIPageControl"]) processor = [[UIPageControlProcessor alloc] init];
+
         if (processor == nil)
         {
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];

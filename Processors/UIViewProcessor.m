@@ -62,6 +62,8 @@
 
 - (NSString *)constructorString
 {
+    // Some subclasses have different constructors than the classic
+    // "initWithFrame:", and as such they should override this method.
     return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", klass, [self frameString]];
 }
 

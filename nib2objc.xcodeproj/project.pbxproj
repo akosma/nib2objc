@@ -17,6 +17,8 @@
 		3A0517300F6BE3940049FCB8 /* UISliderProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A05172F0F6BE3940049FCB8 /* UISliderProcessor.m */; };
 		3A0517570F6BEB970049FCB8 /* UILabelProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517560F6BEB970049FCB8 /* UILabelProcessor.m */; };
 		3A0517C30F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517C20F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.m */; };
+		3A0517EF0F6BFF510049FCB8 /* UIPageControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517EE0F6BFF510049FCB8 /* UIPageControlProcessor.m */; };
+		3A0517FD0F6C00590049FCB8 /* UIButtonProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517FC0F6C00590049FCB8 /* UIButtonProcessor.m */; };
 		3AC911CE0F6B99C700057BCD /* UITextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */; };
 		3AD51EDD0F6AF0D1002D7519 /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD51EDC0F6AF0D1002D7519 /* UIViewProcessor.m */; };
 		8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* nib2objc.m */; settings = {ATTRIBUTES = (); }; };
@@ -59,6 +61,10 @@
 		3A0517560F6BEB970049FCB8 /* UILabelProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelProcessor.m; sourceTree = "<group>"; };
 		3A0517C10F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorViewProcessor.h; sourceTree = "<group>"; };
 		3A0517C20F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityIndicatorViewProcessor.m; sourceTree = "<group>"; };
+		3A0517ED0F6BFF510049FCB8 /* UIPageControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPageControlProcessor.h; sourceTree = "<group>"; };
+		3A0517EE0F6BFF510049FCB8 /* UIPageControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPageControlProcessor.m; sourceTree = "<group>"; };
+		3A0517FB0F6C00590049FCB8 /* UIButtonProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonProcessor.h; sourceTree = "<group>"; };
+		3A0517FC0F6C00590049FCB8 /* UIButtonProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonProcessor.m; sourceTree = "<group>"; };
 		3AC911CC0F6B99C700057BCD /* UITextFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldProcessor.h; sourceTree = "<group>"; };
 		3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldProcessor.m; sourceTree = "<group>"; };
 		3AD51E600F6ABD0A002D7519 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -159,6 +165,10 @@
 				3A0517560F6BEB970049FCB8 /* UILabelProcessor.m */,
 				3A0517C10F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.h */,
 				3A0517C20F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.m */,
+				3A0517ED0F6BFF510049FCB8 /* UIPageControlProcessor.h */,
+				3A0517EE0F6BFF510049FCB8 /* UIPageControlProcessor.m */,
+				3A0517FB0F6C00590049FCB8 /* UIButtonProcessor.h */,
+				3A0517FC0F6C00590049FCB8 /* UIButtonProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 				3A0517300F6BE3940049FCB8 /* UISliderProcessor.m in Sources */,
 				3A0517570F6BEB970049FCB8 /* UILabelProcessor.m in Sources */,
 				3A0517C30F6BF9E60049FCB8 /* UIActivityIndicatorViewProcessor.m in Sources */,
+				3A0517EF0F6BFF510049FCB8 /* UIPageControlProcessor.m in Sources */,
+				3A0517FD0F6C00590049FCB8 /* UIButtonProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

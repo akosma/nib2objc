@@ -135,10 +135,11 @@
 
         if (processor == nil)
         {
-//            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-//            [dict setObject:klass forKey:@"// unknown object (yet)"];
-//            [objects setObject:dict forKey:key];
-//            [dict release];
+            // Uncomment these lines to get notified about classes not yet handled by this utility
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+            [dict setObject:klass forKey:@"// unknown object (yet)"];
+            [objects setObject:dict forKey:key];
+            [dict release];
         }
         else
         {
@@ -207,7 +208,6 @@
             int subview = [[subitem objectForKey:@"object-id"] intValue];
             [self parseChildren:subitem ofCurrentView:subview];
             [output appendFormat:@"[view%d addSubview:view%d];\n", currentView, subview];
-            [output appendFormat:@"[view%d release];\n", subview];
         }
     }
 }

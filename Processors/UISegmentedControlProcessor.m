@@ -39,6 +39,11 @@
         NSString *stringOutput = [value segmentedControlStyleString];
         [output setObject:stringOutput forKey:@"segmentedControlStyle"];
     }
+    else if ([item isEqualToString:@"selectedSegmentIndex"])
+    {
+        NSString *stringOutput = [NSString stringWithFormat:@"%d", [value intValue]];
+        [output setObject:stringOutput forKey:item];
+    }
     else if ([item isEqualToString:@"momentary"])
     {
         NSString *stringOutput = [value booleanString];

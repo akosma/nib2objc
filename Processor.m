@@ -123,7 +123,11 @@ static Class getProcessorClass(NSString *className)
         NSString *klass = [object objectForKey:@"class"];
 
         Class processorClass = getProcessorClass(klass);
-        if (![processorClass isEqual:[NSNull class]])
+        if ([processorClass isEqual:[NSNull class]])
+        {
+            [output appendFormat:@"// Class without processor: %@\n", klass];
+        }
+        else
         {
             UIViewProcessor *processor = [[processorClass alloc] init];
             processor.instanceName = @"instance";

@@ -87,6 +87,66 @@
     return colorReturn;
 }
 
+- (NSString *)contentModeFromValue:(NSInteger)contentMode
+{
+    NSString *value = @"";
+    switch (contentMode)
+    {
+        case 0:
+            value = @"UIViewContentModeScaleToFill";
+            break;
+            
+        case 1:
+            value = @"UIViewContentModeScaleAspectFit";
+            break;
+            
+        case 2:
+            value = @"UIViewContentModeScaleAspectFill";
+            break;
+            
+        case 3:
+            value = @"UIViewContentModeRedraw";
+            break;
+            
+        case 4:
+            value = @"UIViewContentModeCenter";
+            break;
+            
+        case 5:
+            value = @"UIViewContentModeTop";
+            break;
+            
+        case 6:
+            value = @"UIViewContentModeBottom";
+            break;
+            
+        case 7:
+            value = @"UIViewContentModeLeft";
+            break;
+            
+        case 8:
+            value = @"UIViewContentModeRight";
+            break;
+        
+        case 9:
+            value = @"UIViewContentModeTopLeft";
+            break;
+            
+        case 10:
+            value = @"UIViewContentModeTopRight";
+            break;
+            
+        case 11:
+            value = @"UIViewContentModeBottomLeft";
+            break;
+            
+        case 12:
+            value = @"UIViewContentModeBottomRight";
+            break;
+    }
+    return value;
+}
+
 #pragma mark -
 #pragma mark Private methods
 
@@ -102,17 +162,33 @@
     {
         id value = [dict objectForKey:item];
         
-        if ([item isEqualToString:@"alphaValue"])
+        if ([item isEqualToString:@"alpha"])
         {
-            [output appendFormat:@"%@.alpha = %1.1f;\n", instanceName, value];
+            [output appendFormat:@"%@.alpha = %1.1f;\n", instanceName, [value floatValue]];
         }
         else if ([item isEqualToString:@"hidden"])
         {
             [output appendFormat:@"%@.hidden = %@;\n", instanceName, ([value boolValue] == 1) ? @"YES" : @"NO"];
         }
+        else if ([item isEqualToString:@"opaqueForDevice"])
+        {
+            [output appendFormat:@"%@.opaque = %@;\n", instanceName, ([value boolValue] == 1) ? @"YES" : @"NO"];
+        }
+        else if ([item isEqualToString:@"tag"])
+        {
+            [output appendFormat:@"%@.tag = %d;\n", instanceName, [value intValue]];
+        }
         else if ([item isEqualToString:@"backgroundColor"])
         {
             [output appendFormat:@"%@.backgroundColor = %@;\n", instanceName, [self colorFromDescription:value]];
+        }
+        else if ([item isEqualToString:@"contentMode"])
+        {
+            [output appendFormat:@"%@.contentMode = %@;\n", instanceName, [self contentModeFromValue:[value intValue]]];
+        }
+        else
+        {
+            [output appendFormat:@"// property skipped: %@ = %@\n", item, value];
         }
         
 //        if ([value isKindOfClass:[NSNumber class]])

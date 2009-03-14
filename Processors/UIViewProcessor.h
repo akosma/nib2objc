@@ -22,5 +22,6 @@
 - (void)processDictionary:(NSDictionary *)dictionary into:(NSMutableString *)outputString;
 - (NSString *)rectFromPoint:(NSString *)pointString size:(NSString *)sizeString;
 - (NSString *)colorFromDescription:(NSString *)colorString;
+- (NSString *)contentModeFromValue:(NSInteger)contentMode;
 
 @end

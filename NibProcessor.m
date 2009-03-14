@@ -13,32 +13,6 @@
 #import "UISwitchProcessor.h"
 #import "UISliderProcessor.h"
 
-static Class getProcessorClass(NSString *className)
-{
-    Class returnClass = [NSNull class];
-    if ([className isEqualToString:@"IBUIView"])
-    {
-        returnClass = [UIViewProcessor class];
-    }
-    else if ([className isEqualToString:@"IBUITextField"])
-    {
-        returnClass = [UITextFieldProcessor class];
-    }
-    else if ([className isEqualToString:@"IBUIProgressView"])
-    {
-        returnClass = [UIProgressViewProcessor class];
-    }
-    else if ([className isEqualToString:@"IBUISwitch"])
-    {
-        returnClass = [UISwitchProcessor class];
-    }
-    else if ([className isEqualToString:@"IBUISlider"])
-    {
-        returnClass = [UISliderProcessor class];
-    }
-    return returnClass;
-}
-
 @interface NibProcessor (Private)
 
 - (void)getDictionaryFromNIB;
@@ -141,17 +115,22 @@ static Class getProcessorClass(NSString *className)
         id object = [nibObjects objectForKey:key];
         NSString *klass = [object objectForKey:@"class"];
 
-        Class processorClass = getProcessorClass(klass);
-        if ([processorClass isEqual:[NSNull class]])
+        UIViewProcessor *processor = nil;
+        
+        if ([klass isEqualToString:@"IBUIView"]) processor = [[UIViewProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUITextField"]) processor = [[UITextFieldProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUIProgressView"]) processor = [[UIProgressViewProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUISwitch"]) processor = [[UISwitchProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUISlider"]) processor = [[UISliderProcessor alloc] init];
+        
+        if (processor == nil)
         {
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-            [dict setObject:klass forKey:@"unknown object (yet)"];
+            [dict setObject:klass forKey:@"// unknown object (yet)"];
             [objects setObject:dict forKey:key];
         }
         else
         {
-            UIViewProcessor *processor = [[processorClass alloc] init];
-            processor.instanceName = @"instance";
             NSDictionary *dict = [processor processObject:object];
             [objects setObject:dict forKey:key];
             [processor release];
@@ -168,11 +147,6 @@ static Class getProcessorClass(NSString *className)
         {
             id value = [object objectForKey:key];
             [output appendFormat:@"%@ = %@;\n", key, value];
-
-//            if (![value isEqualToString:@"NULL"])
-//            {
-//                [output appendFormat:@"%@ = %@;\n", key, value];
-//            }
         }
         [output appendString:@"\n"];    
     }

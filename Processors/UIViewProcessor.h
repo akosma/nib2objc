@@ -12,15 +12,11 @@
 {
 @protected
     NSString *klass;
-    NSString *instanceName;
     NSDictionary *input;
     NSMutableDictionary *output;
 }
 
-@property (nonatomic, copy) NSString *instanceName;
-
 - (NSDictionary *)processObject:(NSDictionary *)object;
-
 - (void)processKey:(id)item value:(id)value;
 
 @end

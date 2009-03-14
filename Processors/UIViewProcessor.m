@@ -19,21 +19,17 @@
 
 @implementation UIViewProcessor
 
-@synthesize instanceName;
-
 - (id)init
 {
     if (self = [super init])
     {
         klass = @"UIView";
-        instanceName = @"view";
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [instanceName release];
     [super dealloc];
 }
 
@@ -68,7 +64,7 @@
     // Subclasses can override this method for their own properties.
     // In those cases, call [super processUnknownProperty:item value:value];
     // to be sure that mother classes do their work too.
-    id object = value;
+    id object = [NSString stringWithFormat:@"// unknown property: %@", value];
     if ([item isEqualToString:@"alpha"])
     {
         object = [NSString stringWithFormat:@"%1.1f", [value floatValue]];

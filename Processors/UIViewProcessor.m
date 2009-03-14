@@ -12,7 +12,8 @@
 
 @interface UIViewProcessor (Private)
 
-- (void)constructor;
+- (NSString *)constructorString;
+- (NSString *)frameString;
 
 @end
 
@@ -38,8 +39,9 @@
     input = object;
     [output release];
     output = [[NSMutableDictionary alloc] init];
-    [self constructor];
-
+    [output setObject:[self constructorString] forKey:@"constructor"];
+    [output setObject:[self frameString] forKey:@"frame"];
+    
     for (id item in input)
     {
         id value = [input objectForKey:item];
@@ -52,11 +54,15 @@
 #pragma mark -
 #pragma mark Private methods
 
-- (void)constructor
+- (NSString *)frameString
 {
     NSString *rect = [NSString rectStringFromPoint:[input objectForKey:@"frameOrigin"] size:[input objectForKey:@"frameSize"]];
-    NSString *stringObject = [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", klass, rect];
-    [output setObject:stringObject forKey:@"constructor"];
+    return rect;
+}
+
+- (NSString *)constructorString
+{
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", klass, [self frameString]];
 }
 
 - (void)processKey:(id)item value:(id)value

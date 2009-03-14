@@ -25,6 +25,12 @@
     [super dealloc];
 }
 
+- (NSString *)constructorString
+{
+    NSString *style = [[input objectForKey:@"progressViewStyle"] progressViewStyleString];
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithProgressViewStyle:%@]", klass, style];
+}
+
 - (void)processKey:(id)item value:(id)value
 {
     if ([item isEqualToString:@"progress"])

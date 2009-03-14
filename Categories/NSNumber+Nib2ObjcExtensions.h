@@ -26,5 +26,6 @@
 - (NSString *)progressViewStyleString;
 - (NSString *)baselineAdjustmentString;
 - (NSString *)lineBreakModeString;
+- (NSString *)activityIndicatorViewStyleString;
 
 @end

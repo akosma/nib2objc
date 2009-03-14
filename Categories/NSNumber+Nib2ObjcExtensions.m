@@ -481,4 +481,27 @@
     return value;
 }
 
+- (NSString *)activityIndicatorViewStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIActivityIndicatorViewStyleWhiteLarge";
+            break;
+            
+        case 1:
+            value = @"UIActivityIndicatorViewStyleWhite";
+            break;
+            
+        case 2:
+            value = @"UIActivityIndicatorViewStyleGray";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

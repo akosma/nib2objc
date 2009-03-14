@@ -10,6 +10,8 @@
 #import "UIViewProcessor.h"
 #import "UITextFieldProcessor.h"
 #import "UIProgressViewProcessor.h"
+#import "UISwitchProcessor.h"
+#import "UISliderProcessor.h"
 
 static Class getProcessorClass(NSString *className)
 {
@@ -25,6 +27,14 @@ static Class getProcessorClass(NSString *className)
     else if ([className isEqualToString:@"IBUIProgressView"])
     {
         returnClass = [UIProgressViewProcessor class];
+    }
+    else if ([className isEqualToString:@"IBUISwitch"])
+    {
+        returnClass = [UISwitchProcessor class];
+    }
+    else if ([className isEqualToString:@"IBUISlider"])
+    {
+        returnClass = [UISliderProcessor class];
     }
     return returnClass;
 }
@@ -134,7 +144,9 @@ static Class getProcessorClass(NSString *className)
         Class processorClass = getProcessorClass(klass);
         if ([processorClass isEqual:[NSNull class]])
         {
-            [output appendFormat:@"// Class without processor: %@\n", klass];
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+            [dict setObject:klass forKey:@"unknown object (yet)"];
+            [objects setObject:dict forKey:key];
         }
         else
         {

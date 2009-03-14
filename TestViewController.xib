@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="14"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -156,16 +156,16 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<int key="IBUITag">12</int>
 					</object>
-					<object class="IBUITableViewCell" id="152538522">
+					<object class="IBUITableViewCell" id="189682818">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIView" id="61252461">
-								<reference key="NSNextResponder" ref="152538522"/>
+							<object class="IBUIView" id="872270536">
+								<reference key="NSNextResponder" ref="189682818"/>
 								<int key="NSvFlags">256</int>
 								<string key="NSFrameSize">{210, 43}</string>
-								<reference key="NSSuperview" ref="152538522"/>
+								<reference key="NSSuperview" ref="189682818"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MCAwAA</bytes>
@@ -187,7 +187,7 @@
 						<int key="IBUISeparatorStyle">1</int>
 						<int key="IBUIEditingStyle">2</int>
 						<int key="IBUIAccessoryType">2</int>
-						<reference key="IBUIContentView" ref="61252461"/>
+						<reference key="IBUIContentView" ref="872270536"/>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -244,7 +244,7 @@
 							<reference ref="180749592"/>
 							<reference ref="921225608"/>
 							<reference ref="638669474"/>
-							<reference ref="152538522"/>
+							<reference ref="189682818"/>
 							<reference ref="186562161"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
@@ -281,7 +281,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
-						<reference key="object" ref="152538522"/>
+						<reference key="object" ref="189682818"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">

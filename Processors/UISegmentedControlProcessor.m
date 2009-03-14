@@ -29,7 +29,7 @@
 - (NSString *)constructorString
 {
     NSString *items = [[input objectForKey:@"segmentTitles"] componentsJoinedByString:@"\", @\""];
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithItems:[NSArray arrayWithObjects:%@, nil]", klass, [items quotedAsCodeString]];
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithItems:[NSArray arrayWithObjects:%@, nil]]", klass, [items quotedAsCodeString]];
 }
 
 - (void)processKey:(id)item value:(id)value
@@ -42,11 +42,6 @@
     else if ([item isEqualToString:@"momentary"])
     {
         NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
-    }
-    else if ([item isEqualToString:@"numberOfSegments"])
-    {
-        NSString *stringOutput = [NSString stringWithFormat:@"%d", [value intValue]];
         [output setObject:stringOutput forKey:item];
     }
     else

@@ -72,7 +72,11 @@
     // Subclasses can override this method for their own properties.
     // In those cases, call [super processUnknownProperty:item value:value];
     // to be sure that mother classes do their work too.
-    id object = [NSString stringWithFormat:@"// unknown property: %@", value];
+
+    // Use the line below for debugging and development
+    // id object = [NSString stringWithFormat:@"// unknown property: %@", value];
+    
+    id object = nil;
     if ([item isEqualToString:@"class"])
     {
         object = klass;
@@ -123,7 +127,10 @@
     {
         object = [value autoresizingMaskString];
     }
-    [output setObject:object forKey:item];
+    if (object != nil)
+    {
+        [output setObject:object forKey:item];
+    }
 }
 
 @end

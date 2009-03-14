@@ -33,20 +33,17 @@
 
 - (void)processKey:(id)item value:(id)value
 {
-    if ([item isEqualToString:@"style"])
-    {
-        NSString *stringOutput = [value activityIndicatorViewStyleString];
-        [output setObject:stringOutput forKey:item];
-    }
-    else if ([item isEqualToString:@"hidesWhenStopped"])
+    if ([item isEqualToString:@"hidesWhenStopped"])
     {
         NSString *stringOutput = [value booleanString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"animating"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        BOOL isAnimating = [value boolValue];
+
+        NSString *stringOutput = (isAnimating) ? @"startAnimating" : @"stopAnimating";
+        [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else
     {

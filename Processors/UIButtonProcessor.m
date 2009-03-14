@@ -35,12 +35,7 @@
 
 - (void)processKey:(id)item value:(id)value
 {
-    if ([item isEqualToString:@"buttonType"])
-    {
-        NSString *stringOutput = [value buttonTypeString];
-        [output setObject:stringOutput forKey:item];
-    }
-    else if ([item isEqualToString:@"adjustsImageWhenDisabled"])
+    if ([item isEqualToString:@"adjustsImageWhenDisabled"])
     {
         NSString *stringOutput = [value booleanString];
         [output setObject:stringOutput forKey:item];

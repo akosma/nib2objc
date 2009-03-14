@@ -92,7 +92,7 @@
     else if ([item isEqualToString:@"highlightedColor"])
     {
         NSString *stringOutput = [value colorString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:stringOutput forKey:@"highlightedTextColor"];
     }
     else
     {

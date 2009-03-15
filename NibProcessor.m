@@ -19,6 +19,7 @@
 #import "UISegmentedControlProcessor.h"
 #import "UIScrollViewProcessor.h"
 #import "UITableViewProcessor.h"
+#import "UIImageViewProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -136,6 +137,7 @@
         else if ([klass isEqualToString:@"IBUISegmentedControl"]) processor = [[UISegmentedControlProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIScrollView"]) processor = [[UIScrollViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUITableView"]) processor = [[UITableViewProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUIImageView"]) processor = [[UIImageViewProcessor alloc] init];
 
         if (processor == nil)
         {

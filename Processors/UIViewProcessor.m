@@ -14,7 +14,6 @@
 
 - (NSString *)getProcessedClassName;
 - (NSString *)constructorString;
-- (NSString *)frameString;
 
 @end
 

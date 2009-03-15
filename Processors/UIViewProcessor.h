@@ -20,5 +20,6 @@
 
 - (NSDictionary *)processObject:(NSDictionary *)object;
 - (void)processKey:(id)item value:(id)value;
+- (NSString *)frameString;
 
 @end

@@ -585,4 +585,42 @@
     return value;
 }
 
+- (NSString *)tableViewStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITableViewStylePlain";
+            break;
+            
+        case 1:
+            value = @"UITableViewStyleGrouped";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)tableViewCellSeparatorStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITableViewCellSeparatorStyleNone";
+            break;
+            
+        case 1:
+            value = @"UITableViewCellSeparatorStyleSingleLine";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

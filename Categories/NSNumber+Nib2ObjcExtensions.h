@@ -30,5 +30,7 @@
 - (NSString *)buttonTypeString;
 - (NSString *)segmentedControlStyleString;
 - (NSString *)scrollViewIndicatorStyleString;
+- (NSString *)tableViewStyleString;
+- (NSString *)tableViewCellSeparatorStyleString;
 
 @end

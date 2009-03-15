@@ -21,6 +21,7 @@
 #import "UITableViewProcessor.h"
 #import "UIImageViewProcessor.h"
 #import "UITextViewProcessor.h"
+#import "UIPickerViewProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -140,6 +141,7 @@
         else if ([klass isEqualToString:@"IBUITableView"]) processor = [[UITableViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIImageView"]) processor = [[UIImageViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUITextView"]) processor = [[UITextViewProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUIPickerView"]) processor = [[UIPickerViewProcessor alloc] init];
 
         if (processor == nil)
         {

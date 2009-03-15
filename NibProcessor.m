@@ -20,6 +20,7 @@
 #import "UIScrollViewProcessor.h"
 #import "UITableViewProcessor.h"
 #import "UIImageViewProcessor.h"
+#import "UITextViewProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -138,6 +139,7 @@
         else if ([klass isEqualToString:@"IBUIScrollView"]) processor = [[UIScrollViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUITableView"]) processor = [[UITableViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIImageView"]) processor = [[UIImageViewProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUITextView"]) processor = [[UITextViewProcessor alloc] init];
 
         if (processor == nil)
         {

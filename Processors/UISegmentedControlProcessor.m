@@ -12,24 +12,20 @@
 
 @implementation UISegmentedControlProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UISegmentedControl";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
 }
 
+- (NSString *)getProcessedClassName
+{
+    return @"UISegmentedControl";
+}
+
 - (NSString *)constructorString
 {
-    NSString *items = [[input objectForKey:@"segmentTitles"] componentsJoinedByString:@"\", @\""];
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithItems:[NSArray arrayWithObjects:%@, nil]]", klass, [items quotedAsCodeString]];
+    NSString *items = [[self.input objectForKey:@"segmentTitles"] componentsJoinedByString:@"\", @\""];
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithItems:[NSArray arrayWithObjects:%@, nil]]", [self getProcessedClassName], [items quotedAsCodeString]];
 }
 
 - (void)processKey:(id)item value:(id)value

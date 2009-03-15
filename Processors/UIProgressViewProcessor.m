@@ -11,24 +11,20 @@
 
 @implementation UIProgressViewProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UIProgressView";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
 }
 
+- (NSString *)getProcessedClassName
+{
+    return @"UIProgressView";
+}
+
 - (NSString *)constructorString
 {
-    NSString *style = [[input objectForKey:@"progressViewStyle"] progressViewStyleString];
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithProgressViewStyle:%@]", klass, style];
+    NSString *style = [[self.input objectForKey:@"progressViewStyle"] progressViewStyleString];
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithProgressViewStyle:%@]", [self getProcessedClassName], style];
 }
 
 - (void)processKey:(id)item value:(id)value

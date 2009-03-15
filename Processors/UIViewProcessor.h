@@ -11,10 +11,12 @@
 @interface UIViewProcessor : NSObject 
 {
 @protected
-    NSString *klass;
-    NSDictionary *input;
     NSMutableDictionary *output;
+@private
+    NSDictionary *input;
 }
+
+@property (nonatomic, readonly) NSDictionary *input;
 
 - (NSDictionary *)processObject:(NSDictionary *)object;
 - (void)processKey:(id)item value:(id)value;

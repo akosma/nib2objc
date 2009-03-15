@@ -10,8 +10,9 @@
 #import "NSString+Nib2ObjcExtensions.h"
 #import "NSNumber+Nib2ObjcExtensions.h"
 
-@interface UIViewProcessor (Private)
+@interface UIViewProcessor (Protected)
 
+- (NSString *)getProcessedClassName;
 - (NSString *)constructorString;
 - (NSString *)frameString;
 
@@ -20,23 +21,21 @@
 
 @implementation UIViewProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UIView";
-    }
-    return self;
-}
+@synthesize input;
 
 - (void)dealloc
 {
+    [output release];
+    [input release];
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Public method
+
 - (NSDictionary *)processObject:(NSDictionary *)object
 {
-    input = object;
+    input = [object retain];
     [output release];
     output = [[NSMutableDictionary alloc] init];
     [output setObject:[self constructorString] forKey:@"constructor"];
@@ -54,6 +53,11 @@
 #pragma mark -
 #pragma mark Private methods
 
+- (NSString *)getProcessedClassName
+{
+    return @"UIView";
+}
+
 - (NSString *)frameString
 {
     NSString *rect = [NSString rectStringFromPoint:[input objectForKey:@"frameOrigin"] size:[input objectForKey:@"frameSize"]];
@@ -64,7 +68,7 @@
 {
     // Some subclasses have different constructors than the classic
     // "initWithFrame:", and as such they should override this method.
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", klass, [self frameString]];
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
 }
 
 - (void)processKey:(id)item value:(id)value
@@ -74,12 +78,12 @@
     // to be sure that mother classes do their work too.
 
     // Use the line below for debugging and development
-    // id object = [NSString stringWithFormat:@"// unknown property: %@", value];
+    id object = [NSString stringWithFormat:@"// unknown property: %@", value];
     
-    id object = nil;
+//    id object = nil;
     if ([item isEqualToString:@"class"])
     {
-        object = klass;
+        object = [self getProcessedClassName];
     }
     else if ([item isEqualToString:@"alpha"])
     {

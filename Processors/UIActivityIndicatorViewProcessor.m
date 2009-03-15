@@ -11,24 +11,20 @@
 
 @implementation UIActivityIndicatorViewProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UIActivityIndicatorView";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
 }
 
+- (NSString *)getProcessedClassName
+{
+    return @"UIActivityIndicatorView";
+}
+
 - (NSString *)constructorString
 {
-    NSString *style = [[input objectForKey:@"style"] activityIndicatorViewStyleString];
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithActivityIndicatorStyle:%@]", klass, style];
+    NSString *style = [[self.input objectForKey:@"style"] activityIndicatorViewStyleString];
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithActivityIndicatorStyle:%@]", [self getProcessedClassName], style];
 }
 
 - (void)processKey:(id)item value:(id)value

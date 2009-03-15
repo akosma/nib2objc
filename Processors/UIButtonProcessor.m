@@ -13,24 +13,20 @@
 
 @implementation UIButtonProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UIButton";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
 }
 
+- (NSString *)getProcessedClassName
+{
+    return @"UIButton";
+}
+
 - (NSString *)constructorString
 {
-    NSString *style = [[input objectForKey:@"buttonType"] buttonTypeString];
-    return [NSString stringWithFormat:@"[%@ buttonWithType:%@]", klass, style];
+    NSString *style = [[self.input objectForKey:@"buttonType"] buttonTypeString];
+    return [NSString stringWithFormat:@"[%@ buttonWithType:%@]", [self getProcessedClassName], style];
 }
 
 - (void)processKey:(id)item value:(id)value

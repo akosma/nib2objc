@@ -11,18 +11,14 @@
 
 @implementation UIPageControlProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UIPageControl";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (NSString *)getProcessedClassName
+{
+    return @"UIPageControl";
 }
 
 - (void)processKey:(id)item value:(id)value

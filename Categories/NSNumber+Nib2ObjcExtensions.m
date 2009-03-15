@@ -562,4 +562,27 @@
     return value;
 }
 
+- (NSString *)scrollViewIndicatorStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UIScrollViewIndicatorStyleDefault";
+            break;
+            
+        case 1:
+            value = @"UIScrollViewIndicatorStyleBlack";
+            break;
+            
+        case 2:
+            value = @"UIScrollViewIndicatorStyleWhite";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

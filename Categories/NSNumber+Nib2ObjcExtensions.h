@@ -29,5 +29,6 @@
 - (NSString *)activityIndicatorViewStyleString;
 - (NSString *)buttonTypeString;
 - (NSString *)segmentedControlStyleString;
+- (NSString *)scrollViewIndicatorStyleString;
 
 @end

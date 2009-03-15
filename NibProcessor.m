@@ -17,6 +17,7 @@
 #import "UIPageControlProcessor.h"
 #import "UIButtonProcessor.h"
 #import "UISegmentedControlProcessor.h"
+#import "UIScrollViewProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -132,6 +133,7 @@
         else if ([klass isEqualToString:@"IBUIPageControl"]) processor = [[UIPageControlProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIButton"]) processor = [[UIButtonProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUISegmentedControl"]) processor = [[UISegmentedControlProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUIScrollView"]) processor = [[UIScrollViewProcessor alloc] init];
 
         if (processor == nil)
         {

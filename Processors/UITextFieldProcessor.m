@@ -13,18 +13,14 @@
 
 @implementation UITextFieldProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UITextField";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (NSString *)getProcessedClassName
+{
+    return @"UITextField";
 }
 
 - (void)processKey:(id)item value:(id)value

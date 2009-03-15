@@ -11,18 +11,14 @@
 
 @implementation UISliderProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UISlider";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (NSString *)getProcessedClassName
+{
+    return @"UISlider";
 }
 
 - (void)processKey:(id)item value:(id)value

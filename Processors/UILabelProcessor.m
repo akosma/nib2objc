@@ -13,18 +13,14 @@
 
 @implementation UILabelProcessor
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        klass = @"UILabel";
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (NSString *)getProcessedClassName
+{
+    return @"UILabel";
 }
 
 - (void)processKey:(id)item value:(id)value

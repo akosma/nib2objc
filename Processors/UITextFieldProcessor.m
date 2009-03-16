@@ -67,7 +67,7 @@
     }
     else if ([item isEqualToString:@"minimumFontSize"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"textInputTraits.enablesReturnKeyAutomatically"])

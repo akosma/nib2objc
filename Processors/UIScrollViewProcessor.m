@@ -70,12 +70,12 @@
     }
     else if ([item isEqualToString:@"maximumZoomScale"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.3f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"minimumZoomScale"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.3f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"bouncesZoom"])

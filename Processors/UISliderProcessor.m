@@ -30,17 +30,17 @@
     }
     else if ([item isEqualToString:@"maxValue"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.3f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:@"maximumValue"];
     }
     else if ([item isEqualToString:@"minValue"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.3f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:@"minimumValue"];
     }
     else if ([item isEqualToString:@"value"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.3f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:@"value"];
     }
     else

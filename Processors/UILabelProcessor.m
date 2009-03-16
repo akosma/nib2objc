@@ -52,7 +52,7 @@
     }
     else if ([item isEqualToString:@"minimumFontSize"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"enabled"])
@@ -72,7 +72,7 @@
     }
     else if ([item isEqualToString:@"numberOfLines"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%d", [value intValue]];
+        NSString *stringOutput = [value intString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"shadowOffset"])

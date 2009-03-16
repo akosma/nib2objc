@@ -13,6 +13,8 @@
 
 - (NSString *)contentModeString;
 - (NSString *)booleanString;
+- (NSString *)intString;
+- (NSString *)floatString;
 - (NSString *)autoresizingMaskString;
 - (NSString *)textAlignmentString;
 - (NSString *)borderStyleString;

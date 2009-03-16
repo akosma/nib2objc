@@ -78,6 +78,16 @@
     return ([self boolValue] == 1) ? @"YES" : @"NO";
 }
 
+- (NSString *)intString
+{
+    return [NSString stringWithFormat:@"%d", [self intValue]];
+}
+
+- (NSString *)floatString
+{
+    return [NSString stringWithFormat:@"%1.3f", [self floatValue]];
+}
+
 - (NSString *)autoresizingMaskString
 {
     // From the documentation

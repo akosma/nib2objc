@@ -31,7 +31,7 @@
 {
     if ([item isEqualToString:@"progress"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%1.3f", [value floatValue]];
+        NSString *stringOutput = [value floatString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"progressViewStyle"])

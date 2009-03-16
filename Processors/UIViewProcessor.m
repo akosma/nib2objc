@@ -77,16 +77,16 @@
     // to be sure that mother classes do their work too.
 
     // Use the line below for debugging and development
-    id object = [NSString stringWithFormat:@"// unknown property: %@", value];
+//    id object = [NSString stringWithFormat:@"// unknown property: %@", value];
     
-//    id object = nil;
+    id object = nil;
     if ([item isEqualToString:@"class"])
     {
         object = [self getProcessedClassName];
     }
     else if ([item isEqualToString:@"alpha"])
     {
-        object = [NSString stringWithFormat:@"%1.1f", [value floatValue]];
+        object = [value floatString];
     }
     else if ([item isEqualToString:@"hidden"])
     {
@@ -116,7 +116,7 @@
     }
     else if ([item isEqualToString:@"tag"])
     {
-        object = [NSString stringWithFormat:@"%d", [value intValue]];
+        object = [value intString];
     }
     else if ([item isEqualToString:@"backgroundColor"])
     {

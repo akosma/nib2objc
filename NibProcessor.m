@@ -148,10 +148,10 @@
         if (processor == nil)
         {
             // Uncomment these lines to get notified about classes not yet handled by this utility
-            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-            [dict setObject:klass forKey:@"// unknown object (yet)"];
-            [objects setObject:dict forKey:key];
-            [dict release];
+//            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//            [dict setObject:klass forKey:@"// unknown object (yet)"];
+//            [objects setObject:dict forKey:key];
+//            [dict release];
         }
         else
         {

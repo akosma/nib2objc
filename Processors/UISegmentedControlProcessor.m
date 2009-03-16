@@ -37,7 +37,7 @@
     }
     else if ([item isEqualToString:@"selectedSegmentIndex"])
     {
-        NSString *stringOutput = [NSString stringWithFormat:@"%d", [value intValue]];
+        NSString *stringOutput = [value intString];
         [output setObject:stringOutput forKey:item];
     }
     else if ([item isEqualToString:@"momentary"])

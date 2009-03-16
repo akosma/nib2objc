@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class UIViewProcessor;
-
 @interface Processor : NSObject 
 {
 @protected
@@ -20,7 +18,7 @@
 
 @property (nonatomic, readonly) NSDictionary *input;
 
-+ (UIViewProcessor *)processorForClass:(NSString *)klass;
++ (Processor *)processorForClass:(NSString *)klass;
 
 - (NSDictionary *)processObject:(NSDictionary *)object;
 - (void)processKey:(id)item value:(id)value;

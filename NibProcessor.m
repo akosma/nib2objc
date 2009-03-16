@@ -8,7 +8,6 @@
 
 #import "NibProcessor.h"
 #import "Processor.h"
-#import "UIViewProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -112,7 +111,7 @@
         id object = [nibObjects objectForKey:key];
         NSString *klass = [object objectForKey:@"class"];
 
-        UIViewProcessor *processor = [Processor processorForClass:klass];
+        Processor *processor = [Processor processorForClass:klass];
 
         if (processor == nil)
         {

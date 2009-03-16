@@ -11,11 +11,11 @@
 
 @interface NSNumber (Nib2ObjcExtensions)
 
-- (NSString *)contentModeString;
 - (NSString *)booleanString;
 - (NSString *)intString;
 - (NSString *)floatString;
 - (NSString *)autoresizingMaskString;
+- (NSString *)contentModeString;
 - (NSString *)textAlignmentString;
 - (NSString *)borderStyleString;
 - (NSString *)contentHorizontalAlignmentString;

@@ -10,69 +10,6 @@
 
 @implementation NSNumber (Nib2ObjcExtensions)
 
-- (NSString *)contentModeString
-{
-    NSString *value = @"";
-    switch ([self intValue])
-    {
-        case 0:
-            value = @"UIViewContentModeScaleToFill";
-            break;
-            
-        case 1:
-            value = @"UIViewContentModeScaleAspectFit";
-            break;
-            
-        case 2:
-            value = @"UIViewContentModeScaleAspectFill";
-            break;
-            
-        case 3:
-            value = @"UIViewContentModeRedraw";
-            break;
-            
-        case 4:
-            value = @"UIViewContentModeCenter";
-            break;
-            
-        case 5:
-            value = @"UIViewContentModeTop";
-            break;
-            
-        case 6:
-            value = @"UIViewContentModeBottom";
-            break;
-            
-        case 7:
-            value = @"UIViewContentModeLeft";
-            break;
-            
-        case 8:
-            value = @"UIViewContentModeRight";
-            break;
-            
-        case 9:
-            value = @"UIViewContentModeTopLeft";
-            break;
-            
-        case 10:
-            value = @"UIViewContentModeTopRight";
-            break;
-            
-        case 11:
-            value = @"UIViewContentModeBottomLeft";
-            break;
-            
-        case 12:
-            value = @"UIViewContentModeBottomRight";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
-}
-
 - (NSString *)booleanString
 {
     return ([self boolValue] == 1) ? @"YES" : @"NO";
@@ -143,567 +80,210 @@
     return maskValue;
 }
 
+- (NSString *)contentModeString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIViewContentModeScaleToFill",
+                       @"UIViewContentModeScaleAspectFit", 
+                       @"UIViewContentModeScaleAspectFill",
+                       @"UIViewContentModeRedraw",
+                       @"UIViewContentModeCenter",
+                       @"UIViewContentModeTop",
+                       @"UIViewContentModeBottom",
+                       @"UIViewContentModeLeft",
+                       @"UIViewContentModeRight",
+                       @"UIViewContentModeTopLeft",
+                       @"UIViewContentModeTopRight",
+                       @"UIViewContentModeBottomLeft",
+                       @"UIViewContentModeBottomRight", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 - (NSString *)textAlignmentString
 {
-    NSString *value = @"";
-    switch ([self intValue])
-    {
-        case 0:
-            value = @"UITextAlignmentLeft";
-            break;
-            
-        case 1:
-            value = @"UITextAlignmentCenter";
-            break;
-            
-        case 2:
-            value = @"UITextAlignmentRight";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITextAlignmentLeft", 
+                       @"UITextAlignmentCenter", 
+                       @"UITextAlignmentRight", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)borderStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue])
-    {
-        case 0:
-            value = @"UITextBorderStyleNone";
-            break;
-            
-        case 1:
-            value = @"UITextBorderStyleLine";
-            break;
-            
-        case 2:
-            value = @"UITextBorderStyleBezel";
-            break;
-            
-        case 3:
-            value = @"UITextBorderStyleRoundedRect";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITextBorderStyleNone",
+                       @"UITextBorderStyleLine",
+                       @"UITextBorderStyleBezel",
+                       @"UITextBorderStyleRoundedRect", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)contentHorizontalAlignmentString
 {
-    NSString *value = @"";
-    switch ([self intValue])
-    {
-        case 0:
-            value = @"UIControlContentHorizontalAlignmentCenter";
-            break;
-            
-        case 1:
-            value = @"UIControlContentHorizontalAlignmentLeft";
-            break;
-            
-        case 2:
-            value = @"UIControlContentHorizontalAlignmentRight";
-            break;
-            
-        case 3:
-            value = @"UIControlContentHorizontalAlignmentFill";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIControlContentHorizontalAlignmentCenter",
+                       @"UIControlContentHorizontalAlignmentLeft",
+                       @"UIControlContentHorizontalAlignmentRight",
+                       @"UIControlContentHorizontalAlignmentFill", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)contentVerticalAlignmentString
 {
-    NSString *value = @"";
-    switch ([self intValue])
-    {
-        case 0:
-            value = @"UIControlContentVerticalAlignmentCenter";
-            break;
-            
-        case 1:
-            value = @"UIControlContentVerticalAlignmentTop";
-            break;
-            
-        case 2:
-            value = @"UIControlContentVerticalAlignmentBottom";
-            break;
-            
-        case 3:
-            value = @"UIControlContentVerticalAlignmentFill";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIControlContentVerticalAlignmentCenter",
+                       @"UIControlContentVerticalAlignmentTop",
+                       @"UIControlContentVerticalAlignmentBottom",
+                       @"UIControlContentVerticalAlignmentFill", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)keyboardAppearanceString
 {
-    NSString *value = @"";
-    switch ([self intValue])
-    {
-        case 0:
-            value = @"UIKeyboardAppearanceDefault";
-            break;
-        
-        case 1:
-            value = @"UIKeyboardAppearanceAlert";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardAppearanceDefault",
+                       @"UIKeyboardAppearanceAlert", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)returnKeyTypeString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIReturnKeyDefault";
-            break;
-
-        case 1:
-            value = @"UIReturnKeyGo";
-            break;
-            
-        case 2:
-            value = @"UIReturnKeyGoogle";
-            break;
-            
-        case 3:
-            value = @"UIReturnKeyJoin";
-            break;
-            
-        case 4:
-            value = @"UIReturnKeyNext";
-            break;
-            
-        case 5:
-            value = @"UIReturnKeyRoute";
-            break;
-            
-        case 6:
-            value = @"UIReturnKeySearch";
-            break;
-            
-        case 7:
-            value = @"UIReturnKeySend";
-            break;
-            
-        case 8:
-            value = @"UIReturnKeyYahoo";
-            break;
-            
-        case 9:
-            value = @"UIReturnKeyDone";
-            break;
-            
-        case 10:
-            value = @"UIReturnKeyEmergencyCall";
-            break;
-
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIReturnKeyDefault",
+                       @"UIReturnKeyGo",
+                       @"UIReturnKeyGoogle",
+                       @"UIReturnKeyJoin",
+                       @"UIReturnKeyNext",
+                       @"UIReturnKeyRoute",
+                       @"UIReturnKeySearch",
+                       @"UIReturnKeySend",
+                       @"UIReturnKeyYahoo",
+                       @"UIReturnKeyDone",
+                       @"UIReturnKeyEmergencyCall", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)autocapitalizationTypeString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITextAutocapitalizationTypeNone";
-            break;
-            
-        case 1:
-            value = @"UITextAutocapitalizationTypeWords";
-            break;
-            
-        case 2:
-            value = @"UITextAutocapitalizationTypeSentences";
-            break;
-            
-        case 3:
-            value = @"UITextAutocapitalizationTypeAllCharacters";
-            break;
-
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITextAutocapitalizationTypeNone",
+                       @"UITextAutocapitalizationTypeWords",
+                       @"UITextAutocapitalizationTypeSentences",
+                       @"UITextAutocapitalizationTypeAllCharacters", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)autocorrectionTypeString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITextAutocorrectionTypeDefault";
-            break;
-            
-        case 1:
-            value = @"UITextAutocorrectionTypeNo";
-            break;
-            
-        case 2:
-            value = @"UITextAutocorrectionTypeYes";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITextAutocorrectionTypeDefault",
+                       @"UITextAutocorrectionTypeNo",
+                       @"UITextAutocorrectionTypeYes", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)keyboardTypeString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIKeyboardTypeDefault";
-            break;
-            
-        case 1:
-            value = @"UIKeyboardTypeASCIICapable";
-            break;
-            
-        case 2:
-            value = @"UIKeyboardTypeNumbersAndPunctuation";
-            break;
-            
-        case 3:
-            value = @"UIKeyboardTypeURL";
-            break;
-            
-        case 4:
-            value = @"UIKeyboardTypeNumberPad";
-            break;
-            
-        case 5:
-            value = @"UIKeyboardTypePhonePad";
-            break;
-            
-        case 6:
-            value = @"UIKeyboardTypeNamePhonePad";
-            break;
-            
-        case 7:
-            value = @"UIKeyboardTypeEmailAddress";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardTypeDefault", 
+                       @"UIKeyboardTypeASCIICapable", 
+                       @"UIKeyboardTypeNumbersAndPunctuation",
+                       @"UIKeyboardTypeURL",
+                       @"UIKeyboardTypeNumberPad",
+                       @"UIKeyboardTypePhonePad",
+                       @"UIKeyboardTypeNamePhonePad",
+                       @"UIKeyboardTypeEmailAddress", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)progressViewStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIProgressViewStyleDefault";
-            break;
-            
-        case 1:
-            value = @"UIProgressViewStyleBar";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIProgressViewStyleDefault",
+                       @"UIProgressViewStyleBar", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)baselineAdjustmentString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIBaselineAdjustmentAlignBaselines";
-            break;
-            
-        case 1:
-            value = @"UIBaselineAdjustmentAlignCenters";
-            break;
-            
-        case 2:
-            value = @"UIBaselineAdjustmentNone";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIBaselineAdjustmentAlignBaselines",
+                       @"UIBaselineAdjustmentAlignCenters",
+                       @"UIBaselineAdjustmentNone", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)lineBreakModeString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UILineBreakModeWordWrap";
-            break;
-
-        case 1:
-            value = @"UILineBreakModeCharacterWrap";
-            break;
-
-        case 2:
-            value = @"UILineBreakModeClip";
-            break;
-
-        case 3:
-            value = @"UILineBreakModeHeadTruncation";
-            break;
-
-        case 4:
-            value = @"UILineBreakModeTailTruncation";
-            break;
-
-        case 5:
-            value = @"UILineBreakModeMiddleTruncation";
-            break;
-
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UILineBreakModeWordWrap",
+                       @"UILineBreakModeCharacterWrap",
+                       @"UILineBreakModeClip",
+                       @"UILineBreakModeHeadTruncation",
+                       @"UILineBreakModeTailTruncation",
+                       @"UILineBreakModeMiddleTruncation", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)activityIndicatorViewStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIActivityIndicatorViewStyleWhiteLarge";
-            break;
-            
-        case 1:
-            value = @"UIActivityIndicatorViewStyleWhite";
-            break;
-            
-        case 2:
-            value = @"UIActivityIndicatorViewStyleGray";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIActivityIndicatorViewStyleWhiteLarge",
+                       @"UIActivityIndicatorViewStyleWhite",
+                       @"UIActivityIndicatorViewStyleGray", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)buttonTypeString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIButtonTypeCustom";
-            break;
-            
-        case 1:
-            value = @"UIButtonTypeRoundedRect";
-            break;
-            
-        case 2:
-            value = @"UIButtonTypeDetailDisclosure";
-            break;
-            
-        case 3:
-            value = @"UIButtonTypeInfoLight";
-            break;
-            
-        case 4:
-            value = @"UIButtonTypeInfoDark";
-            break;
-            
-        case 5:
-            value = @"UIButtonTypeContactAdd";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIButtonTypeCustom",
+                       @"UIButtonTypeRoundedRect",
+                       @"UIButtonTypeDetailDisclosure",
+                       @"UIButtonTypeInfoLight",
+                       @"UIButtonTypeInfoDark",
+                       @"UIButtonTypeContactAdd", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)segmentedControlStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UISegmentedControlStylePlain";
-            break;
-            
-        case 1:
-            value = @"UISegmentedControlStyleBordered";
-            break;
-            
-        case 2:
-            value = @"UISegmentedControlStyleBar";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UISegmentedControlStylePlain", 
+                       @"UISegmentedControlStyleBordered",
+                       @"UISegmentedControlStyleBar", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)scrollViewIndicatorStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UIScrollViewIndicatorStyleDefault";
-            break;
-            
-        case 1:
-            value = @"UIScrollViewIndicatorStyleBlack";
-            break;
-            
-        case 2:
-            value = @"UIScrollViewIndicatorStyleWhite";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UIScrollViewIndicatorStyleDefault",
+                       @"UIScrollViewIndicatorStyleBlack",
+                       @"UIScrollViewIndicatorStyleWhite", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)tableViewStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITableViewStylePlain";
-            break;
-            
-        case 1:
-            value = @"UITableViewStyleGrouped";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITableViewStylePlain",
+                       @"UITableViewStyleGrouped", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)tableViewCellSeparatorStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITableViewCellSeparatorStyleNone";
-            break;
-            
-        case 1:
-            value = @"UITableViewCellSeparatorStyleSingleLine";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSeparatorStyleNone", 
+                       @"UITableViewCellSeparatorStyleSingleLine", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)tableViewCellAccessoryString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITableViewCellAccessoryNone";
-            break;
-
-        case 1:
-            value = @"UITableViewCellAccessoryDisclosureIndicator";
-            break;
-
-        case 2:
-            value = @"UITableViewCellAccessoryDetailDisclosureButton";
-            break;
-
-        case 3:
-            value = @"UITableViewCellAccessoryCheckmark";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellAccessoryNone",
+                       @"UITableViewCellAccessoryDisclosureIndicator",
+                       @"UITableViewCellAccessoryDetailDisclosureButton",
+                       @"UITableViewCellAccessoryCheckmark", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)tableViewCellEditingStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITableViewCellEditingStyleNone";
-            break;
-            
-        case 1:
-            value = @"UITableViewCellEditingStyleDelete";
-            break;
-            
-        case 2:
-            value = @"UITableViewCellEditingStyleInsert";
-            break;
-
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellEditingStyleNone",
+                       @"UITableViewCellEditingStyleDelete",
+                       @"UITableViewCellEditingStyleInsert", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 - (NSString *)tableViewCellSelectionStyleString
 {
-    NSString *value = @"";
-    switch ([self intValue]) 
-    {
-        case 0:
-            value = @"UITableViewCellSelectionStyleNone";
-            break;
-            
-        case 1:
-            value = @"UITableViewCellSelectionStyleBlue";
-            break;
-            
-        case 2:
-            value = @"UITableViewCellSelectionStyleGray";
-            break;
-            
-        default:
-            break;
-    }
-    return value;
+    NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSelectionStyleNone",
+                       @"UITableViewCellSelectionStyleBlue",
+                       @"UITableViewCellSelectionStyleGray", nil];
+    return [values objectAtIndex:[self intValue]];
 }
 
 @end

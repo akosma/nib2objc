@@ -1,6 +1,6 @@
 h1. nib2objc - NIB to Objective-C converter
 
-This utility converts NIB files (or XIB ones) into Objective-C code, including all the properties of each instance, the documented constructor calls, and also the view hierarchy. It uses the output of the ibtool utility bundled with the Xcode tools. For more information about ibtool, please check "the ibtool man page":.
+This utility converts NIB files (or XIB ones) into Objective-C code, including all the properties of each instance, the documented constructor calls, and also the view hierarchy. It uses the output of the ibtool utility bundled with the Xcode tools. For more information about ibtool, please check "the ibtool man page":http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man1/ibtool.1.html.
 
 h2. Usage
 
@@ -10,7 +10,7 @@ Compile and put the utility in your path, and then call
 nib2objc yourfile.xib > code.m
 </pre>
 
-This will generate a file with the output of the conversion, similar to this:
+This will generate a file with the output of the conversion, similar to this (check out the included sample.m file for the full version):
 
 <pre>
     // ...
@@ -21,29 +21,12 @@ This will generate a file with the output of the conversion, similar to this:
     view9.font = [UIFont fontWithName:@"Helvetica-Bold" size:15.000];
     view9.enabled = YES;
     view9.clearsContextBeforeDrawing = NO;
-    view9.hidden = NO;
-    view9.multipleTouchEnabled = NO;
-    view9.reversesTitleShadowWhenHighlighted = NO;
-    view9.alpha = 1.000;
-    view9.adjustsImageWhenHighlighted = YES;
-    view9.adjustsImageWhenDisabled = YES;
-    view9.showsTouchWhenHighlighted = NO;
+    // ...
     view9.contentMode = UIViewContentModeScaleToFill;
     view9.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     view9.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    view9.highlighted = NO;
-    view9.opaque = NO;
-    view9.clipsToBounds = NO;
-    view9.selected = NO;
-    view9.userInteractionEnabled = YES;
-    [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateHighlighted];
-    [view9 setTitleColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateSelected];
-    [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateSelected];
-    [view9 setTitle:@"Test" forState:UIControlStateHighlighted];
-    [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateDisabled];
-    [view9 setTitleColor:[UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1.000] forState:UIControlStateHighlighted];
+    // ...
     [view9 setTitle:@"Test" forState:UIControlStateNormal];
-    [view9 setTitle:@"Test" forState:UIControlStateDisabled];
     [view9 setTitleColor:[UIColor colorWithRed:0.196 green:0.310 blue:0.522 alpha:1.000] forState:UIControlStateNormal];
     [view9 setTitle:@"Test" forState:UIControlStateSelected];
     [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateNormal];
@@ -56,7 +39,7 @@ This will generate a file with the output of the conversion, similar to this:
     // ...
 </pre>
 
-The generated code takes into account the real class hierarchies in the UIKit, and it outputs the correct constructors and/or method calls for each object, depending on its class.
+The generated code takes into account the real class hierarchies in the UIKit, and it outputs the correct constructors and/or method calls for each object, depending on its class, including the enum values corresponding to the properties using them.
 
 h2. Limitations
 

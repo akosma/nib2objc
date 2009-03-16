@@ -31,13 +31,11 @@
 {
     if ([item isEqualToString:@"progress"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value floatString] forKey:item];
     }
     else if ([item isEqualToString:@"progressViewStyle"])
     {
-        NSString *stringOutput = [value progressViewStyleString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value progressViewStyleString] forKey:item];
     }
     else
     {

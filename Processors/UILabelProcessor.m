@@ -27,68 +27,55 @@
 {
     if ([item isEqualToString:@"text"])
     {
-        NSString *stringOutput = [value quotedAsCodeString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value quotedAsCodeString] forKey:item];
     }
     else if ([item isEqualToString:@"textAlignment"])
     {
-        NSString *stringOutput = [value textAlignmentString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value textAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"textColor"])
     {
-        NSString *stringOutput = [value colorString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value colorString] forKey:item];
     }
     else if ([item isEqualToString:@"font"])
     {
-        NSString *stringOutput = [value fontString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value fontString] forKey:item];
     }
     else if ([item isEqualToString:@"adjustsFontSizeToFitWidth"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"minimumFontSize"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value floatString] forKey:item];
     }
     else if ([item isEqualToString:@"enabled"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"baselineAdjustment"])
     {
-        NSString *stringOutput = [value baselineAdjustmentString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value baselineAdjustmentString] forKey:item];
     }
     else if ([item isEqualToString:@"lineBreakMode"])
     {
-        NSString *stringOutput = [value lineBreakModeString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value lineBreakModeString] forKey:item];
     }
     else if ([item isEqualToString:@"numberOfLines"])
     {
-        NSString *stringOutput = [value intString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"shadowOffset"])
     {
-        NSString *stringOutput = [NSString sizeStringFromSize:value];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value sizeString] forKey:item];
     }
     else if ([item isEqualToString:@"shadowColor"])
     {
-        NSString *stringOutput = [value colorString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value colorString] forKey:item];
     }
     else if ([item isEqualToString:@"highlightedColor"])
     {
-        NSString *stringOutput = [value colorString];
-        [output setObject:stringOutput forKey:@"highlightedTextColor"];
+        [output setObject:[value colorString] forKey:@"highlightedTextColor"];
     }
     else
     {

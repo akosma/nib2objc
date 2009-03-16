@@ -31,8 +31,7 @@
 {
     if ([item isEqualToString:@"hidesWhenStopped"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"animating"])
     {

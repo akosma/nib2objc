@@ -32,18 +32,15 @@
 {
     if ([item isEqualToString:@"separatorStyle"])
     {
-        NSString *stringOutput = [value tableViewCellSeparatorStyleString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value tableViewCellSeparatorStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"sectionIndexMinimumDisplayRowCount"])
     {
-        NSString *stringOutput = [value intString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"allowsSelectionDuringEditing"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

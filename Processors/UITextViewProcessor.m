@@ -27,28 +27,23 @@
 {
     if ([item isEqualToString:@"text"])
     {
-        NSString *stringOutput = [value quotedAsCodeString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value quotedAsCodeString] forKey:item];
     }
     else if ([item isEqualToString:@"textAlignment"])
     {
-        NSString *stringOutput = [value textAlignmentString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value textAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"font"])
     {
-        NSString *stringOutput = [value fontString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value fontString] forKey:item];
     }
     else if ([item isEqualToString:@"textColor"])
     {
-        NSString *stringOutput = [value colorString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value colorString] forKey:item];
     }
     else if ([item isEqualToString:@"editable"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

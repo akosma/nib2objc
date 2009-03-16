@@ -27,83 +27,67 @@
 {
     if ([item isEqualToString:@"text"])
     {
-        NSString *stringOutput = [value quotedAsCodeString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value quotedAsCodeString] forKey:item];
     }
     else if ([item isEqualToString:@"placeholder"])
     {
-        NSString *stringOutput = [value quotedAsCodeString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value quotedAsCodeString] forKey:item];
     }
     else if ([item isEqualToString:@"textAlignment"])
     {
-        NSString *stringOutput = [value textAlignmentString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value textAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"textColor"])
     {
-        NSString *stringOutput = [value colorString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value colorString] forKey:item];
     }
     else if ([item isEqualToString:@"font"])
     {
-        NSString *stringOutput = [value fontString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value fontString] forKey:item];
     }
     else if ([item isEqualToString:@"borderStyle"])
     {
-        NSString *stringOutput = [value borderStyleString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value borderStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"clearsOnBeginEditing"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"adjustsFontSizeToFitWidth"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"minimumFontSize"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value floatString] forKey:item];
     }
     else if ([item isEqualToString:@"textInputTraits.enablesReturnKeyAutomatically"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:@"enablesReturnKeyAutomatically"];
+        [output setObject:[value booleanString] forKey:@"enablesReturnKeyAutomatically"];
     }
     else if ([item isEqualToString:@"textInputTraits.secureTextEntry"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:@"secureTextEntry"];
+        [output setObject:[value booleanString] forKey:@"secureTextEntry"];
     }
     else if ([item isEqualToString:@"textInputTraits.keyboardAppearance"])
     {
-        NSString *stringOutput = [value keyboardAppearanceString];
-        [output setObject:stringOutput forKey:@"keyboardAppearance"];
+        [output setObject:[value keyboardAppearanceString] forKey:@"keyboardAppearance"];
     }
     else if ([item isEqualToString:@"textInputTraits.returnKeyType"])
     {
-        NSString *stringOutput = [value returnKeyTypeString];
-        [output setObject:stringOutput forKey:@"returnKeyType"];
+        [output setObject:[value returnKeyTypeString] forKey:@"returnKeyType"];
     }
     else if ([item isEqualToString:@"textInputTraits.autocapitalizationType"])
     {
-        NSString *stringOutput = [value autocapitalizationTypeString];
-        [output setObject:stringOutput forKey:@"autocapitalizationType"];
+        [output setObject:[value autocapitalizationTypeString] forKey:@"autocapitalizationType"];
     }
     else if ([item isEqualToString:@"textInputTraits.autocorrectionType"])
     {
-        NSString *stringOutput = [value autocorrectionTypeString];
-        [output setObject:stringOutput forKey:@"autocorrectionType"];
+        [output setObject:[value autocorrectionTypeString] forKey:@"autocorrectionType"];
     }
     else if ([item isEqualToString:@"textInputTraits.keyboardType"])
     {
-        NSString *stringOutput = [value keyboardTypeString];
-        [output setObject:stringOutput forKey:@"keyboardType"];
+        [output setObject:[value keyboardTypeString] forKey:@"keyboardType"];
     }
     else
     {

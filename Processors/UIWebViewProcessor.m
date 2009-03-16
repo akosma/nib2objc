@@ -25,13 +25,11 @@
 {
     if ([item isEqualToString:@"scalesPageToFit"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"detectsPhoneNumbers"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

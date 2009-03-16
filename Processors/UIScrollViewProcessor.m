@@ -25,73 +25,59 @@
 {
     if ([item isEqualToString:@"indicatorStyle"])
     {
-        NSString *stringOutput = [value scrollViewIndicatorStyleString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value scrollViewIndicatorStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"showsHorizontalScrollIndicator"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"showsVerticalScrollIndicator"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"scrollEnabled"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"pagingEnabled"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"directionalLockEnabled"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"bounces"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"alwaysBounceHorizontal"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"alwaysBounceVertical"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"maximumZoomScale"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value floatString] forKey:item];
     }
     else if ([item isEqualToString:@"minimumZoomScale"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value floatString] forKey:item];
     }
     else if ([item isEqualToString:@"bouncesZoom"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"delaysContentTouches"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"canCancelContentTouches"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

@@ -17,9 +17,9 @@
     return [NSString stringWithFormat:@"CGRectMake(%1.1f, %1.1f, %1.1f, %1.1f)", point.x, point.y, size.width, size.height];
 }
 
-+ (NSString *)sizeStringFromSize:(NSString *)sizeString
+- (NSString *)sizeString
 {
-    NSSize size = NSSizeFromString(sizeString);
+    NSSize size = NSSizeFromString(self);
     return [NSString stringWithFormat:@"CGSizeMake(%1.1f, %1.1f)", size.width, size.height];
 }
 

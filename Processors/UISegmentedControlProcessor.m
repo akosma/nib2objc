@@ -32,18 +32,15 @@
 {
     if ([item isEqualToString:@"segmentControlStyle"])
     {
-        NSString *stringOutput = [value segmentedControlStyleString];
-        [output setObject:stringOutput forKey:@"segmentedControlStyle"];
+        [output setObject:[value segmentedControlStyleString] forKey:@"segmentedControlStyle"];
     }
     else if ([item isEqualToString:@"selectedSegmentIndex"])
     {
-        NSString *stringOutput = [value intString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"momentary"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

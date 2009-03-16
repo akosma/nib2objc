@@ -25,23 +25,19 @@
 {
     if ([item isEqualToString:@"continuous"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"maxValue"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:@"maximumValue"];
+        [output setObject:[value floatString] forKey:@"maximumValue"];
     }
     else if ([item isEqualToString:@"minValue"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:@"minimumValue"];
+        [output setObject:[value floatString] forKey:@"minimumValue"];
     }
     else if ([item isEqualToString:@"value"])
     {
-        NSString *stringOutput = [value floatString];
-        [output setObject:stringOutput forKey:@"value"];
+        [output setObject:[value floatString] forKey:@"value"];
     }
     else
     {

@@ -21,28 +21,23 @@
 {
     if ([item isEqualToString:@"contentHorizontalAlignment"])
     {
-        NSString *stringOutput = [value contentHorizontalAlignmentString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value contentHorizontalAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"contentVerticalAlignment"])
     {
-        NSString *stringOutput = [value contentVerticalAlignmentString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value contentVerticalAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"enabled"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"highlighted"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"selected"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

@@ -33,38 +33,31 @@
 {
     if ([item isEqualToString:@"adjustsImageWhenDisabled"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"adjustsImageWhenHighlighted"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"font"])
     {
-        NSString *stringOutput = [value fontString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value fontString] forKey:item];
     }
     else if ([item isEqualToString:@"lineBreakMode"])
     {
-        NSString *stringOutput = [value lineBreakModeString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value lineBreakModeString] forKey:item];
     }
     else if ([item isEqualToString:@"reversesTitleShadowWhenHighlighted"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"showsTouchWhenHighlighted"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"titleShadowOffset"])
     {
-        NSString *stringOutput = [NSString sizeStringFromSize:value];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value sizeString] forKey:item];
     }
 
     // Creation of methods for the titles, instead of properties

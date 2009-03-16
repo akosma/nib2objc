@@ -25,23 +25,19 @@
 {
     if ([item isEqualToString:@"currentPage"])
     {
-        NSString *stringOutput = [value intString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"numberOfPages"])
     {
-        NSString *stringOutput = [value intString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"hidesForSinglePage"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"defersCurrentPageDisplay"])
     {
-        NSString *stringOutput = [value booleanString];
-        [output setObject:stringOutput forKey:item];
+        [output setObject:[value booleanString] forKey:item];
     }
     else
     {

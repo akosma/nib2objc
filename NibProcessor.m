@@ -125,7 +125,6 @@
         {
             NSDictionary *dict = [processor processObject:object];
             [objects setObject:dict forKey:key];
-            [processor release];
         }
     }
     

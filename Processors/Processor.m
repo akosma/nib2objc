@@ -62,7 +62,7 @@
     else if ([klass isEqualToString:@"IBUIWebView"]) processor = [[UIWebViewProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUITableViewCell"]) processor = [[UITableViewCellProcessor alloc] init];
     
-    return processor;
+    return [processor autorelease];
 }
 
 - (void)dealloc

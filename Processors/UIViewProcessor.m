@@ -10,43 +10,11 @@
 #import "NSString+Nib2ObjcExtensions.h"
 #import "NSNumber+Nib2ObjcExtensions.h"
 
-@interface UIViewProcessor (Protected)
-
-- (NSString *)getProcessedClassName;
-- (NSString *)constructorString;
-
-@end
-
-
 @implementation UIViewProcessor
-
-@synthesize input;
 
 - (void)dealloc
 {
-    [output release];
-    [input release];
     [super dealloc];
-}
-
-#pragma mark -
-#pragma mark Public method
-
-- (NSDictionary *)processObject:(NSDictionary *)object
-{
-    input = [object retain];
-    [output release];
-    output = [[NSMutableDictionary alloc] init];
-    [output setObject:[self constructorString] forKey:@"constructor"];
-    [output setObject:[self frameString] forKey:@"frame"];
-    
-    for (id item in input)
-    {
-        id value = [input objectForKey:item];
-        [self processKey:item value:value];
-    }
-    
-    return output;
 }
 
 #pragma mark -
@@ -59,7 +27,7 @@
 
 - (NSString *)frameString
 {
-    NSString *rect = [NSString rectStringFromPoint:[input objectForKey:@"frameOrigin"] size:[input objectForKey:@"frameSize"]];
+    NSString *rect = [NSString rectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
     return rect;
 }
 

@@ -6,20 +6,8 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "Processor.h"
 
-@interface UIViewProcessor : NSObject 
-{
-@protected
-    NSMutableDictionary *output;
-@private
-    NSDictionary *input;
-}
-
-@property (nonatomic, readonly) NSDictionary *input;
-
-- (NSDictionary *)processObject:(NSDictionary *)object;
-- (void)processKey:(id)item value:(id)value;
-- (NSString *)frameString;
+@interface UIViewProcessor : Processor 
 
 @end

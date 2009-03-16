@@ -177,8 +177,9 @@
         [output appendFormat:@"%@ *view%@ = %@;\n", klass, identifier, constructor];
         [output appendFormat:@"view%@.frame = %@;\n", identifier, frame];
         
-        // Then, output the properties only
-        for (NSString *key in object)
+        // Then, output the properties only, ordered alphabetically
+        NSArray *orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        for (NSString *key in orderedKeys)
         {
             id value = [object objectForKey:key];
             if (![key hasPrefix:@"__method__"] && ![key isEqualToString:@"frame"] 
@@ -188,8 +189,9 @@
             }
         }
 
-        // Finally, output the method calls
-        for (NSString *key in object)
+        // Finally, output the method calls, ordered alphabetically
+        orderedKeys = [object keysSortedByValueUsingSelector:@selector(caseInsensitiveCompare:)];
+        for (NSString *key in orderedKeys)
         {
             id value = [object objectForKey:key];
             if ([key hasPrefix:@"__method__"])

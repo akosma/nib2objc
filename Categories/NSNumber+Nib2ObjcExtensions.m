@@ -633,4 +633,77 @@
     return value;
 }
 
+- (NSString *)tableViewCellAccessoryString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITableViewCellAccessoryNone";
+            break;
+
+        case 1:
+            value = @"UITableViewCellAccessoryDisclosureIndicator";
+            break;
+
+        case 2:
+            value = @"UITableViewCellAccessoryDetailDisclosureButton";
+            break;
+
+        case 3:
+            value = @"UITableViewCellAccessoryCheckmark";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)tableViewCellEditingStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITableViewCellEditingStyleNone";
+            break;
+            
+        case 1:
+            value = @"UITableViewCellEditingStyleDelete";
+            break;
+            
+        case 2:
+            value = @"UITableViewCellEditingStyleInsert";
+            break;
+
+        default:
+            break;
+    }
+    return value;
+}
+
+- (NSString *)tableViewCellSelectionStyleString
+{
+    NSString *value = @"";
+    switch ([self intValue]) 
+    {
+        case 0:
+            value = @"UITableViewCellSelectionStyleNone";
+            break;
+            
+        case 1:
+            value = @"UITableViewCellSelectionStyleBlue";
+            break;
+            
+        case 2:
+            value = @"UITableViewCellSelectionStyleGray";
+            break;
+            
+        default:
+            break;
+    }
+    return value;
+}
+
 @end

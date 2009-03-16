@@ -34,5 +34,8 @@
 - (NSString *)scrollViewIndicatorStyleString;
 - (NSString *)tableViewStyleString;
 - (NSString *)tableViewCellSeparatorStyleString;
+- (NSString *)tableViewCellAccessoryString;
+- (NSString *)tableViewCellEditingStyleString;
+- (NSString *)tableViewCellSelectionStyleString;
 
 @end

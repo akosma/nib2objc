@@ -23,6 +23,7 @@
 #import "UITextViewProcessor.h"
 #import "UIPickerViewProcessor.h"
 #import "UIWebViewProcessor.h"
+#import "UITableViewCellProcessor.h"
 
 @interface NibProcessor (Private)
 
@@ -144,6 +145,7 @@
         else if ([klass isEqualToString:@"IBUITextView"]) processor = [[UITextViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIPickerView"]) processor = [[UIPickerViewProcessor alloc] init];
         else if ([klass isEqualToString:@"IBUIWebView"]) processor = [[UIWebViewProcessor alloc] init];
+        else if ([klass isEqualToString:@"IBUITableViewCell"]) processor = [[UITableViewCellProcessor alloc] init];
 
         if (processor == nil)
         {

@@ -20,6 +20,7 @@
 		3A0517EF0F6BFF510049FCB8 /* UIPageControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517EE0F6BFF510049FCB8 /* UIPageControlProcessor.m */; };
 		3A0517FD0F6C00590049FCB8 /* UIButtonProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0517FC0F6C00590049FCB8 /* UIButtonProcessor.m */; };
 		3A0518430F6C0B380049FCB8 /* UISegmentedControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0518420F6C0B380049FCB8 /* UISegmentedControlProcessor.m */; };
+		3A8897CB0F6E7C4D00A537A3 /* UITableViewCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8897CA0F6E7C4D00A537A3 /* UITableViewCellProcessor.m */; };
 		3A927CC50F6D55BD00C7C3B1 /* UITableViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A927CC40F6D55BD00C7C3B1 /* UITableViewProcessor.m */; };
 		3A927CF20F6D5BA700C7C3B1 /* UIImageViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A927CF10F6D5BA700C7C3B1 /* UIImageViewProcessor.m */; };
 		3A927CFB0F6D5DF100C7C3B1 /* UITextViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A927CFA0F6D5DF100C7C3B1 /* UITextViewProcessor.m */; };
@@ -74,6 +75,8 @@
 		3A0517FC0F6C00590049FCB8 /* UIButtonProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonProcessor.m; sourceTree = "<group>"; };
 		3A0518410F6C0B380049FCB8 /* UISegmentedControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISegmentedControlProcessor.h; sourceTree = "<group>"; };
 		3A0518420F6C0B380049FCB8 /* UISegmentedControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISegmentedControlProcessor.m; sourceTree = "<group>"; };
+		3A8897C90F6E7C4D00A537A3 /* UITableViewCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellProcessor.h; sourceTree = "<group>"; };
+		3A8897CA0F6E7C4D00A537A3 /* UITableViewCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellProcessor.m; sourceTree = "<group>"; };
 		3A927CC30F6D55BD00C7C3B1 /* UITableViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewProcessor.h; sourceTree = "<group>"; };
 		3A927CC40F6D55BD00C7C3B1 /* UITableViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewProcessor.m; sourceTree = "<group>"; };
 		3A927CF00F6D5BA700C7C3B1 /* UIImageViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewProcessor.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				3A927D1E0F6D60F000C7C3B1 /* UIPickerViewProcessor.m */,
 				3A927D2B0F6D61E200C7C3B1 /* UIWebViewProcessor.h */,
 				3A927D2C0F6D61E200C7C3B1 /* UIWebViewProcessor.m */,
+				3A8897C90F6E7C4D00A537A3 /* UITableViewCellProcessor.h */,
+				3A8897CA0F6E7C4D00A537A3 /* UITableViewCellProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				3A927CFB0F6D5DF100C7C3B1 /* UITextViewProcessor.m in Sources */,
 				3A927D1F0F6D60F000C7C3B1 /* UIPickerViewProcessor.m in Sources */,
 				3A927D2D0F6D61E200C7C3B1 /* UIWebViewProcessor.m in Sources */,
+				3A8897CB0F6E7C4D00A537A3 /* UITableViewCellProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

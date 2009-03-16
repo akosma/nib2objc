@@ -1,0 +1,18 @@
+h1. nib2objc - NIB to Objective-C converter
+
+This utility converts NIB files (or XIB ones) into Objective-C code, including all the properties of each instance, the documented constructor calls, and also the view hierarchy. It uses the output of the nibtool utility bundled with the Xcode tools. For more information about nibtool, please check "this blog entry":http://www.red-sweater.com/blog/137/pain-in-the-nib.
+
+h2. Usage
+
+Compile and put the utility in your path, and then call
+
+<pre>
+nib2objc yourfile.xib > code.m
+</pre>
+
+This will generate a file with the output of the conversion.
+
+h2. Limitations
+
+* For the moment this utility only works for UIKit views (iPhone), but it should be easy to extend to those of the AppKit too.
+* It cannot output the values of UIImage properties, because nibtool does not support this.

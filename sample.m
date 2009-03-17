@@ -14,6 +14,20 @@ view39.scalesPageToFit = YES;
 view39.tag = 0;
 view39.userInteractionEnabled = YES;
 
+UIView *view23 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
+view23.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
+view23.alpha = 1.000;
+view23.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+view23.backgroundColor = [UIColor colorWithWhite:1.000 alpha:1.000];
+view23.clearsContextBeforeDrawing = NO;
+view23.clipsToBounds = NO;
+view23.contentMode = UIViewContentModeScaleToFill;
+view23.hidden = NO;
+view23.multipleTouchEnabled = NO;
+view23.opaque = YES;
+view23.tag = 0;
+view23.userInteractionEnabled = YES;
+
 UIView *view35 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
 view35.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
 view35.alpha = 1.000;
@@ -404,6 +418,41 @@ view19.selected = NO;
 view19.tag = 0;
 view19.userInteractionEnabled = YES;
 
+NSDate *dateFromString(NSString *input)
+{
+    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+    [formatter setDateStyle:NSDateFormatterFullStyle];
+    [formatter setTimeStyle:NSDateFormatterFullStyle];
+    NSDate *date = [formatter dateFromString:input];
+    return date;
+}
+
+UIDatePicker *view38 = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, 244.0, 320.0, 216.0)];
+view38.frame = CGRectMake(0.0, 244.0, 320.0, 216.0);
+view38.alpha = 1.000;
+view38.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+view38.clearsContextBeforeDrawing = YES;
+view38.clipsToBounds = YES;
+view38.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+view38.contentMode = UIViewContentModeScaleToFill;
+view38.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+view38.countDownDuration = 0;
+view38.date = dateFromString(@"Monday, October 27, 2008 2:00:00 AM GMT+01:00");
+view38.datePickerMode = UIDatePickerModeDateAndTime;
+view38.enabled = YES;
+view38.hidden = NO;
+view38.highlighted = NO;
+view38.locale = nil;
+view38.maximumDate = dateFromString(@"Monday, January 1, 4001 1:00:00 AM GMT+01:00");
+view38.minimumDate = dateFromString(@"Saturday, January 1, 0001 1:00:00 AM GMT+01:00");
+view38.minuteInterval = 5;
+view38.multipleTouchEnabled = YES;
+view38.opaque = NO;
+view38.selected = NO;
+view38.tag = 0;
+view38.timeZone = nil;
+view38.userInteractionEnabled = YES;
+
 UIImageView *view27 = [[UIImageView alloc] initWithFrame:CGRectMake(68.0, 148.0, 240.0, 128.0)];
 view27.frame = CGRectMake(68.0, 148.0, 240.0, 128.0);
 view27.alpha = 1.000;
@@ -432,20 +481,6 @@ view11.progress = 0.500;
 view11.progressViewStyle = UIProgressViewStyleDefault;
 view11.tag = 0;
 view11.userInteractionEnabled = YES;
-
-UIView *view23 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
-view23.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
-view23.alpha = 1.000;
-view23.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-view23.backgroundColor = [UIColor colorWithWhite:1.000 alpha:1.000];
-view23.clearsContextBeforeDrawing = NO;
-view23.clipsToBounds = NO;
-view23.contentMode = UIViewContentModeScaleToFill;
-view23.hidden = NO;
-view23.multipleTouchEnabled = NO;
-view23.opaque = YES;
-view23.tag = 0;
-view23.userInteractionEnabled = YES;
 
 UIButton *view9 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 view9.frame = CGRectMake(167.0, 65.0, 72.0, 37.0);

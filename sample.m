@@ -47,6 +47,11 @@ view35.opaque = YES;
 view35.tag = 0;
 view35.userInteractionEnabled = YES;
 
+UINavigationItem *view55 = [[UINavigationItem alloc] initWithTitle:@"Title"];
+view55.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view55.prompt = @"prompt";
+view55.title = @"Title";
+
 UITextField *view8 = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 20.0, 97.0, 31.0)];
 view8.frame = CGRectMake(20.0, 20.0, 97.0, 31.0);
 view8.adjustsFontSizeToFitWidth = YES;
@@ -299,8 +304,8 @@ view27.opaque = NO;
 view27.tag = 0;
 view27.userInteractionEnabled = NO;
 
-UINavigationBar *view41 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 44.0)];
-view41.frame = CGRectMake(0.0, 0.0, 320.0, 44.0);
+UINavigationBar *view41 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 74.0)];
+view41.frame = CGRectMake(0.0, 0.0, 320.0, 74.0);
 view41.alpha = 1.000;
 view41.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
 view41.barStyle = UIBarStyleDefault;
@@ -468,20 +473,6 @@ view14.opaque = YES;
 view14.tag = 12;
 view14.userInteractionEnabled = YES;
 
-UIView *view23 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
-view23.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
-view23.alpha = 1.000;
-view23.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-view23.backgroundColor = [UIColor colorWithWhite:1.000 alpha:1.000];
-view23.clearsContextBeforeDrawing = NO;
-view23.clipsToBounds = NO;
-view23.contentMode = UIViewContentModeScaleToFill;
-view23.hidden = NO;
-view23.multipleTouchEnabled = NO;
-view23.opaque = YES;
-view23.tag = 0;
-view23.userInteractionEnabled = YES;
-
 UISwitch *view13 = [[UISwitch alloc] initWithFrame:CGRectMake(30.0, 165.0, 94.0, 27.0)];
 view13.frame = CGRectMake(30.0, 165.0, 94.0, 27.0);
 view13.alpha = 1.000;
@@ -515,6 +506,20 @@ view11.progress = 0.500;
 view11.progressViewStyle = UIProgressViewStyleDefault;
 view11.tag = 0;
 view11.userInteractionEnabled = YES;
+
+UIView *view23 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
+view23.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
+view23.alpha = 1.000;
+view23.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+view23.backgroundColor = [UIColor colorWithWhite:1.000 alpha:1.000];
+view23.clearsContextBeforeDrawing = NO;
+view23.clipsToBounds = NO;
+view23.contentMode = UIViewContentModeScaleToFill;
+view23.hidden = NO;
+view23.multipleTouchEnabled = NO;
+view23.opaque = YES;
+view23.tag = 0;
+view23.userInteractionEnabled = YES;
 
 UIWebView *view39 = [[UIWebView alloc] initWithFrame:CGRectMake(20.0, 26.0, 240.0, 128.0)];
 view39.frame = CGRectMake(20.0, 26.0, 240.0, 128.0);
@@ -554,7 +559,6 @@ view39.userInteractionEnabled = YES;
 [view55 addSubview:view56];
 [view41 addSubview:view55];
 [view40 addSubview:view41];
-[view40 addSubview:view43];
 [view50 addSubview:view51];
 [view50 addSubview:view52];
 [view50 addSubview:view53];
@@ -563,3 +567,4 @@ view39.userInteractionEnabled = YES;
 [view45 addSubview:view48];
 [view45 addSubview:view49];
 [view40 addSubview:view45];
+[view40 addSubview:view43];

@@ -303,4 +303,38 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)barButtonItemStyleString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIBarButtonItemStylePlain",
+                       @"UIBarButtonItemStyleBordered",
+                       @"UIBarButtonItemStyleDone", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
+- (NSString *)barButtonSystemItemString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIBarButtonSystemItemDone",
+                       @"UIBarButtonSystemItemCancel",
+                       @"UIBarButtonSystemItemEdit",
+                       @"UIBarButtonSystemItemSave",
+                       @"UIBarButtonSystemItemAdd",
+                       @"UIBarButtonSystemItemFlexibleSpace",
+                       @"UIBarButtonSystemItemFixedSpace",
+                       @"UIBarButtonSystemItemCompose",
+                       @"UIBarButtonSystemItemReply",
+                       @"UIBarButtonSystemItemAction",
+                       @"UIBarButtonSystemItemOrganize",
+                       @"UIBarButtonSystemItemBookmarks",
+                       @"UIBarButtonSystemItemSearch",
+                       @"UIBarButtonSystemItemRefresh",
+                       @"UIBarButtonSystemItemStop",
+                       @"UIBarButtonSystemItemCamera",
+                       @"UIBarButtonSystemItemTrash",
+                       @"UIBarButtonSystemItemPlay",
+                       @"UIBarButtonSystemItemPause",
+                       @"UIBarButtonSystemItemRewind",
+                       @"UIBarButtonSystemItemFastForward", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

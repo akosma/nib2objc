@@ -39,5 +39,7 @@
 - (NSString *)tableViewCellSelectionStyleString;
 - (NSString *)datePickerModeString;
 - (NSString *)barStyleString;
+- (NSString *)barButtonItemStyleString;
+- (NSString *)barButtonSystemItemString;
 
 @end

@@ -31,9 +31,6 @@
     // In those cases, call [super processUnknownProperty:item value:value];
     // to be sure that mother classes do their work too.
 
-    // Use the line below for debugging and development
-//    id object = [NSString stringWithFormat:@"// unknown property: %@", value];
-    
     id object = nil;
     if ([item isEqualToString:@"class"])
     {

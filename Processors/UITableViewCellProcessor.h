@@ -3,7 +3,7 @@
 //  nib2objc
 //
 //  Created by Adrian on 3/16/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Adrian Kosmaczewski 2009
 //
 
 #import "UIViewProcessor.h"

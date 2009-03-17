@@ -295,4 +295,12 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)barStyleString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIBarStyleDefault",
+                       @"UIBarStyleBlackOpaque",
+                       @"UIBarStyleBlackTranslucent", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

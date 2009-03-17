@@ -47,6 +47,14 @@ view35.opaque = YES;
 view35.tag = 0;
 view35.userInteractionEnabled = YES;
 
+UIBarButtonItem *view64 = [[UIBarButtonItem alloc] initWithTitle:@"Item" style:UIBarButtonItemStyleBordered target:nil action:nil];
+view64.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view64.enabled = YES;
+view64.style = UIBarButtonItemStyleBordered;
+view64.tag = 0;
+view64.title = @"Item";
+view64.width = 0.000;
+
 UINavigationItem *view55 = [[UINavigationItem alloc] initWithTitle:@"Title"];
 view55.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
 view55.prompt = @"prompt";
@@ -347,6 +355,27 @@ view43.text = @"wooot!";
 view43.tintColor = [UIColor colorWithRed:1.000 green:0.000 blue:0.000 alpha:1.000];
 view43.userInteractionEnabled = YES;
 
+UIToolbar *view63 = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 367.0, 320.0, 44.0)];
+view63.frame = CGRectMake(0.0, 367.0, 320.0, 44.0);
+view63.alpha = 1.000;
+view63.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+view63.barStyle = UIBarStyleDefault;
+view63.clearsContextBeforeDrawing = NO;
+view63.clipsToBounds = NO;
+view63.contentMode = UIViewContentModeScaleToFill;
+view63.hidden = NO;
+view63.multipleTouchEnabled = NO;
+view63.opaque = NO;
+view63.tag = 0;
+view63.userInteractionEnabled = YES;
+
+UIBarButtonItem *view65 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+view65.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view65.enabled = YES;
+view65.style = UIBarButtonItemStylePlain;
+view65.tag = 0;
+view65.width = 0.000;
+
 UITextView *view33 = [[UITextView alloc] initWithFrame:CGRectMake(20.0, 20.0, 231.0, 209.0)];
 view33.frame = CGRectMake(20.0, 20.0, 231.0, 209.0);
 view33.alpha = 1.000;
@@ -379,19 +408,12 @@ view33.textAlignment = UITextAlignmentLeft;
 view33.textColor = [UIColor colorWithRed:0.000 green:0.000 blue:1.000 alpha:1.000];
 view33.userInteractionEnabled = YES;
 
-UIBarButtonItem *view49 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-view49.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
-view49.enabled = YES;
-view49.style = UIBarButtonItemStylePlain;
-view49.tag = 0;
-view49.width = 42.000;
-
-UIBarButtonItem *view48 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-view48.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
-view48.enabled = YES;
-view48.style = UIBarButtonItemStylePlain;
-view48.tag = 0;
-view48.width = 0.000;
+UIBarButtonItem *view66 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+view66.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view66.enabled = YES;
+view66.style = UIBarButtonItemStylePlain;
+view66.tag = 0;
+view66.width = 42.000;
 
 UITableView *view26 = [[UITableView alloc] initWithFrame:CGRectMake(20.0, 20.0, 253.0, 179.0) style:UITableViewStylePlain];
 view26.frame = CGRectMake(20.0, 20.0, 253.0, 179.0);
@@ -570,13 +592,6 @@ view23.opaque = YES;
 view23.tag = 0;
 view23.userInteractionEnabled = YES;
 
-UIBarButtonItem *view46 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
-view46.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
-view46.enabled = YES;
-view46.style = UIBarButtonItemStyleBordered;
-view46.tag = 0;
-view46.width = 0.000;
-
 UIWebView *view39 = [[UIWebView alloc] initWithFrame:CGRectMake(20.0, 26.0, 240.0, 128.0)];
 view39.frame = CGRectMake(20.0, 26.0, 240.0, 128.0);
 view39.alpha = 1.000;
@@ -620,8 +635,8 @@ view39.userInteractionEnabled = YES;
 [view50 addSubview:view52];
 [view50 addSubview:view53];
 [view40 addSubview:view50];
-[view45 addSubview:view46];
-[view45 addSubview:view48];
-[view45 addSubview:view49];
-[view40 addSubview:view45];
 [view40 addSubview:view43];
+[view63 addSubview:view64];
+[view63 addSubview:view65];
+[view63 addSubview:view66];
+[view40 addSubview:view63];

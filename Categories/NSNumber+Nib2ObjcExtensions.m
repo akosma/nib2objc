@@ -337,4 +337,21 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)tabBarSystemItemString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UITabBarSystemItemMore",
+                       @"UITabBarSystemItemFavorites",
+                       @"UITabBarSystemItemFeatured",
+                       @"UITabBarSystemItemTopRated",
+                       @"UITabBarSystemItemRecents",
+                       @"UITabBarSystemItemContacts",
+                       @"UITabBarSystemItemHistory",
+                       @"UITabBarSystemItemBookmarks",
+                       @"UITabBarSystemItemSearch",
+                       @"UITabBarSystemItemDownloads",
+                       @"UITabBarSystemItemMostRecent",
+                       @"UITabBarSystemItemMostViewed", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

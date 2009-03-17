@@ -41,5 +41,6 @@
 - (NSString *)barStyleString;
 - (NSString *)barButtonItemStyleString;
 - (NSString *)barButtonSystemItemString;
+- (NSString *)tabBarSystemItemString;
 
 @end

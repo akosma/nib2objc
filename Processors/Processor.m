@@ -32,6 +32,7 @@
 #import "UINavigationBarProcessor.h"
 #import "UINavigationItemProcessor.h"
 #import "UIBarButtonItemProcessor.h"
+#import "UISearchBarProcessor.h"
 
 @interface Processor (Protected)
 
@@ -69,6 +70,7 @@
     else if ([klass isEqualToString:@"IBUINavigationBar"]) processor = [[UINavigationBarProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUINavigationItem"]) processor = [[UINavigationItemProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIBarButtonItem"]) processor = [[UIBarButtonItemProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUISearchBar"]) processor = [[UISearchBarProcessor alloc] init];
 
     return [processor autorelease];
 }
@@ -97,11 +99,11 @@
         [self processKey:item value:value];
 
         // Use the lines below for debugging and development
-        if ([output objectForKey:item] == nil)
-        {
-            id object = [NSString stringWithFormat:@"// unknown property: %@", value];
-            [output setObject:object forKey:item];
-        }        
+//        if ([output objectForKey:item] == nil)
+//        {
+//            id object = [NSString stringWithFormat:@"// unknown property: %@", value];
+//            [output setObject:object forKey:item];
+//        }        
     }
     
     return output;

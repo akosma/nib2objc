@@ -33,6 +33,13 @@ view9.userInteractionEnabled = YES;
 [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateNormal];
 [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateSelected];
 
+UITabBarItem *view53 = [[UITabBarItem alloc] initWithTitle:@"Item" image:nil tag:0];
+view53.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view53.badgeValue = @"12";
+view53.enabled = YES;
+view53.tag = 0;
+view53.title = @"Item";
+
 UIView *view35 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
 view35.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
 view35.alpha = 1.000;
@@ -181,6 +188,11 @@ view12.selected = NO;
 view12.tag = 0;
 view12.userInteractionEnabled = YES;
 view12.value = 0.500;
+
+UITabBarItem *view52 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:0];
+view52.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view52.enabled = YES;
+view52.tag = 0;
 
 UIBarButtonItem *view61 = [[UIBarButtonItem alloc] initWithTitle:@"Action!" style:UIBarButtonItemStyleBordered target:nil action:nil];
 view61.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
@@ -355,6 +367,11 @@ view43.text = @"wooot!";
 view43.tintColor = [UIColor colorWithRed:1.000 green:0.000 blue:0.000 alpha:1.000];
 view43.userInteractionEnabled = YES;
 
+UITabBarItem *view51 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
+view51.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view51.enabled = YES;
+view51.tag = 0;
+
 UIToolbar *view63 = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 367.0, 320.0, 44.0)];
 view63.frame = CGRectMake(0.0, 367.0, 320.0, 44.0);
 view63.alpha = 1.000;
@@ -368,13 +385,6 @@ view63.multipleTouchEnabled = NO;
 view63.opaque = NO;
 view63.tag = 0;
 view63.userInteractionEnabled = YES;
-
-UIBarButtonItem *view65 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-view65.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
-view65.enabled = YES;
-view65.style = UIBarButtonItemStylePlain;
-view65.tag = 0;
-view65.width = 0.000;
 
 UITextView *view33 = [[UITextView alloc] initWithFrame:CGRectMake(20.0, 20.0, 231.0, 209.0)];
 view33.frame = CGRectMake(20.0, 20.0, 231.0, 209.0);
@@ -407,6 +417,13 @@ view33.text = @"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipis
 view33.textAlignment = UITextAlignmentLeft;
 view33.textColor = [UIColor colorWithRed:0.000 green:0.000 blue:1.000 alpha:1.000];
 view33.userInteractionEnabled = YES;
+
+UIBarButtonItem *view65 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+view65.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+view65.enabled = YES;
+view65.style = UIBarButtonItemStylePlain;
+view65.tag = 0;
+view65.width = 0.000;
 
 UIBarButtonItem *view66 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
 view66.frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
@@ -591,6 +608,20 @@ view23.multipleTouchEnabled = NO;
 view23.opaque = YES;
 view23.tag = 0;
 view23.userInteractionEnabled = YES;
+
+UITabBar *view50 = [[UITabBar alloc] initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
+view50.frame = CGRectMake(0.0, 411.0, 320.0, 49.0);
+view50.alpha = 1.000;
+view50.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+view50.backgroundColor = [UIColor colorWithRed:0.600 green:0.400 blue:0.200 alpha:1.000];
+view50.clearsContextBeforeDrawing = NO;
+view50.clipsToBounds = NO;
+view50.contentMode = UIViewContentModeScaleToFill;
+view50.hidden = NO;
+view50.multipleTouchEnabled = NO;
+view50.opaque = YES;
+view50.tag = 0;
+view50.userInteractionEnabled = YES;
 
 UIWebView *view39 = [[UIWebView alloc] initWithFrame:CGRectMake(20.0, 26.0, 240.0, 128.0)];
 view39.frame = CGRectMake(20.0, 26.0, 240.0, 128.0);

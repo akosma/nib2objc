@@ -37,5 +37,6 @@
 - (NSString *)tableViewCellAccessoryString;
 - (NSString *)tableViewCellEditingStyleString;
 - (NSString *)tableViewCellSelectionStyleString;
+- (NSString *)datePickerModeString;
 
 @end

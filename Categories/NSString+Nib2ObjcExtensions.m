@@ -17,6 +17,20 @@
     return [NSString stringWithFormat:@"CGRectMake(%1.1f, %1.1f, %1.1f, %1.1f)", point.x, point.y, size.width, size.height];
 }
 
++ (NSString *)dateFromStringFunction
+{
+    NSMutableString *function = [[[NSMutableString alloc] init] autorelease];
+    [function appendString:@"NSDate *dateFromString(NSString *input)\n"];
+    [function appendString:@"{\n"];
+    [function appendString:@"    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];\n"];
+    [function appendString:@"    [formatter setDateStyle:NSDateFormatterFullStyle];\n"];
+    [function appendString:@"    [formatter setTimeStyle:NSDateFormatterFullStyle];\n"];
+    [function appendString:@"    NSDate *date = [formatter dateFromString:input];\n"];
+    [function appendString:@"    return date;\n"];
+    [function appendString:@"}\n"];
+    return function;
+}
+
 - (NSString *)sizeString
 {
     NSSize size = NSSizeFromString(self);

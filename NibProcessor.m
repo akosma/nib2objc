@@ -135,7 +135,19 @@
     {
         id object = [objects objectForKey:identifier];
         
-        // First, output the constructor and the frame
+        // First, output any helper functions, ordered alphabetically
+        NSArray *orderedKeys = [object keysSortedByValueUsingSelector:@selector(caseInsensitiveCompare:)];
+        for (NSString *key in orderedKeys)
+        {
+            id value = [object objectForKey:key];
+            if ([key hasPrefix:@"__helper__"])
+            {
+                [output appendString:value];
+                [output appendString:@"\n"];    
+            }
+        }
+        
+        // Then, output the constructor and the frame
         id klass = [object objectForKey:@"class"];
         id constructor = [object objectForKey:@"constructor"];
         id frame = [object objectForKey:@"frame"];
@@ -143,12 +155,13 @@
         [output appendFormat:@"view%@.frame = %@;\n", identifier, frame];
         
         // Then, output the properties only, ordered alphabetically
-        NSArray *orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
         for (NSString *key in orderedKeys)
         {
             id value = [object objectForKey:key];
             if (![key hasPrefix:@"__method__"] && ![key isEqualToString:@"frame"] 
-                && ![key isEqualToString:@"constructor"] && ![key isEqualToString:@"class"])
+                && ![key isEqualToString:@"constructor"] && ![key isEqualToString:@"class"]
+                && ![key hasPrefix:@"__helper__"])
             {
                 [output appendFormat:@"view%@.%@ = %@;\n", identifier, key, value];
             }

@@ -286,4 +286,13 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)datePickerModeString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIDatePickerModeTime",
+                       @"UIDatePickerModeDate",
+                       @"UIDatePickerModeDateAndTime",
+                       @"UIDatePickerModeCountDownTimer", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

@@ -28,6 +28,7 @@
 #import "UIPickerViewProcessor.h"
 #import "UIWebViewProcessor.h"
 #import "UITableViewCellProcessor.h"
+#import "UIDatePickerProcessor.h"
 
 @interface Processor (Protected)
 
@@ -61,7 +62,8 @@
     else if ([klass isEqualToString:@"IBUIPickerView"]) processor = [[UIPickerViewProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIWebView"]) processor = [[UIWebViewProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUITableViewCell"]) processor = [[UITableViewCellProcessor alloc] init];
-    
+    else if ([klass isEqualToString:@"IBUIDatePicker"]) processor = [[UIDatePickerProcessor alloc] init];
+
     return [processor autorelease];
 }
 

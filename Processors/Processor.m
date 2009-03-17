@@ -33,6 +33,7 @@
 #import "UINavigationItemProcessor.h"
 #import "UIBarButtonItemProcessor.h"
 #import "UISearchBarProcessor.h"
+#import "UIToolbarProcessor.h"
 
 @interface Processor (Protected)
 
@@ -71,6 +72,7 @@
     else if ([klass isEqualToString:@"IBUINavigationItem"]) processor = [[UINavigationItemProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIBarButtonItem"]) processor = [[UIBarButtonItemProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUISearchBar"]) processor = [[UISearchBarProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUIToolbar"]) processor = [[UIToolbarProcessor alloc] init];
 
     return [processor autorelease];
 }

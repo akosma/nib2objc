@@ -30,6 +30,7 @@
 #import "UITableViewCellProcessor.h"
 #import "UIDatePickerProcessor.h"
 #import "UINavigationBarProcessor.h"
+#import "UINavigationItemProcessor.h"
 
 @interface Processor (Protected)
 
@@ -65,6 +66,7 @@
     else if ([klass isEqualToString:@"IBUITableViewCell"]) processor = [[UITableViewCellProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIDatePicker"]) processor = [[UIDatePickerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUINavigationBar"]) processor = [[UINavigationBarProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUINavigationItem"]) processor = [[UINavigationItemProcessor alloc] init];
 
     return [processor autorelease];
 }
@@ -103,8 +105,15 @@
 
 - (NSString *)frameString
 {
-    // Overridden in subclasses
-    return nil;
+    NSString *rect = [NSString rectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
+    return rect;
+}
+
+- (NSString *)constructorString
+{
+    // Some subclasses have different constructors than the classic
+    // "initWithFrame:", and as such they should override this method.
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
 }
 
 @end

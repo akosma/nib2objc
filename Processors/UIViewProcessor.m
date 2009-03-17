@@ -25,19 +25,6 @@
     return @"UIView";
 }
 
-- (NSString *)frameString
-{
-    NSString *rect = [NSString rectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
-    return rect;
-}
-
-- (NSString *)constructorString
-{
-    // Some subclasses have different constructors than the classic
-    // "initWithFrame:", and as such they should override this method.
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
-}
-
 - (void)processKey:(id)item value:(id)value
 {
     // Subclasses can override this method for their own properties.

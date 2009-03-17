@@ -31,6 +31,7 @@
 		3A99D0680F6D4CFA00F7D892 /* UIScrollViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A99D0670F6D4CFA00F7D892 /* UIScrollViewProcessor.m */; };
 		3AC911CE0F6B99C700057BCD /* UITextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */; };
 		3ACDD3850F6FD7B0008EA9F2 /* UINavigationBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDD3840F6FD7B0008EA9F2 /* UINavigationBarProcessor.m */; };
+		3ACDD3B10F6FE0C2008EA9F2 /* UINavigationItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDD3B00F6FE0C2008EA9F2 /* UINavigationItemProcessor.m */; };
 		3AD51EDD0F6AF0D1002D7519 /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD51EDC0F6AF0D1002D7519 /* UIViewProcessor.m */; };
 		8DD76F9A0486AA7600D96B5E /* nib2objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* nib2objc.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
@@ -100,6 +101,8 @@
 		3AC911CD0F6B99C700057BCD /* UITextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldProcessor.m; sourceTree = "<group>"; };
 		3ACDD3830F6FD7B0008EA9F2 /* UINavigationBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarProcessor.h; sourceTree = "<group>"; };
 		3ACDD3840F6FD7B0008EA9F2 /* UINavigationBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarProcessor.m; sourceTree = "<group>"; };
+		3ACDD3AF0F6FE0C2008EA9F2 /* UINavigationItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationItemProcessor.h; sourceTree = "<group>"; };
+		3ACDD3B00F6FE0C2008EA9F2 /* UINavigationItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationItemProcessor.m; sourceTree = "<group>"; };
 		3AD51E600F6ABD0A002D7519 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		3AD51EDB0F6AF0D1002D7519 /* UIViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewProcessor.h; sourceTree = "<group>"; };
 		3AD51EDC0F6AF0D1002D7519 /* UIViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewProcessor.m; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				3A464C6B0F6F8165006D2694 /* UIDatePickerProcessor.m */,
 				3ACDD3830F6FD7B0008EA9F2 /* UINavigationBarProcessor.h */,
 				3ACDD3840F6FD7B0008EA9F2 /* UINavigationBarProcessor.m */,
+				3ACDD3AF0F6FE0C2008EA9F2 /* UINavigationItemProcessor.h */,
+				3ACDD3B00F6FE0C2008EA9F2 /* UINavigationItemProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				3A672E4D0F6E949000715857 /* Processor.m in Sources */,
 				3A464C6C0F6F8165006D2694 /* UIDatePickerProcessor.m in Sources */,
 				3ACDD3850F6FD7B0008EA9F2 /* UINavigationBarProcessor.m in Sources */,
+				3ACDD3B10F6FE0C2008EA9F2 /* UINavigationItemProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

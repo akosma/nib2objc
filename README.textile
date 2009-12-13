@@ -46,3 +46,7 @@ h2. Limitations
 * For the moment this utility only works for UIKit views (iPhone), but it should be easy to extend to those of the AppKit too.
 * It cannot output the values of UIImage, NSLocale or NSTimeZone properties, because ibtool does not support them.
 * It does not distinguishes default values for properties, and as such, it outputs all the information it can find about a particular instance.
+
+h3. Contributions
+
+This project includes the *nibs2objc.pl* Perl script by Rudi Farkas, which allows users to perform batch transformations of nib files in a folder. Thanks Rudi for the contribution!

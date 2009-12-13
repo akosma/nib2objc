@@ -1,7 +1,19 @@
 2009 March 16
  
-The author disclaims copyright to this source code.  In place of a legal notice, here is a blessing:
+Adrian Kosmaczewski disclaims copyright to this source code.  In place of a legal notice, here is a blessing:
  
 May you do good and not evil.
 May you find forgiveness for yourself and forgive others.
 May you share freely, never taking more than you give.
+
+
+---
+
+The nibs2objc.pl file has the following license:
+
+----------------------------------------------------------------------------
+"THE BEER-WARE LICENSE" (Revision 42):
+Rudi Farkas wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return (Guiness if possible).
+----------------------------------------------------------------------------

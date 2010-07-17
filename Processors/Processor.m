@@ -104,12 +104,14 @@
         id value = [input objectForKey:item];
         [self processKey:item value:value];
 
-        // Use the lines below for debugging and development
-//        if ([output objectForKey:item] == nil)
-//        {
-//            id object = [NSString stringWithFormat:@"// unknown property: %@", value];
-//            [output setObject:object forKey:item];
-//        }        
+#ifdef CONFIGURATION_Debug
+        // This will show properties not yet known by nib2objc
+        if ([output objectForKey:item] == nil)
+        {
+            id object = [NSString stringWithFormat:@"// unknown property: %@", value];
+            [output setObject:object forKey:item];
+        }
+#endif
     }
     
     return output;

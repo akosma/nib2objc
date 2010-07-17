@@ -41,11 +41,11 @@
     }
     else if ([item isEqualToString:@"font"])
     {
-        [output setObject:[value fontString] forKey:item];
+        [output setObject:[value fontString] forKey:@"titleLabel.font"];
     }
     else if ([item isEqualToString:@"lineBreakMode"])
     {
-        [output setObject:[value lineBreakModeString] forKey:item];
+        [output setObject:[value lineBreakModeString] forKey:@"titleLabel.lineBreakMode"];
     }
     else if ([item isEqualToString:@"reversesTitleShadowWhenHighlighted"])
     {
@@ -57,7 +57,7 @@
     }
     else if ([item isEqualToString:@"titleShadowOffset"])
     {
-        [output setObject:[value sizeString] forKey:item];
+        [output setObject:[value sizeString] forKey:@"titleLabel.shadowOffset"];
     }
 
     // Creation of methods for the titles, instead of properties

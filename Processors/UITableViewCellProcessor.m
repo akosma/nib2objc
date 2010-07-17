@@ -26,41 +26,45 @@
 - (NSString *)constructorString
 {
     NSString *reuseIdentifier = [[self.input objectForKey:@"reuseIdentifier"] quotedAsCodeString];
-    NSString *frame = [self frameString];
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@ reuseIdentifier:%@]", [self getProcessedClassName], frame, reuseIdentifier];
+    if (reuseIdentifier == nil)
+    {
+        reuseIdentifier = @"@\"UITableViewCellReuseIdentifier\"";
+    }
+    return [NSString stringWithFormat:@"[[%@ alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:%@]", [self getProcessedClassName], reuseIdentifier];
 }
 
 - (void)processKey:(id)item value:(id)value
 {
     if ([item isEqualToString:@"textAlignment"])
     {
-        [output setObject:[value textAlignmentString] forKey:item];
+        [output setObject:[value textAlignmentString] forKey:@"textLabel.textAlignment"];
+        [output setObject:[value textAlignmentString] forKey:@"detailTextLabel.textAlignment"];
     }
     else if ([item isEqualToString:@"lineBreakMode"])
     {
-        [output setObject:[value lineBreakModeString] forKey:item];
+        [output setObject:[value lineBreakModeString] forKey:@"textLabel.lineBreakMode"];
+        [output setObject:[value lineBreakModeString] forKey:@"detailTextLabel.lineBreakMode"];
     }
     else if ([item isEqualToString:@"textColor"])
     {
-        [output setObject:[value colorString] forKey:item];
+        [output setObject:[value colorString] forKey:@"textLabel.textColor"];
+        [output setObject:[value colorString] forKey:@"detailTextLabel.textColor"];
     }
     else if ([item isEqualToString:@"selectedTextColor"])
     {
-        [output setObject:[value colorString] forKey:item];
+        [output setObject:[value colorString] forKey:@"textLabel.highlightedTextColor"];
+        [output setObject:[value colorString] forKey:@"detailTextLabel.highlightedTextColor"];
     }
     else if ([item isEqualToString:@"font"])
     {
-        [output setObject:[value fontString] forKey:item];
+        [output setObject:[value fontString] forKey:@"textLabel.font"];
+        [output setObject:[value fontString] forKey:@"detailTextLabel.font"];
     }
     else if ([item isEqualToString:@"showsReorderControl"])
     {
         [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"shouldIndentWhileEditing"])
-    {
-        [output setObject:[value booleanString] forKey:item];
-    }
-    else if ([item isEqualToString:@"hidesAccessoryWhenEditing"])
     {
         [output setObject:[value booleanString] forKey:item];
     }

@@ -42,7 +42,7 @@
     }
     else if ([item isEqualToString:@"contentStretch"])
     {
-        object = [NSString stringWithFormat:@"CGRectFromString(\"%@\")", value];
+        object = [NSString stringWithFormat:@"CGRectFromString(@\"%@\")", value];
     }
     else if ([item isEqualToString:@"alpha"])
     {

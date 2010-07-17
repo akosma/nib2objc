@@ -9,39 +9,39 @@
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
-		3A1AB2C311F250950062422A /* NSDictionary+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28111F250950062422A /* NSDictionary+Nib2ObjcExtensions.m */; };
-		3A1AB2C411F250950062422A /* NSNumber+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28311F250950062422A /* NSNumber+Nib2ObjcExtensions.m */; };
-		3A1AB2C511F250950062422A /* NSString+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28511F250950062422A /* NSString+Nib2ObjcExtensions.m */; };
-		3A1AB2C611F250950062422A /* NibProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28711F250950062422A /* NibProcessor.m */; };
-		3A1AB2C711F250950062422A /* MKMapViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28A11F250950062422A /* MKMapViewProcessor.m */; };
-		3A1AB2C811F250950062422A /* Processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28C11F250950062422A /* Processor.m */; };
-		3A1AB2C911F250950062422A /* UIActivityIndicatorViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB28E11F250950062422A /* UIActivityIndicatorViewProcessor.m */; };
-		3A1AB2CA11F250950062422A /* UIBarButtonItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29011F250950062422A /* UIBarButtonItemProcessor.m */; };
-		3A1AB2CB11F250950062422A /* UIBarItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29211F250950062422A /* UIBarItemProcessor.m */; };
-		3A1AB2CC11F250950062422A /* UIButtonProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29411F250950062422A /* UIButtonProcessor.m */; };
-		3A1AB2CD11F250950062422A /* UIControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29611F250950062422A /* UIControlProcessor.m */; };
-		3A1AB2CE11F250950062422A /* UIDatePickerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29811F250950062422A /* UIDatePickerProcessor.m */; };
-		3A1AB2CF11F250950062422A /* UIImageViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29A11F250950062422A /* UIImageViewProcessor.m */; };
-		3A1AB2D011F250950062422A /* UILabelProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29C11F250950062422A /* UILabelProcessor.m */; };
-		3A1AB2D111F250950062422A /* UINavigationBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB29E11F250950062422A /* UINavigationBarProcessor.m */; };
-		3A1AB2D211F250950062422A /* UINavigationItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2A011F250950062422A /* UINavigationItemProcessor.m */; };
-		3A1AB2D311F250950062422A /* UIPageControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2A211F250950062422A /* UIPageControlProcessor.m */; };
-		3A1AB2D411F250950062422A /* UIPickerViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2A411F250950062422A /* UIPickerViewProcessor.m */; };
-		3A1AB2D511F250950062422A /* UIProgressViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2A611F250950062422A /* UIProgressViewProcessor.m */; };
-		3A1AB2D611F250950062422A /* UIScrollViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2A811F250950062422A /* UIScrollViewProcessor.m */; };
-		3A1AB2D711F250950062422A /* UISearchBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2AA11F250950062422A /* UISearchBarProcessor.m */; };
-		3A1AB2D811F250950062422A /* UISegmentedControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2AC11F250950062422A /* UISegmentedControlProcessor.m */; };
-		3A1AB2D911F250950062422A /* UISliderProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2AE11F250950062422A /* UISliderProcessor.m */; };
-		3A1AB2DA11F250950062422A /* UISwitchProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2B011F250950062422A /* UISwitchProcessor.m */; };
-		3A1AB2DB11F250950062422A /* UITabBarItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2B211F250950062422A /* UITabBarItemProcessor.m */; };
-		3A1AB2DC11F250950062422A /* UITabBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2B411F250950062422A /* UITabBarProcessor.m */; };
-		3A1AB2DD11F250950062422A /* UITableViewCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2B611F250950062422A /* UITableViewCellProcessor.m */; };
-		3A1AB2DE11F250950062422A /* UITableViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2B811F250950062422A /* UITableViewProcessor.m */; };
-		3A1AB2DF11F250950062422A /* UITextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2BA11F250950062422A /* UITextFieldProcessor.m */; };
-		3A1AB2E011F250950062422A /* UITextViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2BC11F250950062422A /* UITextViewProcessor.m */; };
-		3A1AB2E111F250950062422A /* UIToolbarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2BE11F250950062422A /* UIToolbarProcessor.m */; };
-		3A1AB2E211F250950062422A /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2C011F250950062422A /* UIViewProcessor.m */; };
-		3A1AB2E311F250950062422A /* UIWebViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB2C211F250950062422A /* UIWebViewProcessor.m */; };
+		3AEDA04711F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00511F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m */; };
+		3AEDA04811F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00711F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m */; };
+		3AEDA04911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m */; };
+		3AEDA04A11F2578100D0D041 /* NibProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00B11F2578100D0D041 /* NibProcessor.m */; };
+		3AEDA04B11F2578100D0D041 /* MKMapViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00E11F2578100D0D041 /* MKMapViewProcessor.m */; };
+		3AEDA04C11F2578100D0D041 /* Processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01011F2578100D0D041 /* Processor.m */; };
+		3AEDA04D11F2578100D0D041 /* UIActivityIndicatorViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01211F2578100D0D041 /* UIActivityIndicatorViewProcessor.m */; };
+		3AEDA04E11F2578100D0D041 /* UIBarButtonItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01411F2578100D0D041 /* UIBarButtonItemProcessor.m */; };
+		3AEDA04F11F2578100D0D041 /* UIBarItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01611F2578100D0D041 /* UIBarItemProcessor.m */; };
+		3AEDA05011F2578100D0D041 /* UIButtonProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01811F2578100D0D041 /* UIButtonProcessor.m */; };
+		3AEDA05111F2578100D0D041 /* UIControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01A11F2578100D0D041 /* UIControlProcessor.m */; };
+		3AEDA05211F2578100D0D041 /* UIDatePickerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01C11F2578100D0D041 /* UIDatePickerProcessor.m */; };
+		3AEDA05311F2578100D0D041 /* UIImageViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA01E11F2578100D0D041 /* UIImageViewProcessor.m */; };
+		3AEDA05411F2578100D0D041 /* UILabelProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02011F2578100D0D041 /* UILabelProcessor.m */; };
+		3AEDA05511F2578100D0D041 /* UINavigationBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02211F2578100D0D041 /* UINavigationBarProcessor.m */; };
+		3AEDA05611F2578100D0D041 /* UINavigationItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02411F2578100D0D041 /* UINavigationItemProcessor.m */; };
+		3AEDA05711F2578100D0D041 /* UIPageControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02611F2578100D0D041 /* UIPageControlProcessor.m */; };
+		3AEDA05811F2578100D0D041 /* UIPickerViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02811F2578100D0D041 /* UIPickerViewProcessor.m */; };
+		3AEDA05911F2578100D0D041 /* UIProgressViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02A11F2578100D0D041 /* UIProgressViewProcessor.m */; };
+		3AEDA05A11F2578100D0D041 /* UIScrollViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02C11F2578100D0D041 /* UIScrollViewProcessor.m */; };
+		3AEDA05B11F2578100D0D041 /* UISearchBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA02E11F2578100D0D041 /* UISearchBarProcessor.m */; };
+		3AEDA05C11F2578100D0D041 /* UISegmentedControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03011F2578100D0D041 /* UISegmentedControlProcessor.m */; };
+		3AEDA05D11F2578100D0D041 /* UISliderProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03211F2578100D0D041 /* UISliderProcessor.m */; };
+		3AEDA05E11F2578100D0D041 /* UISwitchProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03411F2578100D0D041 /* UISwitchProcessor.m */; };
+		3AEDA05F11F2578100D0D041 /* UITabBarItemProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03611F2578100D0D041 /* UITabBarItemProcessor.m */; };
+		3AEDA06011F2578100D0D041 /* UITabBarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03811F2578100D0D041 /* UITabBarProcessor.m */; };
+		3AEDA06111F2578100D0D041 /* UITableViewCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03A11F2578100D0D041 /* UITableViewCellProcessor.m */; };
+		3AEDA06211F2578100D0D041 /* UITableViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03C11F2578100D0D041 /* UITableViewProcessor.m */; };
+		3AEDA06311F2578100D0D041 /* UITextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA03E11F2578100D0D041 /* UITextFieldProcessor.m */; };
+		3AEDA06411F2578100D0D041 /* UITextViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA04011F2578100D0D041 /* UITextViewProcessor.m */; };
+		3AEDA06511F2578100D0D041 /* UIToolbarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA04211F2578100D0D041 /* UIToolbarProcessor.m */; };
+		3AEDA06611F2578100D0D041 /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA04411F2578100D0D041 /* UIViewProcessor.m */; };
+		3AEDA06711F2578100D0D041 /* UIWebViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA04611F2578100D0D041 /* UIWebViewProcessor.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
@@ -62,72 +62,72 @@
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		3A1AB28011F250950062422A /* NSDictionary+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
-		3A1AB28111F250950062422A /* NSDictionary+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
-		3A1AB28211F250950062422A /* NSNumber+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
-		3A1AB28311F250950062422A /* NSNumber+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
-		3A1AB28411F250950062422A /* NSString+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
-		3A1AB28511F250950062422A /* NSString+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
-		3A1AB28611F250950062422A /* NibProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NibProcessor.h; path = ../NibProcessor.h; sourceTree = SOURCE_ROOT; };
-		3A1AB28711F250950062422A /* NibProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NibProcessor.m; path = ../NibProcessor.m; sourceTree = SOURCE_ROOT; };
-		3A1AB28911F250950062422A /* MKMapViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB28A11F250950062422A /* MKMapViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB28B11F250950062422A /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
-		3A1AB28C11F250950062422A /* Processor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Processor.m; sourceTree = "<group>"; };
-		3A1AB28D11F250950062422A /* UIActivityIndicatorViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB28E11F250950062422A /* UIActivityIndicatorViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityIndicatorViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB28F11F250950062422A /* UIBarButtonItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarButtonItemProcessor.h; sourceTree = "<group>"; };
-		3A1AB29011F250950062422A /* UIBarButtonItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarButtonItemProcessor.m; sourceTree = "<group>"; };
-		3A1AB29111F250950062422A /* UIBarItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarItemProcessor.h; sourceTree = "<group>"; };
-		3A1AB29211F250950062422A /* UIBarItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarItemProcessor.m; sourceTree = "<group>"; };
-		3A1AB29311F250950062422A /* UIButtonProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonProcessor.h; sourceTree = "<group>"; };
-		3A1AB29411F250950062422A /* UIButtonProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonProcessor.m; sourceTree = "<group>"; };
-		3A1AB29511F250950062422A /* UIControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlProcessor.h; sourceTree = "<group>"; };
-		3A1AB29611F250950062422A /* UIControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlProcessor.m; sourceTree = "<group>"; };
-		3A1AB29711F250950062422A /* UIDatePickerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDatePickerProcessor.h; sourceTree = "<group>"; };
-		3A1AB29811F250950062422A /* UIDatePickerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDatePickerProcessor.m; sourceTree = "<group>"; };
-		3A1AB29911F250950062422A /* UIImageViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB29A11F250950062422A /* UIImageViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB29B11F250950062422A /* UILabelProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelProcessor.h; sourceTree = "<group>"; };
-		3A1AB29C11F250950062422A /* UILabelProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelProcessor.m; sourceTree = "<group>"; };
-		3A1AB29D11F250950062422A /* UINavigationBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarProcessor.h; sourceTree = "<group>"; };
-		3A1AB29E11F250950062422A /* UINavigationBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarProcessor.m; sourceTree = "<group>"; };
-		3A1AB29F11F250950062422A /* UINavigationItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationItemProcessor.h; sourceTree = "<group>"; };
-		3A1AB2A011F250950062422A /* UINavigationItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationItemProcessor.m; sourceTree = "<group>"; };
-		3A1AB2A111F250950062422A /* UIPageControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPageControlProcessor.h; sourceTree = "<group>"; };
-		3A1AB2A211F250950062422A /* UIPageControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPageControlProcessor.m; sourceTree = "<group>"; };
-		3A1AB2A311F250950062422A /* UIPickerViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2A411F250950062422A /* UIPickerViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB2A511F250950062422A /* UIProgressViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIProgressViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2A611F250950062422A /* UIProgressViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIProgressViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB2A711F250950062422A /* UIScrollViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2A811F250950062422A /* UIScrollViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB2A911F250950062422A /* UISearchBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISearchBarProcessor.h; sourceTree = "<group>"; };
-		3A1AB2AA11F250950062422A /* UISearchBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISearchBarProcessor.m; sourceTree = "<group>"; };
-		3A1AB2AB11F250950062422A /* UISegmentedControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISegmentedControlProcessor.h; sourceTree = "<group>"; };
-		3A1AB2AC11F250950062422A /* UISegmentedControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISegmentedControlProcessor.m; sourceTree = "<group>"; };
-		3A1AB2AD11F250950062422A /* UISliderProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISliderProcessor.h; sourceTree = "<group>"; };
-		3A1AB2AE11F250950062422A /* UISliderProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISliderProcessor.m; sourceTree = "<group>"; };
-		3A1AB2AF11F250950062422A /* UISwitchProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchProcessor.h; sourceTree = "<group>"; };
-		3A1AB2B011F250950062422A /* UISwitchProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchProcessor.m; sourceTree = "<group>"; };
-		3A1AB2B111F250950062422A /* UITabBarItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarItemProcessor.h; sourceTree = "<group>"; };
-		3A1AB2B211F250950062422A /* UITabBarItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarItemProcessor.m; sourceTree = "<group>"; };
-		3A1AB2B311F250950062422A /* UITabBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarProcessor.h; sourceTree = "<group>"; };
-		3A1AB2B411F250950062422A /* UITabBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarProcessor.m; sourceTree = "<group>"; };
-		3A1AB2B511F250950062422A /* UITableViewCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellProcessor.h; sourceTree = "<group>"; };
-		3A1AB2B611F250950062422A /* UITableViewCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellProcessor.m; sourceTree = "<group>"; };
-		3A1AB2B711F250950062422A /* UITableViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2B811F250950062422A /* UITableViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB2B911F250950062422A /* UITextFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldProcessor.h; sourceTree = "<group>"; };
-		3A1AB2BA11F250950062422A /* UITextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldProcessor.m; sourceTree = "<group>"; };
-		3A1AB2BB11F250950062422A /* UITextViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2BC11F250950062422A /* UITextViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB2BD11F250950062422A /* UIToolbarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIToolbarProcessor.h; sourceTree = "<group>"; };
-		3A1AB2BE11F250950062422A /* UIToolbarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIToolbarProcessor.m; sourceTree = "<group>"; };
-		3A1AB2BF11F250950062422A /* UIViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2C011F250950062422A /* UIViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewProcessor.m; sourceTree = "<group>"; };
-		3A1AB2C111F250950062422A /* UIWebViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewProcessor.h; sourceTree = "<group>"; };
-		3A1AB2C211F250950062422A /* UIWebViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA00411F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
+		3AEDA00511F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
+		3AEDA00611F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
+		3AEDA00711F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
+		3AEDA00811F2578100D0D041 /* NSString+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
+		3AEDA00911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
+		3AEDA00A11F2578100D0D041 /* NibProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibProcessor.h; sourceTree = "<group>"; };
+		3AEDA00B11F2578100D0D041 /* NibProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibProcessor.m; sourceTree = "<group>"; };
+		3AEDA00D11F2578100D0D041 /* MKMapViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA00E11F2578100D0D041 /* MKMapViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA00F11F2578100D0D041 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		3AEDA01011F2578100D0D041 /* Processor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Processor.m; sourceTree = "<group>"; };
+		3AEDA01111F2578100D0D041 /* UIActivityIndicatorViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA01211F2578100D0D041 /* UIActivityIndicatorViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityIndicatorViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA01311F2578100D0D041 /* UIBarButtonItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarButtonItemProcessor.h; sourceTree = "<group>"; };
+		3AEDA01411F2578100D0D041 /* UIBarButtonItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarButtonItemProcessor.m; sourceTree = "<group>"; };
+		3AEDA01511F2578100D0D041 /* UIBarItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarItemProcessor.h; sourceTree = "<group>"; };
+		3AEDA01611F2578100D0D041 /* UIBarItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarItemProcessor.m; sourceTree = "<group>"; };
+		3AEDA01711F2578100D0D041 /* UIButtonProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonProcessor.h; sourceTree = "<group>"; };
+		3AEDA01811F2578100D0D041 /* UIButtonProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonProcessor.m; sourceTree = "<group>"; };
+		3AEDA01911F2578100D0D041 /* UIControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlProcessor.h; sourceTree = "<group>"; };
+		3AEDA01A11F2578100D0D041 /* UIControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlProcessor.m; sourceTree = "<group>"; };
+		3AEDA01B11F2578100D0D041 /* UIDatePickerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDatePickerProcessor.h; sourceTree = "<group>"; };
+		3AEDA01C11F2578100D0D041 /* UIDatePickerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDatePickerProcessor.m; sourceTree = "<group>"; };
+		3AEDA01D11F2578100D0D041 /* UIImageViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA01E11F2578100D0D041 /* UIImageViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA01F11F2578100D0D041 /* UILabelProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelProcessor.h; sourceTree = "<group>"; };
+		3AEDA02011F2578100D0D041 /* UILabelProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelProcessor.m; sourceTree = "<group>"; };
+		3AEDA02111F2578100D0D041 /* UINavigationBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarProcessor.h; sourceTree = "<group>"; };
+		3AEDA02211F2578100D0D041 /* UINavigationBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarProcessor.m; sourceTree = "<group>"; };
+		3AEDA02311F2578100D0D041 /* UINavigationItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationItemProcessor.h; sourceTree = "<group>"; };
+		3AEDA02411F2578100D0D041 /* UINavigationItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationItemProcessor.m; sourceTree = "<group>"; };
+		3AEDA02511F2578100D0D041 /* UIPageControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPageControlProcessor.h; sourceTree = "<group>"; };
+		3AEDA02611F2578100D0D041 /* UIPageControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPageControlProcessor.m; sourceTree = "<group>"; };
+		3AEDA02711F2578100D0D041 /* UIPickerViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPickerViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA02811F2578100D0D041 /* UIPickerViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA02911F2578100D0D041 /* UIProgressViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIProgressViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA02A11F2578100D0D041 /* UIProgressViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIProgressViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA02B11F2578100D0D041 /* UIScrollViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA02C11F2578100D0D041 /* UIScrollViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA02D11F2578100D0D041 /* UISearchBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISearchBarProcessor.h; sourceTree = "<group>"; };
+		3AEDA02E11F2578100D0D041 /* UISearchBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISearchBarProcessor.m; sourceTree = "<group>"; };
+		3AEDA02F11F2578100D0D041 /* UISegmentedControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISegmentedControlProcessor.h; sourceTree = "<group>"; };
+		3AEDA03011F2578100D0D041 /* UISegmentedControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISegmentedControlProcessor.m; sourceTree = "<group>"; };
+		3AEDA03111F2578100D0D041 /* UISliderProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISliderProcessor.h; sourceTree = "<group>"; };
+		3AEDA03211F2578100D0D041 /* UISliderProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISliderProcessor.m; sourceTree = "<group>"; };
+		3AEDA03311F2578100D0D041 /* UISwitchProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchProcessor.h; sourceTree = "<group>"; };
+		3AEDA03411F2578100D0D041 /* UISwitchProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchProcessor.m; sourceTree = "<group>"; };
+		3AEDA03511F2578100D0D041 /* UITabBarItemProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarItemProcessor.h; sourceTree = "<group>"; };
+		3AEDA03611F2578100D0D041 /* UITabBarItemProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarItemProcessor.m; sourceTree = "<group>"; };
+		3AEDA03711F2578100D0D041 /* UITabBarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarProcessor.h; sourceTree = "<group>"; };
+		3AEDA03811F2578100D0D041 /* UITabBarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarProcessor.m; sourceTree = "<group>"; };
+		3AEDA03911F2578100D0D041 /* UITableViewCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellProcessor.h; sourceTree = "<group>"; };
+		3AEDA03A11F2578100D0D041 /* UITableViewCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellProcessor.m; sourceTree = "<group>"; };
+		3AEDA03B11F2578100D0D041 /* UITableViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA03C11F2578100D0D041 /* UITableViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA03D11F2578100D0D041 /* UITextFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldProcessor.h; sourceTree = "<group>"; };
+		3AEDA03E11F2578100D0D041 /* UITextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldProcessor.m; sourceTree = "<group>"; };
+		3AEDA03F11F2578100D0D041 /* UITextViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA04011F2578100D0D041 /* UITextViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA04111F2578100D0D041 /* UIToolbarProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIToolbarProcessor.h; sourceTree = "<group>"; };
+		3AEDA04211F2578100D0D041 /* UIToolbarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIToolbarProcessor.m; sourceTree = "<group>"; };
+		3AEDA04311F2578100D0D041 /* UIViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA04411F2578100D0D041 /* UIViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewProcessor.m; sourceTree = "<group>"; };
+		3AEDA04511F2578100D0D041 /* UIWebViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewProcessor.h; sourceTree = "<group>"; };
+		3AEDA04611F2578100D0D041 /* UIWebViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewProcessor.m; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* nib2objc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "nib2objc-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* nib2objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nib2objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,10 +185,7 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3A1AB27F11F250950062422A /* Categories */,
-				3A1AB28811F250950062422A /* Processors */,
-				3A1AB28611F250950062422A /* NibProcessor.h */,
-				3A1AB28711F250950062422A /* NibProcessor.m */,
+				3AEDA00211F2578100D0D041 /* NibProcessor */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
 				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
 			);
@@ -225,85 +222,95 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3A1AB27F11F250950062422A /* Categories */ = {
+		3AEDA00211F2578100D0D041 /* NibProcessor */ = {
 			isa = PBXGroup;
 			children = (
-				3A1AB28011F250950062422A /* NSDictionary+Nib2ObjcExtensions.h */,
-				3A1AB28111F250950062422A /* NSDictionary+Nib2ObjcExtensions.m */,
-				3A1AB28211F250950062422A /* NSNumber+Nib2ObjcExtensions.h */,
-				3A1AB28311F250950062422A /* NSNumber+Nib2ObjcExtensions.m */,
-				3A1AB28411F250950062422A /* NSString+Nib2ObjcExtensions.h */,
-				3A1AB28511F250950062422A /* NSString+Nib2ObjcExtensions.m */,
+				3AEDA00311F2578100D0D041 /* Categories */,
+				3AEDA00C11F2578100D0D041 /* Processors */,
+				3AEDA00A11F2578100D0D041 /* NibProcessor.h */,
+				3AEDA00B11F2578100D0D041 /* NibProcessor.m */,
 			);
-			name = Categories;
-			path = ../Categories;
+			name = NibProcessor;
+			path = ../NibProcessor;
 			sourceTree = SOURCE_ROOT;
 		};
-		3A1AB28811F250950062422A /* Processors */ = {
+		3AEDA00311F2578100D0D041 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				3A1AB28911F250950062422A /* MKMapViewProcessor.h */,
-				3A1AB28A11F250950062422A /* MKMapViewProcessor.m */,
-				3A1AB28B11F250950062422A /* Processor.h */,
-				3A1AB28C11F250950062422A /* Processor.m */,
-				3A1AB28D11F250950062422A /* UIActivityIndicatorViewProcessor.h */,
-				3A1AB28E11F250950062422A /* UIActivityIndicatorViewProcessor.m */,
-				3A1AB28F11F250950062422A /* UIBarButtonItemProcessor.h */,
-				3A1AB29011F250950062422A /* UIBarButtonItemProcessor.m */,
-				3A1AB29111F250950062422A /* UIBarItemProcessor.h */,
-				3A1AB29211F250950062422A /* UIBarItemProcessor.m */,
-				3A1AB29311F250950062422A /* UIButtonProcessor.h */,
-				3A1AB29411F250950062422A /* UIButtonProcessor.m */,
-				3A1AB29511F250950062422A /* UIControlProcessor.h */,
-				3A1AB29611F250950062422A /* UIControlProcessor.m */,
-				3A1AB29711F250950062422A /* UIDatePickerProcessor.h */,
-				3A1AB29811F250950062422A /* UIDatePickerProcessor.m */,
-				3A1AB29911F250950062422A /* UIImageViewProcessor.h */,
-				3A1AB29A11F250950062422A /* UIImageViewProcessor.m */,
-				3A1AB29B11F250950062422A /* UILabelProcessor.h */,
-				3A1AB29C11F250950062422A /* UILabelProcessor.m */,
-				3A1AB29D11F250950062422A /* UINavigationBarProcessor.h */,
-				3A1AB29E11F250950062422A /* UINavigationBarProcessor.m */,
-				3A1AB29F11F250950062422A /* UINavigationItemProcessor.h */,
-				3A1AB2A011F250950062422A /* UINavigationItemProcessor.m */,
-				3A1AB2A111F250950062422A /* UIPageControlProcessor.h */,
-				3A1AB2A211F250950062422A /* UIPageControlProcessor.m */,
-				3A1AB2A311F250950062422A /* UIPickerViewProcessor.h */,
-				3A1AB2A411F250950062422A /* UIPickerViewProcessor.m */,
-				3A1AB2A511F250950062422A /* UIProgressViewProcessor.h */,
-				3A1AB2A611F250950062422A /* UIProgressViewProcessor.m */,
-				3A1AB2A711F250950062422A /* UIScrollViewProcessor.h */,
-				3A1AB2A811F250950062422A /* UIScrollViewProcessor.m */,
-				3A1AB2A911F250950062422A /* UISearchBarProcessor.h */,
-				3A1AB2AA11F250950062422A /* UISearchBarProcessor.m */,
-				3A1AB2AB11F250950062422A /* UISegmentedControlProcessor.h */,
-				3A1AB2AC11F250950062422A /* UISegmentedControlProcessor.m */,
-				3A1AB2AD11F250950062422A /* UISliderProcessor.h */,
-				3A1AB2AE11F250950062422A /* UISliderProcessor.m */,
-				3A1AB2AF11F250950062422A /* UISwitchProcessor.h */,
-				3A1AB2B011F250950062422A /* UISwitchProcessor.m */,
-				3A1AB2B111F250950062422A /* UITabBarItemProcessor.h */,
-				3A1AB2B211F250950062422A /* UITabBarItemProcessor.m */,
-				3A1AB2B311F250950062422A /* UITabBarProcessor.h */,
-				3A1AB2B411F250950062422A /* UITabBarProcessor.m */,
-				3A1AB2B511F250950062422A /* UITableViewCellProcessor.h */,
-				3A1AB2B611F250950062422A /* UITableViewCellProcessor.m */,
-				3A1AB2B711F250950062422A /* UITableViewProcessor.h */,
-				3A1AB2B811F250950062422A /* UITableViewProcessor.m */,
-				3A1AB2B911F250950062422A /* UITextFieldProcessor.h */,
-				3A1AB2BA11F250950062422A /* UITextFieldProcessor.m */,
-				3A1AB2BB11F250950062422A /* UITextViewProcessor.h */,
-				3A1AB2BC11F250950062422A /* UITextViewProcessor.m */,
-				3A1AB2BD11F250950062422A /* UIToolbarProcessor.h */,
-				3A1AB2BE11F250950062422A /* UIToolbarProcessor.m */,
-				3A1AB2BF11F250950062422A /* UIViewProcessor.h */,
-				3A1AB2C011F250950062422A /* UIViewProcessor.m */,
-				3A1AB2C111F250950062422A /* UIWebViewProcessor.h */,
-				3A1AB2C211F250950062422A /* UIWebViewProcessor.m */,
+				3AEDA00411F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.h */,
+				3AEDA00511F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m */,
+				3AEDA00611F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.h */,
+				3AEDA00711F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m */,
+				3AEDA00811F2578100D0D041 /* NSString+Nib2ObjcExtensions.h */,
+				3AEDA00911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m */,
 			);
-			name = Processors;
-			path = ../Processors;
-			sourceTree = SOURCE_ROOT;
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		3AEDA00C11F2578100D0D041 /* Processors */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDA00D11F2578100D0D041 /* MKMapViewProcessor.h */,
+				3AEDA00E11F2578100D0D041 /* MKMapViewProcessor.m */,
+				3AEDA00F11F2578100D0D041 /* Processor.h */,
+				3AEDA01011F2578100D0D041 /* Processor.m */,
+				3AEDA01111F2578100D0D041 /* UIActivityIndicatorViewProcessor.h */,
+				3AEDA01211F2578100D0D041 /* UIActivityIndicatorViewProcessor.m */,
+				3AEDA01311F2578100D0D041 /* UIBarButtonItemProcessor.h */,
+				3AEDA01411F2578100D0D041 /* UIBarButtonItemProcessor.m */,
+				3AEDA01511F2578100D0D041 /* UIBarItemProcessor.h */,
+				3AEDA01611F2578100D0D041 /* UIBarItemProcessor.m */,
+				3AEDA01711F2578100D0D041 /* UIButtonProcessor.h */,
+				3AEDA01811F2578100D0D041 /* UIButtonProcessor.m */,
+				3AEDA01911F2578100D0D041 /* UIControlProcessor.h */,
+				3AEDA01A11F2578100D0D041 /* UIControlProcessor.m */,
+				3AEDA01B11F2578100D0D041 /* UIDatePickerProcessor.h */,
+				3AEDA01C11F2578100D0D041 /* UIDatePickerProcessor.m */,
+				3AEDA01D11F2578100D0D041 /* UIImageViewProcessor.h */,
+				3AEDA01E11F2578100D0D041 /* UIImageViewProcessor.m */,
+				3AEDA01F11F2578100D0D041 /* UILabelProcessor.h */,
+				3AEDA02011F2578100D0D041 /* UILabelProcessor.m */,
+				3AEDA02111F2578100D0D041 /* UINavigationBarProcessor.h */,
+				3AEDA02211F2578100D0D041 /* UINavigationBarProcessor.m */,
+				3AEDA02311F2578100D0D041 /* UINavigationItemProcessor.h */,
+				3AEDA02411F2578100D0D041 /* UINavigationItemProcessor.m */,
+				3AEDA02511F2578100D0D041 /* UIPageControlProcessor.h */,
+				3AEDA02611F2578100D0D041 /* UIPageControlProcessor.m */,
+				3AEDA02711F2578100D0D041 /* UIPickerViewProcessor.h */,
+				3AEDA02811F2578100D0D041 /* UIPickerViewProcessor.m */,
+				3AEDA02911F2578100D0D041 /* UIProgressViewProcessor.h */,
+				3AEDA02A11F2578100D0D041 /* UIProgressViewProcessor.m */,
+				3AEDA02B11F2578100D0D041 /* UIScrollViewProcessor.h */,
+				3AEDA02C11F2578100D0D041 /* UIScrollViewProcessor.m */,
+				3AEDA02D11F2578100D0D041 /* UISearchBarProcessor.h */,
+				3AEDA02E11F2578100D0D041 /* UISearchBarProcessor.m */,
+				3AEDA02F11F2578100D0D041 /* UISegmentedControlProcessor.h */,
+				3AEDA03011F2578100D0D041 /* UISegmentedControlProcessor.m */,
+				3AEDA03111F2578100D0D041 /* UISliderProcessor.h */,
+				3AEDA03211F2578100D0D041 /* UISliderProcessor.m */,
+				3AEDA03311F2578100D0D041 /* UISwitchProcessor.h */,
+				3AEDA03411F2578100D0D041 /* UISwitchProcessor.m */,
+				3AEDA03511F2578100D0D041 /* UITabBarItemProcessor.h */,
+				3AEDA03611F2578100D0D041 /* UITabBarItemProcessor.m */,
+				3AEDA03711F2578100D0D041 /* UITabBarProcessor.h */,
+				3AEDA03811F2578100D0D041 /* UITabBarProcessor.m */,
+				3AEDA03911F2578100D0D041 /* UITableViewCellProcessor.h */,
+				3AEDA03A11F2578100D0D041 /* UITableViewCellProcessor.m */,
+				3AEDA03B11F2578100D0D041 /* UITableViewProcessor.h */,
+				3AEDA03C11F2578100D0D041 /* UITableViewProcessor.m */,
+				3AEDA03D11F2578100D0D041 /* UITextFieldProcessor.h */,
+				3AEDA03E11F2578100D0D041 /* UITextFieldProcessor.m */,
+				3AEDA03F11F2578100D0D041 /* UITextViewProcessor.h */,
+				3AEDA04011F2578100D0D041 /* UITextViewProcessor.m */,
+				3AEDA04111F2578100D0D041 /* UIToolbarProcessor.h */,
+				3AEDA04211F2578100D0D041 /* UIToolbarProcessor.m */,
+				3AEDA04311F2578100D0D041 /* UIViewProcessor.h */,
+				3AEDA04411F2578100D0D041 /* UIViewProcessor.m */,
+				3AEDA04511F2578100D0D041 /* UIWebViewProcessor.h */,
+				3AEDA04611F2578100D0D041 /* UIWebViewProcessor.m */,
+			);
+			path = Processors;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -364,39 +371,39 @@
 			files = (
 				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
-				3A1AB2C311F250950062422A /* NSDictionary+Nib2ObjcExtensions.m in Sources */,
-				3A1AB2C411F250950062422A /* NSNumber+Nib2ObjcExtensions.m in Sources */,
-				3A1AB2C511F250950062422A /* NSString+Nib2ObjcExtensions.m in Sources */,
-				3A1AB2C611F250950062422A /* NibProcessor.m in Sources */,
-				3A1AB2C711F250950062422A /* MKMapViewProcessor.m in Sources */,
-				3A1AB2C811F250950062422A /* Processor.m in Sources */,
-				3A1AB2C911F250950062422A /* UIActivityIndicatorViewProcessor.m in Sources */,
-				3A1AB2CA11F250950062422A /* UIBarButtonItemProcessor.m in Sources */,
-				3A1AB2CB11F250950062422A /* UIBarItemProcessor.m in Sources */,
-				3A1AB2CC11F250950062422A /* UIButtonProcessor.m in Sources */,
-				3A1AB2CD11F250950062422A /* UIControlProcessor.m in Sources */,
-				3A1AB2CE11F250950062422A /* UIDatePickerProcessor.m in Sources */,
-				3A1AB2CF11F250950062422A /* UIImageViewProcessor.m in Sources */,
-				3A1AB2D011F250950062422A /* UILabelProcessor.m in Sources */,
-				3A1AB2D111F250950062422A /* UINavigationBarProcessor.m in Sources */,
-				3A1AB2D211F250950062422A /* UINavigationItemProcessor.m in Sources */,
-				3A1AB2D311F250950062422A /* UIPageControlProcessor.m in Sources */,
-				3A1AB2D411F250950062422A /* UIPickerViewProcessor.m in Sources */,
-				3A1AB2D511F250950062422A /* UIProgressViewProcessor.m in Sources */,
-				3A1AB2D611F250950062422A /* UIScrollViewProcessor.m in Sources */,
-				3A1AB2D711F250950062422A /* UISearchBarProcessor.m in Sources */,
-				3A1AB2D811F250950062422A /* UISegmentedControlProcessor.m in Sources */,
-				3A1AB2D911F250950062422A /* UISliderProcessor.m in Sources */,
-				3A1AB2DA11F250950062422A /* UISwitchProcessor.m in Sources */,
-				3A1AB2DB11F250950062422A /* UITabBarItemProcessor.m in Sources */,
-				3A1AB2DC11F250950062422A /* UITabBarProcessor.m in Sources */,
-				3A1AB2DD11F250950062422A /* UITableViewCellProcessor.m in Sources */,
-				3A1AB2DE11F250950062422A /* UITableViewProcessor.m in Sources */,
-				3A1AB2DF11F250950062422A /* UITextFieldProcessor.m in Sources */,
-				3A1AB2E011F250950062422A /* UITextViewProcessor.m in Sources */,
-				3A1AB2E111F250950062422A /* UIToolbarProcessor.m in Sources */,
-				3A1AB2E211F250950062422A /* UIViewProcessor.m in Sources */,
-				3A1AB2E311F250950062422A /* UIWebViewProcessor.m in Sources */,
+				3AEDA04711F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m in Sources */,
+				3AEDA04811F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m in Sources */,
+				3AEDA04911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m in Sources */,
+				3AEDA04A11F2578100D0D041 /* NibProcessor.m in Sources */,
+				3AEDA04B11F2578100D0D041 /* MKMapViewProcessor.m in Sources */,
+				3AEDA04C11F2578100D0D041 /* Processor.m in Sources */,
+				3AEDA04D11F2578100D0D041 /* UIActivityIndicatorViewProcessor.m in Sources */,
+				3AEDA04E11F2578100D0D041 /* UIBarButtonItemProcessor.m in Sources */,
+				3AEDA04F11F2578100D0D041 /* UIBarItemProcessor.m in Sources */,
+				3AEDA05011F2578100D0D041 /* UIButtonProcessor.m in Sources */,
+				3AEDA05111F2578100D0D041 /* UIControlProcessor.m in Sources */,
+				3AEDA05211F2578100D0D041 /* UIDatePickerProcessor.m in Sources */,
+				3AEDA05311F2578100D0D041 /* UIImageViewProcessor.m in Sources */,
+				3AEDA05411F2578100D0D041 /* UILabelProcessor.m in Sources */,
+				3AEDA05511F2578100D0D041 /* UINavigationBarProcessor.m in Sources */,
+				3AEDA05611F2578100D0D041 /* UINavigationItemProcessor.m in Sources */,
+				3AEDA05711F2578100D0D041 /* UIPageControlProcessor.m in Sources */,
+				3AEDA05811F2578100D0D041 /* UIPickerViewProcessor.m in Sources */,
+				3AEDA05911F2578100D0D041 /* UIProgressViewProcessor.m in Sources */,
+				3AEDA05A11F2578100D0D041 /* UIScrollViewProcessor.m in Sources */,
+				3AEDA05B11F2578100D0D041 /* UISearchBarProcessor.m in Sources */,
+				3AEDA05C11F2578100D0D041 /* UISegmentedControlProcessor.m in Sources */,
+				3AEDA05D11F2578100D0D041 /* UISliderProcessor.m in Sources */,
+				3AEDA05E11F2578100D0D041 /* UISwitchProcessor.m in Sources */,
+				3AEDA05F11F2578100D0D041 /* UITabBarItemProcessor.m in Sources */,
+				3AEDA06011F2578100D0D041 /* UITabBarProcessor.m in Sources */,
+				3AEDA06111F2578100D0D041 /* UITableViewCellProcessor.m in Sources */,
+				3AEDA06211F2578100D0D041 /* UITableViewProcessor.m in Sources */,
+				3AEDA06311F2578100D0D041 /* UITextFieldProcessor.m in Sources */,
+				3AEDA06411F2578100D0D041 /* UITextViewProcessor.m in Sources */,
+				3AEDA06511F2578100D0D041 /* UIToolbarProcessor.m in Sources */,
+				3AEDA06611F2578100D0D041 /* UIViewProcessor.m in Sources */,
+				3AEDA06711F2578100D0D041 /* UIWebViewProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

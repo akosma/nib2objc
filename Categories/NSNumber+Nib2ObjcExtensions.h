@@ -43,5 +43,6 @@
 - (NSString *)barButtonSystemItemString;
 - (NSString *)tabBarSystemItemString;
 - (NSString *)mapTypeString;
+- (NSString *)clearButtonModeString;
 
 @end

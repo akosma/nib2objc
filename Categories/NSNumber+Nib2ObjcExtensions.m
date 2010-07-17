@@ -362,4 +362,13 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)clearButtonModeString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UITextFieldViewModeNever",
+                       @"UITextFieldViewModeWhileEditing", 
+                       @"UITextFieldViewModeUnlessEditing", 
+                       @"UITextFieldViewModeAlways", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

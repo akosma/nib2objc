@@ -89,6 +89,10 @@
     {
         [output setObject:[value keyboardTypeString] forKey:@"keyboardType"];
     }
+    else if ([item isEqualToString:@"clearButtonMode"])
+    {
+        [output setObject:[value clearButtonModeString] forKey:item];
+    }
     else
     {
         [super processKey:item value:value];

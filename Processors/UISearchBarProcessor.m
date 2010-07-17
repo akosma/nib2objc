@@ -36,9 +36,27 @@
     {
         [output setObject:[value booleanString] forKey:item];
     }
+    else if ([item isEqualToString:@"showsScopeBar"])
+    {
+        [output setObject:[value booleanString] forKey:item];
+    }
+    else if ([item isEqualToString:@"showsSearchResultsButton"])
+    {
+        [output setObject:[value booleanString] forKey:item];
+    }
     else if ([item isEqualToString:@"text"])
     {
         [output setObject:[value quotedAsCodeString] forKey:item];
+    }
+    else if ([item isEqualToString:@"scopeButtonTitles"])
+    {
+        NSMutableString *string = [NSMutableString stringWithString:@"[NSArray arrayWithObjects:"];
+        for (id element in value)
+        {
+            [string appendFormat:@"@\"%@\", ", element];
+        }
+        [string appendString:@"nil]"];
+        [output setObject:string forKey:item];
     }
     else if ([item isEqualToString:@"placeholder"])
     {

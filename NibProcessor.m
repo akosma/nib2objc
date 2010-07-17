@@ -153,8 +153,9 @@
         id klass = [object objectForKey:@"class"];
         id constructor = [object objectForKey:@"constructor"];
         id frame = [object objectForKey:@"frame"];
-        [output appendFormat:@"%@ *view%@ = %@;\n", klass, identifier, constructor];
-        [output appendFormat:@"view%@.frame = %@;\n", identifier, frame];
+        NSString *instanceName = [[klass lowercaseString] substringFromIndex:2];
+        [output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
+        [output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
         
         // Then, output the properties only, ordered alphabetically
         orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -165,7 +166,7 @@
                 && ![key isEqualToString:@"constructor"] && ![key isEqualToString:@"class"]
                 && ![key hasPrefix:@"__helper__"])
             {
-                [output appendFormat:@"view%@.%@ = %@;\n", identifier, key, value];
+                [output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifier, key, value];
             }
         }
 
@@ -176,7 +177,7 @@
             id value = [object objectForKey:key];
             if ([key hasPrefix:@"__method__"])
             {
-                [output appendFormat:@"[view%@ %@];\n", identifier, value];
+                [output appendFormat:@"[%@%@ %@];\n", instanceName, identifier, value];
             }
         }
         [output appendString:@"\n"];    

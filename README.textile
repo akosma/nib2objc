@@ -22,20 +22,20 @@ This will generate a file with the output of the conversion, similar to this (ch
     view6.clearsContextBeforeDrawing = NO;
     // ...
 
-    UIButton *view9 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    view9.frame = CGRectMake(167.0, 65.0, 72.0, 37.0);
-    view9.adjustsImageWhenDisabled = YES;
-    view9.adjustsImageWhenHighlighted = YES;
-    view9.alpha = 1.000;
-    view9.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-    view9.clearsContextBeforeDrawing = NO;
-    view9.clipsToBounds = NO;
-    view9.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    UIButton *button9 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button9.frame = CGRectMake(167.0, 65.0, 72.0, 37.0);
+    button9.adjustsImageWhenDisabled = YES;
+    button9.adjustsImageWhenHighlighted = YES;
+    button9.alpha = 1.000;
+    button9.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    button9.clearsContextBeforeDrawing = NO;
+    button9.clipsToBounds = NO;
+    button9.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     // ...
-    [view9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateSelected];
+    [button9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateSelected];
 
     // ...
-    [view6 addSubview:view9];
+    [view6 addSubview:button9];
     // ...
 </pre>
 

@@ -13,7 +13,8 @@
 
 - (void)getDictionaryFromNIB;
 - (void)process;
-- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView;
+- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)nibObjects;
+- (NSString *)instanceNameForObject:(id)obj;
 
 @end
 
@@ -153,7 +154,7 @@
         id klass = [object objectForKey:@"class"];
         id constructor = [object objectForKey:@"constructor"];
         id frame = [object objectForKey:@"frame"];
-        NSString *instanceName = [[klass lowercaseString] substringFromIndex:2];
+        NSString *instanceName = [self instanceNameForObject:object];
         [output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
         [output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
         
@@ -188,14 +189,14 @@
     for (NSDictionary *item in nibHierarchy)
     {
         int currentView = [[item objectForKey:@"object-id"] intValue];
-        [self parseChildren:item ofCurrentView:currentView];
+        [self parseChildren:item ofCurrentView:currentView withObjects:nibObjects];
     }
     
     [objects release];
     objects = nil;
 }
 
-- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView
+- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)nibObjects
 {
     NSArray *children = [dict objectForKey:@"children"];
     if (children != nil)
@@ -203,10 +204,24 @@
         for (NSDictionary *subitem in children)
         {
             int subview = [[subitem objectForKey:@"object-id"] intValue];
-            [self parseChildren:subitem ofCurrentView:subview];
-            [output appendFormat:@"[view%d addSubview:view%d];\n", currentView, subview];
+
+            id currentViewObject = [nibObjects objectForKey:[NSString stringWithFormat:@"%d", currentView]];
+            NSString *instanceName = [self instanceNameForObject:currentViewObject];
+            
+            id subViewObject = [nibObjects objectForKey:[NSString stringWithFormat:@"%d", subview]];
+            NSString *subInstanceName = [self instanceNameForObject:subViewObject];
+            
+            [self parseChildren:subitem ofCurrentView:subview withObjects:nibObjects];
+            [output appendFormat:@"[%@%d addSubview:%@%d];\n", instanceName, currentView, subInstanceName, subview];
         }
     }
+}
+
+- (NSString *)instanceNameForObject:(id)obj
+{
+    id klass = [obj objectForKey:@"class"];
+    NSString *instanceName = [[klass lowercaseString] substringFromIndex:2];
+    return instanceName;
 }
 
 @end

@@ -16,7 +16,7 @@ int main (int argc, const char * argv[])
     }
     
     // Test that the input file exists, and that it is not a directory
-    NSString *nibFile = [NSString stringWithCString:argv[1]];
+    NSString *nibFile = [NSString stringWithCString:argv[1] encoding:NSUTF8StringEncoding];
     NSFileManager *manager = [NSFileManager defaultManager];
     BOOL isDirectory = NO;
     BOOL fileExists = [manager fileExistsAtPath:nibFile isDirectory:&isDirectory];
@@ -31,7 +31,7 @@ int main (int argc, const char * argv[])
     // and redirect the output to the standard output stream
     NibProcessor *processor = [[NibProcessor alloc] init];
     processor.input = nibFile;
-    printf([processor.output UTF8String]);
+    printf([processor.output UTF8String], NULL);
     [processor release];
 
     [pool drain];

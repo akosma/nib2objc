@@ -13,7 +13,7 @@
 
 - (void)getDictionaryFromNIB;
 - (void)process;
-- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)nibObjects;
+- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)objects;
 - (NSString *)instanceNameForObject:(id)obj;
 
 @end
@@ -189,14 +189,14 @@
     for (NSDictionary *item in nibHierarchy)
     {
         int currentView = [[item objectForKey:@"object-id"] intValue];
-        [self parseChildren:item ofCurrentView:currentView withObjects:nibObjects];
+        [self parseChildren:item ofCurrentView:currentView withObjects:objects];
     }
     
     [objects release];
     objects = nil;
 }
 
-- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)nibObjects
+- (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)objects
 {
     NSArray *children = [dict objectForKey:@"children"];
     if (children != nil)
@@ -205,13 +205,13 @@
         {
             int subview = [[subitem objectForKey:@"object-id"] intValue];
 
-            id currentViewObject = [nibObjects objectForKey:[NSString stringWithFormat:@"%d", currentView]];
+            id currentViewObject = [objects objectForKey:[NSString stringWithFormat:@"%d", currentView]];
             NSString *instanceName = [self instanceNameForObject:currentViewObject];
             
-            id subViewObject = [nibObjects objectForKey:[NSString stringWithFormat:@"%d", subview]];
+            id subViewObject = [objects objectForKey:[NSString stringWithFormat:@"%d", subview]];
             NSString *subInstanceName = [self instanceNameForObject:subViewObject];
             
-            [self parseChildren:subitem ofCurrentView:subview withObjects:nibObjects];
+            [self parseChildren:subitem ofCurrentView:subview withObjects:objects];
             [output appendFormat:@"[%@%d addSubview:%@%d];\n", instanceName, currentView, subInstanceName, subview];
         }
     }

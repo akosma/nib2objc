@@ -56,6 +56,10 @@
     {
         [output setObject:[value booleanString] forKey:item];
     }
+    else if ([item isEqualToString:@"shouldIndentWhileEditing"])
+    {
+        [output setObject:[value booleanString] forKey:item];
+    }
     else if ([item isEqualToString:@"hidesAccessoryWhenEditing"])
     {
         [output setObject:[value booleanString] forKey:item];
@@ -69,6 +73,10 @@
         [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"accessoryType"])
+    {
+        [output setObject:[value tableViewCellAccessoryString] forKey:item];
+    }
+    else if ([item isEqualToString:@"editingAccessoryType"])
     {
         [output setObject:[value tableViewCellAccessoryString] forKey:item];
     }

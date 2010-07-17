@@ -41,6 +41,10 @@ This will generate a file with the output of the conversion, similar to this (ch
 
 The generated code takes into account the real class hierarchies in the UIKit, and it outputs the correct constructors and/or method calls for each object, depending on its class, including the enum values corresponding to the properties using them.
 
+h2. Mac OS X GUI Application
+
+The "GUI" folder contains a Mac OS X application that can be used to open several nib files and to see their contents as Objective-C code.
+
 h2. Mac OS X Service
 
 A secondary project in the "Convert with nib2objc" folder creates an Automator action, that can be used to create Mac OS X services with Automator. The "Convert with nib2objc.zip" file contains an example of such a service, ready to be installed in ~/Library/Services, and which can be called from the Finder after selecting a nib file. The result of the conversion will be placed in the clipboard for pasting into any application.

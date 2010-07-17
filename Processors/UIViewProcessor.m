@@ -36,6 +36,14 @@
     {
         object = [self getProcessedClassName];
     }
+    else if ([item isEqualToString:@"autoresizesSubviews"])
+    {
+        object = [value booleanString];
+    }
+    else if ([item isEqualToString:@"contentStretch"])
+    {
+        object = [NSString stringWithFormat:@"CGRectFromString(\"%@\")", value];
+    }
     else if ([item isEqualToString:@"alpha"])
     {
         object = [value floatString];

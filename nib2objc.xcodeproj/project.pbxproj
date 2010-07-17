@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A01C6F211F192780041B2A8 /* MKMapViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A01C6F111F192780041B2A8 /* MKMapViewProcessor.m */; };
 		3A0515CA0F6BBA140049FCB8 /* UIControlProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0515C90F6BBA140049FCB8 /* UIControlProcessor.m */; };
 		3A0515D30F6BBC310049FCB8 /* NibProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0515D20F6BBC310049FCB8 /* NibProcessor.m */; };
 		3A0516090F6BC8270049FCB8 /* NSNumber+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0516080F6BC8270049FCB8 /* NSNumber+Nib2ObjcExtensions.m */; };
@@ -59,6 +60,8 @@
 		08FB7796FE84155DC02AAC07 /* nib2objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nib2objc.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* nib2objc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nib2objc_Prefix.pch; sourceTree = "<group>"; };
+		3A01C6F011F192780041B2A8 /* MKMapViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewProcessor.h; sourceTree = "<group>"; };
+		3A01C6F111F192780041B2A8 /* MKMapViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewProcessor.m; sourceTree = "<group>"; };
 		3A0515C80F6BBA140049FCB8 /* UIControlProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlProcessor.h; sourceTree = "<group>"; };
 		3A0515C90F6BBA140049FCB8 /* UIControlProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlProcessor.m; sourceTree = "<group>"; };
 		3A0515D10F6BBC310049FCB8 /* NibProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibProcessor.h; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				3ACDD4710F6FF5CB008EA9F2 /* UITabBarProcessor.m */,
 				3ACDD47C0F6FF6D2008EA9F2 /* UITabBarItemProcessor.h */,
 				3ACDD47D0F6FF6D2008EA9F2 /* UITabBarItemProcessor.m */,
+				3A01C6F011F192780041B2A8 /* MKMapViewProcessor.h */,
+				3A01C6F111F192780041B2A8 /* MKMapViewProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				3ACDD44F0F6FF267008EA9F2 /* UIToolbarProcessor.m in Sources */,
 				3ACDD4720F6FF5CB008EA9F2 /* UITabBarProcessor.m in Sources */,
 				3ACDD47E0F6FF6D2008EA9F2 /* UITabBarItemProcessor.m in Sources */,
+				3A01C6F211F192780041B2A8 /* MKMapViewProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

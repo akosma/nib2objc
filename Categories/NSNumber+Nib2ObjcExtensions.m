@@ -354,4 +354,12 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)mapTypeString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"MKMapTypeStandard",
+                       @"MKMapTypeSatellite",
+                       @"MKMapTypeHybrid", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

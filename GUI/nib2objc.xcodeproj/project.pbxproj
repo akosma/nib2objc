@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		3A92DE6311F308C300E0EF30 /* nib2objc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A92DE6211F308C300E0EF30 /* nib2objc.icns */; };
 		3AEDA04711F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00511F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m */; };
 		3AEDA04811F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00711F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.m */; };
 		3AEDA04911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDA00911F2578100D0D041 /* NSString+Nib2ObjcExtensions.m */; };
@@ -62,6 +63,7 @@
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3A92DE6211F308C300E0EF30 /* nib2objc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = nib2objc.icns; sourceTree = "<group>"; };
 		3AEDA00411F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
 		3AEDA00511F2578100D0D041 /* NSDictionary+Nib2ObjcExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Nib2ObjcExtensions.m"; sourceTree = "<group>"; };
 		3AEDA00611F2578100D0D041 /* NSNumber+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A92DE6211F308C300E0EF30 /* nib2objc.icns */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* nib2objc-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
@@ -359,6 +362,7 @@
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
+				3A92DE6311F308C300E0EF30 /* nib2objc.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

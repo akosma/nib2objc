@@ -44,6 +44,19 @@
     [self.editor setString:self.nibCode];
 }
 
+- (BOOL)prepareSavePanel:(NSSavePanel *)savePanel
+{
+    [savePanel setAllowedFileTypes:[NSArray arrayWithObjects:@"m", nil]];
+    [savePanel setExtensionHidden:NO];
+    return YES;
+}
+
+- (BOOL)writeToURL:(NSURL *)absoluteURL ofType:(NSString *)typeName error:(NSError **)outError
+{
+    [self.nibCode writeToURL:absoluteURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    return YES;
+}
+
 - (BOOL)readFromFile:(NSString *)fileName ofType:(NSString *)type
 {
     self.fileName = fileName;

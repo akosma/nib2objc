@@ -1,0 +1,3 @@
+[submodule "GUI/Externals/Fragaria"]
+	path = GUI/Externals/Fragaria
+	url = http://github.com/mugginsoft/Fragaria.git

@@ -67,6 +67,10 @@
     [self.fragariaEditor setObject:@"Objective-C" forKey:MGSFOSyntaxDefinitionName];
     [self.fragariaEditor embedInView:self.editorView];
     [self.fragariaEditor setString:self.nibCode];
+    
+    NSTextView *textView = [self.fragariaEditor objectForKey:ro_MGSFOTextView];
+    [textView setEditable:NO];
+    [textView setFont:[NSFont fontWithName:@"Monaco" size:14.0]];
 }
 
 - (BOOL)prepareSavePanel:(NSSavePanel *)savePanel

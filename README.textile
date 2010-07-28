@@ -43,7 +43,14 @@ The generated code takes into account the real class hierarchies in the UIKit, a
 
 h2. Mac OS X GUI Application
 
-The "GUI" folder contains a Mac OS X application that can be used to open several nib files and to see their contents as Objective-C code.
+The "GUI" folder contains a Mac OS X application that can be used to open several nib files and to see their contents as Objective-C code. 
+
+The GUI application uses the "Fragaria":http://github.com/mugginsoft/Fragaria library as a submodule, to provide syntax highlighting of the generated Objective-C code. Prior to compilation, please do the following:
+
+<pre>
+$ git submodule init
+$ git submodule update
+</pre>
 
 h2. Mac OS X Service
 

@@ -9,14 +9,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class MGSFragaria;
+
 @interface MyDocument : NSDocument
 {
 @private
-    NSTextView *_editor;
+    NSView *_editorView;
     NSString *_nibCode;
     NSString *_fileName;
+	MGSFragaria *_fragariaEditor;
 }
 
-@property (nonatomic, retain) IBOutlet NSTextView *editor;
+@property (nonatomic, retain) IBOutlet NSView *editorView;
 
 @end

@@ -77,4 +77,12 @@
     return [NSString stringWithFormat:@"@\"%@\"", self];
 }
 
+- (NSString *)capitalize
+{
+    // Adapted from 
+    // http://stackoverflow.com/questions/2432452/how-to-capitalize-the-first-word-of-the-sentece-in-objective-c
+    return [self stringByReplacingCharactersInRange:NSMakeRange(0,1) 
+                                         withString:[[self substringToIndex:1] uppercaseString]];
+}
+
 @end

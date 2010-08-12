@@ -8,6 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef enum {
+    NibProcessorCodeStyleProperties = 1,
+    NibProcessorCodeStyleSetter = 2
+} NibProcessorCodeStyle;
+
 @interface NibProcessor : NSObject
 {
 @private
@@ -15,10 +20,14 @@
     NSMutableString *_output;
     NSMutableData *_data;
     NSString *_filename;
+    NibProcessorCodeStyle _codeStyle;
 }
 
 @property (nonatomic, copy) NSString *input;
 @property (nonatomic, readonly) NSString *output;
+@property (nonatomic) NibProcessorCodeStyle codeStyle;
+
+- (void)process;
 
 - (NSString *)inputAsText;
 - (NSDictionary *)inputAsDictionary;

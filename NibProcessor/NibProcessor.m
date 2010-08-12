@@ -8,11 +8,11 @@
 
 #import "NibProcessor.h"
 #import "Processor.h"
+#import "NSString+Nib2ObjcExtensions.h"
 
 @interface NibProcessor ()
 
 - (void)getDictionaryFromNIB;
-- (void)process;
 - (void)parseChildren:(NSDictionary *)dict ofCurrentView:(int)currentView withObjects:(NSDictionary *)objects;
 - (NSString *)instanceNameForObject:(id)obj;
 
@@ -23,6 +23,16 @@
 
 @dynamic input;
 @synthesize output = _output;
+@synthesize codeStyle = _codeStyle;
+
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.codeStyle = NibProcessorCodeStyleProperties;
+    }
+    return self;
+}
 
 - (void)dealloc
 {
@@ -47,7 +57,6 @@
     _filename = nil;
     _filename = [newFilename copy];
     [self getDictionaryFromNIB];
-    [self process];
 }
 
 - (NSString *)inputAsText
@@ -156,7 +165,20 @@
         id frame = [object objectForKey:@"frame"];
         NSString *instanceName = [self instanceNameForObject:object];
         [_output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
-        [_output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
+        
+        switch (self.codeStyle) 
+        {
+            case NibProcessorCodeStyleProperties:
+                [_output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
+                break;
+                
+            case NibProcessorCodeStyleSetter:
+                [_output appendFormat:@"[%@%@ setFrame:%@];\n", instanceName, identifier, frame];
+                break;
+
+            default:
+                break;
+        }
         
         // Then, output the properties only, ordered alphabetically
         orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -167,7 +189,19 @@
                 && ![key isEqualToString:@"constructor"] && ![key isEqualToString:@"class"]
                 && ![key hasPrefix:@"__helper__"])
             {
-                [_output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifier, key, value];
+                switch (self.codeStyle) 
+                {
+                    case NibProcessorCodeStyleProperties:
+                        [_output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifier, key, value];
+                        break;
+                        
+                    case NibProcessorCodeStyleSetter:
+                        [_output appendFormat:@"[%@%@ set%@:%@];\n", instanceName, identifier, [key capitalize], value];
+                        break;
+                        
+                    default:
+                        break;
+                }
             }
         }
 

@@ -15,5 +15,6 @@
 - (NSString *)sizeString;
 - (NSString *)colorString;
 - (NSString *)quotedAsCodeString;
+- (NSString *)capitalize;
 
 @end

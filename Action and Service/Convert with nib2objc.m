@@ -3,7 +3,7 @@
 //  Convert with nib2objc
 //
 //  Created by Adrian on 7/17/10.
-//  Copyright (c) 2010 __MyCompanyName__, All Rights Reserved.
+//  Copyright (c) 2010 akosma software, All Rights Reserved.
 //
 
 #import "Convert with nib2objc.h"
@@ -19,6 +19,7 @@
     // is an array with string filenames.
     NibProcessor *processor = [[[NibProcessor alloc] init] autorelease];
     processor.input = [input objectAtIndex:0];
+    [processor process];
 	return processor.output;
 }
 

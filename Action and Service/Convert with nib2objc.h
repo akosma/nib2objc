@@ -3,7 +3,7 @@
 //  Convert with nib2objc
 //
 //  Created by Adrian on 7/17/10.
-//  Copyright (c) 2010 __MyCompanyName__, All Rights Reserved.
+//  Copyright (c) 2010 akosma software, All Rights Reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -9,7 +9,7 @@
 #import "NibProcessor.h"
 #import "Processor.h"
 
-@interface NibProcessor (Private)
+@interface NibProcessor ()
 
 - (void)getDictionaryFromNIB;
 - (void)process;
@@ -22,14 +22,14 @@
 @implementation NibProcessor
 
 @dynamic input;
-@synthesize output;
+@synthesize output = _output;
 
 - (void)dealloc
 {
-    [filename release];
-    [output release];
-    [dictionary release];
-    [data release];
+    [_filename release];
+    [_output release];
+    [_dictionary release];
+    [_data release];
     [super dealloc];
 }
 
@@ -38,28 +38,28 @@
 
 - (NSString *)input
 {
-    return filename;
+    return _filename;
 }
 
 - (void)setInput:(NSString *)newFilename
 {
-    [filename release];
-    filename = nil;
-    filename = [newFilename copy];
+    [_filename release];
+    _filename = nil;
+    _filename = [newFilename copy];
     [self getDictionaryFromNIB];
     [self process];
 }
 
 - (NSString *)inputAsText
 {
-    return [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    return [[[NSString alloc] initWithData:_data encoding:NSUTF8StringEncoding] autorelease];
 }
 
 - (NSDictionary *)inputAsDictionary
 {
     NSString *errorStr = nil;
     NSPropertyListFormat format;
-    NSDictionary *propertyList = [NSPropertyListSerialization propertyListFromData:data
+    NSDictionary *propertyList = [NSPropertyListSerialization propertyListFromData:_data
                                                                   mutabilityOption:NSPropertyListImmutable
                                                                             format:&format
                                                                   errorDescription:&errorStr];
@@ -73,15 +73,15 @@
 - (void)getDictionaryFromNIB
 {
     // Build the NSTask that will run the ibtool utility
-    NSArray *arguments = [NSArray arrayWithObjects:filename, @"--objects", 
+    NSArray *arguments = [NSArray arrayWithObjects:_filename, @"--objects", 
                           @"--hierarchy", @"--connections", @"--classes", nil];
     NSTask *task = [[NSTask alloc] init];
     NSPipe *pipe = [NSPipe pipe];
     NSFileHandle *readHandle = [pipe fileHandleForReading];
     NSData *temp = nil;
 
-    [data release];
-    data = [[NSMutableData alloc] init];
+    [_data release];
+    _data = [[NSMutableData alloc] init];
     
     [task setLaunchPath:@"/usr/bin/ibtool"];
     [task setArguments:arguments];
@@ -90,12 +90,12 @@
     
     while ((temp = [readHandle availableData]) && [temp length]) 
     {
-        [data appendData:temp];
+        [_data appendData:temp];
     }
 
     // This dictionary is ready to be parsed, and it contains
     // everything we need from the NIB file.
-    dictionary = [[self inputAsDictionary] retain];
+    _dictionary = [[self inputAsDictionary] retain];
     
     [task release];
 }
@@ -104,7 +104,7 @@
 {
     //    NSDictionary *nibClasses = [dict objectForKey:@"com.apple.ibtool.document.classes"];
     //    NSDictionary *nibConnections = [dict objectForKey:@"com.apple.ibtool.document.connections"];
-    NSDictionary *nibObjects = [dictionary objectForKey:@"com.apple.ibtool.document.objects"];
+    NSDictionary *nibObjects = [_dictionary objectForKey:@"com.apple.ibtool.document.objects"];
     NSMutableDictionary *objects = [[NSMutableDictionary alloc] init];
     
     for (NSDictionary *key in nibObjects)
@@ -132,8 +132,8 @@
     }
     
     // Let's print everything as source code
-    [output release];
-    output = [[NSMutableString alloc] init];
+    [_output release];
+    _output = [[NSMutableString alloc] init];
     for (NSDictionary *identifier in objects)
     {
         id object = [objects objectForKey:identifier];
@@ -145,8 +145,8 @@
             id value = [object objectForKey:key];
             if ([key hasPrefix:@"__helper__"])
             {
-                [output appendString:value];
-                [output appendString:@"\n"];    
+                [_output appendString:value];
+                [_output appendString:@"\n"];    
             }
         }
         
@@ -155,8 +155,8 @@
         id constructor = [object objectForKey:@"constructor"];
         id frame = [object objectForKey:@"frame"];
         NSString *instanceName = [self instanceNameForObject:object];
-        [output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
-        [output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
+        [_output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
+        [_output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
         
         // Then, output the properties only, ordered alphabetically
         orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -167,7 +167,7 @@
                 && ![key isEqualToString:@"constructor"] && ![key isEqualToString:@"class"]
                 && ![key hasPrefix:@"__helper__"])
             {
-                [output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifier, key, value];
+                [_output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifier, key, value];
             }
         }
 
@@ -178,14 +178,14 @@
             id value = [object objectForKey:key];
             if ([key hasPrefix:@"__method__"])
             {
-                [output appendFormat:@"[%@%@ %@];\n", instanceName, identifier, value];
+                [_output appendFormat:@"[%@%@ %@];\n", instanceName, identifier, value];
             }
         }
-        [output appendString:@"\n"];    
+        [_output appendString:@"\n"];    
     }
     
     // Now that the objects are created, recreate the hierarchy of the NIB
-    NSArray *nibHierarchy = [dictionary objectForKey:@"com.apple.ibtool.document.hierarchy"];
+    NSArray *nibHierarchy = [_dictionary objectForKey:@"com.apple.ibtool.document.hierarchy"];
     for (NSDictionary *item in nibHierarchy)
     {
         int currentView = [[item objectForKey:@"object-id"] intValue];
@@ -212,7 +212,7 @@
             NSString *subInstanceName = [self instanceNameForObject:subViewObject];
             
             [self parseChildren:subitem ofCurrentView:subview withObjects:objects];
-            [output appendFormat:@"[%@%d addSubview:%@%d];\n", instanceName, currentView, subInstanceName, subview];
+            [_output appendFormat:@"[%@%d addSubview:%@%d];\n", instanceName, currentView, subInstanceName, subview];
         }
     }
 }

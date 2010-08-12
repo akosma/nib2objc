@@ -11,17 +11,16 @@
 @interface NibProcessor : NSObject
 {
 @private
-    NSDictionary *dictionary;
-    NSMutableString *output;
-    NSMutableData *data;
-    NSString *filename;
+    NSDictionary *_dictionary;
+    NSMutableString *_output;
+    NSMutableData *_data;
+    NSString *_filename;
 }
 
-@property (nonatomic, retain) NSString *input;
+@property (nonatomic, copy) NSString *input;
 @property (nonatomic, readonly) NSString *output;
 
 - (NSString *)inputAsText;
 - (NSDictionary *)inputAsDictionary;
 
 @end
-

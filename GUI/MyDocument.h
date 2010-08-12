@@ -10,6 +10,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class MGSFragaria;
+@class NibProcessor;
 
 @interface MyDocument : NSDocument
 {
@@ -18,8 +19,13 @@
     NSString *_nibCode;
     NSString *_fileName;
 	MGSFragaria *_fragariaEditor;
+    NibProcessor *_nibProcessor;
+    NSMatrix *_radioButtonMatrix;
 }
 
 @property (nonatomic, retain) IBOutlet NSView *editorView;
+@property (nonatomic, retain) IBOutlet NSMatrix *radioButtonMatrix;
+
+- (IBAction)changeOutputType:(id)sender;
 
 @end

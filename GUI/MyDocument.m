@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *nibCode;
 @property (nonatomic, copy) NSString *fileName;
 @property (nonatomic, retain) MGSFragaria *fragariaEditor;
+@property (nonatomic, retain) NibProcessor *nibProcessor;
 
 @end
 
@@ -26,6 +27,8 @@
 @synthesize nibCode = _nibCode;
 @synthesize fileName = _fileName;
 @synthesize fragariaEditor = _fragariaEditor;
+@synthesize nibProcessor = _nibProcessor;
+@synthesize radioButtonMatrix = _radioButtonMatrix;
 
 - (id)init
 {
@@ -46,6 +49,10 @@
     _fileName = nil;
     [_fragariaEditor release];
     _fragariaEditor = nil;
+    [_nibProcessor release];
+    _nibProcessor = nil;
+    [_radioButtonMatrix release];
+    _radioButtonMatrix = nil;
     
     [super dealloc];
 }
@@ -89,10 +96,23 @@
 - (BOOL)readFromFile:(NSString *)fileName ofType:(NSString *)type
 {
     self.fileName = fileName;
-    NibProcessor *processor = [[[NibProcessor alloc] init] autorelease];
-    processor.input = self.fileName;
-    self.nibCode = processor.output;
+    self.nibProcessor = [[[NibProcessor alloc] init] autorelease];
+    self.nibProcessor.input = self.fileName;
+    [self.nibProcessor process];
+    self.nibCode = self.nibProcessor.output;
     return YES;
+}
+
+#pragma mark -
+#pragma mark IBAction methods
+
+- (IBAction)changeOutputType:(id)sender
+{
+    self.nibProcessor.codeStyle = (NibProcessorCodeStyle)[self.radioButtonMatrix selectedTag];
+    [self.nibProcessor process];
+    self.nibCode = self.nibProcessor.output;
+    [self.fragariaEditor setString:@""];
+    [self.fragariaEditor setString:self.nibCode];
 }
 
 @end

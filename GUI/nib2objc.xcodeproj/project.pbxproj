@@ -325,10 +325,10 @@
 		3AEDA00C11F2578100D0D041 /* Processors */ = {
 			isa = PBXGroup;
 			children = (
-				3AEDA00D11F2578100D0D041 /* MKMapViewProcessor.h */,
-				3AEDA00E11F2578100D0D041 /* MKMapViewProcessor.m */,
 				3AEDA00F11F2578100D0D041 /* Processor.h */,
 				3AEDA01011F2578100D0D041 /* Processor.m */,
+				3AEDA00D11F2578100D0D041 /* MKMapViewProcessor.h */,
+				3AEDA00E11F2578100D0D041 /* MKMapViewProcessor.m */,
 				3AEDA01111F2578100D0D041 /* UIActivityIndicatorViewProcessor.h */,
 				3AEDA01211F2578100D0D041 /* UIActivityIndicatorViewProcessor.m */,
 				3AEDA01311F2578100D0D041 /* UIBarButtonItemProcessor.h */,

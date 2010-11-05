@@ -257,7 +257,8 @@
 - (NSString *)tableViewCellSeparatorStyleString
 {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSeparatorStyleNone", 
-                       @"UITableViewCellSeparatorStyleSingleLine", nil];
+                       @"UITableViewCellSeparatorStyleSingleLine", 
+                       @"UITableViewCellSeparatorStyleSingleLineEtched", nil];
     return [values objectAtIndex:[self intValue]];
 }
 

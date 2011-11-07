@@ -126,7 +126,11 @@
                              @"wantsLayer",
                              @"autoresizesArchivedViewToFullSize",
                              @"designatedEntryPoint",
-                             @"simulatedStatusBarMetrics", nil];
+                             @"simulatedStatusBarMetrics",
+                             @"contentInset",
+                             @"dataMode",
+                             @"scrollIndicatorInsets",
+                             @"showsSelectionImmediatelyOnTouchBegin", nil];
     }
     return self;
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:GUI/nib2objc.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Command Line/nib2objc.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Action and Service/Convert with nib2objc.xcodeproj">
+   </FileRef>
+</Workspace>

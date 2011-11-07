@@ -47,5 +47,9 @@
 - (NSString *)swipeGestureRecognizerDirectionString;
 - (NSString *)modalPresentationStyleString;
 - (NSString *)modalTransitionStyleString;
+- (NSString *)drawableColorFormatString;
+- (NSString *)drawableDepthFormatString;
+- (NSString *)drawableMultisampleString;
+- (NSString *)drawableStencilFormatString;
 
 @end

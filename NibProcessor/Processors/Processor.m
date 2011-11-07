@@ -45,6 +45,9 @@
 #import "UIViewControllerProcessor.h"
 #import "UITableViewControllerProcessor.h"
 #import "UIStepperProcessor.h"
+#import "GLKViewControllerProcessor.h"
+#import "UITapGestureRecognizerProcessor.h"
+#import "GLKViewProcessor.h"
 
 @interface Processor (Protected)
 
@@ -95,6 +98,9 @@
     else if ([klass isEqualToString:@"IBUIViewController"]) processor = [[UIViewControllerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUITableViewController"]) processor = [[UITableViewControllerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIStepper"]) processor = [[UIStepperProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBGLKViewController"]) processor = [[GLKViewControllerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUITapGestureRecognizer"]) processor = [[UITapGestureRecognizerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBGLKView"]) processor = [[GLKViewProcessor alloc] init];
 
     return [processor autorelease];
 }
@@ -130,7 +136,13 @@
                              @"contentInset",
                              @"dataMode",
                              @"scrollIndicatorInsets",
-                             @"showsSelectionImmediatelyOnTouchBegin", nil];
+                             @"showsSelectionImmediatelyOnTouchBegin",
+                             @"ibExternalExplicitLabel",
+                             @"fontDescription",
+                             @"edgeInsetsContent",
+                             @"edgeInsetsImage",
+                             @"edgeInsetsTitle",
+                             @"highlightedColor", nil];
     }
     return self;
 }

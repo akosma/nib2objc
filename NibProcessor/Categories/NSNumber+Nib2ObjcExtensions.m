@@ -399,4 +399,33 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)drawableColorFormatString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableColorFormatRGBA8888",
+                       @"GLKViewDrawableColorFormatRGB565", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
+- (NSString *)drawableDepthFormatString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableDepthFormatNone",
+                       @"GLKViewDrawableDepthFormat16",
+                       @"GLKViewDrawableDepthFormat24", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
+- (NSString *)drawableMultisampleString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableMultisampleNone",
+                       @"GLKViewDrawableMultisample4X", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
+- (NSString *)drawableStencilFormatString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableStencilFormatNone",
+                       @"GLKViewDrawableStencilFormatNone", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

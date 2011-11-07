@@ -40,6 +40,8 @@
 #import "UIPinchGestureRecognizerProcessor.h"
 #import "UIRotationGestureRecognizerProcessor.h"
 #import "UISwipeGestureRecognizerProcessor.h"
+#import "UIPanGestureRecognizerProcessor.h"
+#import "UILongPressGestureRecognizerProcessor.h"
 
 @interface Processor (Protected)
 
@@ -85,12 +87,44 @@
     else if ([klass isEqualToString:@"IBUIPinchGestureRecognizer"]) processor = [[UIPinchGestureRecognizerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIRotationGestureRecognizer"]) processor = [[UIRotationGestureRecognizerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUISwipeGestureRecognizer"]) processor = [[UISwipeGestureRecognizerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUIPanGestureRecognizer"]) processor = [[UIPanGestureRecognizerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUILongPressGestureRecognizer"]) processor = [[UILongPressGestureRecognizerProcessor alloc] init];
 
     return [processor autorelease];
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        ignoredProperties = [[NSSet alloc] initWithObjects:@"ibExternalIdentityShowNotesWithSelection", 
+                             @"systemItemIdentifier", 
+                             @"autoresizesSubviewsForDevice",
+                             @"backgroundFilters",
+                             @"canDrawConcurrently",
+                             @"clipsSubviews",
+                             @"contentFilters",
+                             @"focusRingType",
+                             @"frameCenterRotation",
+                             @"alphaValue",
+                             @"frameOrigin",
+                             @"frameSize",
+                             @"ibExternalTranslatesAutoresizingMaskIntoConstraints",
+                             @"ibShadowedHorizontalContentCompressionResistancePriority",
+                             @"ibShadowedHorizontalContentHuggingPriority",
+                             @"ibShadowedVerticalContentCompressionResistancePriority",
+                             @"ibShadowedVerticalContentHuggingPriority",
+                             @"opaqueForDevice",
+                             @"simulatedOrientationMetrics",
+                             @"wantsLayer", nil];
+    }
+    return self;
+}
+
 - (void)dealloc
 {
+    [ignoredProperties release];
     [output release];
     [input release];
     [super dealloc];
@@ -114,7 +148,8 @@
 
 #ifdef CONFIGURATION_Debug
         // This will show properties not yet known by nib2objc
-        if ([output objectForKey:item] == nil)
+        if ([output objectForKey:item] == nil &&
+            ![ignoredProperties containsObject:item])
         {
             id object = [NSString stringWithFormat:@"// unknown property: %@", value];
             [output setObject:object forKey:item];

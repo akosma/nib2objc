@@ -14,6 +14,7 @@
     NSMutableDictionary *output;
 @private
     NSDictionary *input;
+    NSSet *ignoredProperties;
 }
 
 @property (nonatomic, readonly) NSDictionary *input;

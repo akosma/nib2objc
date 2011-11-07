@@ -13,6 +13,8 @@
 		3A13E9F6146823500099DE03 /* UIPinchGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9F5146823500099DE03 /* UIPinchGestureRecognizerProcessor.m */; };
 		3A13E9F9146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */; };
 		3A13E9FC14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */; };
+		3A13E9FF1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */; };
+		3A13EA02146831640099DE03 /* UILongPressGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */; };
 		3A527B4C12006FAD00F0986C /* MGSFragaria.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ACD6E2A120067A2006C9D8E /* MGSFragaria.framework */; };
 		3A92DE6311F308C300E0EF30 /* nib2objc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A92DE6211F308C300E0EF30 /* nib2objc.icns */; };
 		3A92E20211F3153000E0EF30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92E20111F3153000E0EF30 /* AppDelegate.m */; };
@@ -122,6 +124,10 @@
 		3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRotationGestureRecognizerProcessor.m; sourceTree = "<group>"; };
 		3A13E9FA14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwipeGestureRecognizerProcessor.h; sourceTree = "<group>"; };
 		3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwipeGestureRecognizerProcessor.m; sourceTree = "<group>"; };
+		3A13E9FD1468306C0099DE03 /* UIPanGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPanGestureRecognizerProcessor.h; sourceTree = "<group>"; };
+		3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPanGestureRecognizerProcessor.m; sourceTree = "<group>"; };
+		3A13EA00146831620099DE03 /* UILongPressGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILongPressGestureRecognizerProcessor.h; sourceTree = "<group>"; };
+		3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILongPressGestureRecognizerProcessor.m; sourceTree = "<group>"; };
 		3A92DE6211F308C300E0EF30 /* nib2objc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = nib2objc.icns; sourceTree = "<group>"; };
 		3A92E20011F3153000E0EF30 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A92E20111F3153000E0EF30 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -403,6 +409,10 @@
 				3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */,
 				3A13E9FA14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.h */,
 				3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */,
+				3A13E9FD1468306C0099DE03 /* UIPanGestureRecognizerProcessor.h */,
+				3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */,
+				3A13EA00146831620099DE03 /* UILongPressGestureRecognizerProcessor.h */,
+				3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -544,6 +554,8 @@
 				3A13E9F6146823500099DE03 /* UIPinchGestureRecognizerProcessor.m in Sources */,
 				3A13E9F9146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m in Sources */,
 				3A13E9FC14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m in Sources */,
+				3A13E9FF1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m in Sources */,
+				3A13EA02146831640099DE03 /* UILongPressGestureRecognizerProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

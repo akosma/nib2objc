@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		3A13E9F3146822B50099DE03 /* UIGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9F2146822B50099DE03 /* UIGestureRecognizerProcessor.m */; };
+		3A13E9F6146823500099DE03 /* UIPinchGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9F5146823500099DE03 /* UIPinchGestureRecognizerProcessor.m */; };
+		3A13E9F9146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */; };
+		3A13E9FC14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */; };
 		3A527B4C12006FAD00F0986C /* MGSFragaria.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ACD6E2A120067A2006C9D8E /* MGSFragaria.framework */; };
 		3A92DE6311F308C300E0EF30 /* nib2objc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A92DE6211F308C300E0EF30 /* nib2objc.icns */; };
 		3A92E20211F3153000E0EF30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92E20111F3153000E0EF30 /* AppDelegate.m */; };
@@ -110,6 +114,14 @@
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3A13E9F1146822B50099DE03 /* UIGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGestureRecognizerProcessor.h; sourceTree = "<group>"; };
+		3A13E9F2146822B50099DE03 /* UIGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGestureRecognizerProcessor.m; sourceTree = "<group>"; };
+		3A13E9F4146823500099DE03 /* UIPinchGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPinchGestureRecognizerProcessor.h; sourceTree = "<group>"; };
+		3A13E9F5146823500099DE03 /* UIPinchGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPinchGestureRecognizerProcessor.m; sourceTree = "<group>"; };
+		3A13E9F7146828AD0099DE03 /* UIRotationGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRotationGestureRecognizerProcessor.h; sourceTree = "<group>"; };
+		3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRotationGestureRecognizerProcessor.m; sourceTree = "<group>"; };
+		3A13E9FA14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwipeGestureRecognizerProcessor.h; sourceTree = "<group>"; };
+		3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwipeGestureRecognizerProcessor.m; sourceTree = "<group>"; };
 		3A92DE6211F308C300E0EF30 /* nib2objc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = nib2objc.icns; sourceTree = "<group>"; };
 		3A92E20011F3153000E0EF30 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A92E20111F3153000E0EF30 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -383,6 +395,14 @@
 				3AEDA04411F2578100D0D041 /* UIViewProcessor.m */,
 				3AEDA04511F2578100D0D041 /* UIWebViewProcessor.h */,
 				3AEDA04611F2578100D0D041 /* UIWebViewProcessor.m */,
+				3A13E9F1146822B50099DE03 /* UIGestureRecognizerProcessor.h */,
+				3A13E9F2146822B50099DE03 /* UIGestureRecognizerProcessor.m */,
+				3A13E9F4146823500099DE03 /* UIPinchGestureRecognizerProcessor.h */,
+				3A13E9F5146823500099DE03 /* UIPinchGestureRecognizerProcessor.m */,
+				3A13E9F7146828AD0099DE03 /* UIRotationGestureRecognizerProcessor.h */,
+				3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */,
+				3A13E9FA14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.h */,
+				3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -418,7 +438,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "nib2objc" */;
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "GUI App" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -520,6 +540,10 @@
 				3AEDA06611F2578100D0D041 /* UIViewProcessor.m in Sources */,
 				3AEDA06711F2578100D0D041 /* UIWebViewProcessor.m in Sources */,
 				3A92E20211F3153000E0EF30 /* AppDelegate.m in Sources */,
+				3A13E9F3146822B50099DE03 /* UIGestureRecognizerProcessor.m in Sources */,
+				3A13E9F6146823500099DE03 /* UIPinchGestureRecognizerProcessor.m in Sources */,
+				3A13E9F9146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m in Sources */,
+				3A13E9FC14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "nib2objc" */ = {
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "GUI App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05733CC08A9546B00998B17 /* Debug */,

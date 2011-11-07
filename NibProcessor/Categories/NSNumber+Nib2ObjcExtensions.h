@@ -44,5 +44,6 @@
 - (NSString *)tabBarSystemItemString;
 - (NSString *)mapTypeString;
 - (NSString *)clearButtonModeString;
+- (NSString *)swipeGestureRecognizerDirectionString;
 
 @end

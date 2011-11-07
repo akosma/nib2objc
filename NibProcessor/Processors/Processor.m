@@ -37,6 +37,9 @@
 #import "UITabBarProcessor.h"
 #import "UITabBarItemProcessor.h"
 #import "MKMapViewProcessor.h"
+#import "UIPinchGestureRecognizerProcessor.h"
+#import "UIRotationGestureRecognizerProcessor.h"
+#import "UISwipeGestureRecognizerProcessor.h"
 
 @interface Processor (Protected)
 
@@ -79,6 +82,9 @@
     else if ([klass isEqualToString:@"IBUITabBar"]) processor = [[UITabBarProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUITabBarItem"]) processor = [[UITabBarItemProcessor alloc] init];
     else if ([klass isEqualToString:@"IBMKMapView"]) processor = [[MKMapViewProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUIPinchGestureRecognizer"]) processor = [[UIPinchGestureRecognizerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUIRotationGestureRecognizer"]) processor = [[UIRotationGestureRecognizerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUISwipeGestureRecognizer"]) processor = [[UISwipeGestureRecognizerProcessor alloc] init];
 
     return [processor autorelease];
 }

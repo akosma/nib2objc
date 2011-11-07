@@ -45,6 +45,10 @@
     {
         object = @"nil";
     }
+    else if ([item isEqualToString:@"imageInsets"])
+    {
+        object = @"UIEdgeInsetsZero";
+    }
     if (object != nil)
     {
         [output setObject:object forKey:item];

@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GUI/nib2objc.xcodeproj">
+      location = "group:GUI/GUI App.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Command Line/nib2objc.xcodeproj">
+      location = "group:Command Line/Command Line.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Action and Service/Convert with nib2objc.xcodeproj">

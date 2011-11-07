@@ -372,4 +372,13 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)swipeGestureRecognizerDirectionString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UISwipeGestureRecognizerDirectionRight",
+                       @"UISwipeGestureRecognizerDirectionLeft",
+                       @"UISwipeGestureRecognizerDirectionUp",
+                       @"UISwipeGestureRecognizerDirectionDown", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

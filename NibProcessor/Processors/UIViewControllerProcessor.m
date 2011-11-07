@@ -21,16 +21,6 @@
     return @"UIViewController";
 }
 
-- (NSString *)constructorString
-{
-    return [NSString stringWithFormat:@"[[%@ alloc] init]", [self getProcessedClassName]];
-}
-
-- (NSString *)frameString
-{
-    return nil;
-}
-
 - (void)processKey:(id)item value:(id)value
 {
     id object = nil;

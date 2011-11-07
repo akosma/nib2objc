@@ -125,13 +125,13 @@
 
         if (processor == nil)
         {
-//#ifdef CONFIGURATION_Debug
+#ifdef CONFIGURATION_Debug
             // Get notified about classes not yet handled by this utility
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             [dict setObject:klass forKey:@"// unknown object (yet)"];
             [objects setObject:dict forKey:key];
             [dict release];
-//#endif
+#endif
         }
         else
         {
@@ -143,9 +143,10 @@
     // Let's print everything as source code
     [_output release];
     _output = [[NSMutableString alloc] init];
-    for (NSDictionary *identifier in objects)
+    for (NSString *identifier in objects)
     {
         id object = [objects objectForKey:identifier];
+        NSString *identifierKey = [[identifier stringByReplacingOccurrencesOfString:@"-" withString:@""] lowercaseString];
         
         // First, output any helper functions, ordered alphabetically
         NSArray *orderedKeys = [object keysSortedByValueUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -163,7 +164,7 @@
         id klass = [object objectForKey:@"class"];
         id constructor = [object objectForKey:@"constructor"];
         NSString *instanceName = [self instanceNameForObject:object];
-        [_output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
+        [_output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifierKey, constructor];
                 
         // Then, output the properties only, ordered alphabetically
         orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -177,11 +178,11 @@
                 switch (self.codeStyle) 
                 {
                     case NibProcessorCodeStyleProperties:
-                        [_output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifier, key, value];
+                        [_output appendFormat:@"%@%@.%@ = %@;\n", instanceName, identifierKey, key, value];
                         break;
                         
                     case NibProcessorCodeStyleSetter:
-                        [_output appendFormat:@"[%@%@ set%@:%@];\n", instanceName, identifier, [key capitalize], value];
+                        [_output appendFormat:@"[%@%@ set%@:%@];\n", instanceName, identifierKey, [key capitalize], value];
                         break;
                         
                     default:
@@ -197,7 +198,7 @@
             id value = [object objectForKey:key];
             if ([key hasPrefix:@"__method__"])
             {
-                [_output appendFormat:@"[%@%@ %@];\n", instanceName, identifier, value];
+                [_output appendFormat:@"[%@%@ %@];\n", instanceName, identifierKey, value];
             }
         }
         [_output appendString:@"\n"];    

@@ -48,6 +48,7 @@
 #import "GLKViewControllerProcessor.h"
 #import "UITapGestureRecognizerProcessor.h"
 #import "GLKViewProcessor.h"
+#import "ProxyObjectProcessor.h"
 
 @interface Processor (Protected)
 
@@ -101,6 +102,7 @@
     else if ([klass isEqualToString:@"IBGLKViewController"]) processor = [[GLKViewControllerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUITapGestureRecognizer"]) processor = [[UITapGestureRecognizerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBGLKView"]) processor = [[GLKViewProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBProxyObject"]) processor = [[ProxyObjectProcessor alloc] init];
 
     return [processor autorelease];
 }
@@ -142,7 +144,9 @@
                              @"edgeInsetsContent",
                              @"edgeInsetsImage",
                              @"edgeInsetsTitle",
-                             @"highlightedColor", nil];
+                             @"highlightedColor",
+                             @"proxiedObjectIdentifier",
+                             @"ibExternalCustomClassName", nil];
     }
     return self;
 }
@@ -163,20 +167,13 @@
     input = [object retain];
     [output release];
     output = [[NSMutableDictionary alloc] init];
-    [output setObject:[self constructorString] forKey:@"constructor"];
-    
-    NSString *frameString = [self frameString];
-    if (nil != frameString)
-    {
-        [output setObject:frameString forKey:@"frame"];
-    }
     
     for (id item in input)
     {
         id value = [input objectForKey:item];
         [self processKey:item value:value];
 
-//#ifdef CONFIGURATION_Debug
+#ifdef CONFIGURATION_Debug
         // This will show properties not yet known by nib2objc
         if ([output objectForKey:item] == nil &&
             ![ignoredProperties containsObject:item])
@@ -184,9 +181,19 @@
             id object = [NSString stringWithFormat:@"// unknown property: %@", value];
             [output setObject:object forKey:item];
         }
-//#endif
+#endif
     }
+
+    // Because of proxy objects, this call should be done at the end
+    // when all the properties of the object have been parsed
+    [output setObject:[self constructorString] forKey:@"constructor"];
     
+    NSString *frameString = [self frameString];
+    if (nil != frameString)
+    {
+        [output setObject:frameString forKey:@"frame"];
+    }
+
     return output;
 }
 
@@ -197,15 +204,14 @@
 
 - (NSString *)frameString
 {
-    NSString *rect = [NSString rectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
-    return rect;
+    return nil;
 }
 
 - (NSString *)constructorString
 {
     // Some subclasses have different constructors than the classic
     // "initWithFrame:", and as such they should override this method.
-    return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
+    return [NSString stringWithFormat:@"[[%@ alloc] init]", [self getProcessedClassName]];
 }
 
 @end

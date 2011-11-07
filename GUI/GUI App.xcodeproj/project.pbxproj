@@ -21,6 +21,7 @@
 		3A13EA0E14683C4C0099DE03 /* GLKViewControllerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA0D14683C4B0099DE03 /* GLKViewControllerProcessor.m */; };
 		3A13EA1114683F500099DE03 /* UITapGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA1014683F4E0099DE03 /* UITapGestureRecognizerProcessor.m */; };
 		3A13EA14146840460099DE03 /* GLKViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA13146840450099DE03 /* GLKViewProcessor.m */; };
+		3A13EA171468437D0099DE03 /* ProxyObjectProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA161468437B0099DE03 /* ProxyObjectProcessor.m */; };
 		3A527B4C12006FAD00F0986C /* MGSFragaria.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ACD6E2A120067A2006C9D8E /* MGSFragaria.framework */; };
 		3A92DE6311F308C300E0EF30 /* nib2objc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A92DE6211F308C300E0EF30 /* nib2objc.icns */; };
 		3A92E20211F3153000E0EF30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92E20111F3153000E0EF30 /* AppDelegate.m */; };
@@ -146,6 +147,8 @@
 		3A13EA1014683F4E0099DE03 /* UITapGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITapGestureRecognizerProcessor.m; sourceTree = "<group>"; };
 		3A13EA12146840430099DE03 /* GLKViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKViewProcessor.h; sourceTree = "<group>"; };
 		3A13EA13146840450099DE03 /* GLKViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLKViewProcessor.m; sourceTree = "<group>"; };
+		3A13EA15146843790099DE03 /* ProxyObjectProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProxyObjectProcessor.h; sourceTree = "<group>"; };
+		3A13EA161468437B0099DE03 /* ProxyObjectProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProxyObjectProcessor.m; sourceTree = "<group>"; };
 		3A92DE6211F308C300E0EF30 /* nib2objc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = nib2objc.icns; sourceTree = "<group>"; };
 		3A92E20011F3153000E0EF30 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A92E20111F3153000E0EF30 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				3A13EA1014683F4E0099DE03 /* UITapGestureRecognizerProcessor.m */,
 				3A13EA12146840430099DE03 /* GLKViewProcessor.h */,
 				3A13EA13146840450099DE03 /* GLKViewProcessor.m */,
+				3A13EA15146843790099DE03 /* ProxyObjectProcessor.h */,
+				3A13EA161468437B0099DE03 /* ProxyObjectProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 				3A13EA0E14683C4C0099DE03 /* GLKViewControllerProcessor.m in Sources */,
 				3A13EA1114683F500099DE03 /* UITapGestureRecognizerProcessor.m in Sources */,
 				3A13EA14146840460099DE03 /* GLKViewProcessor.m in Sources */,
+				3A13EA171468437D0099DE03 /* ProxyObjectProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

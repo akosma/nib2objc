@@ -42,6 +42,9 @@
 #import "UISwipeGestureRecognizerProcessor.h"
 #import "UIPanGestureRecognizerProcessor.h"
 #import "UILongPressGestureRecognizerProcessor.h"
+#import "UIViewControllerProcessor.h"
+#import "UITableViewControllerProcessor.h"
+#import "UIStepperProcessor.h"
 
 @interface Processor (Protected)
 
@@ -89,6 +92,9 @@
     else if ([klass isEqualToString:@"IBUISwipeGestureRecognizer"]) processor = [[UISwipeGestureRecognizerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUIPanGestureRecognizer"]) processor = [[UIPanGestureRecognizerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBUILongPressGestureRecognizer"]) processor = [[UILongPressGestureRecognizerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUIViewController"]) processor = [[UIViewControllerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUITableViewController"]) processor = [[UITableViewControllerProcessor alloc] init];
+    else if ([klass isEqualToString:@"IBUIStepper"]) processor = [[UIStepperProcessor alloc] init];
 
     return [processor autorelease];
 }
@@ -117,7 +123,10 @@
                              @"ibShadowedVerticalContentHuggingPriority",
                              @"opaqueForDevice",
                              @"simulatedOrientationMetrics",
-                             @"wantsLayer", nil];
+                             @"wantsLayer",
+                             @"autoresizesArchivedViewToFullSize",
+                             @"designatedEntryPoint",
+                             @"simulatedStatusBarMetrics", nil];
     }
     return self;
 }
@@ -139,14 +148,19 @@
     [output release];
     output = [[NSMutableDictionary alloc] init];
     [output setObject:[self constructorString] forKey:@"constructor"];
-    [output setObject:[self frameString] forKey:@"frame"];
+    
+    NSString *frameString = [self frameString];
+    if (nil != frameString)
+    {
+        [output setObject:frameString forKey:@"frame"];
+    }
     
     for (id item in input)
     {
         id value = [input objectForKey:item];
         [self processKey:item value:value];
 
-#ifdef CONFIGURATION_Debug
+//#ifdef CONFIGURATION_Debug
         // This will show properties not yet known by nib2objc
         if ([output objectForKey:item] == nil &&
             ![ignoredProperties containsObject:item])
@@ -154,7 +168,7 @@
             id object = [NSString stringWithFormat:@"// unknown property: %@", value];
             [output setObject:object forKey:item];
         }
-#endif
+//#endif
     }
     
     return output;

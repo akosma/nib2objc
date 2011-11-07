@@ -1,16 +1,15 @@
 //
-//  UIGestureRecognizerProcessor.m
+//  UIViewControllerProcessor.m
 //  nib2objc
 //
 //  Created by Adrian Kosmaczewski on 11/7/11.
 //  Copyright (c) 2011 akosma software. All rights reserved.
 //
 
-#import "UIGestureRecognizerProcessor.h"
-#import "NSString+Nib2ObjcExtensions.h"
+#import "UIViewControllerProcessor.h"
 #import "NSNumber+Nib2ObjcExtensions.h"
 
-@implementation UIGestureRecognizerProcessor
+@implementation UIViewControllerProcessor
 
 - (void)dealloc
 {
@@ -19,7 +18,7 @@
 
 - (NSString *)getProcessedClassName
 {
-    return @"UIGestureRecognizer";
+    return @"UIViewController";
 }
 
 - (NSString *)constructorString
@@ -39,21 +38,29 @@
     {
         object = [self getProcessedClassName];
     }
-    else if ([item isEqualToString:@"enabled"])
+    else if ([item isEqualToString:@"definesPresentationContext"])
     {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"cancelsTouchesInView"])
+    else if ([item isEqualToString:@"hidesBottomBarWhenPushed"])
     {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"delaysTouchesBegan"])
+    else if ([item isEqualToString:@"wantsFullScreenLayout"])
     {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"delaysTouchesEnded"])
+    else if ([item isEqualToString:@"providesPresentationContextTransitionStyle"])
     {
         object = [value booleanString];
+    }
+    else if ([item isEqualToString:@"modalPresentationStyle"])
+    {
+        object = [value modalPresentationStyleString];
+    }
+    else if ([item isEqualToString:@"modalTransitionStyle"])
+    {
+        object = [value modalTransitionStyleString];
     }
     if (object != nil)
     {

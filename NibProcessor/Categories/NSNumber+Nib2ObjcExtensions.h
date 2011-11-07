@@ -45,5 +45,7 @@
 - (NSString *)mapTypeString;
 - (NSString *)clearButtonModeString;
 - (NSString *)swipeGestureRecognizerDirectionString;
+- (NSString *)modalPresentationStyleString;
+- (NSString *)modalTransitionStyleString;
 
 @end

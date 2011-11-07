@@ -22,6 +22,11 @@
     return @"UIBarItem";
 }
 
+- (NSString *)frameString
+{
+    return nil;
+}
+
 - (void)processKey:(id)item value:(id)value
 {
     id object = nil;

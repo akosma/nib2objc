@@ -125,13 +125,13 @@
 
         if (processor == nil)
         {
-#ifdef CONFIGURATION_Debug
+//#ifdef CONFIGURATION_Debug
             // Get notified about classes not yet handled by this utility
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             [dict setObject:klass forKey:@"// unknown object (yet)"];
             [objects setObject:dict forKey:key];
             [dict release];
-#endif
+//#endif
         }
         else
         {
@@ -159,33 +159,18 @@
             }
         }
         
-        // Then, output the constructor and the frame
+        // Then, output the constructor
         id klass = [object objectForKey:@"class"];
         id constructor = [object objectForKey:@"constructor"];
-        id frame = [object objectForKey:@"frame"];
         NSString *instanceName = [self instanceNameForObject:object];
         [_output appendFormat:@"%@ *%@%@ = %@;\n", klass, instanceName, identifier, constructor];
-        
-        switch (self.codeStyle) 
-        {
-            case NibProcessorCodeStyleProperties:
-                [_output appendFormat:@"%@%@.frame = %@;\n", instanceName, identifier, frame];
-                break;
                 
-            case NibProcessorCodeStyleSetter:
-                [_output appendFormat:@"[%@%@ setFrame:%@];\n", instanceName, identifier, frame];
-                break;
-
-            default:
-                break;
-        }
-        
         // Then, output the properties only, ordered alphabetically
         orderedKeys = [[object allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
         for (NSString *key in orderedKeys)
         {
             id value = [object objectForKey:key];
-            if (![key hasPrefix:@"__method__"] && ![key isEqualToString:@"frame"] 
+            if (![key hasPrefix:@"__method__"] 
                 && ![key isEqualToString:@"constructor"] && ![key isEqualToString:@"class"]
                 && ![key hasPrefix:@"__helper__"])
             {

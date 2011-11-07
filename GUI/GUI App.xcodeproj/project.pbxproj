@@ -15,6 +15,9 @@
 		3A13E9FC14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */; };
 		3A13E9FF1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */; };
 		3A13EA02146831640099DE03 /* UILongPressGestureRecognizerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */; };
+		3A13EA05146834C80099DE03 /* UIViewControllerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA04146834C70099DE03 /* UIViewControllerProcessor.m */; };
+		3A13EA08146839300099DE03 /* UITableViewControllerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA071468392F0099DE03 /* UITableViewControllerProcessor.m */; };
+		3A13EA0B146839F20099DE03 /* UIStepperProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A13EA0A146839F10099DE03 /* UIStepperProcessor.m */; };
 		3A527B4C12006FAD00F0986C /* MGSFragaria.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ACD6E2A120067A2006C9D8E /* MGSFragaria.framework */; };
 		3A92DE6311F308C300E0EF30 /* nib2objc.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A92DE6211F308C300E0EF30 /* nib2objc.icns */; };
 		3A92E20211F3153000E0EF30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92E20111F3153000E0EF30 /* AppDelegate.m */; };
@@ -128,6 +131,12 @@
 		3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPanGestureRecognizerProcessor.m; sourceTree = "<group>"; };
 		3A13EA00146831620099DE03 /* UILongPressGestureRecognizerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILongPressGestureRecognizerProcessor.h; sourceTree = "<group>"; };
 		3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILongPressGestureRecognizerProcessor.m; sourceTree = "<group>"; };
+		3A13EA03146834C60099DE03 /* UIViewControllerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerProcessor.h; sourceTree = "<group>"; };
+		3A13EA04146834C70099DE03 /* UIViewControllerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerProcessor.m; sourceTree = "<group>"; };
+		3A13EA061468392E0099DE03 /* UITableViewControllerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerProcessor.h; sourceTree = "<group>"; };
+		3A13EA071468392F0099DE03 /* UITableViewControllerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerProcessor.m; sourceTree = "<group>"; };
+		3A13EA09146839F00099DE03 /* UIStepperProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIStepperProcessor.h; sourceTree = "<group>"; };
+		3A13EA0A146839F10099DE03 /* UIStepperProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIStepperProcessor.m; sourceTree = "<group>"; };
 		3A92DE6211F308C300E0EF30 /* nib2objc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = nib2objc.icns; sourceTree = "<group>"; };
 		3A92E20011F3153000E0EF30 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A92E20111F3153000E0EF30 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -413,6 +422,12 @@
 				3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */,
 				3A13EA00146831620099DE03 /* UILongPressGestureRecognizerProcessor.h */,
 				3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */,
+				3A13EA03146834C60099DE03 /* UIViewControllerProcessor.h */,
+				3A13EA04146834C70099DE03 /* UIViewControllerProcessor.m */,
+				3A13EA061468392E0099DE03 /* UITableViewControllerProcessor.h */,
+				3A13EA071468392F0099DE03 /* UITableViewControllerProcessor.m */,
+				3A13EA09146839F00099DE03 /* UIStepperProcessor.h */,
+				3A13EA0A146839F10099DE03 /* UIStepperProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -556,6 +571,9 @@
 				3A13E9FC14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m in Sources */,
 				3A13E9FF1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m in Sources */,
 				3A13EA02146831640099DE03 /* UILongPressGestureRecognizerProcessor.m in Sources */,
+				3A13EA05146834C80099DE03 /* UIViewControllerProcessor.m in Sources */,
+				3A13EA08146839300099DE03 /* UITableViewControllerProcessor.m in Sources */,
+				3A13EA0B146839F20099DE03 /* UIStepperProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

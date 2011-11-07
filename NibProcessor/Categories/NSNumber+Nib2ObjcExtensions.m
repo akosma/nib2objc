@@ -381,4 +381,22 @@
     return [values objectAtIndex:[self intValue]];
 }
 
+- (NSString *)modalPresentationStyleString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIModalPresentationFullScreen",
+                       @"UIModalPresentationPageSheet",
+                       @"UIModalPresentationFormSheet",
+                       @"UIModalPresentationCurrentContext", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
+- (NSString *)modalTransitionStyleString
+{
+    NSArray *values = [NSArray arrayWithObjects:@"UIModalTransitionStyleCoverVertical",
+                       @"UIModalTransitionStyleFlipHorizontal", 
+                       @"UIModalTransitionStyleCrossDissolve", 
+                       @"UIModalTransitionStylePartialCurl", nil];
+    return [values objectAtIndex:[self intValue]];
+}
+
 @end

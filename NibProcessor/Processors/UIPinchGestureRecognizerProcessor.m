@@ -11,15 +11,7 @@
 
 @implementation UIPinchGestureRecognizerProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIPinchGestureRecognizer";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

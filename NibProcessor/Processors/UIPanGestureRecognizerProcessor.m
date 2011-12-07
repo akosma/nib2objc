@@ -11,15 +11,7 @@
 
 @implementation UIPanGestureRecognizerProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIPanGestureRecognizer";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

@@ -12,15 +12,7 @@
 
 @implementation UIBarButtonItemProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIBarButtonItem";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

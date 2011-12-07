@@ -11,14 +11,11 @@
 
 @implementation ProxyObjectProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
+RegisterOnLoadWithCustom("IBProxyObject")
 
 #pragma mark - Private methods
 
-- (NSString *)getProcessedClassName
++ (NSString *)processedClassName
 {
     return @"NSProxy";
 }

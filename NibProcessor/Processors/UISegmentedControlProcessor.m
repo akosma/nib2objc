@@ -12,15 +12,7 @@
 
 @implementation UISegmentedControlProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UISegmentedControl";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

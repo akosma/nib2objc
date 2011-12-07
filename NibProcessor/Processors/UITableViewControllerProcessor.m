@@ -11,15 +11,7 @@
 
 @implementation UITableViewControllerProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UITableViewController";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

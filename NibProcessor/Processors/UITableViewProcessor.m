@@ -11,15 +11,7 @@
 
 @implementation UITableViewProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UITableView";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

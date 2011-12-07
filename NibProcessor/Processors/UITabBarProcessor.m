@@ -10,15 +10,7 @@
 
 @implementation UITabBarProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UITabBar";
-}
+RegisterOnLoadWithIB
 
 // This class does not override 
 // - (void)processKey:(id)item value:(id)value

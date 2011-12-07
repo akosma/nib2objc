@@ -11,15 +11,7 @@
 
 @implementation UIPageControlProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIPageControl";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

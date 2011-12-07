@@ -11,15 +11,7 @@
 
 @implementation UINavigationItemProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UINavigationItem";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

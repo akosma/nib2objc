@@ -11,15 +11,7 @@
 
 @implementation UIProgressViewProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIProgressView";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

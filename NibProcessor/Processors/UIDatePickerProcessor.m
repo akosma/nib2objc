@@ -12,15 +12,7 @@
 
 @implementation UIDatePickerProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIDatePicker";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

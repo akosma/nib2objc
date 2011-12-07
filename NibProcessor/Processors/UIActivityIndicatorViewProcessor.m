@@ -11,15 +11,7 @@
 
 @implementation UIActivityIndicatorViewProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIActivityIndicatorView";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

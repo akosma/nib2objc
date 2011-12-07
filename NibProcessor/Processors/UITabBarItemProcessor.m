@@ -12,15 +12,7 @@
 
 @implementation UITabBarItemProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UITabBarItem";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

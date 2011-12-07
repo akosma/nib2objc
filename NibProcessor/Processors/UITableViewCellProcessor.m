@@ -13,15 +13,7 @@
 
 @implementation UITableViewCellProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UITableViewCell";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

@@ -11,15 +11,7 @@
 
 @implementation UISwipeGestureRecognizerProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UISwipeGestureRecognizer";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

@@ -11,15 +11,7 @@
 
 @implementation UIRotationGestureRecognizerProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIRotationGestureRecognizer";
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

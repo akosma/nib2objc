@@ -7,8 +7,12 @@
 //
 
 #import "NibProcessor.h"
-#import "Processor.h"
+
 #import "NSString+Nib2ObjcExtensions.h"
+#import "NSNumber+Nib2ObjcExtensions.h"
+#import "NSDictionary+Nib2ObjcExtensions.h"
+
+#import "processors.h"
 
 @interface NibProcessor ()
 
@@ -125,7 +129,7 @@
 
         if (processor == nil)
         {
-#ifdef CONFIGURATION_Debug
+#if defined (DEBUG)
             // Get notified about classes not yet handled by this utility
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             [dict setObject:klass forKey:@"// unknown object (yet)"];

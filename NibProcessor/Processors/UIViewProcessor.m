@@ -12,18 +12,10 @@
 
 @implementation UIViewProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
+RegisterOnLoadWithIB
 
 #pragma mark -
 #pragma mark Private methods
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIView";
-}
 
 - (NSString *)frameString
 {

@@ -13,15 +13,7 @@
 
 @implementation UIButtonProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
-- (NSString *)getProcessedClassName
-{
-    return @"UIButton";
-}
+RegisterOnLoadWithIB
 
 - (NSString *)constructorString
 {

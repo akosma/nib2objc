@@ -12,10 +12,7 @@
 
 @implementation UIControlProcessor
 
-- (void)dealloc
-{
-    [super dealloc];
-}
+RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {

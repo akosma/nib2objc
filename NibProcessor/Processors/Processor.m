@@ -53,7 +53,6 @@
 
 + (void)registerProcessorClass:(Class)processorClass
                        forName:(NSString *)className {
-    NSLog(@"registerProcessorClass: %@ forName: %@", processorClass, className);
     [[self mutableMap] setValue:processorClass
                          forKey:className];
 }
@@ -97,8 +96,6 @@
     } else {
         className = [processorClassName substringToIndex:suffix.location];
     }
-
-    NSLog(@"processor class: %@  default processed class: %@", processorClassName, className);
 
     return [className autorelease];
 }

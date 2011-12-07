@@ -30,10 +30,6 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value
 {
-    // Subclasses can override this method for their own properties.
-    // In those cases, call [super processUnknownProperty:item value:value];
-    // to be sure that mother classes do their work too.
-
     id object = nil;
     if ([item isEqualToString:@"class"])
     {

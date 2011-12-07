@@ -6,8 +6,8 @@
 //  Adrian Kosmaczewski 2009
 //
 
-#import "Processor.h"
+#import "ObjectProcessor.h"
 
-@interface UINavigationItemProcessor : Processor
+@interface UINavigationItemProcessor : ObjectProcessor
 
 @end

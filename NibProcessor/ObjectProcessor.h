@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Processor : NSObject {
+@interface ObjectProcessor : NSObject {
 @protected
     NSMutableDictionary *output;
 @private
@@ -22,15 +22,15 @@
 
 - (NSString *)getProcessedClassName;
 
-+ (void)registerProcessor:(Processor *)processor;
++ (void)registerProcessor:(ObjectProcessor *)processor;
 
-+ (void)registerProcessor:(Processor *)processor forName:(NSString *)className;
++ (void)registerProcessor:(ObjectProcessor *)processor forName:(NSString *)className;
 
 + (void)registerProcessorClass:(Class)processorClass;
 
 + (void)registerProcessorClass:(Class)processorClass forName:(NSString *)className;
 
-+ (Processor *)processorForClass:(NSString *)klass;
++ (ObjectProcessor *)processorForClass:(NSString *)klass;
 
 - (NSDictionary *)processObject:(NSDictionary *)object;
 

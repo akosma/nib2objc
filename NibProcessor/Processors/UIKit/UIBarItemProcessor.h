@@ -6,8 +6,8 @@
 //  Adrian Kosmaczewski 2009
 //
 
-#import "Processor.h"
+#import "ObjectProcessor.h"
 
-@interface UIBarItemProcessor : Processor
+@interface UIBarItemProcessor : ObjectProcessor
 
 @end

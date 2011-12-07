@@ -6,8 +6,8 @@
 //  Copyright (c) 2011 akosma software. All rights reserved.
 //
 
-#import "Processor.h"
+#import "ObjectProcessor.h"
 
-@interface UIViewControllerProcessor : Processor
+@interface UIViewControllerProcessor : ObjectProcessor
 
 @end

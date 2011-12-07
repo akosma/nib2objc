@@ -10,7 +10,7 @@
 
 #import "NSString+Nib2ObjcExtensions.h"
 
-#import "processors.h"
+#import "ObjectProcessor.h"
 
 @interface NibProcessor ()
 
@@ -123,7 +123,7 @@
         id object = [nibObjects objectForKey:key];
         NSString *klass = [object objectForKey:@"class"];
 
-        Processor *processor = [Processor processorForClass:klass];
+        ObjectProcessor *processor = [ObjectProcessor processorForClass:klass];
 
         if (processor == nil)
         {

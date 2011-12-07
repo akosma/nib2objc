@@ -6,10 +6,10 @@
 //  Adrian Kosmaczewski 2009
 //
 
-#import "Processor.h"
+#import "ObjectProcessor.h"
 
 
-@interface Processor ()
+@interface ObjectProcessor ()
 + (NSString *)processedClassName;
 
 - (NSString *)getProcessedClassName;
@@ -66,7 +66,7 @@
     [self release];
     NSException *exception =
             [[NSException exceptionWithName:NSGenericException
-                                     reason:@"_ProcessorRegistry isn't meant to be instantiated"
+                                     reason:@"ProcessorRegistry isn't meant to be instantiated"
                                    userInfo:nil] autorelease];
     @throw exception;
 }
@@ -76,7 +76,7 @@
 #pragma mark -
 
 
-@implementation Processor
+@implementation ObjectProcessor
 
 @synthesize input;
 
@@ -104,11 +104,11 @@
     return [[self class] processedClassName];
 }
 
-+ (void)registerProcessor:(Processor *)processor {
++ (void)registerProcessor:(ObjectProcessor *)processor {
     [ProcessorRegistry registerProcessorClass:[processor class]];
 }
 
-+ (void)registerProcessor:(Processor *)processor forName:(NSString *)className {
++ (void)registerProcessor:(ObjectProcessor *)processor forName:(NSString *)className {
     [ProcessorRegistry registerProcessorClass:[processor class] forName:className];
 }
 
@@ -120,7 +120,7 @@
     [ProcessorRegistry registerProcessorClass:processorClass forName:className];
 }
 
-+ (Processor *)processorForClass:(NSString *)klass {
++ (ObjectProcessor *)processorForClass:(NSString *)klass {
     Class processorClass = [ProcessorRegistry processorClassForName:klass];
     return [[[processorClass alloc] init] autorelease];
 }

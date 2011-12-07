@@ -13,39 +13,30 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
+- (void)processKey:(id)item value:(id)value {
     id object = nil;
-    if ([item isEqualToString:@"class"])
-    {
+    if ([item isEqualToString:@"class"]) {
         object = [self getProcessedClassName];
     }
-    else if ([item isEqualToString:@"definesPresentationContext"])
-    {
+    else if ([item isEqualToString:@"definesPresentationContext"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"hidesBottomBarWhenPushed"])
-    {
+    else if ([item isEqualToString:@"hidesBottomBarWhenPushed"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"wantsFullScreenLayout"])
-    {
+    else if ([item isEqualToString:@"wantsFullScreenLayout"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"providesPresentationContextTransitionStyle"])
-    {
+    else if ([item isEqualToString:@"providesPresentationContextTransitionStyle"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"modalPresentationStyle"])
-    {
+    else if ([item isEqualToString:@"modalPresentationStyle"]) {
         object = [value modalPresentationStyleString];
     }
-    else if ([item isEqualToString:@"modalTransitionStyle"])
-    {
+    else if ([item isEqualToString:@"modalTransitionStyle"]) {
         object = [value modalTransitionStyleString];
     }
-    if (object != nil)
-    {
+    if (object != nil) {
         [output setObject:object forKey:item];
     }
 }

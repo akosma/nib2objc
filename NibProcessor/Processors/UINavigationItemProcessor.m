@@ -13,29 +13,23 @@
 
 RegisterOnLoadWithIB
 
-- (NSString *)constructorString
-{
+- (NSString *)constructorString {
     NSString *title = [[self.input objectForKey:@"title"] quotedAsCodeString];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithTitle:%@]", [self getProcessedClassName], title];
 }
 
-- (void)processKey:(id)item value:(id)value
-{
+- (void)processKey:(id)item value:(id)value {
     id object = nil;
-    if ([item isEqualToString:@"class"])
-    {
+    if ([item isEqualToString:@"class"]) {
         object = [self getProcessedClassName];
     }
-    else if ([item isEqualToString:@"title"])
-    {
+    else if ([item isEqualToString:@"title"]) {
         object = [value quotedAsCodeString];
     }
-    else if ([item isEqualToString:@"prompt"])
-    {
+    else if ([item isEqualToString:@"prompt"]) {
         object = [value quotedAsCodeString];
     }
-    if (object != nil)
-    {
+    if (object != nil) {
         [output setObject:object forKey:item];
     }
 }

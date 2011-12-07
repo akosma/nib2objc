@@ -8,6 +8,6 @@
 
 #import "UIViewProcessor.h"
 
-@interface UIActivityIndicatorViewProcessor : UIViewProcessor 
+@interface UIActivityIndicatorViewProcessor : UIViewProcessor
 
 @end

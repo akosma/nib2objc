@@ -8,6 +8,6 @@
 
 #import "UIControlProcessor.h"
 
-@interface UIButtonProcessor : UIControlProcessor 
+@interface UIButtonProcessor : UIControlProcessor
 
 @end

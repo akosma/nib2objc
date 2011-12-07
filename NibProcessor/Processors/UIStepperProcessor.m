@@ -13,38 +13,29 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"autorepeat"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"autorepeat"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"continuous"])
-    {
+    else if ([item isEqualToString:@"continuous"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"maximumValue"])
-    {
+    else if ([item isEqualToString:@"maximumValue"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"minimumValue"])
-    {
+    else if ([item isEqualToString:@"minimumValue"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"stepValue"])
-    {
+    else if ([item isEqualToString:@"stepValue"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"value"])
-    {
+    else if ([item isEqualToString:@"value"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"wraps"])
-    {
+    else if ([item isEqualToString:@"wraps"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

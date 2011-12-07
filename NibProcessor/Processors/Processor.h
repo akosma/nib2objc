@@ -8,8 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Processor : NSObject 
-{
+@interface Processor : NSObject {
 @protected
     NSMutableDictionary *output;
 @private
@@ -17,19 +16,26 @@
     NSSet *ignoredProperties;
 }
 
-@property (nonatomic, readonly) NSDictionary *input;
+@property(nonatomic, readonly) NSDictionary *input;
 
-+ (NSString*)processedClassName;
-- (NSString*)getProcessedClassName;
-+ (void)registerProcessor:(Processor*)processor;
-+ (void)registerProcessor:(Processor*)processor forName:(NSString*)className;
++ (NSString *)processedClassName;
+
+- (NSString *)getProcessedClassName;
+
++ (void)registerProcessor:(Processor *)processor;
+
++ (void)registerProcessor:(Processor *)processor forName:(NSString *)className;
+
 + (void)registerProcessorClass:(Class)processorClass;
-+ (void)registerProcessorClass:(Class)processorClass forName:(NSString*)className;
+
++ (void)registerProcessorClass:(Class)processorClass forName:(NSString *)className;
 
 + (Processor *)processorForClass:(NSString *)klass;
 
 - (NSDictionary *)processObject:(NSDictionary *)object;
+
 - (void)processKey:(id)item value:(id)value;
+
 - (NSString *)frameString;
 
 @end
@@ -61,7 +67,7 @@
     static dispatch_once_t onceToken;                                                               \
     dispatch_once(&onceToken, ^{                                                                    \
         [self registerProcessorClass:self];                                                         \
-        [self registerProcessorClass:self forName:@customName];                                     \
+        [self registerProcessorClass:self forName:customName];                                      \
     });                                                                                             \
 }
 

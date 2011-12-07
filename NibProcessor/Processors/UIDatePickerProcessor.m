@@ -14,29 +14,23 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"datePickerMode"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"datePickerMode"]) {
         [output setObject:[value datePickerModeString] forKey:item];
     }
-    else if ([item isEqualToString:@"timeZone"])
-    {
+    else if ([item isEqualToString:@"timeZone"]) {
         // NSTimeZone instances are not supported by ibtool
         [output setObject:@"nil" forKey:item];
     }
-    else if ([item isEqualToString:@"locale"])
-    {
+    else if ([item isEqualToString:@"locale"]) {
         // NSLocale instances are not supported by ibtool
         [output setObject:@"nil" forKey:item];
     }
-    else if ([item isEqualToString:@"minuteInterval"])
-    {
+    else if ([item isEqualToString:@"minuteInterval"]) {
         // NSLocale instances are not supported by ibtool
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"date"])
-    {
+    else if ([item isEqualToString:@"date"]) {
         NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
         [formatter setDateStyle:NSDateFormatterFullStyle];
         [formatter setTimeStyle:NSDateFormatterFullStyle];
@@ -45,33 +39,29 @@ RegisterOnLoadWithIB
         [output setObject:stringObject forKey:item];
         [output setObject:[NSString dateFromStringFunction] forKey:@"__helper__"];
     }
-    else if ([item isEqualToString:@"maximumDate"])
-    {
+    else if ([item isEqualToString:@"maximumDate"]) {
         NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
         [formatter setDateStyle:NSDateFormatterFullStyle];
         [formatter setTimeStyle:NSDateFormatterFullStyle];
-        
+
         NSString *stringObject = [NSString stringWithFormat:@"dateFromString(%@)", [[formatter stringFromDate:value] quotedAsCodeString]];
         [output setObject:stringObject forKey:item];
         [output setObject:[NSString dateFromStringFunction] forKey:@"__helper__"];
     }
-    else if ([item isEqualToString:@"minimumDate"])
-    {
+    else if ([item isEqualToString:@"minimumDate"]) {
         NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
         [formatter setDateStyle:NSDateFormatterFullStyle];
         [formatter setTimeStyle:NSDateFormatterFullStyle];
-        
+
         NSString *stringObject = [NSString stringWithFormat:@"dateFromString(%@)", [[formatter stringFromDate:value] quotedAsCodeString]];
         [output setObject:stringObject forKey:item];
         [output setObject:[NSString dateFromStringFunction] forKey:@"__helper__"];
     }
-    else if ([item isEqualToString:@"countDownDuration"])
-    {
+    else if ([item isEqualToString:@"countDownDuration"]) {
         // NSLocale instances are not supported by ibtool
         [output setObject:[value intString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

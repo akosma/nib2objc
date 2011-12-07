@@ -13,26 +13,20 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"minimumPressDuration"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"minimumPressDuration"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"allowableMovement"])
-    {
+    else if ([item isEqualToString:@"allowableMovement"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"numberOfTapsRequired"])
-    {
+    else if ([item isEqualToString:@"numberOfTapsRequired"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"numberOfTouchesRequired"])
-    {
+    else if ([item isEqualToString:@"numberOfTouchesRequired"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

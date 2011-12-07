@@ -8,6 +8,6 @@
 
 #import "UIViewProcessor.h"
 
-@interface UIImageViewProcessor : UIViewProcessor 
+@interface UIImageViewProcessor : UIViewProcessor
 
 @end

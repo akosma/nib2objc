@@ -13,28 +13,22 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"currentPage"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"currentPage"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"numberOfPages"])
-    {
+    else if ([item isEqualToString:@"numberOfPages"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"hidesForSinglePage"])
-    {
+    else if ([item isEqualToString:@"hidesForSinglePage"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"defersCurrentPageDisplay"])
-    {
+    else if ([item isEqualToString:@"defersCurrentPageDisplay"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
-    }    
+    }
 }
 
 @end

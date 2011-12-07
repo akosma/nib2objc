@@ -7,38 +7,30 @@
 //
 
 #import "UIGestureRecognizerProcessor.h"
-#import "NSString+Nib2ObjcExtensions.h"
 #import "NSNumber+Nib2ObjcExtensions.h"
 
 @implementation UIGestureRecognizerProcessor
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
+- (void)processKey:(id)item value:(id)value {
     id object = nil;
-    if ([item isEqualToString:@"class"])
-    {
+    if ([item isEqualToString:@"class"]) {
         object = [self getProcessedClassName];
     }
-    else if ([item isEqualToString:@"enabled"])
-    {
+    else if ([item isEqualToString:@"enabled"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"cancelsTouchesInView"])
-    {
+    else if ([item isEqualToString:@"cancelsTouchesInView"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"delaysTouchesBegan"])
-    {
+    else if ([item isEqualToString:@"delaysTouchesBegan"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"delaysTouchesEnded"])
-    {
+    else if ([item isEqualToString:@"delaysTouchesEnded"]) {
         object = [value booleanString];
     }
-    if (object != nil)
-    {
+    if (object != nil) {
         [output setObject:object forKey:item];
     }
 }

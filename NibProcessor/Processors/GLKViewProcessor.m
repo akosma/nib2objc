@@ -13,30 +13,23 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"drawableColorFormat"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"drawableColorFormat"]) {
         [output setObject:[value drawableColorFormatString] forKey:item];
     }
-    else if ([item isEqualToString:@"drawableDepthFormat"])
-    {
+    else if ([item isEqualToString:@"drawableDepthFormat"]) {
         [output setObject:[value drawableDepthFormatString] forKey:item];
     }
-    else if ([item isEqualToString:@"drawableMultisample"])
-    {
+    else if ([item isEqualToString:@"drawableMultisample"]) {
         [output setObject:[value drawableMultisampleString] forKey:item];
     }
-    else if ([item isEqualToString:@"drawableStencilFormat"])
-    {
+    else if ([item isEqualToString:@"drawableStencilFormat"]) {
         [output setObject:[value drawableStencilFormatString] forKey:item];
     }
-    else if ([item isEqualToString:@"enableSetNeedsDisplay"])
-    {
+    else if ([item isEqualToString:@"enableSetNeedsDisplay"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

@@ -10,421 +10,373 @@
 
 @implementation NSNumber (Nib2ObjcExtensions)
 
-- (NSString *)booleanString
-{
-    return ([self boolValue] == 1) ? @"YES" : @"NO";
+- (NSString *)booleanString {
+    return ([self boolValue]) ? @"YES" : @"NO";
 }
 
-- (NSString *)intString
-{
+- (NSString *)intString {
     return [NSString stringWithFormat:@"%d", [self intValue]];
 }
 
-- (NSString *)floatString
-{
+- (NSString *)floatString {
     return [NSString stringWithFormat:@"%1.3f", [self floatValue]];
 }
 
-- (NSString *)autoresizingMaskString
-{
+- (NSString *)autoresizingMaskString {
     // From the documentation
-    enum 
-    {
-        UIViewAutoresizingNone                 = 0,
-        UIViewAutoresizingFlexibleLeftMargin   = 1 << 0,
-        UIViewAutoresizingFlexibleWidth        = 1 << 1,
-        UIViewAutoresizingFlexibleRightMargin  = 1 << 2,
-        UIViewAutoresizingFlexibleTopMargin    = 1 << 3,
-        UIViewAutoresizingFlexibleHeight       = 1 << 4,
-        UIViewAutoresizingFlexibleBottomMargin = 1 << 5
+    enum {
+        UIViewAutoresizingNone                  = 0,
+        UIViewAutoresizingFlexibleLeftMargin    = 1 << 0,
+        UIViewAutoresizingFlexibleWidth         = 1 << 1,
+        UIViewAutoresizingFlexibleRightMargin   = 1 << 2,
+        UIViewAutoresizingFlexibleTopMargin     = 1 << 3,
+        UIViewAutoresizingFlexibleHeight        = 1 << 4,
+        UIViewAutoresizingFlexibleBottomMargin  = 1 << 5
     };
-    
+
     NSUInteger mask = [self unsignedIntValue];
     NSMutableString *maskValue = [[[NSMutableString alloc] init] autorelease];
-    
-    if (mask == UIViewAutoresizingNone) 
-    {
+
+    if (mask == UIViewAutoresizingNone) {
         [maskValue appendString:@"UIViewAutoresizingNone"];
     }
-    if ((mask & UIViewAutoresizingFlexibleLeftMargin) == UIViewAutoresizingFlexibleLeftMargin)
-    {
+    if ((mask & UIViewAutoresizingFlexibleLeftMargin) == UIViewAutoresizingFlexibleLeftMargin) {
         if ([maskValue length] > 0) [maskValue appendString:@" | "];
         [maskValue appendString:@"UIViewAutoresizingFlexibleLeftMargin"];
     }
-    if ((mask & UIViewAutoresizingFlexibleWidth) == UIViewAutoresizingFlexibleWidth)
-    {
+    if ((mask & UIViewAutoresizingFlexibleWidth) == UIViewAutoresizingFlexibleWidth) {
         if ([maskValue length] > 0) [maskValue appendString:@" | "];
         [maskValue appendString:@"UIViewAutoresizingFlexibleWidth"];
     }
-    if ((mask & UIViewAutoresizingFlexibleRightMargin) == UIViewAutoresizingFlexibleRightMargin)
-    {
+    if ((mask & UIViewAutoresizingFlexibleRightMargin) == UIViewAutoresizingFlexibleRightMargin) {
         if ([maskValue length] > 0) [maskValue appendString:@" | "];
         [maskValue appendString:@"UIViewAutoresizingFlexibleRightMargin"];
     }
-    if ((mask & UIViewAutoresizingFlexibleTopMargin) == UIViewAutoresizingFlexibleTopMargin)
-    {
+    if ((mask & UIViewAutoresizingFlexibleTopMargin) == UIViewAutoresizingFlexibleTopMargin) {
         if ([maskValue length] > 0) [maskValue appendString:@" | "];
         [maskValue appendString:@"UIViewAutoresizingFlexibleTopMargin"];
     }
-    if ((mask & UIViewAutoresizingFlexibleHeight) == UIViewAutoresizingFlexibleHeight)
-    {
+    if ((mask & UIViewAutoresizingFlexibleHeight) == UIViewAutoresizingFlexibleHeight) {
         if ([maskValue length] > 0) [maskValue appendString:@" | "];
         [maskValue appendString:@"UIViewAutoresizingFlexibleHeight"];
     }
-    if ((mask & UIViewAutoresizingFlexibleBottomMargin) == UIViewAutoresizingFlexibleBottomMargin)
-    {
+    if ((mask & UIViewAutoresizingFlexibleBottomMargin) == UIViewAutoresizingFlexibleBottomMargin) {
         if ([maskValue length] > 0) [maskValue appendString:@" | "];
         [maskValue appendString:@"UIViewAutoresizingFlexibleBottomMargin"];
     }
-    
+
     return maskValue;
 }
 
-- (NSString *)contentModeString
-{
+- (NSString *)contentModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIViewContentModeScaleToFill",
-                       @"UIViewContentModeScaleAspectFit", 
-                       @"UIViewContentModeScaleAspectFill",
-                       @"UIViewContentModeRedraw",
-                       @"UIViewContentModeCenter",
-                       @"UIViewContentModeTop",
-                       @"UIViewContentModeBottom",
-                       @"UIViewContentModeLeft",
-                       @"UIViewContentModeRight",
-                       @"UIViewContentModeTopLeft",
-                       @"UIViewContentModeTopRight",
-                       @"UIViewContentModeBottomLeft",
-                       @"UIViewContentModeBottomRight", nil];
+                                                @"UIViewContentModeScaleAspectFit",
+                                                @"UIViewContentModeScaleAspectFill",
+                                                @"UIViewContentModeRedraw",
+                                                @"UIViewContentModeCenter",
+                                                @"UIViewContentModeTop",
+                                                @"UIViewContentModeBottom",
+                                                @"UIViewContentModeLeft",
+                                                @"UIViewContentModeRight",
+                                                @"UIViewContentModeTopLeft",
+                                                @"UIViewContentModeTopRight",
+                                                @"UIViewContentModeBottomLeft",
+                                                @"UIViewContentModeBottomRight", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)textAlignmentString
-{
-    NSArray *values = [NSArray arrayWithObjects:@"UITextAlignmentLeft", 
-                       @"UITextAlignmentCenter", 
-                       @"UITextAlignmentRight", nil];
+- (NSString *)textAlignmentString {
+    NSArray *values = [NSArray arrayWithObjects:@"UITextAlignmentLeft",
+                                                @"UITextAlignmentCenter",
+                                                @"UITextAlignmentRight", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)borderStyleString
-{
+- (NSString *)borderStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextBorderStyleNone",
-                       @"UITextBorderStyleLine",
-                       @"UITextBorderStyleBezel",
-                       @"UITextBorderStyleRoundedRect", nil];
+                                                @"UITextBorderStyleLine",
+                                                @"UITextBorderStyleBezel",
+                                                @"UITextBorderStyleRoundedRect", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)contentHorizontalAlignmentString
-{
+- (NSString *)contentHorizontalAlignmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UIControlContentHorizontalAlignmentCenter",
-                       @"UIControlContentHorizontalAlignmentLeft",
-                       @"UIControlContentHorizontalAlignmentRight",
-                       @"UIControlContentHorizontalAlignmentFill", nil];
+                                                @"UIControlContentHorizontalAlignmentLeft",
+                                                @"UIControlContentHorizontalAlignmentRight",
+                                                @"UIControlContentHorizontalAlignmentFill", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)contentVerticalAlignmentString
-{
+- (NSString *)contentVerticalAlignmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UIControlContentVerticalAlignmentCenter",
-                       @"UIControlContentVerticalAlignmentTop",
-                       @"UIControlContentVerticalAlignmentBottom",
-                       @"UIControlContentVerticalAlignmentFill", nil];
+                                                @"UIControlContentVerticalAlignmentTop",
+                                                @"UIControlContentVerticalAlignmentBottom",
+                                                @"UIControlContentVerticalAlignmentFill", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)keyboardAppearanceString
-{
+- (NSString *)keyboardAppearanceString {
     NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardAppearanceDefault",
-                       @"UIKeyboardAppearanceAlert", nil];
+                                                @"UIKeyboardAppearanceAlert", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)returnKeyTypeString
-{
+- (NSString *)returnKeyTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIReturnKeyDefault",
-                       @"UIReturnKeyGo",
-                       @"UIReturnKeyGoogle",
-                       @"UIReturnKeyJoin",
-                       @"UIReturnKeyNext",
-                       @"UIReturnKeyRoute",
-                       @"UIReturnKeySearch",
-                       @"UIReturnKeySend",
-                       @"UIReturnKeyYahoo",
-                       @"UIReturnKeyDone",
-                       @"UIReturnKeyEmergencyCall", nil];
+                                                @"UIReturnKeyGo",
+                                                @"UIReturnKeyGoogle",
+                                                @"UIReturnKeyJoin",
+                                                @"UIReturnKeyNext",
+                                                @"UIReturnKeyRoute",
+                                                @"UIReturnKeySearch",
+                                                @"UIReturnKeySend",
+                                                @"UIReturnKeyYahoo",
+                                                @"UIReturnKeyDone",
+                                                @"UIReturnKeyEmergencyCall", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)autocapitalizationTypeString
-{
+- (NSString *)autocapitalizationTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextAutocapitalizationTypeNone",
-                       @"UITextAutocapitalizationTypeWords",
-                       @"UITextAutocapitalizationTypeSentences",
-                       @"UITextAutocapitalizationTypeAllCharacters", nil];
+                                                @"UITextAutocapitalizationTypeWords",
+                                                @"UITextAutocapitalizationTypeSentences",
+                                                @"UITextAutocapitalizationTypeAllCharacters", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)autocorrectionTypeString
-{
+- (NSString *)autocorrectionTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextAutocorrectionTypeDefault",
-                       @"UITextAutocorrectionTypeNo",
-                       @"UITextAutocorrectionTypeYes", nil];
+                                                @"UITextAutocorrectionTypeNo",
+                                                @"UITextAutocorrectionTypeYes", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)keyboardTypeString
-{
-    NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardTypeDefault", 
-                       @"UIKeyboardTypeASCIICapable", 
-                       @"UIKeyboardTypeNumbersAndPunctuation",
-                       @"UIKeyboardTypeURL",
-                       @"UIKeyboardTypeNumberPad",
-                       @"UIKeyboardTypePhonePad",
-                       @"UIKeyboardTypeNamePhonePad",
-                       @"UIKeyboardTypeEmailAddress", nil];
+- (NSString *)keyboardTypeString {
+    NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardTypeDefault",
+                                                @"UIKeyboardTypeASCIICapable",
+                                                @"UIKeyboardTypeNumbersAndPunctuation",
+                                                @"UIKeyboardTypeURL",
+                                                @"UIKeyboardTypeNumberPad",
+                                                @"UIKeyboardTypePhonePad",
+                                                @"UIKeyboardTypeNamePhonePad",
+                                                @"UIKeyboardTypeEmailAddress", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)progressViewStyleString
-{
+- (NSString *)progressViewStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIProgressViewStyleDefault",
-                       @"UIProgressViewStyleBar", nil];
+                                                @"UIProgressViewStyleBar", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)baselineAdjustmentString
-{
+- (NSString *)baselineAdjustmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBaselineAdjustmentAlignBaselines",
-                       @"UIBaselineAdjustmentAlignCenters",
-                       @"UIBaselineAdjustmentNone", nil];
+                                                @"UIBaselineAdjustmentAlignCenters",
+                                                @"UIBaselineAdjustmentNone", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)lineBreakModeString
-{
+- (NSString *)lineBreakModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UILineBreakModeWordWrap",
-                       @"UILineBreakModeCharacterWrap",
-                       @"UILineBreakModeClip",
-                       @"UILineBreakModeHeadTruncation",
-                       @"UILineBreakModeTailTruncation",
-                       @"UILineBreakModeMiddleTruncation", nil];
+                                                @"UILineBreakModeCharacterWrap",
+                                                @"UILineBreakModeClip",
+                                                @"UILineBreakModeHeadTruncation",
+                                                @"UILineBreakModeTailTruncation",
+                                                @"UILineBreakModeMiddleTruncation", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)activityIndicatorViewStyleString
-{
+- (NSString *)activityIndicatorViewStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIActivityIndicatorViewStyleWhiteLarge",
-                       @"UIActivityIndicatorViewStyleWhite",
-                       @"UIActivityIndicatorViewStyleGray", nil];
+                                                @"UIActivityIndicatorViewStyleWhite",
+                                                @"UIActivityIndicatorViewStyleGray", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)buttonTypeString
-{
+- (NSString *)buttonTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIButtonTypeCustom",
-                       @"UIButtonTypeRoundedRect",
-                       @"UIButtonTypeDetailDisclosure",
-                       @"UIButtonTypeInfoLight",
-                       @"UIButtonTypeInfoDark",
-                       @"UIButtonTypeContactAdd", nil];
+                                                @"UIButtonTypeRoundedRect",
+                                                @"UIButtonTypeDetailDisclosure",
+                                                @"UIButtonTypeInfoLight",
+                                                @"UIButtonTypeInfoDark",
+                                                @"UIButtonTypeContactAdd", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)segmentedControlStyleString
-{
-    NSArray *values = [NSArray arrayWithObjects:@"UISegmentedControlStylePlain", 
-                       @"UISegmentedControlStyleBordered",
-                       @"UISegmentedControlStyleBar", nil];
+- (NSString *)segmentedControlStyleString {
+    NSArray *values = [NSArray arrayWithObjects:@"UISegmentedControlStylePlain",
+                                                @"UISegmentedControlStyleBordered",
+                                                @"UISegmentedControlStyleBar", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)scrollViewIndicatorStyleString
-{
+- (NSString *)scrollViewIndicatorStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIScrollViewIndicatorStyleDefault",
-                       @"UIScrollViewIndicatorStyleBlack",
-                       @"UIScrollViewIndicatorStyleWhite", nil];
+                                                @"UIScrollViewIndicatorStyleBlack",
+                                                @"UIScrollViewIndicatorStyleWhite", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewStyleString
-{
+- (NSString *)tableViewStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewStylePlain",
-                       @"UITableViewStyleGrouped", nil];
+                                                @"UITableViewStyleGrouped", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellSeparatorStyleString
-{
-    NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSeparatorStyleNone", 
-                       @"UITableViewCellSeparatorStyleSingleLine", 
-                       @"UITableViewCellSeparatorStyleSingleLineEtched", nil];
+- (NSString *)tableViewCellSeparatorStyleString {
+    NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSeparatorStyleNone",
+                                                @"UITableViewCellSeparatorStyleSingleLine",
+                                                @"UITableViewCellSeparatorStyleSingleLineEtched", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellAccessoryString
-{
+- (NSString *)tableViewCellAccessoryString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellAccessoryNone",
-                       @"UITableViewCellAccessoryDisclosureIndicator",
-                       @"UITableViewCellAccessoryDetailDisclosureButton",
-                       @"UITableViewCellAccessoryCheckmark", nil];
+                                                @"UITableViewCellAccessoryDisclosureIndicator",
+                                                @"UITableViewCellAccessoryDetailDisclosureButton",
+                                                @"UITableViewCellAccessoryCheckmark", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellEditingStyleString
-{
+- (NSString *)tableViewCellEditingStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellEditingStyleNone",
-                       @"UITableViewCellEditingStyleDelete",
-                       @"UITableViewCellEditingStyleInsert", nil];
+                                                @"UITableViewCellEditingStyleDelete",
+                                                @"UITableViewCellEditingStyleInsert", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellSelectionStyleString
-{
+- (NSString *)tableViewCellSelectionStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSelectionStyleNone",
-                       @"UITableViewCellSelectionStyleBlue",
-                       @"UITableViewCellSelectionStyleGray", nil];
+                                                @"UITableViewCellSelectionStyleBlue",
+                                                @"UITableViewCellSelectionStyleGray", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)datePickerModeString
-{
+- (NSString *)datePickerModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIDatePickerModeTime",
-                       @"UIDatePickerModeDate",
-                       @"UIDatePickerModeDateAndTime",
-                       @"UIDatePickerModeCountDownTimer", nil];
+                                                @"UIDatePickerModeDate",
+                                                @"UIDatePickerModeDateAndTime",
+                                                @"UIDatePickerModeCountDownTimer", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)barStyleString
-{
+- (NSString *)barStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBarStyleDefault",
-                       @"UIBarStyleBlackOpaque",
-                       @"UIBarStyleBlackTranslucent", nil];
+                                                @"UIBarStyleBlackOpaque",
+                                                @"UIBarStyleBlackTranslucent", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)barButtonItemStyleString
-{
+- (NSString *)barButtonItemStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBarButtonItemStylePlain",
-                       @"UIBarButtonItemStyleBordered",
-                       @"UIBarButtonItemStyleDone", nil];
+                                                @"UIBarButtonItemStyleBordered",
+                                                @"UIBarButtonItemStyleDone", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)barButtonSystemItemString
-{
+- (NSString *)barButtonSystemItemString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBarButtonSystemItemDone",
-                       @"UIBarButtonSystemItemCancel",
-                       @"UIBarButtonSystemItemEdit",
-                       @"UIBarButtonSystemItemSave",
-                       @"UIBarButtonSystemItemAdd",
-                       @"UIBarButtonSystemItemFlexibleSpace",
-                       @"UIBarButtonSystemItemFixedSpace",
-                       @"UIBarButtonSystemItemCompose",
-                       @"UIBarButtonSystemItemReply",
-                       @"UIBarButtonSystemItemAction",
-                       @"UIBarButtonSystemItemOrganize",
-                       @"UIBarButtonSystemItemBookmarks",
-                       @"UIBarButtonSystemItemSearch",
-                       @"UIBarButtonSystemItemRefresh",
-                       @"UIBarButtonSystemItemStop",
-                       @"UIBarButtonSystemItemCamera",
-                       @"UIBarButtonSystemItemTrash",
-                       @"UIBarButtonSystemItemPlay",
-                       @"UIBarButtonSystemItemPause",
-                       @"UIBarButtonSystemItemRewind",
-                       @"UIBarButtonSystemItemFastForward", nil];
+                                                @"UIBarButtonSystemItemCancel",
+                                                @"UIBarButtonSystemItemEdit",
+                                                @"UIBarButtonSystemItemSave",
+                                                @"UIBarButtonSystemItemAdd",
+                                                @"UIBarButtonSystemItemFlexibleSpace",
+                                                @"UIBarButtonSystemItemFixedSpace",
+                                                @"UIBarButtonSystemItemCompose",
+                                                @"UIBarButtonSystemItemReply",
+                                                @"UIBarButtonSystemItemAction",
+                                                @"UIBarButtonSystemItemOrganize",
+                                                @"UIBarButtonSystemItemBookmarks",
+                                                @"UIBarButtonSystemItemSearch",
+                                                @"UIBarButtonSystemItemRefresh",
+                                                @"UIBarButtonSystemItemStop",
+                                                @"UIBarButtonSystemItemCamera",
+                                                @"UIBarButtonSystemItemTrash",
+                                                @"UIBarButtonSystemItemPlay",
+                                                @"UIBarButtonSystemItemPause",
+                                                @"UIBarButtonSystemItemRewind",
+                                                @"UIBarButtonSystemItemFastForward", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tabBarSystemItemString
-{
+- (NSString *)tabBarSystemItemString {
     NSArray *values = [NSArray arrayWithObjects:@"UITabBarSystemItemMore",
-                       @"UITabBarSystemItemFavorites",
-                       @"UITabBarSystemItemFeatured",
-                       @"UITabBarSystemItemTopRated",
-                       @"UITabBarSystemItemRecents",
-                       @"UITabBarSystemItemContacts",
-                       @"UITabBarSystemItemHistory",
-                       @"UITabBarSystemItemBookmarks",
-                       @"UITabBarSystemItemSearch",
-                       @"UITabBarSystemItemDownloads",
-                       @"UITabBarSystemItemMostRecent",
-                       @"UITabBarSystemItemMostViewed", nil];
+                                                @"UITabBarSystemItemFavorites",
+                                                @"UITabBarSystemItemFeatured",
+                                                @"UITabBarSystemItemTopRated",
+                                                @"UITabBarSystemItemRecents",
+                                                @"UITabBarSystemItemContacts",
+                                                @"UITabBarSystemItemHistory",
+                                                @"UITabBarSystemItemBookmarks",
+                                                @"UITabBarSystemItemSearch",
+                                                @"UITabBarSystemItemDownloads",
+                                                @"UITabBarSystemItemMostRecent",
+                                                @"UITabBarSystemItemMostViewed", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)mapTypeString
-{
+- (NSString *)mapTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"MKMapTypeStandard",
-                       @"MKMapTypeSatellite",
-                       @"MKMapTypeHybrid", nil];
+                                                @"MKMapTypeSatellite",
+                                                @"MKMapTypeHybrid", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)clearButtonModeString
-{
+- (NSString *)clearButtonModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextFieldViewModeNever",
-                       @"UITextFieldViewModeWhileEditing", 
-                       @"UITextFieldViewModeUnlessEditing", 
-                       @"UITextFieldViewModeAlways", nil];
+                                                @"UITextFieldViewModeWhileEditing",
+                                                @"UITextFieldViewModeUnlessEditing",
+                                                @"UITextFieldViewModeAlways", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)swipeGestureRecognizerDirectionString
-{
+- (NSString *)swipeGestureRecognizerDirectionString {
     NSArray *values = [NSArray arrayWithObjects:@"UISwipeGestureRecognizerDirectionRight",
-                       @"UISwipeGestureRecognizerDirectionLeft",
-                       @"UISwipeGestureRecognizerDirectionUp",
-                       @"UISwipeGestureRecognizerDirectionDown", nil];
+                                                @"UISwipeGestureRecognizerDirectionLeft",
+                                                @"UISwipeGestureRecognizerDirectionUp",
+                                                @"UISwipeGestureRecognizerDirectionDown", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)modalPresentationStyleString
-{
+- (NSString *)modalPresentationStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIModalPresentationFullScreen",
-                       @"UIModalPresentationPageSheet",
-                       @"UIModalPresentationFormSheet",
-                       @"UIModalPresentationCurrentContext", nil];
+                                                @"UIModalPresentationPageSheet",
+                                                @"UIModalPresentationFormSheet",
+                                                @"UIModalPresentationCurrentContext", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)modalTransitionStyleString
-{
+- (NSString *)modalTransitionStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIModalTransitionStyleCoverVertical",
-                       @"UIModalTransitionStyleFlipHorizontal", 
-                       @"UIModalTransitionStyleCrossDissolve", 
-                       @"UIModalTransitionStylePartialCurl", nil];
+                                                @"UIModalTransitionStyleFlipHorizontal",
+                                                @"UIModalTransitionStyleCrossDissolve",
+                                                @"UIModalTransitionStylePartialCurl", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableColorFormatString
-{
+- (NSString *)drawableColorFormatString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableColorFormatRGBA8888",
-                       @"GLKViewDrawableColorFormatRGB565", nil];
+                                                @"GLKViewDrawableColorFormatRGB565", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableDepthFormatString
-{
+- (NSString *)drawableDepthFormatString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableDepthFormatNone",
-                       @"GLKViewDrawableDepthFormat16",
-                       @"GLKViewDrawableDepthFormat24", nil];
+                                                @"GLKViewDrawableDepthFormat16",
+                                                @"GLKViewDrawableDepthFormat24", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableMultisampleString
-{
+- (NSString *)drawableMultisampleString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableMultisampleNone",
-                       @"GLKViewDrawableMultisample4X", nil];
+                                                @"GLKViewDrawableMultisample4X", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableStencilFormatString
-{
+- (NSString *)drawableStencilFormatString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableStencilFormatNone",
-                       @"GLKViewDrawableStencilFormatNone", nil];
+                                                @"GLKViewDrawableStencilFormatNone", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 

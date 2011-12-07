@@ -7,37 +7,29 @@
 //
 
 #import "UIControlProcessor.h"
-#import "NSString+Nib2ObjcExtensions.h"
 #import "NSNumber+Nib2ObjcExtensions.h"
 
 @implementation UIControlProcessor
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"contentHorizontalAlignment"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"contentHorizontalAlignment"]) {
         [output setObject:[value contentHorizontalAlignmentString] forKey:item];
     }
-    else if ([item isEqualToString:@"contentVerticalAlignment"])
-    {
+    else if ([item isEqualToString:@"contentVerticalAlignment"]) {
         [output setObject:[value contentVerticalAlignmentString] forKey:item];
     }
-    else if ([item isEqualToString:@"enabled"])
-    {
+    else if ([item isEqualToString:@"enabled"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"highlighted"])
-    {
+    else if ([item isEqualToString:@"highlighted"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"selected"])
-    {
+    else if ([item isEqualToString:@"selected"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

@@ -8,6 +8,6 @@
 
 #import "UIViewProcessor.h"
 
-@interface MKMapViewProcessor : UIViewProcessor 
+@interface MKMapViewProcessor : UIViewProcessor
 
 @end

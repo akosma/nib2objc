@@ -13,26 +13,20 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"continuous"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"continuous"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"maxValue"])
-    {
+    else if ([item isEqualToString:@"maxValue"]) {
         [output setObject:[value floatString] forKey:@"maximumValue"];
     }
-    else if ([item isEqualToString:@"minValue"])
-    {
+    else if ([item isEqualToString:@"minValue"]) {
         [output setObject:[value floatString] forKey:@"minimumValue"];
     }
-    else if ([item isEqualToString:@"value"])
-    {
+    else if ([item isEqualToString:@"value"]) {
         [output setObject:[value floatString] forKey:@"value"];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

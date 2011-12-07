@@ -13,26 +13,20 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"showsUserLocation"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"showsUserLocation"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    if ([item isEqualToString:@"mapType"])
-    {
+    if ([item isEqualToString:@"mapType"]) {
         [output setObject:[value mapTypeString] forKey:item];
     }
-    else if ([item isEqualToString:@"scrollEnabled"])
-    {
+    else if ([item isEqualToString:@"scrollEnabled"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"zoomEnabled"])
-    {
+    else if ([item isEqualToString:@"zoomEnabled"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

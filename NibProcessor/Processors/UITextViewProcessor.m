@@ -15,30 +15,23 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"text"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"text"]) {
         [output setObject:[value quotedAsCodeString] forKey:item];
     }
-    else if ([item isEqualToString:@"textAlignment"])
-    {
+    else if ([item isEqualToString:@"textAlignment"]) {
         [output setObject:[value textAlignmentString] forKey:item];
     }
-    else if ([item isEqualToString:@"font"])
-    {
+    else if ([item isEqualToString:@"font"]) {
         [output setObject:[value fontString] forKey:item];
     }
-    else if ([item isEqualToString:@"textColor"])
-    {
+    else if ([item isEqualToString:@"textColor"]) {
         [output setObject:[value colorString] forKey:item];
     }
-    else if ([item isEqualToString:@"editable"])
-    {
+    else if ([item isEqualToString:@"editable"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

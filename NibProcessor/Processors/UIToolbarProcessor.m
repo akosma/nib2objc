@@ -14,20 +14,16 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"tintColor"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"tintColor"]) {
         // As of the iPhone SDK 2.2.1, this property does not seem
         // to be exported at all by Interface Builder.
         [output setObject:[value colorString] forKey:item];
     }
-    else if ([item isEqualToString:@"barStyle"])
-    {
+    else if ([item isEqualToString:@"barStyle"]) {
         [output setObject:[value barStyleString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

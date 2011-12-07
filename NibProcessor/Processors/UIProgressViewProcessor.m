@@ -13,24 +13,19 @@
 
 RegisterOnLoadWithIB
 
-- (NSString *)constructorString
-{
+- (NSString *)constructorString {
     NSString *style = [[self.input objectForKey:@"progressViewStyle"] progressViewStyleString];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithProgressViewStyle:%@]", [self getProcessedClassName], style];
 }
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"progress"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"progress"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"progressViewStyle"])
-    {
+    else if ([item isEqualToString:@"progressViewStyle"]) {
         [output setObject:[value progressViewStyleString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

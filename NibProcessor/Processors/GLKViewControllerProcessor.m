@@ -13,22 +13,17 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"pauseOnWillResignActive"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"pauseOnWillResignActive"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"preferredFramesPerSecond"])
-    {
+    else if ([item isEqualToString:@"preferredFramesPerSecond"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"resumeOnDidBecomeActive"])
-    {
+    else if ([item isEqualToString:@"resumeOnDidBecomeActive"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

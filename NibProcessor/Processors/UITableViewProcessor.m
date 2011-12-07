@@ -13,53 +13,41 @@
 
 RegisterOnLoadWithIB
 
-- (NSString *)constructorString
-{
+- (NSString *)constructorString {
     NSString *style = [[self.input objectForKey:@"style"] tableViewStyleString];
     NSString *frame = [self frameString];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@ style:%@]", [self getProcessedClassName], frame, style];
 }
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"rowHeight"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"rowHeight"]) {
         [output setObject:[value description] forKey:item];
     }
-    else if ([item isEqualToString:@"sectionFooterHeight"])
-    {
+    else if ([item isEqualToString:@"sectionFooterHeight"]) {
         [output setObject:[value description] forKey:item];
     }
-    else if ([item isEqualToString:@"sectionHeaderHeight"])
-    {
+    else if ([item isEqualToString:@"sectionHeaderHeight"]) {
         [output setObject:[value description] forKey:item];
     }
-    else if ([item isEqualToString:@"separatorStyle"])
-    {
+    else if ([item isEqualToString:@"separatorStyle"]) {
         [output setObject:[value tableViewCellSeparatorStyleString] forKey:item];
     }
-    else if ([item isEqualToString:@"sectionIndexMinimumDisplayRowCount"])
-    {
+    else if ([item isEqualToString:@"sectionIndexMinimumDisplayRowCount"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"allowsMultipleSelection"])
-    {
+    else if ([item isEqualToString:@"allowsMultipleSelection"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"allowsMultipleSelectionDuringEditing"])
-    {
+    else if ([item isEqualToString:@"allowsMultipleSelectionDuringEditing"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"allowsSelection"])
-    {
+    else if ([item isEqualToString:@"allowsSelection"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"allowsSelectionDuringEditing"])
-    {
+    else if ([item isEqualToString:@"allowsSelectionDuringEditing"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

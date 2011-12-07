@@ -13,14 +13,11 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"minimumNumberOfTouches"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"minimumNumberOfTouches"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

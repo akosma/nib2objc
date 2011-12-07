@@ -8,6 +8,6 @@
 
 #import "UIControlProcessor.h"
 
-@interface UISliderProcessor : UIControlProcessor 
+@interface UISliderProcessor : UIControlProcessor
 
 @end

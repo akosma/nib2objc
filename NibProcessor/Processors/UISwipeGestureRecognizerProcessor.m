@@ -13,18 +13,14 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"numberOfTouchesRequired"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"numberOfTouchesRequired"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"direction"])
-    {
+    else if ([item isEqualToString:@"direction"]) {
         [output setObject:[value swipeGestureRecognizerDirectionString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

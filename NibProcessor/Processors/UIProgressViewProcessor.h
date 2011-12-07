@@ -8,6 +8,6 @@
 
 #import "UIViewProcessor.h"
 
-@interface UIProgressViewProcessor : UIViewProcessor 
+@interface UIProgressViewProcessor : UIViewProcessor
 
 @end

@@ -13,14 +13,11 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"showsSelectionIndicator"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"showsSelectionIndicator"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

@@ -10,8 +10,7 @@
 
 @implementation NSDictionary (Nib2ObjcExtensions)
 
-- (NSString *)fontString
-{
+- (NSString *)fontString {
     NSString *name = [self objectForKey:@"Name"];
     float size = [[self objectForKey:@"Size"] floatValue];
     return [NSString stringWithFormat:@"[UIFont fontWithName:@\"%@\" size:%1.3f]", name, size];

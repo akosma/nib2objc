@@ -13,18 +13,14 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"scalesPageToFit"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"scalesPageToFit"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"detectsPhoneNumbers"])
-    {
+    else if ([item isEqualToString:@"detectsPhoneNumbers"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

@@ -14,56 +14,43 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"tintColor"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"tintColor"]) {
         [output setObject:[value colorString] forKey:item];
     }
-    else if ([item isEqualToString:@"showsBookmarkButton"])
-    {
+    else if ([item isEqualToString:@"showsBookmarkButton"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"showsCancelButton"])
-    {
+    else if ([item isEqualToString:@"showsCancelButton"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"showsScopeBar"])
-    {
+    else if ([item isEqualToString:@"showsScopeBar"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"showsSearchResultsButton"])
-    {
+    else if ([item isEqualToString:@"showsSearchResultsButton"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"text"])
-    {
+    else if ([item isEqualToString:@"text"]) {
         [output setObject:[value quotedAsCodeString] forKey:item];
     }
-    else if ([item isEqualToString:@"scopeButtonTitles"])
-    {
+    else if ([item isEqualToString:@"scopeButtonTitles"]) {
         NSMutableString *string = [NSMutableString stringWithString:@"[NSArray arrayWithObjects:"];
-        for (id element in value)
-        {
+        for (id element in value) {
             [string appendFormat:@"@\"%@\", ", element];
         }
         [string appendString:@"nil]"];
         [output setObject:string forKey:item];
     }
-    else if ([item isEqualToString:@"placeholder"])
-    {
+    else if ([item isEqualToString:@"placeholder"]) {
         [output setObject:[value quotedAsCodeString] forKey:item];
     }
-    else if ([item isEqualToString:@"prompt"])
-    {
+    else if ([item isEqualToString:@"prompt"]) {
         [output setObject:[value quotedAsCodeString] forKey:item];
     }
-    else if ([item isEqualToString:@"barStyle"])
-    {
+    else if ([item isEqualToString:@"barStyle"]) {
         [output setObject:[value barStyleString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

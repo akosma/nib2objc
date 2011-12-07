@@ -7,28 +7,23 @@
 //
 
 #import "ProxyObjectProcessor.h"
-#import "NSNumber+Nib2ObjcExtensions.h"
 
 @implementation ProxyObjectProcessor
 
-RegisterOnLoadWithCustom("IBProxyObject")
+RegisterOnLoadWithCustom(@"IBProxyObject")
 
 #pragma mark - Private methods
 
-+ (NSString *)processedClassName
-{
++ (NSString *)processedClassName {
     return @"NSProxy";
 }
 
-- (void)processKey:(id)item value:(id)value
-{
+- (void)processKey:(id)item value:(id)value {
     id object = nil;
-    if ([item isEqualToString:@"custom-class"])
-    {
+    if ([item isEqualToString:@"custom-class"]) {
         [output setObject:value forKey:@"class"];
     }
-    if (object != nil)
-    {
+    if (object != nil) {
         [output setObject:object forKey:item];
     }
 }

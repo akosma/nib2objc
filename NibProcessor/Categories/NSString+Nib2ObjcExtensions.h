@@ -11,10 +11,15 @@
 @interface NSString (Nib2ObjcExtensions)
 
 + (NSString *)rectStringFromPoint:(NSString *)pointString size:(NSString *)sizeString;
+
 + (NSString *)dateFromStringFunction;
+
 - (NSString *)sizeString;
+
 - (NSString *)colorString;
+
 - (NSString *)quotedAsCodeString;
+
 - (NSString *)capitalize;
 
 @end

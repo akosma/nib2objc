@@ -15,62 +15,47 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"text"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"text"]) {
         [output setObject:[value quotedAsCodeString] forKey:item];
     }
-    else if ([item isEqualToString:@"textAlignment"])
-    {
+    else if ([item isEqualToString:@"textAlignment"]) {
         [output setObject:[value textAlignmentString] forKey:item];
     }
-    else if ([item isEqualToString:@"textColor"])
-    {
+    else if ([item isEqualToString:@"textColor"]) {
         [output setObject:[value colorString] forKey:item];
     }
-    else if ([item isEqualToString:@"font"])
-    {
+    else if ([item isEqualToString:@"font"]) {
         [output setObject:[value fontString] forKey:item];
     }
-    else if ([item isEqualToString:@"adjustsFontSizeToFitWidth"])
-    {
+    else if ([item isEqualToString:@"adjustsFontSizeToFitWidth"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"minimumFontSize"])
-    {
+    else if ([item isEqualToString:@"minimumFontSize"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else if ([item isEqualToString:@"enabled"])
-    {
+    else if ([item isEqualToString:@"enabled"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else if ([item isEqualToString:@"baselineAdjustment"])
-    {
+    else if ([item isEqualToString:@"baselineAdjustment"]) {
         [output setObject:[value baselineAdjustmentString] forKey:item];
     }
-    else if ([item isEqualToString:@"lineBreakMode"])
-    {
+    else if ([item isEqualToString:@"lineBreakMode"]) {
         [output setObject:[value lineBreakModeString] forKey:item];
     }
-    else if ([item isEqualToString:@"numberOfLines"])
-    {
+    else if ([item isEqualToString:@"numberOfLines"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"shadowOffset"])
-    {
+    else if ([item isEqualToString:@"shadowOffset"]) {
         [output setObject:[value sizeString] forKey:item];
     }
-    else if ([item isEqualToString:@"shadowColor"])
-    {
+    else if ([item isEqualToString:@"shadowColor"]) {
         [output setObject:[value colorString] forKey:item];
     }
-    else if ([item isEqualToString:@"highlightedColor"])
-    {
+    else if ([item isEqualToString:@"highlightedColor"]) {
         [output setObject:[value colorString] forKey:@"highlightedTextColor"];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

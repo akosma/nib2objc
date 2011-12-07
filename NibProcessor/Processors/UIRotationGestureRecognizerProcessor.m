@@ -13,14 +13,11 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"rotation"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"rotation"]) {
         [output setObject:[value floatString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

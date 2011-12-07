@@ -14,28 +14,22 @@
 
 RegisterOnLoadWithIB
 
-- (NSString *)constructorString
-{
+- (NSString *)constructorString {
     NSString *items = [[self.input objectForKey:@"segmentTitles"] componentsJoinedByString:@"\", @\""];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithItems:[NSArray arrayWithObjects:%@, nil]]", [self getProcessedClassName], [items quotedAsCodeString]];
 }
 
-- (void)processKey:(id)item value:(id)value
-{
-    if ([item isEqualToString:@"segmentControlStyle"])
-    {
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"segmentControlStyle"]) {
         [output setObject:[value segmentedControlStyleString] forKey:@"segmentedControlStyle"];
     }
-    else if ([item isEqualToString:@"selectedSegmentIndex"])
-    {
+    else if ([item isEqualToString:@"selectedSegmentIndex"]) {
         [output setObject:[value intString] forKey:item];
     }
-    else if ([item isEqualToString:@"momentary"])
-    {
+    else if ([item isEqualToString:@"momentary"]) {
         [output setObject:[value booleanString] forKey:item];
     }
-    else
-    {
+    else {
         [super processKey:item value:value];
     }
 }

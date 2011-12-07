@@ -17,80 +17,62 @@ RegisterOnLoadWithIB
 #pragma mark -
 #pragma mark Private methods
 
-- (NSString *)frameString
-{
+- (NSString *)frameString {
     NSString *rect = [NSString rectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
     return rect;
 }
 
-- (NSString *)constructorString
-{
+- (NSString *)constructorString {
     return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
 }
 
-- (void)processKey:(id)item value:(id)value
-{
+- (void)processKey:(id)item value:(id)value {
     id object = nil;
-    if ([item isEqualToString:@"class"])
-    {
+    if ([item isEqualToString:@"class"]) {
         object = [self getProcessedClassName];
     }
-    else if ([item isEqualToString:@"autoresizesSubviews"])
-    {
+    else if ([item isEqualToString:@"autoresizesSubviews"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"contentStretch"])
-    {
+    else if ([item isEqualToString:@"contentStretch"]) {
         object = [NSString stringWithFormat:@"CGRectFromString(@\"%@\")", value];
     }
-    else if ([item isEqualToString:@"alpha"])
-    {
+    else if ([item isEqualToString:@"alpha"]) {
         object = [value floatString];
     }
-    else if ([item isEqualToString:@"hidden"])
-    {
+    else if ([item isEqualToString:@"hidden"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"opaqueForDevice"])
-    {
+    else if ([item isEqualToString:@"opaqueForDevice"]) {
         object = [value booleanString];
         item = @"opaque";
     }
-    else if ([item isEqualToString:@"clipsSubviews"])
-    {
+    else if ([item isEqualToString:@"clipsSubviews"]) {
         object = [value booleanString];
         item = @"clipsToBounds";
     }
-    else if ([item isEqualToString:@"clearsContextBeforeDrawing"])
-    {
+    else if ([item isEqualToString:@"clearsContextBeforeDrawing"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"userInteractionEnabled"])
-    {
+    else if ([item isEqualToString:@"userInteractionEnabled"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"multipleTouchEnabled"])
-    {
+    else if ([item isEqualToString:@"multipleTouchEnabled"]) {
         object = [value booleanString];
     }
-    else if ([item isEqualToString:@"tag"])
-    {
+    else if ([item isEqualToString:@"tag"]) {
         object = [value intString];
     }
-    else if ([item isEqualToString:@"backgroundColor"])
-    {
+    else if ([item isEqualToString:@"backgroundColor"]) {
         object = [value colorString];
     }
-    else if ([item isEqualToString:@"contentMode"])
-    {
+    else if ([item isEqualToString:@"contentMode"]) {
         object = [value contentModeString];
     }
-    else if ([item isEqualToString:@"autoresizingMask"])
-    {
+    else if ([item isEqualToString:@"autoresizingMask"]) {
         object = [value autoresizingMaskString];
     }
-    if (object != nil)
-    {
+    if (object != nil) {
         [output setObject:object forKey:item];
     }
 }

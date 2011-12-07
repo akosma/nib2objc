@@ -8,6 +8,6 @@
 
 #import "UIControlProcessor.h"
 
-@interface UITextFieldProcessor : UIControlProcessor 
+@interface UITextFieldProcessor : UIControlProcessor
 
 @end

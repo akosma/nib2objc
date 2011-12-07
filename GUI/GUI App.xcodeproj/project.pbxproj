@@ -219,6 +219,7 @@
 		3AEDA04411F2578100D0D041 /* UIViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewProcessor.m; sourceTree = "<group>"; };
 		3AEDA04511F2578100D0D041 /* UIWebViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewProcessor.h; sourceTree = "<group>"; };
 		3AEDA04611F2578100D0D041 /* UIWebViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewProcessor.m; sourceTree = "<group>"; };
+		6ACCD42D148F366300D6804D /* processors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processors.h; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* nib2objc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "nib2objc-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* nib2objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nib2objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -290,8 +291,8 @@
 		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2564AD2C0F5327BB00F57823 /* nib2objc_Prefix.pch */,
 				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+				2564AD2C0F5327BB00F57823 /* nib2objc_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -300,11 +301,11 @@
 			isa = PBXGroup;
 			children = (
 				3A92DE6211F308C300E0EF30 /* nib2objc.icns */,
-				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* nib2objc-Info.plist */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
-				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
 				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
+				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -343,6 +344,7 @@
 				3AEDA00C11F2578100D0D041 /* Processors */,
 				3AEDA00A11F2578100D0D041 /* NibProcessor.h */,
 				3AEDA00B11F2578100D0D041 /* NibProcessor.m */,
+				6ACCD42D148F366300D6804D /* processors.h */,
 			);
 			name = NibProcessor;
 			path = ../NibProcessor;
@@ -364,10 +366,16 @@
 		3AEDA00C11F2578100D0D041 /* Processors */ = {
 			isa = PBXGroup;
 			children = (
-				3AEDA00F11F2578100D0D041 /* Processor.h */,
-				3AEDA01011F2578100D0D041 /* Processor.m */,
+				3A13EA0C14683C4A0099DE03 /* GLKViewControllerProcessor.h */,
+				3A13EA0D14683C4B0099DE03 /* GLKViewControllerProcessor.m */,
+				3A13EA12146840430099DE03 /* GLKViewProcessor.h */,
+				3A13EA13146840450099DE03 /* GLKViewProcessor.m */,
 				3AEDA00D11F2578100D0D041 /* MKMapViewProcessor.h */,
 				3AEDA00E11F2578100D0D041 /* MKMapViewProcessor.m */,
+				3AEDA00F11F2578100D0D041 /* Processor.h */,
+				3AEDA01011F2578100D0D041 /* Processor.m */,
+				3A13EA15146843790099DE03 /* ProxyObjectProcessor.h */,
+				3A13EA161468437B0099DE03 /* ProxyObjectProcessor.m */,
 				3AEDA01111F2578100D0D041 /* UIActivityIndicatorViewProcessor.h */,
 				3AEDA01211F2578100D0D041 /* UIActivityIndicatorViewProcessor.m */,
 				3AEDA01311F2578100D0D041 /* UIBarButtonItemProcessor.h */,
@@ -380,20 +388,30 @@
 				3AEDA01A11F2578100D0D041 /* UIControlProcessor.m */,
 				3AEDA01B11F2578100D0D041 /* UIDatePickerProcessor.h */,
 				3AEDA01C11F2578100D0D041 /* UIDatePickerProcessor.m */,
+				3A13E9F1146822B50099DE03 /* UIGestureRecognizerProcessor.h */,
+				3A13E9F2146822B50099DE03 /* UIGestureRecognizerProcessor.m */,
 				3AEDA01D11F2578100D0D041 /* UIImageViewProcessor.h */,
 				3AEDA01E11F2578100D0D041 /* UIImageViewProcessor.m */,
 				3AEDA01F11F2578100D0D041 /* UILabelProcessor.h */,
 				3AEDA02011F2578100D0D041 /* UILabelProcessor.m */,
+				3A13EA00146831620099DE03 /* UILongPressGestureRecognizerProcessor.h */,
+				3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */,
 				3AEDA02111F2578100D0D041 /* UINavigationBarProcessor.h */,
 				3AEDA02211F2578100D0D041 /* UINavigationBarProcessor.m */,
 				3AEDA02311F2578100D0D041 /* UINavigationItemProcessor.h */,
 				3AEDA02411F2578100D0D041 /* UINavigationItemProcessor.m */,
 				3AEDA02511F2578100D0D041 /* UIPageControlProcessor.h */,
 				3AEDA02611F2578100D0D041 /* UIPageControlProcessor.m */,
+				3A13E9FD1468306C0099DE03 /* UIPanGestureRecognizerProcessor.h */,
+				3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */,
 				3AEDA02711F2578100D0D041 /* UIPickerViewProcessor.h */,
 				3AEDA02811F2578100D0D041 /* UIPickerViewProcessor.m */,
+				3A13E9F4146823500099DE03 /* UIPinchGestureRecognizerProcessor.h */,
+				3A13E9F5146823500099DE03 /* UIPinchGestureRecognizerProcessor.m */,
 				3AEDA02911F2578100D0D041 /* UIProgressViewProcessor.h */,
 				3AEDA02A11F2578100D0D041 /* UIProgressViewProcessor.m */,
+				3A13E9F7146828AD0099DE03 /* UIRotationGestureRecognizerProcessor.h */,
+				3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */,
 				3AEDA02B11F2578100D0D041 /* UIScrollViewProcessor.h */,
 				3AEDA02C11F2578100D0D041 /* UIScrollViewProcessor.m */,
 				3AEDA02D11F2578100D0D041 /* UISearchBarProcessor.h */,
@@ -402,6 +420,10 @@
 				3AEDA03011F2578100D0D041 /* UISegmentedControlProcessor.m */,
 				3AEDA03111F2578100D0D041 /* UISliderProcessor.h */,
 				3AEDA03211F2578100D0D041 /* UISliderProcessor.m */,
+				3A13EA09146839F00099DE03 /* UIStepperProcessor.h */,
+				3A13EA0A146839F10099DE03 /* UIStepperProcessor.m */,
+				3A13E9FA14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.h */,
+				3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */,
 				3AEDA03311F2578100D0D041 /* UISwitchProcessor.h */,
 				3AEDA03411F2578100D0D041 /* UISwitchProcessor.m */,
 				3AEDA03511F2578100D0D041 /* UITabBarItemProcessor.h */,
@@ -410,44 +432,24 @@
 				3AEDA03811F2578100D0D041 /* UITabBarProcessor.m */,
 				3AEDA03911F2578100D0D041 /* UITableViewCellProcessor.h */,
 				3AEDA03A11F2578100D0D041 /* UITableViewCellProcessor.m */,
+				3A13EA061468392E0099DE03 /* UITableViewControllerProcessor.h */,
+				3A13EA071468392F0099DE03 /* UITableViewControllerProcessor.m */,
 				3AEDA03B11F2578100D0D041 /* UITableViewProcessor.h */,
 				3AEDA03C11F2578100D0D041 /* UITableViewProcessor.m */,
+				3A13EA0F14683F4D0099DE03 /* UITapGestureRecognizerProcessor.h */,
+				3A13EA1014683F4E0099DE03 /* UITapGestureRecognizerProcessor.m */,
 				3AEDA03D11F2578100D0D041 /* UITextFieldProcessor.h */,
 				3AEDA03E11F2578100D0D041 /* UITextFieldProcessor.m */,
 				3AEDA03F11F2578100D0D041 /* UITextViewProcessor.h */,
 				3AEDA04011F2578100D0D041 /* UITextViewProcessor.m */,
 				3AEDA04111F2578100D0D041 /* UIToolbarProcessor.h */,
 				3AEDA04211F2578100D0D041 /* UIToolbarProcessor.m */,
+				3A13EA03146834C60099DE03 /* UIViewControllerProcessor.h */,
+				3A13EA04146834C70099DE03 /* UIViewControllerProcessor.m */,
 				3AEDA04311F2578100D0D041 /* UIViewProcessor.h */,
 				3AEDA04411F2578100D0D041 /* UIViewProcessor.m */,
 				3AEDA04511F2578100D0D041 /* UIWebViewProcessor.h */,
 				3AEDA04611F2578100D0D041 /* UIWebViewProcessor.m */,
-				3A13E9F1146822B50099DE03 /* UIGestureRecognizerProcessor.h */,
-				3A13E9F2146822B50099DE03 /* UIGestureRecognizerProcessor.m */,
-				3A13E9F4146823500099DE03 /* UIPinchGestureRecognizerProcessor.h */,
-				3A13E9F5146823500099DE03 /* UIPinchGestureRecognizerProcessor.m */,
-				3A13E9F7146828AD0099DE03 /* UIRotationGestureRecognizerProcessor.h */,
-				3A13E9F8146828AE0099DE03 /* UIRotationGestureRecognizerProcessor.m */,
-				3A13E9FA14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.h */,
-				3A13E9FB14682ADE0099DE03 /* UISwipeGestureRecognizerProcessor.m */,
-				3A13E9FD1468306C0099DE03 /* UIPanGestureRecognizerProcessor.h */,
-				3A13E9FE1468306D0099DE03 /* UIPanGestureRecognizerProcessor.m */,
-				3A13EA00146831620099DE03 /* UILongPressGestureRecognizerProcessor.h */,
-				3A13EA01146831630099DE03 /* UILongPressGestureRecognizerProcessor.m */,
-				3A13EA03146834C60099DE03 /* UIViewControllerProcessor.h */,
-				3A13EA04146834C70099DE03 /* UIViewControllerProcessor.m */,
-				3A13EA061468392E0099DE03 /* UITableViewControllerProcessor.h */,
-				3A13EA071468392F0099DE03 /* UITableViewControllerProcessor.m */,
-				3A13EA09146839F00099DE03 /* UIStepperProcessor.h */,
-				3A13EA0A146839F10099DE03 /* UIStepperProcessor.m */,
-				3A13EA0C14683C4A0099DE03 /* GLKViewControllerProcessor.h */,
-				3A13EA0D14683C4B0099DE03 /* GLKViewControllerProcessor.m */,
-				3A13EA0F14683F4D0099DE03 /* UITapGestureRecognizerProcessor.h */,
-				3A13EA1014683F4E0099DE03 /* UITapGestureRecognizerProcessor.m */,
-				3A13EA12146840430099DE03 /* GLKViewProcessor.h */,
-				3A13EA13146840450099DE03 /* GLKViewProcessor.m */,
-				3A13EA15146843790099DE03 /* ProxyObjectProcessor.h */,
-				3A13EA161468437B0099DE03 /* ProxyObjectProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -651,12 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_PREFIX_HEADER = nib2objc_Prefix.pch;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "nib2objc-Info.plist";
@@ -669,11 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_PREFIX_HEADER = nib2objc_Prefix.pch;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "nib2objc-Info.plist";
@@ -685,24 +678,183 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_FILES = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_PASCAL_STRINGS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_MATH = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NS_BUILD_32_LIKE_64,
+					NS_BLOCK_ASSERTIONS,
+					DEBUG,
+				);
+				GCC_REUSE_STRINGS = YES;
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IBC_FLATTEN_NIBS = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = YES;
+				LD_NO_PIE = NO;
+				LLVM_LTO = YES;
+				"LLVM_LTO[arch=i386]" = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-fcatch-undefined-behavior",
+					"-ftrapv",
+					"-v",
+				);
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpointer-arith",
+					"-Wformat=2",
+					"-Wfloat-equal",
+					"-Wstrict-overflow=4",
+					"-Wbad-function-cast",
+					"-Winline",
+					"-Wstrict-aliasing",
+				);
 			};
 			name = Debug;
 		};
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_FILES = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = YES;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_PASCAL_STRINGS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_MATH = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NS_BUILD_32_LIKE_64,
+					NS_BLOCK_ASSERTIONS,
+					NDEBUG,
+				);
+				GCC_REUSE_STRINGS = YES;
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IBC_FLATTEN_NIBS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = YES;
+				LD_NO_PIE = NO;
+				LLVM_LTO = YES;
+				"LLVM_LTO[arch=i386]" = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpointer-arith",
+					"-Wformat=2",
+					"-Wfloat-equal",
+					"-Wstrict-overflow=4",
+					"-Wbad-function-cast",
+					"-Winline",
+					"-Wstrict-aliasing",
+				);
 			};
 			name = Release;
 		};

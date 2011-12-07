@@ -15,10 +15,10 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"contentHorizontalAlignment"]) {
-        [output setObject:[value contentHorizontalAlignmentString] forKey:item];
+        [output setObject:[value uiContentHorizontalAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"contentVerticalAlignment"]) {
-        [output setObject:[value contentVerticalAlignmentString] forKey:item];
+        [output setObject:[value uiContentVerticalAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"enabled"]) {
         [output setObject:[value booleanString] forKey:item];

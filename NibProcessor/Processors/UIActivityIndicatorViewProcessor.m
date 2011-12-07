@@ -14,7 +14,7 @@
 RegisterOnLoadWithIB
 
 - (NSString *)constructorString {
-    NSString *style = [[self.input objectForKey:@"style"] activityIndicatorViewStyleString];
+    NSString *style = [[self.input objectForKey:@"style"] uiActivityIndicatorViewStyleString];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithActivityIndicatorStyle:%@]", [self getProcessedClassName], style];
 }
 

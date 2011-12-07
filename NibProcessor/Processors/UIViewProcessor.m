@@ -18,7 +18,7 @@ RegisterOnLoadWithIB
 #pragma mark Private methods
 
 - (NSString *)frameString {
-    NSString *rect = [NSString rectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
+    NSString *rect = [NSString cgRectStringFromPoint:[self.input objectForKey:@"frameOrigin"] size:[self.input objectForKey:@"frameSize"]];
     return rect;
 }
 
@@ -64,13 +64,13 @@ RegisterOnLoadWithIB
         object = [value intString];
     }
     else if ([item isEqualToString:@"backgroundColor"]) {
-        object = [value colorString];
+        object = [value uiColorString];
     }
     else if ([item isEqualToString:@"contentMode"]) {
-        object = [value contentModeString];
+        object = [value uiContentModeString];
     }
     else if ([item isEqualToString:@"autoresizingMask"]) {
-        object = [value autoresizingMaskString];
+        object = [value uiAutoresizingMaskString];
     }
     if (object != nil) {
         [output setObject:object forKey:item];

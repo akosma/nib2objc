@@ -18,7 +18,7 @@ RegisterOnLoadWithIB
         [output setObject:[value intString] forKey:item];
     }
     else if ([item isEqualToString:@"direction"]) {
-        [output setObject:[value swipeGestureRecognizerDirectionString] forKey:item];
+        [output setObject:[value uiSwipeGestureRecognizerDirectionString] forKey:item];
     }
     else {
         [super processKey:item value:value];

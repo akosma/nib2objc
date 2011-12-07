@@ -16,7 +16,7 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"datePickerMode"]) {
-        [output setObject:[value datePickerModeString] forKey:item];
+        [output setObject:[value uiDatePickerModeString] forKey:item];
     }
     else if ([item isEqualToString:@"timeZone"]) {
         // NSTimeZone instances are not supported by ibtool

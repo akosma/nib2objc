@@ -22,7 +22,7 @@
     return [NSString stringWithFormat:@"%1.3f", [self floatValue]];
 }
 
-- (NSString *)autoresizingMaskString {
+- (NSString *)uiAutoresizingMaskString {
     // From the documentation
     enum {
         UIViewAutoresizingNone                  = 0,
@@ -68,7 +68,7 @@
     return maskValue;
 }
 
-- (NSString *)contentModeString {
+- (NSString *)uiContentModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIViewContentModeScaleToFill",
                                                 @"UIViewContentModeScaleAspectFit",
                                                 @"UIViewContentModeScaleAspectFill",
@@ -85,14 +85,14 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)textAlignmentString {
+- (NSString *)uiTextAlignmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextAlignmentLeft",
                                                 @"UITextAlignmentCenter",
                                                 @"UITextAlignmentRight", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)borderStyleString {
+- (NSString *)uiBorderStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextBorderStyleNone",
                                                 @"UITextBorderStyleLine",
                                                 @"UITextBorderStyleBezel",
@@ -100,7 +100,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)contentHorizontalAlignmentString {
+- (NSString *)uiContentHorizontalAlignmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UIControlContentHorizontalAlignmentCenter",
                                                 @"UIControlContentHorizontalAlignmentLeft",
                                                 @"UIControlContentHorizontalAlignmentRight",
@@ -108,7 +108,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)contentVerticalAlignmentString {
+- (NSString *)uiContentVerticalAlignmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UIControlContentVerticalAlignmentCenter",
                                                 @"UIControlContentVerticalAlignmentTop",
                                                 @"UIControlContentVerticalAlignmentBottom",
@@ -116,13 +116,13 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)keyboardAppearanceString {
+- (NSString *)uiKeyboardAppearanceString {
     NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardAppearanceDefault",
                                                 @"UIKeyboardAppearanceAlert", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)returnKeyTypeString {
+- (NSString *)uiReturnKeyTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIReturnKeyDefault",
                                                 @"UIReturnKeyGo",
                                                 @"UIReturnKeyGoogle",
@@ -137,7 +137,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)autocapitalizationTypeString {
+- (NSString *)uiAutocapitalizationTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextAutocapitalizationTypeNone",
                                                 @"UITextAutocapitalizationTypeWords",
                                                 @"UITextAutocapitalizationTypeSentences",
@@ -145,14 +145,14 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)autocorrectionTypeString {
+- (NSString *)uiAutocorrectionTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextAutocorrectionTypeDefault",
                                                 @"UITextAutocorrectionTypeNo",
                                                 @"UITextAutocorrectionTypeYes", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)keyboardTypeString {
+- (NSString *)uiKeyboardTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIKeyboardTypeDefault",
                                                 @"UIKeyboardTypeASCIICapable",
                                                 @"UIKeyboardTypeNumbersAndPunctuation",
@@ -164,20 +164,20 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)progressViewStyleString {
+- (NSString *)uiProgressViewStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIProgressViewStyleDefault",
                                                 @"UIProgressViewStyleBar", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)baselineAdjustmentString {
+- (NSString *)uiBaselineAdjustmentString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBaselineAdjustmentAlignBaselines",
                                                 @"UIBaselineAdjustmentAlignCenters",
                                                 @"UIBaselineAdjustmentNone", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)lineBreakModeString {
+- (NSString *)uiLineBreakModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UILineBreakModeWordWrap",
                                                 @"UILineBreakModeCharacterWrap",
                                                 @"UILineBreakModeClip",
@@ -187,14 +187,14 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)activityIndicatorViewStyleString {
+- (NSString *)uiActivityIndicatorViewStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIActivityIndicatorViewStyleWhiteLarge",
                                                 @"UIActivityIndicatorViewStyleWhite",
                                                 @"UIActivityIndicatorViewStyleGray", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)buttonTypeString {
+- (NSString *)uiButtonTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIButtonTypeCustom",
                                                 @"UIButtonTypeRoundedRect",
                                                 @"UIButtonTypeDetailDisclosure",
@@ -204,34 +204,34 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)segmentedControlStyleString {
+- (NSString *)uiSegmentedControlStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UISegmentedControlStylePlain",
                                                 @"UISegmentedControlStyleBordered",
                                                 @"UISegmentedControlStyleBar", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)scrollViewIndicatorStyleString {
+- (NSString *)uiScrollViewIndicatorStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIScrollViewIndicatorStyleDefault",
                                                 @"UIScrollViewIndicatorStyleBlack",
                                                 @"UIScrollViewIndicatorStyleWhite", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewStyleString {
+- (NSString *)uiTableViewStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewStylePlain",
                                                 @"UITableViewStyleGrouped", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellSeparatorStyleString {
+- (NSString *)uiTableViewCellSeparatorStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSeparatorStyleNone",
                                                 @"UITableViewCellSeparatorStyleSingleLine",
                                                 @"UITableViewCellSeparatorStyleSingleLineEtched", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellAccessoryString {
+- (NSString *)uiTableViewCellAccessoryString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellAccessoryNone",
                                                 @"UITableViewCellAccessoryDisclosureIndicator",
                                                 @"UITableViewCellAccessoryDetailDisclosureButton",
@@ -239,21 +239,21 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellEditingStyleString {
+- (NSString *)uiTableViewCellEditingStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellEditingStyleNone",
                                                 @"UITableViewCellEditingStyleDelete",
                                                 @"UITableViewCellEditingStyleInsert", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tableViewCellSelectionStyleString {
+- (NSString *)uiTableViewCellSelectionStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UITableViewCellSelectionStyleNone",
                                                 @"UITableViewCellSelectionStyleBlue",
                                                 @"UITableViewCellSelectionStyleGray", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)datePickerModeString {
+- (NSString *)uiDatePickerModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UIDatePickerModeTime",
                                                 @"UIDatePickerModeDate",
                                                 @"UIDatePickerModeDateAndTime",
@@ -261,21 +261,21 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)barStyleString {
+- (NSString *)uiBarStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBarStyleDefault",
                                                 @"UIBarStyleBlackOpaque",
                                                 @"UIBarStyleBlackTranslucent", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)barButtonItemStyleString {
+- (NSString *)uiBarButtonItemStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBarButtonItemStylePlain",
                                                 @"UIBarButtonItemStyleBordered",
                                                 @"UIBarButtonItemStyleDone", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)barButtonSystemItemString {
+- (NSString *)uiBarButtonSystemItemString {
     NSArray *values = [NSArray arrayWithObjects:@"UIBarButtonSystemItemDone",
                                                 @"UIBarButtonSystemItemCancel",
                                                 @"UIBarButtonSystemItemEdit",
@@ -300,7 +300,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)tabBarSystemItemString {
+- (NSString *)uiTabBarSystemItemString {
     NSArray *values = [NSArray arrayWithObjects:@"UITabBarSystemItemMore",
                                                 @"UITabBarSystemItemFavorites",
                                                 @"UITabBarSystemItemFeatured",
@@ -316,14 +316,14 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)mapTypeString {
+- (NSString *)mmMapTypeString {
     NSArray *values = [NSArray arrayWithObjects:@"MKMapTypeStandard",
                                                 @"MKMapTypeSatellite",
                                                 @"MKMapTypeHybrid", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)clearButtonModeString {
+- (NSString *)uiClearButtonModeString {
     NSArray *values = [NSArray arrayWithObjects:@"UITextFieldViewModeNever",
                                                 @"UITextFieldViewModeWhileEditing",
                                                 @"UITextFieldViewModeUnlessEditing",
@@ -331,7 +331,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)swipeGestureRecognizerDirectionString {
+- (NSString *)uiSwipeGestureRecognizerDirectionString {
     NSArray *values = [NSArray arrayWithObjects:@"UISwipeGestureRecognizerDirectionRight",
                                                 @"UISwipeGestureRecognizerDirectionLeft",
                                                 @"UISwipeGestureRecognizerDirectionUp",
@@ -339,7 +339,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)modalPresentationStyleString {
+- (NSString *)uiModalPresentationStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIModalPresentationFullScreen",
                                                 @"UIModalPresentationPageSheet",
                                                 @"UIModalPresentationFormSheet",
@@ -347,7 +347,7 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)modalTransitionStyleString {
+- (NSString *)uiModalTransitionStyleString {
     NSArray *values = [NSArray arrayWithObjects:@"UIModalTransitionStyleCoverVertical",
                                                 @"UIModalTransitionStyleFlipHorizontal",
                                                 @"UIModalTransitionStyleCrossDissolve",
@@ -355,26 +355,26 @@
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableColorFormatString {
+- (NSString *)glkDrawableColorFormatString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableColorFormatRGBA8888",
                                                 @"GLKViewDrawableColorFormatRGB565", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableDepthFormatString {
+- (NSString *)glkDrawableDepthFormatString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableDepthFormatNone",
                                                 @"GLKViewDrawableDepthFormat16",
                                                 @"GLKViewDrawableDepthFormat24", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableMultisampleString {
+- (NSString *)glkDrawableMultisampleString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableMultisampleNone",
                                                 @"GLKViewDrawableMultisample4X", nil];
     return [values objectAtIndex:[self unsignedIntValue]];
 }
 
-- (NSString *)drawableStencilFormatString {
+- (NSString *)glkDrawableStencilFormatString {
     NSArray *values = [NSArray arrayWithObjects:@"GLKViewDrawableStencilFormatNone",
                                                 @"GLKViewDrawableStencilFormatNone", nil];
     return [values objectAtIndex:[self unsignedIntValue]];

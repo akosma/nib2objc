@@ -15,7 +15,7 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"indicatorStyle"]) {
-        [output setObject:[value scrollViewIndicatorStyleString] forKey:item];
+        [output setObject:[value uiScrollViewIndicatorStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"showsHorizontalScrollIndicator"]) {
         [output setObject:[value booleanString] forKey:item];

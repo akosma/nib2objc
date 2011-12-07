@@ -31,10 +31,10 @@ RegisterOnLoadWithIB
         object = [value booleanString];
     }
     else if ([item isEqualToString:@"modalPresentationStyle"]) {
-        object = [value modalPresentationStyleString];
+        object = [value uiModalPresentationStyleString];
     }
     else if ([item isEqualToString:@"modalTransitionStyle"]) {
-        object = [value modalTransitionStyleString];
+        object = [value uiModalTransitionStyleString];
     }
     if (object != nil) {
         [output setObject:object forKey:item];

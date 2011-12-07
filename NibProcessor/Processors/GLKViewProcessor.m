@@ -15,16 +15,16 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"drawableColorFormat"]) {
-        [output setObject:[value drawableColorFormatString] forKey:item];
+        [output setObject:[value glkDrawableColorFormatString] forKey:item];
     }
     else if ([item isEqualToString:@"drawableDepthFormat"]) {
-        [output setObject:[value drawableDepthFormatString] forKey:item];
+        [output setObject:[value glkDrawableDepthFormatString] forKey:item];
     }
     else if ([item isEqualToString:@"drawableMultisample"]) {
-        [output setObject:[value drawableMultisampleString] forKey:item];
+        [output setObject:[value glkDrawableMultisampleString] forKey:item];
     }
     else if ([item isEqualToString:@"drawableStencilFormat"]) {
-        [output setObject:[value drawableStencilFormatString] forKey:item];
+        [output setObject:[value glkDrawableStencilFormatString] forKey:item];
     }
     else if ([item isEqualToString:@"enableSetNeedsDisplay"]) {
         [output setObject:[value booleanString] forKey:item];

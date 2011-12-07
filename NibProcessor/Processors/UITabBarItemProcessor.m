@@ -23,7 +23,7 @@ RegisterOnLoadWithIB
         constructor = [NSString stringWithFormat:@"[[%@ alloc] initWithTitle:%@ image:nil tag:%@]", [self getProcessedClassName], title, tag];
     }
     else {
-        NSString *systemItem = [systemItemIdentifier tabBarSystemItemString];
+        NSString *systemItem = [systemItemIdentifier uiTabBarSystemItemString];
         NSString *tag = [[self.input objectForKey:@"tag"] intString];
         constructor = [NSString stringWithFormat:@"[[%@ alloc] initWithTabBarSystemItem:%@ tag:%@]", [self getProcessedClassName], systemItem, tag];
     }

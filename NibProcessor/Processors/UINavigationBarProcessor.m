@@ -16,10 +16,10 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"tintColor"]) {
-        [output setObject:[value colorString] forKey:item];
+        [output setObject:[value uiColorString] forKey:item];
     }
     else if ([item isEqualToString:@"barStyle"]) {
-        [output setObject:[value barStyleString] forKey:item];
+        [output setObject:[value uiBarStyleString] forKey:item];
     }
     else {
         [super processKey:item value:value];

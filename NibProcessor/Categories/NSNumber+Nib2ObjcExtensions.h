@@ -17,78 +17,78 @@
 
 - (NSString *)floatString;
 
-- (NSString *)autoresizingMaskString;
+- (NSString *)uiAutoresizingMaskString;
 
-- (NSString *)contentModeString;
+- (NSString *)uiContentModeString;
 
-- (NSString *)textAlignmentString;
+- (NSString *)uiTextAlignmentString;
 
-- (NSString *)borderStyleString;
+- (NSString *)uiBorderStyleString;
 
-- (NSString *)contentHorizontalAlignmentString;
+- (NSString *)uiContentHorizontalAlignmentString;
 
-- (NSString *)contentVerticalAlignmentString;
+- (NSString *)uiContentVerticalAlignmentString;
 
-- (NSString *)keyboardAppearanceString;
+- (NSString *)uiKeyboardAppearanceString;
 
-- (NSString *)returnKeyTypeString;
+- (NSString *)uiReturnKeyTypeString;
 
-- (NSString *)autocapitalizationTypeString;
+- (NSString *)uiAutocapitalizationTypeString;
 
-- (NSString *)autocorrectionTypeString;
+- (NSString *)uiAutocorrectionTypeString;
 
-- (NSString *)keyboardTypeString;
+- (NSString *)uiKeyboardTypeString;
 
-- (NSString *)progressViewStyleString;
+- (NSString *)uiProgressViewStyleString;
 
-- (NSString *)baselineAdjustmentString;
+- (NSString *)uiBaselineAdjustmentString;
 
-- (NSString *)lineBreakModeString;
+- (NSString *)uiLineBreakModeString;
 
-- (NSString *)activityIndicatorViewStyleString;
+- (NSString *)uiActivityIndicatorViewStyleString;
 
-- (NSString *)buttonTypeString;
+- (NSString *)uiButtonTypeString;
 
-- (NSString *)segmentedControlStyleString;
+- (NSString *)uiSegmentedControlStyleString;
 
-- (NSString *)scrollViewIndicatorStyleString;
+- (NSString *)uiScrollViewIndicatorStyleString;
 
-- (NSString *)tableViewStyleString;
+- (NSString *)uiTableViewStyleString;
 
-- (NSString *)tableViewCellSeparatorStyleString;
+- (NSString *)uiTableViewCellSeparatorStyleString;
 
-- (NSString *)tableViewCellAccessoryString;
+- (NSString *)uiTableViewCellAccessoryString;
 
-- (NSString *)tableViewCellEditingStyleString;
+- (NSString *)uiTableViewCellEditingStyleString;
 
-- (NSString *)tableViewCellSelectionStyleString;
+- (NSString *)uiTableViewCellSelectionStyleString;
 
-- (NSString *)datePickerModeString;
+- (NSString *)uiDatePickerModeString;
 
-- (NSString *)barStyleString;
+- (NSString *)uiBarStyleString;
 
-- (NSString *)barButtonItemStyleString;
+- (NSString *)uiBarButtonItemStyleString;
 
-- (NSString *)barButtonSystemItemString;
+- (NSString *)uiBarButtonSystemItemString;
 
-- (NSString *)tabBarSystemItemString;
+- (NSString *)uiTabBarSystemItemString;
 
-- (NSString *)mapTypeString;
+- (NSString *)mmMapTypeString;
 
-- (NSString *)clearButtonModeString;
+- (NSString *)uiClearButtonModeString;
 
-- (NSString *)swipeGestureRecognizerDirectionString;
+- (NSString *)uiSwipeGestureRecognizerDirectionString;
 
-- (NSString *)modalPresentationStyleString;
+- (NSString *)uiModalPresentationStyleString;
 
-- (NSString *)modalTransitionStyleString;
+- (NSString *)uiModalTransitionStyleString;
 
-- (NSString *)drawableColorFormatString;
+- (NSString *)glkDrawableColorFormatString;
 
-- (NSString *)drawableDepthFormatString;
+- (NSString *)glkDrawableDepthFormatString;
 
-- (NSString *)drawableMultisampleString;
+- (NSString *)glkDrawableMultisampleString;
 
-- (NSString *)drawableStencilFormatString;
+- (NSString *)glkDrawableStencilFormatString;
 
 @end

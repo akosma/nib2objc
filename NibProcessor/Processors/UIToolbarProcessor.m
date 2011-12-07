@@ -18,10 +18,10 @@ RegisterOnLoadWithIB
     if ([item isEqualToString:@"tintColor"]) {
         // As of the iPhone SDK 2.2.1, this property does not seem
         // to be exported at all by Interface Builder.
-        [output setObject:[value colorString] forKey:item];
+        [output setObject:[value uiColorString] forKey:item];
     }
     else if ([item isEqualToString:@"barStyle"]) {
-        [output setObject:[value barStyleString] forKey:item];
+        [output setObject:[value uiBarStyleString] forKey:item];
     }
     else {
         [super processKey:item value:value];

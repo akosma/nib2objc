@@ -21,7 +21,7 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"segmentControlStyle"]) {
-        [output setObject:[value segmentedControlStyleString] forKey:@"segmentedControlStyle"];
+        [output setObject:[value uiSegmentedControlStyleString] forKey:@"segmentedControlStyle"];
     }
     else if ([item isEqualToString:@"selectedSegmentIndex"]) {
         [output setObject:[value intString] forKey:item];

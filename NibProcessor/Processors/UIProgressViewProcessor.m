@@ -14,7 +14,7 @@
 RegisterOnLoadWithIB
 
 - (NSString *)constructorString {
-    NSString *style = [[self.input objectForKey:@"progressViewStyle"] progressViewStyleString];
+    NSString *style = [[self.input objectForKey:@"progressViewStyle"] uiProgressViewStyleString];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithProgressViewStyle:%@]", [self getProcessedClassName], style];
 }
 
@@ -23,7 +23,7 @@ RegisterOnLoadWithIB
         [output setObject:[value floatString] forKey:item];
     }
     else if ([item isEqualToString:@"progressViewStyle"]) {
-        [output setObject:[value progressViewStyleString] forKey:item];
+        [output setObject:[value uiProgressViewStyleString] forKey:item];
     }
     else {
         [super processKey:item value:value];

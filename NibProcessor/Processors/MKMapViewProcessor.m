@@ -18,7 +18,7 @@ RegisterOnLoadWithIB
         [output setObject:[value booleanString] forKey:item];
     }
     if ([item isEqualToString:@"mapType"]) {
-        [output setObject:[value mapTypeString] forKey:item];
+        [output setObject:[value mmMapTypeString] forKey:item];
     }
     else if ([item isEqualToString:@"scrollEnabled"]) {
         [output setObject:[value booleanString] forKey:item];

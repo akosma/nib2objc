@@ -10,13 +10,13 @@
 
 @interface NSString (Nib2ObjcExtensions)
 
-+ (NSString *)rectStringFromPoint:(NSString *)pointString size:(NSString *)sizeString;
++ (NSString *)cgRectStringFromPoint:(NSString *)pointString size:(NSString *)sizeString;
 
 + (NSString *)dateFromStringFunction;
 
-- (NSString *)sizeString;
+- (NSString *)cgSizeString;
 
-- (NSString *)colorString;
+- (NSString *)uiColorString;
 
 - (NSString *)quotedAsCodeString;
 

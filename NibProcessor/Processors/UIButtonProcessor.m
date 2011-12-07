@@ -16,7 +16,7 @@
 RegisterOnLoadWithIB
 
 - (NSString *)constructorString {
-    NSString *style = [[self.input objectForKey:@"buttonType"] buttonTypeString];
+    NSString *style = [[self.input objectForKey:@"buttonType"] uiButtonTypeString];
     return [NSString stringWithFormat:@"[%@ buttonWithType:%@]", [self getProcessedClassName], style];
 }
 
@@ -28,10 +28,10 @@ RegisterOnLoadWithIB
         [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"font"]) {
-        [output setObject:[value fontString] forKey:@"titleLabel.font"];
+        [output setObject:[value uiFontString] forKey:@"titleLabel.font"];
     }
     else if ([item isEqualToString:@"lineBreakMode"]) {
-        [output setObject:[value lineBreakModeString] forKey:@"titleLabel.lineBreakMode"];
+        [output setObject:[value uiLineBreakModeString] forKey:@"titleLabel.lineBreakMode"];
     }
     else if ([item isEqualToString:@"reversesTitleShadowWhenHighlighted"]) {
         [output setObject:[value booleanString] forKey:item];
@@ -40,7 +40,7 @@ RegisterOnLoadWithIB
         [output setObject:[value booleanString] forKey:item];
     }
     else if ([item isEqualToString:@"titleShadowOffset"]) {
-        [output setObject:[value sizeString] forKey:@"titleLabel.shadowOffset"];
+        [output setObject:[value cgSizeString] forKey:@"titleLabel.shadowOffset"];
     }
 
             // Creation of methods for the titles, instead of properties
@@ -63,37 +63,37 @@ RegisterOnLoadWithIB
 
             // Creation of methods for the title colors, instead of properties
     else if ([item isEqualToString:@"normalTitleColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateNormal", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateNormal", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else if ([item isEqualToString:@"selectedTitleColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateSelected", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateSelected", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else if ([item isEqualToString:@"highlightedTitleColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateHighlighted", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateHighlighted", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else if ([item isEqualToString:@"disabledTitleColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateDisabled", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleColor:%@ forState:UIControlStateDisabled", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
 
             // Creation of methods for the title shadow colors, instead of properties
     else if ([item isEqualToString:@"normalTitleShadowColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateNormal", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateNormal", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else if ([item isEqualToString:@"selectedTitleShadowColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateSelected", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateSelected", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else if ([item isEqualToString:@"highlightedTitleShadowColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateHighlighted", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateHighlighted", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
     else if ([item isEqualToString:@"disabledTitleShadowColor"]) {
-        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateDisabled", [value colorString]];
+        NSString *stringOutput = [NSString stringWithFormat:@"setTitleShadowColor:%@ forState:UIControlStateDisabled", [value uiColorString]];
         [output setObject:stringOutput forKey:[NSString stringWithFormat:@"__method__%@", item]];
     }
 

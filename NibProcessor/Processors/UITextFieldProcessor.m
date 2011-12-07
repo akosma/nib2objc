@@ -23,16 +23,16 @@ RegisterOnLoadWithIB
         [output setObject:[value quotedAsCodeString] forKey:item];
     }
     else if ([item isEqualToString:@"textAlignment"]) {
-        [output setObject:[value textAlignmentString] forKey:item];
+        [output setObject:[value uiTextAlignmentString] forKey:item];
     }
     else if ([item isEqualToString:@"textColor"]) {
-        [output setObject:[value colorString] forKey:item];
+        [output setObject:[value uiColorString] forKey:item];
     }
     else if ([item isEqualToString:@"font"]) {
-        [output setObject:[value fontString] forKey:item];
+        [output setObject:[value uiFontString] forKey:item];
     }
     else if ([item isEqualToString:@"borderStyle"]) {
-        [output setObject:[value borderStyleString] forKey:item];
+        [output setObject:[value uiBorderStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"clearsOnBeginEditing"]) {
         [output setObject:[value booleanString] forKey:item];
@@ -50,22 +50,22 @@ RegisterOnLoadWithIB
         [output setObject:[value booleanString] forKey:@"secureTextEntry"];
     }
     else if ([item isEqualToString:@"textInputTraits.keyboardAppearance"]) {
-        [output setObject:[value keyboardAppearanceString] forKey:@"keyboardAppearance"];
+        [output setObject:[value uiKeyboardAppearanceString] forKey:@"keyboardAppearance"];
     }
     else if ([item isEqualToString:@"textInputTraits.returnKeyType"]) {
-        [output setObject:[value returnKeyTypeString] forKey:@"returnKeyType"];
+        [output setObject:[value uiReturnKeyTypeString] forKey:@"returnKeyType"];
     }
     else if ([item isEqualToString:@"textInputTraits.autocapitalizationType"]) {
-        [output setObject:[value autocapitalizationTypeString] forKey:@"autocapitalizationType"];
+        [output setObject:[value uiAutocapitalizationTypeString] forKey:@"autocapitalizationType"];
     }
     else if ([item isEqualToString:@"textInputTraits.autocorrectionType"]) {
-        [output setObject:[value autocorrectionTypeString] forKey:@"autocorrectionType"];
+        [output setObject:[value uiAutocorrectionTypeString] forKey:@"autocorrectionType"];
     }
     else if ([item isEqualToString:@"textInputTraits.keyboardType"]) {
-        [output setObject:[value keyboardTypeString] forKey:@"keyboardType"];
+        [output setObject:[value uiKeyboardTypeString] forKey:@"keyboardType"];
     }
     else if ([item isEqualToString:@"clearButtonMode"]) {
-        [output setObject:[value clearButtonModeString] forKey:item];
+        [output setObject:[value uiClearButtonModeString] forKey:item];
     }
     else {
         [super processKey:item value:value];

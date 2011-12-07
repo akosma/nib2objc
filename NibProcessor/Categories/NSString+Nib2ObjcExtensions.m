@@ -10,7 +10,7 @@
 
 @implementation NSString (Nib2ObjcExtensions)
 
-+ (NSString *)rectStringFromPoint:(NSString *)pointString size:(NSString *)sizeString {
++ (NSString *)cgRectStringFromPoint:(NSString *)pointString size:(NSString *)sizeString {
     NSPoint point = NSPointFromString(pointString);
     NSSize size = NSSizeFromString(sizeString);
     return [NSString stringWithFormat:@"CGRectMake(%1.1f, %1.1f, %1.1f, %1.1f)", point.x, point.y, size.width, size.height];
@@ -29,12 +29,12 @@
     return function;
 }
 
-- (NSString *)sizeString {
+- (NSString *)cgSizeString {
     NSSize size = NSSizeFromString(self);
     return [NSString stringWithFormat:@"CGSizeMake(%1.1f, %1.1f)", size.width, size.height];
 }
 
-- (NSString *)colorString {
+- (NSString *)uiColorString {
     NSMutableString *color = [[[NSMutableString alloc] init] autorelease];
     if ([self hasPrefix:@"NSCalibratedRGBColorSpace"]) {
         float red, green, blue, alpha;

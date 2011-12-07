@@ -19,11 +19,11 @@ RegisterOnLoadWithIB
     NSNumber *systemItemIdentifier = [self.input objectForKey:@"systemItemIdentifier"];
     if ([systemItemIdentifier intValue] == -1) {
         NSString *title = [[self.input objectForKey:@"title"] quotedAsCodeString];
-        NSString *style = [[self.input objectForKey:@"style"] barButtonItemStyleString];
+        NSString *style = [[self.input objectForKey:@"style"] uiBarButtonItemStyleString];
         constructor = [NSString stringWithFormat:@"[[%@ alloc] initWithTitle:%@ style:%@ target:nil action:nil]", [self getProcessedClassName], title, style];
     }
     else {
-        NSString *systemItem = [systemItemIdentifier barButtonSystemItemString];
+        NSString *systemItem = [systemItemIdentifier uiBarButtonSystemItemString];
         constructor = [NSString stringWithFormat:@"[[%@ alloc] initWithBarButtonSystemItem:%@ target:nil action:nil]", [self getProcessedClassName], systemItem];
     }
     return constructor;
@@ -31,7 +31,7 @@ RegisterOnLoadWithIB
 
 - (void)processKey:(id)item value:(id)value {
     if ([item isEqualToString:@"style"]) {
-        [output setObject:[value barButtonItemStyleString] forKey:item];
+        [output setObject:[value uiBarButtonItemStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"width"]) {
         [output setObject:[value floatString] forKey:item];

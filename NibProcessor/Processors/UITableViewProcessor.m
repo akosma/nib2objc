@@ -14,7 +14,7 @@
 RegisterOnLoadWithIB
 
 - (NSString *)constructorString {
-    NSString *style = [[self.input objectForKey:@"style"] tableViewStyleString];
+    NSString *style = [[self.input objectForKey:@"style"] uiTableViewStyleString];
     NSString *frame = [self frameString];
     return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@ style:%@]", [self getProcessedClassName], frame, style];
 }
@@ -30,7 +30,7 @@ RegisterOnLoadWithIB
         [output setObject:[value description] forKey:item];
     }
     else if ([item isEqualToString:@"separatorStyle"]) {
-        [output setObject:[value tableViewCellSeparatorStyleString] forKey:item];
+        [output setObject:[value uiTableViewCellSeparatorStyleString] forKey:item];
     }
     else if ([item isEqualToString:@"sectionIndexMinimumDisplayRowCount"]) {
         [output setObject:[value intString] forKey:item];

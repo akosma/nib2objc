@@ -658,6 +658,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "nib2objc-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = nib2objc;
 			};
 			name = Debug;
@@ -671,6 +672,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "nib2objc-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = nib2objc;
 			};
 			name = Release;

@@ -14,15 +14,33 @@
 				<string>xib</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>nib2objc</string>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>XIB Document</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>public.data</string>
 			</array>
 			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string>Viewer</string>
+			<key>NSDocumentClass</key>
+			<string>MyDocument</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>nib</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>nib2objc</string>
+			<key>CFBundleTypeName</key>
+			<string>NIB Document</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
 			<key>NSDocumentClass</key>
 			<string>MyDocument</string>
 		</dict>

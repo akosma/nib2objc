@@ -10,102 +10,127 @@
 
 #import "NSString+Nib2ObjcExtensions.h"
 #import "NSNumber+Nib2ObjcExtensions.h"
+#import "NSDictionary+Nib2ObjcExtensions.h"
 
-#import "UIViewProcessor.h"
-#import "UITextFieldProcessor.h"
-#import "UIProgressViewProcessor.h"
-#import "UISwitchProcessor.h"
-#import "UISliderProcessor.h"
-#import "UILabelProcessor.h"
-#import "UIActivityIndicatorViewProcessor.h"
-#import "UIPageControlProcessor.h"
-#import "UIButtonProcessor.h"
-#import "UISegmentedControlProcessor.h"
-#import "UIScrollViewProcessor.h"
-#import "UITableViewProcessor.h"
-#import "UIImageViewProcessor.h"
-#import "UITextViewProcessor.h"
-#import "UIPickerViewProcessor.h"
-#import "UIWebViewProcessor.h"
-#import "UITableViewCellProcessor.h"
-#import "UIDatePickerProcessor.h"
-#import "UINavigationBarProcessor.h"
-#import "UINavigationItemProcessor.h"
-#import "UIBarButtonItemProcessor.h"
-#import "UISearchBarProcessor.h"
-#import "UIToolbarProcessor.h"
-#import "UITabBarProcessor.h"
-#import "UITabBarItemProcessor.h"
-#import "MKMapViewProcessor.h"
-#import "UIPinchGestureRecognizerProcessor.h"
-#import "UIRotationGestureRecognizerProcessor.h"
-#import "UISwipeGestureRecognizerProcessor.h"
-#import "UIPanGestureRecognizerProcessor.h"
-#import "UILongPressGestureRecognizerProcessor.h"
-#import "UIViewControllerProcessor.h"
-#import "UITableViewControllerProcessor.h"
-#import "UIStepperProcessor.h"
-#import "GLKViewControllerProcessor.h"
-#import "UITapGestureRecognizerProcessor.h"
-#import "GLKViewProcessor.h"
-#import "ProxyObjectProcessor.h"
 
-@interface Processor (Protected)
-
+@interface Processor ()
++ (NSString *)processedClassName;
 - (NSString *)getProcessedClassName;
 - (NSString *)constructorString;
+@end
+
+
+#pragma mark private processor registry
+
+@interface ProcessorRegistry : NSObject
++(NSMutableDictionary*)mutableMap;
++(NSDictionary*)map;
++(Class)processorClassForName:(NSString*)className;
++(void)registerProcessorClass:(Class)processorClass;
++(void)registerProcessorClass:(Class)processorClass forName:(NSString*)className;
+@end
+
+@implementation ProcessorRegistry
+
++(NSMutableDictionary*)mutableMap
+{
+    static __strong NSMutableDictionary* _processorMap;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _processorMap = [[NSMutableDictionary alloc] init];
+    });
+    return _processorMap;
+}
+
++(NSDictionary*)map
+{
+    return [[[self mutableMap] copy] autorelease];
+}
+
++(Class)processorClassForName:(NSString *)className
+{
+    return [[self map] valueForKey:className];
+}
+
++(void)registerProcessorClass:(Class)processorClass
+                      forName:(NSString *)className
+{
+    NSLog(@"registerProcessorClass: %@ forName: %@", processorClass, className);
+    [[self mutableMap] setValue:processorClass
+                         forKey:className];
+}
+
++(void)registerProcessorClass:(Class)processorClass
+{
+    [self registerProcessorClass:processorClass
+                         forName:[processorClass processedClassName]];
+}
+
+-(id)init
+{
+    [self release];
+    NSException* exception = 
+        [[NSException exceptionWithName:NSGenericException
+                                reason:@"_ProcessorRegistry isn't meant to be instantiated"
+                              userInfo:nil] autorelease];
+    @throw exception;
+    return nil; // STFU clang
+}
 
 @end
+
+#pragma mark -
+
 
 @implementation Processor
 
 @synthesize input;
 
-+ (Processor *)processorForClass:(NSString *)klass
+#pragma mark registry
+
++ (NSString *)processedClassName
 {
-    Processor *processor = nil;
-
-    if ([klass isEqualToString:@"IBUIView"]) processor = [[UIViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITextField"]) processor = [[UITextFieldProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIProgressView"]) processor = [[UIProgressViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUISwitch"]) processor = [[UISwitchProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUISlider"]) processor = [[UISliderProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUILabel"]) processor = [[UILabelProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIActivityIndicatorView"]) processor = [[UIActivityIndicatorViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIPageControl"]) processor = [[UIPageControlProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIButton"]) processor = [[UIButtonProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUISegmentedControl"]) processor = [[UISegmentedControlProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIScrollView"]) processor = [[UIScrollViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITableView"]) processor = [[UITableViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIImageView"]) processor = [[UIImageViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITextView"]) processor = [[UITextViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIPickerView"]) processor = [[UIPickerViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIWebView"]) processor = [[UIWebViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITableViewCell"]) processor = [[UITableViewCellProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIDatePicker"]) processor = [[UIDatePickerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUINavigationBar"]) processor = [[UINavigationBarProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUINavigationItem"]) processor = [[UINavigationItemProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIBarButtonItem"]) processor = [[UIBarButtonItemProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUISearchBar"]) processor = [[UISearchBarProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIToolbar"]) processor = [[UIToolbarProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITabBar"]) processor = [[UITabBarProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITabBarItem"]) processor = [[UITabBarItemProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBMKMapView"]) processor = [[MKMapViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIPinchGestureRecognizer"]) processor = [[UIPinchGestureRecognizerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIRotationGestureRecognizer"]) processor = [[UIRotationGestureRecognizerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUISwipeGestureRecognizer"]) processor = [[UISwipeGestureRecognizerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIPanGestureRecognizer"]) processor = [[UIPanGestureRecognizerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUILongPressGestureRecognizer"]) processor = [[UILongPressGestureRecognizerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIViewController"]) processor = [[UIViewControllerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITableViewController"]) processor = [[UITableViewControllerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUIStepper"]) processor = [[UIStepperProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBGLKViewController"]) processor = [[GLKViewControllerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBUITapGestureRecognizer"]) processor = [[UITapGestureRecognizerProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBGLKView"]) processor = [[GLKViewProcessor alloc] init];
-    else if ([klass isEqualToString:@"IBProxyObject"]) processor = [[ProxyObjectProcessor alloc] init];
-
-    return [processor autorelease];
+    NSString* className;
+    NSString* processorClassName = [NSStringFromClass(self) autorelease];
+    NSRange suffix = [processorClassName rangeOfString:@"Processor"
+                                               options:(NSBackwardsSearch | NSAnchoredSearch | NSLiteralSearch)];
+    if (suffix.length == 0) {
+        NSException* autoNameException =
+            [NSException exceptionWithName:NSGenericException
+                                    reason:@"Please implement +(NSString*)processedClassName in your processor subclass."
+                                  userInfo:nil];
+        @throw autoNameException;
+    } else {
+        className = [processorClassName substringToIndex:suffix.location];
+    }
+    
+    NSLog(@"processor class: %@  default processed class: %@", processorClassName, className);
+    
+    return [className autorelease];
 }
+
+- (NSString *)getProcessedClassName
+{ return [[self class] processedClassName]; }
+
++ (void)registerProcessor:(Processor*)processor
+{ [ProcessorRegistry registerProcessorClass:[processor class]]; }
+
++ (void)registerProcessor:(Processor*)processor forName:(NSString*)className
+{ [ProcessorRegistry registerProcessorClass:[processor class] forName:className]; }
+
++ (void)registerProcessorClass:(Class)processorClass
+{ [ProcessorRegistry registerProcessorClass:processorClass]; }
+
++ (void)registerProcessorClass:(Class)processorClass forName:(NSString*)className
+{ [ProcessorRegistry registerProcessorClass:processorClass forName:className]; }
+
++ (Processor *)processorForClass:(NSString *)klass
+{    
+    Class processorClass = [ProcessorRegistry processorClassForName:klass];
+    return [[[processorClass alloc] init] autorelease];
+}
+
+#pragma mark -
 
 - (id)init
 {
@@ -172,14 +197,14 @@
     {
         id value = [input objectForKey:item];
         [self processKey:item value:value];
-
-#ifdef CONFIGURATION_Debug
+        
+#if defined (DEBUG)
         // This will show properties not yet known by nib2objc
         if ([output objectForKey:item] == nil &&
             ![ignoredProperties containsObject:item])
         {
-            id object = [NSString stringWithFormat:@"// unknown property: %@", value];
-            [output setObject:object forKey:item];
+            NSString* unknown = [NSString stringWithFormat:@"// unknown property: %@", value];
+            [output setObject:unknown forKey:item];
         }
 #endif
     }
@@ -199,6 +224,8 @@
 
 - (void)processKey:(id)item value:(id)value
 {
+#pragma unused(item)
+#pragma unused(value)
     // Overridden in subclasses
 }
 

@@ -26,55 +26,32 @@ RegisterOnLoadWithIB
     return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
 }
 
-- (void)processKey:(id)item value:(id)value {
-    id object = nil;
-    if ([item isEqualToString:@"class"]) {
-        object = [self getProcessedClassName];
-    }
-    else if ([item isEqualToString:@"autoresizesSubviews"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"contentStretch"]) {
-        object = [NSString stringWithFormat:@"CGRectFromString(@\"%@\")", value];
-    }
-    else if ([item isEqualToString:@"alpha"]) {
-        object = [value floatString];
-    }
-    else if ([item isEqualToString:@"hidden"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"opaqueForDevice"]) {
-        object = [value booleanString];
+- (void)processKey:(id)item value:(id)value
+{
+    if ([item isEqualToString:@"opaqueForDevice"]) {
         item = @"opaque";
-    }
-    else if ([item isEqualToString:@"clipsSubviews"]) {
-        object = [value booleanString];
+    } else if ([item isEqualToString:@"clipsSubViews"]) {
         item = @"clipsToBounds";
     }
-    else if ([item isEqualToString:@"clearsContextBeforeDrawing"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"userInteractionEnabled"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"multipleTouchEnabled"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"tag"]) {
-        object = [value intString];
-    }
-    else if ([item isEqualToString:@"backgroundColor"]) {
-        object = [value uiColorString];
-    }
-    else if ([item isEqualToString:@"contentMode"]) {
-        object = [value uiContentModeString];
-    }
-    else if ([item isEqualToString:@"autoresizingMask"]) {
-        object = [value uiAutoresizingMaskString];
-    }
-    if (object != nil) {
-        [output setObject:object forKey:item];
-    }
+    
+    [super processKey:item value:value];
 }
+
+#pragma mark value methods
+
+BooleanKey(autoresizesSubviews)
+BooleanKey(hidden)
+BooleanKey(enabled)
+BooleanKey(opaque)
+BooleanKey(clipsToBounds)
+BooleanKey(clearsContextBeforeDrawing)
+BooleanKey(userInteractionEnabled)
+BooleanKey(multipleTouchEnabled)
+FloatKey(alpha)
+IntKey(tag)
+KeyValueMethod(backgroundColor, uiColorString)
+KeyValueMethod(contentMode, uiContentModeString)
+KeyValueMethod(autoresizingMask, uiAutoresizingMaskString)
+KeyExpressionMethod(contentStretch, ([NSString stringWithFormat:@"CGRectFromString(@\"%@\")", value]))
 
 @end

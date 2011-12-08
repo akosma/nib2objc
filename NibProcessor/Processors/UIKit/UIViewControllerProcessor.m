@@ -13,32 +13,11 @@
 
 RegisterOnLoadWithIB
 
-- (void)processKey:(id)item value:(id)value {
-    id object = nil;
-    if ([item isEqualToString:@"class"]) {
-        object = [self getProcessedClassName];
-    }
-    else if ([item isEqualToString:@"definesPresentationContext"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"hidesBottomBarWhenPushed"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"wantsFullScreenLayout"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"providesPresentationContextTransitionStyle"]) {
-        object = [value booleanString];
-    }
-    else if ([item isEqualToString:@"modalPresentationStyle"]) {
-        object = [value uiModalPresentationStyleString];
-    }
-    else if ([item isEqualToString:@"modalTransitionStyle"]) {
-        object = [value uiModalTransitionStyleString];
-    }
-    if (object != nil) {
-        [output setObject:object forKey:item];
-    }
-}
+BooleanKey(definesPresentationContext)
+BooleanKey(hidesBottomBarWhenPushed)
+BooleanKey(wantsFullScreenLayout)
+BooleanKey(providesPresentationContextTransitionStyle)
+KeyValueMethod(modalPresentationStyle, uiModalPresentationStyleString)
+KeyValueMethod(modalTransitionStyle, uiModalTransitionStyleString)
 
 @end

@@ -19,12 +19,10 @@ RegisterOnLoadWithCustom(@"IBProxyObject")
 }
 
 - (void)processKey:(id)item value:(id)value {
-    id object = nil;
     if ([item isEqualToString:@"custom-class"]) {
         [output setObject:value forKey:@"class"];
-    }
-    if (object != nil) {
-        [output setObject:object forKey:item];
+    } else {
+        [super processKey:item value:value];
     }
 }
 

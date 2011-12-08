@@ -210,10 +210,28 @@
     return output;
 }
 
++ (NSString *)classString:(id)value {
+#pragma unused (value)
+    return [self processedClassName];
+}
+
 - (void)processKey:(id)item value:(id)value {
-#pragma unused(item)
-#pragma unused(value)
-    // Overridden in subclasses
+    if ([ignoredProperties containsObject:item]) return;
+    
+    id object = nil;
+    
+    NSString* method = [NSString stringWithFormat:@"%@String:", item];
+    SEL selector = NSSelectorFromString(method);
+    
+    if ([[self class] respondsToSelector:selector]) {
+        object = [[self class] performSelector:selector withObject:value];
+    } else if ([self respondsToSelector:selector]) {
+        object = [self performSelector:selector withObject:value];
+    }
+    
+    if (object != nil) {
+        [output setObject:object forKey:item];
+    }
 }
 
 - (NSString *)frameString {

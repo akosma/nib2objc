@@ -72,3 +72,23 @@
 }
 
 
+#define KeyExpressionMethodMeta(type, keyName, expression)                                          \
+    type (NSString *) keyName ## String:(id) __attribute__((unused)) value                          \
+    { return expression; }
+
+#define KeyExpressionClassMethod(keyName, expression)                                               \
+    KeyExpressionMethodMeta(+, keyName, expression)
+
+#define KeyExpressionInstanceMethod(keyName, expression)                                            \
+    KeyExpressionMethodMeta(-, keyName, expression)
+
+#define KeyExpressionMethod(keyName, expression)                                                    \
+    KeyExpressionClassMethod(keyName, expression)
+
+#define KeyValueMethod(keyName, methodName)                                                         \
+    KeyExpressionMethod(keyName, [value methodName])
+
+#define BooleanKey(keyName)             KeyValueMethod(keyName, booleanString)
+#define FloatKey(keyName)               KeyValueMethod(keyName, floatString)
+#define IntKey(keyName)                 KeyValueMethod(keyName, intString)
+#define QuotedKey(keyName)              KeyValueMethod(keyName, quotedAsCodeString)

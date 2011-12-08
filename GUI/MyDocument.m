@@ -94,10 +94,11 @@
     return YES;
 }
 
-- (BOOL)readFromFile:(NSString *)fileName ofType:(NSString *)type
+- (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError **)outError
 {
-#pragma unused (type)
-    self.fileName = fileName;
+#pragma unused (typeName)
+#pragma unused (outError)
+    self.fileName = [url path];
     self.nibProcessor = [[[NibProcessor alloc] init] autorelease];
     self.nibProcessor.input = self.fileName;
     [self.nibProcessor process];

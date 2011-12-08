@@ -97,7 +97,7 @@
         className = [processorClassName substringToIndex:suffix.location];
     }
 
-    return [className autorelease];
+    return className;
 }
 
 - (NSString *)getProcessedClassName {

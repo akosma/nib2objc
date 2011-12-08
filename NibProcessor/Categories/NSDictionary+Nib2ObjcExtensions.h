@@ -10,6 +10,6 @@
 
 @interface NSDictionary (Nib2ObjcExtensions)
 
-- (NSString *)fontString;
+- (NSString *)uiFontString;
 
 @end

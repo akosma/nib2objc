@@ -3,7 +3,6 @@
 //  nib2objc
 //
 //  Created by Adrian on 7/17/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import "MyDocument.h"
@@ -89,13 +88,17 @@
 
 - (BOOL)writeToURL:(NSURL *)absoluteURL ofType:(NSString *)typeName error:(NSError **)outError
 {
+#pragma unused (typeName)
+#pragma unused (outError)
     [self.nibCode writeToURL:absoluteURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
     return YES;
 }
 
-- (BOOL)readFromFile:(NSString *)fileName ofType:(NSString *)type
+- (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError **)outError
 {
-    self.fileName = fileName;
+#pragma unused (typeName)
+#pragma unused (outError)
+    self.fileName = [url path];
     self.nibProcessor = [[[NibProcessor alloc] init] autorelease];
     self.nibProcessor.input = self.fileName;
     [self.nibProcessor process];
@@ -108,6 +111,7 @@
 
 - (IBAction)changeOutputType:(id)sender
 {
+#pragma unused (sender)
     self.nibProcessor.codeStyle = (NibProcessorCodeStyle)[self.radioButtonMatrix selectedTag];
     [self.nibProcessor process];
     self.nibCode = self.nibProcessor.output;

@@ -1,0 +1,29 @@
+//
+//  UINavigationBarProcessor.m
+//  nib2objc
+//
+//  Created by Adrian on 3/17/09.
+//  Adrian Kosmaczewski 2009
+//
+
+#import "UINavigationBarProcessor.h"
+#import "NSString+Nib2ObjcExtensions.h"
+#import "NSNumber+Nib2ObjcExtensions.h"
+
+@implementation UINavigationBarProcessor
+
+RegisterOnLoadWithIB
+
+- (void)processKey:(id)item value:(id)value {
+    if ([item isEqualToString:@"tintColor"]) {
+        [output setObject:[value uiColorString] forKey:item];
+    }
+    else if ([item isEqualToString:@"barStyle"]) {
+        [output setObject:[value uiBarStyleString] forKey:item];
+    }
+    else {
+        [super processKey:item value:value];
+    }
+}
+
+@end

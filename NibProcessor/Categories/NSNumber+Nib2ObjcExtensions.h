@@ -12,44 +12,83 @@
 @interface NSNumber (Nib2ObjcExtensions)
 
 - (NSString *)booleanString;
+
 - (NSString *)intString;
+
 - (NSString *)floatString;
-- (NSString *)autoresizingMaskString;
-- (NSString *)contentModeString;
-- (NSString *)textAlignmentString;
-- (NSString *)borderStyleString;
-- (NSString *)contentHorizontalAlignmentString;
-- (NSString *)contentVerticalAlignmentString;
-- (NSString *)keyboardAppearanceString;
-- (NSString *)returnKeyTypeString;
-- (NSString *)autocapitalizationTypeString;
-- (NSString *)autocorrectionTypeString;
-- (NSString *)keyboardTypeString;
-- (NSString *)progressViewStyleString;
-- (NSString *)baselineAdjustmentString;
-- (NSString *)lineBreakModeString;
-- (NSString *)activityIndicatorViewStyleString;
-- (NSString *)buttonTypeString;
-- (NSString *)segmentedControlStyleString;
-- (NSString *)scrollViewIndicatorStyleString;
-- (NSString *)tableViewStyleString;
-- (NSString *)tableViewCellSeparatorStyleString;
-- (NSString *)tableViewCellAccessoryString;
-- (NSString *)tableViewCellEditingStyleString;
-- (NSString *)tableViewCellSelectionStyleString;
-- (NSString *)datePickerModeString;
-- (NSString *)barStyleString;
-- (NSString *)barButtonItemStyleString;
-- (NSString *)barButtonSystemItemString;
-- (NSString *)tabBarSystemItemString;
-- (NSString *)mapTypeString;
-- (NSString *)clearButtonModeString;
-- (NSString *)swipeGestureRecognizerDirectionString;
-- (NSString *)modalPresentationStyleString;
-- (NSString *)modalTransitionStyleString;
-- (NSString *)drawableColorFormatString;
-- (NSString *)drawableDepthFormatString;
-- (NSString *)drawableMultisampleString;
-- (NSString *)drawableStencilFormatString;
+
+- (NSString *)uiAutoresizingMaskString;
+
+- (NSString *)uiContentModeString;
+
+- (NSString *)uiTextAlignmentString;
+
+- (NSString *)uiBorderStyleString;
+
+- (NSString *)uiContentHorizontalAlignmentString;
+
+- (NSString *)uiContentVerticalAlignmentString;
+
+- (NSString *)uiKeyboardAppearanceString;
+
+- (NSString *)uiReturnKeyTypeString;
+
+- (NSString *)uiAutocapitalizationTypeString;
+
+- (NSString *)uiAutocorrectionTypeString;
+
+- (NSString *)uiKeyboardTypeString;
+
+- (NSString *)uiProgressViewStyleString;
+
+- (NSString *)uiBaselineAdjustmentString;
+
+- (NSString *)uiLineBreakModeString;
+
+- (NSString *)uiActivityIndicatorViewStyleString;
+
+- (NSString *)uiButtonTypeString;
+
+- (NSString *)uiSegmentedControlStyleString;
+
+- (NSString *)uiScrollViewIndicatorStyleString;
+
+- (NSString *)uiTableViewStyleString;
+
+- (NSString *)uiTableViewCellSeparatorStyleString;
+
+- (NSString *)uiTableViewCellAccessoryString;
+
+- (NSString *)uiTableViewCellEditingStyleString;
+
+- (NSString *)uiTableViewCellSelectionStyleString;
+
+- (NSString *)uiDatePickerModeString;
+
+- (NSString *)uiBarStyleString;
+
+- (NSString *)uiBarButtonItemStyleString;
+
+- (NSString *)uiBarButtonSystemItemString;
+
+- (NSString *)uiTabBarSystemItemString;
+
+- (NSString *)mmMapTypeString;
+
+- (NSString *)uiClearButtonModeString;
+
+- (NSString *)uiSwipeGestureRecognizerDirectionString;
+
+- (NSString *)uiModalPresentationStyleString;
+
+- (NSString *)uiModalTransitionStyleString;
+
+- (NSString *)glkDrawableColorFormatString;
+
+- (NSString *)glkDrawableDepthFormatString;
+
+- (NSString *)glkDrawableMultisampleString;
+
+- (NSString *)glkDrawableStencilFormatString;
 
 @end

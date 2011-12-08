@@ -22,6 +22,13 @@ RegisterOnLoadWithIB
     return rect;
 }
 
+- (NSString *)getProcessedClassName
+{
+    NSString *customClass = [self.input objectForKey:@"custom-class"];
+    if (customClass) return customClass;
+    return [super getProcessedClassName];
+}
+
 - (NSString *)constructorString {
     return [NSString stringWithFormat:@"[[%@ alloc] initWithFrame:%@]", [self getProcessedClassName], [self frameString]];
 }

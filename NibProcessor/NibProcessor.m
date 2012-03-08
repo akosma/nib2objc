@@ -125,7 +125,7 @@
 
         if (processor == nil)
         {
-#ifdef CONFIGURATION_Debug
+#ifdef DEBUG
             // Get notified about classes not yet handled by this utility
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             [dict setObject:klass forKey:@"// unknown object (yet)"];

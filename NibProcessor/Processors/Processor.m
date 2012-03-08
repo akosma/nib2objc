@@ -210,7 +210,7 @@
         id value = [input objectForKey:item];
         [self processKey:item value:value];
 
-#ifdef CONFIGURATION_Debug
+#ifdef DEBUG
         // This will show properties not yet known by nib2objc
         if ([output objectForKey:item] == nil &&
             ![ignoredProperties containsObject:item])

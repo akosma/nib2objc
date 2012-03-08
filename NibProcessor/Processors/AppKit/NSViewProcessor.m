@@ -143,7 +143,7 @@
 					{
 						if ([value isEqualToString:anObject])
 						{
-#ifdef CONFIGURATION_Debug
+#ifdef DEBUG
 							aString = [NSString stringWithFormat:@"// default: %@", aString];
 #else
 							aString = nil;
@@ -152,7 +152,7 @@
 					}
 					else if (value == anObject)
 					{
-#ifdef CONFIGURATION_Debug
+#ifdef DEBUG
 						aString = [NSString stringWithFormat:@"// default: %@", aString];
 #else
 						aString = nil;

@@ -50,6 +50,25 @@
 #import "GLKViewProcessor.h"
 #import "ProxyObjectProcessor.h"
 
+#import "NSWindowTemplateProcessor.h"
+#import "NSViewProcessor.h"
+#import "NSCustomViewProcessor.h"
+#import "NSScrollViewProcessor.h"
+#import "NSScrollerProcessor.h"
+#import "NSCollectionViewProcessor.h"
+#import "NSBoxProcessor.h"
+#import "NSImageViewProcessor.h"
+#import "NSImageCellProcessor.h"
+#import "NSTextFieldProcessor.h"
+#import "NSTextFieldCellProcessor.h"
+#import "NSButtonProcessor.h"
+#import "NSButtonCellProcessor.h"
+#import "NSSearchFieldProcessor.h"
+#import "NSSearchFieldCellProcessor.h"
+#import "NSArrayControllerProcessor.h"
+#import "NSPopUpButtonProcessor.h"
+#import "NSPopUpButtonCellProcessor.h"
+
 @interface Processor (Protected)
 
 - (NSString *)getProcessedClassName;
@@ -103,6 +122,24 @@
     else if ([klass isEqualToString:@"IBUITapGestureRecognizer"]) processor = [[UITapGestureRecognizerProcessor alloc] init];
     else if ([klass isEqualToString:@"IBGLKView"]) processor = [[GLKViewProcessor alloc] init];
     else if ([klass isEqualToString:@"IBProxyObject"]) processor = [[ProxyObjectProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSWindowTemplate"]) processor = [[NSWindowTemplateProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSView"]) processor = [[NSViewProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSCustomView"]) processor = [[NSCustomViewProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSScrollView"]) processor = [[NSScrollViewProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSScroller"]) processor = [[NSScrollerProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSCollectionView"]) processor = [[NSCollectionViewProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSBox"]) processor = [[NSBoxProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSImageView"]) processor = [[NSImageViewProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSImageCell"]) processor = [[NSImageCellProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSTextField"]) processor = [[NSTextFieldProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSTextFieldCell"]) processor = [[NSTextFieldCellProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSButton"]) processor = [[NSButtonProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSButtonCell"]) processor = [[NSButtonCellProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSSearchField"]) processor = [[NSSearchFieldProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSSearchFieldCell"]) processor = [[NSSearchFieldCellProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSArrayController"]) processor = [[NSArrayControllerProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSPopUpButton"]) processor = [[NSPopUpButtonProcessor alloc] init];
+	else if ([klass isEqualToString:@"NSPopUpButtonCell"]) processor = [[NSPopUpButtonCellProcessor alloc] init];
 
     return [processor autorelease];
 }

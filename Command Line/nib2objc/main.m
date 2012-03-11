@@ -25,9 +25,8 @@ int main (int argc, const char * argv[])
 	// Test that the input file exists, and that it is not a directory
 	NSString *nibFile = [NSString stringWithCString:argv[1] encoding:NSUTF8StringEncoding];
 	NSFileManager *manager = [NSFileManager defaultManager];
-	BOOL isDirectory = NO;
-	BOOL fileExists = [manager fileExistsAtPath:nibFile isDirectory:&isDirectory];
-	if (!fileExists || isDirectory)
+	BOOL fileExists = [manager fileExistsAtPath:nibFile];
+	if (!fileExists)
 	{
 		printf("This utility requires a valid NIB file path as parameter.\n");
 		return 0;

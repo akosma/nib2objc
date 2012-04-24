@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>nib2objc by akosma</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>nib2objc</h1>
+        <h2>Set of tools and utilities (command line, GUI, Mac Service) to transform NIB files for the iPhone into Objective-C code files</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/akosma/nib2objc/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/akosma/nib2objc/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/akosma/nib2objc" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>nib2objc - NIB to Objective-C converter</h1>
+
+<p>This utility converts NIB files (or XIB ones) into Objective-C code,
+including all the properties of each instance, the documented
+constructor calls, and also the view hierarchy. It uses the output of
+the ibtool utility bundled with the Xcode tools. For more information
+about ibtool, please check <a href="http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man1/ibtool.1.html">the ibtool man
+page</a>.</p>
+
+<h2>Usage</h2>
+
+<p>Compile and put the utility in your path, and then call</p>
+
+<pre><code>nib2objc yourfile.xib &gt; code.m
+</code></pre>
+
+<p>This will generate a file with the output of the conversion, similar to
+this (check out the included sample.m file for the full version):</p>
+
+<pre><code>    // ...
+    UIView *view6 = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
+    view6.frame = CGRectMake(0.0, 0.0, 320.0, 460.0);
+    view6.alpha = 1.000;
+    view6.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    view6.backgroundColor = [UIColor colorWithWhite:0.750 alpha:1.000];
+    view6.clearsContextBeforeDrawing = NO;
+    // ...
+
+    UIButton *button9 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button9.frame = CGRectMake(167.0, 65.0, 72.0, 37.0);
+    button9.adjustsImageWhenDisabled = YES;
+    button9.adjustsImageWhenHighlighted = YES;
+    button9.alpha = 1.000;
+    button9.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    button9.clearsContextBeforeDrawing = NO;
+    button9.clipsToBounds = NO;
+    button9.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    // ...
+    [button9 setTitleShadowColor:[UIColor colorWithWhite:0.000 alpha:1.000] forState:UIControlStateSelected];
+
+    // ...
+    [view6 addSubview:button9];
+    // ...
+</code></pre>
+
+<p>The generated code takes into account the real class hierarchies in the
+UIKit, and it outputs the correct constructors and/or method calls for
+each object, depending on its class, including the enum values
+corresponding to the properties using them.</p>
+
+<h2>Mac OS X GUI Application</h2>
+
+<p>The “GUI” folder contains a Mac OS X application that can be used to
+open several nib files and to see their contents as Objective-C code.</p>
+
+<p>The GUI application uses the
+<a href="http://github.com/mugginsoft/Fragaria">Fragaria</a> library as a
+submodule, to provide syntax highlighting of the generated Objective-C
+code. Prior to compilation, please do the following:</p>
+
+<pre><code>$ git submodule init
+$ git submodule update
+</code></pre>
+
+<h2>Mac OS X Service</h2>
+
+<p>A secondary project in the “Convert with nib2objc” folder creates an
+Automator action, that can be used to create Mac OS X services with
+Automator. The “Convert with nib2objc.zip” file contains an example of
+such a service, ready to be installed in ~/Library/Services, and which
+can be called from the Finder after selecting a nib file. The result of
+the conversion will be placed in the clipboard for pasting into any
+application.</p>
+
+<h2>Limitations</h2>
+
+<ul>
+<li>  For the moment this utility only works for UIKit views (iPhone), but
+it should be easy to extend to those of the AppKit too.</li>
+<li>  It cannot output the values of UIImage, NSLocale or NSTimeZone
+properties, because ibtool does not support them.</li>
+<li>  It does not distinguishes default values for properties, and as
+such, it outputs all the information it can find about a particular
+instance.</li>
+</ul><h3>Contributions</h3>
+
+<p>This project includes the <strong>nibs2objc.pl</strong> Perl script by Rudi Farkas,
+which allows users to perform batch transformations of nib files in a
+folder. Thanks Rudi for the contribution!</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>

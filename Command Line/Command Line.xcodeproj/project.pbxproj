@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,6 +55,26 @@
 		3A1CCF7814684EFA00E639D4 /* UIViewControllerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CCF4814684EFA00E639D4 /* UIViewControllerProcessor.m */; };
 		3A1CCF7914684EFA00E639D4 /* UIViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CCF4A14684EFA00E639D4 /* UIViewProcessor.m */; };
 		3A1CCF7A14684EFA00E639D4 /* UIWebViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CCF4C14684EFA00E639D4 /* UIWebViewProcessor.m */; };
+		C36F0DAB1508F3F600A96F84 /* NSArrayControllerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D861508F3F600A96F84 /* NSArrayControllerProcessor.m */; };
+		C36F0DAC1508F3F600A96F84 /* NSBoxProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D881508F3F600A96F84 /* NSBoxProcessor.m */; };
+		C36F0DAD1508F3F600A96F84 /* NSButtonCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D8A1508F3F600A96F84 /* NSButtonCellProcessor.m */; };
+		C36F0DAE1508F3F600A96F84 /* NSButtonProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D8C1508F3F600A96F84 /* NSButtonProcessor.m */; };
+		C36F0DAF1508F3F600A96F84 /* NSCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D8E1508F3F600A96F84 /* NSCellProcessor.m */; };
+		C36F0DB01508F3F600A96F84 /* NSCollectionViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D901508F3F600A96F84 /* NSCollectionViewProcessor.m */; };
+		C36F0DB11508F3F600A96F84 /* NSCustomViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D921508F3F600A96F84 /* NSCustomViewProcessor.m */; };
+		C36F0DB21508F3F600A96F84 /* NSImageCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D941508F3F600A96F84 /* NSImageCellProcessor.m */; };
+		C36F0DB31508F3F600A96F84 /* NSImageViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D961508F3F600A96F84 /* NSImageViewProcessor.m */; };
+		C36F0DB41508F3F600A96F84 /* NSPopUpButtonCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D981508F3F600A96F84 /* NSPopUpButtonCellProcessor.m */; };
+		C36F0DB51508F3F600A96F84 /* NSPopUpButtonProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D9A1508F3F600A96F84 /* NSPopUpButtonProcessor.m */; };
+		C36F0DB61508F3F600A96F84 /* NSScrollerProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D9C1508F3F600A96F84 /* NSScrollerProcessor.m */; };
+		C36F0DB71508F3F600A96F84 /* NSScrollViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0D9E1508F3F600A96F84 /* NSScrollViewProcessor.m */; };
+		C36F0DB81508F3F600A96F84 /* NSSearchFieldCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0DA01508F3F600A96F84 /* NSSearchFieldCellProcessor.m */; };
+		C36F0DB91508F3F600A96F84 /* NSSearchFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0DA21508F3F600A96F84 /* NSSearchFieldProcessor.m */; };
+		C36F0DBA1508F3F600A96F84 /* NSTextFieldCellProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0DA41508F3F600A96F84 /* NSTextFieldCellProcessor.m */; };
+		C36F0DBB1508F3F600A96F84 /* NSTextFieldProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0DA61508F3F600A96F84 /* NSTextFieldProcessor.m */; };
+		C36F0DBC1508F3F600A96F84 /* NSViewProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0DA81508F3F600A96F84 /* NSViewProcessor.m */; };
+		C36F0DBD1508F3F600A96F84 /* NSWindowTemplateProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0DAA1508F3F600A96F84 /* NSWindowTemplateProcessor.m */; };
+		C36F0E051508F8BA00A96F84 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36F0E041508F8BA00A96F84 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,7 +91,7 @@
 
 /* Begin PBXFileReference section */
 		3A1CCED114684E1200E639D4 /* nib2objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nib2objc; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A1CCED514684E1200E639D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A1CCED514684E1200E639D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		3A1CCED814684E1200E639D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A1CCEDB14684E1200E639D4 /* nib2objc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nib2objc-Prefix.pch"; sourceTree = "<group>"; };
 		3A1CCEF014684EFA00E639D4 /* NSDictionary+Nib2ObjcExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Nib2ObjcExtensions.h"; sourceTree = "<group>"; };
@@ -166,6 +186,45 @@
 		3A1CCF4A14684EFA00E639D4 /* UIViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewProcessor.m; sourceTree = "<group>"; };
 		3A1CCF4B14684EFA00E639D4 /* UIWebViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewProcessor.h; sourceTree = "<group>"; };
 		3A1CCF4C14684EFA00E639D4 /* UIWebViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewProcessor.m; sourceTree = "<group>"; };
+		C36F0D851508F3F600A96F84 /* NSArrayControllerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayControllerProcessor.h; sourceTree = "<group>"; };
+		C36F0D861508F3F600A96F84 /* NSArrayControllerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayControllerProcessor.m; sourceTree = "<group>"; };
+		C36F0D871508F3F600A96F84 /* NSBoxProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBoxProcessor.h; sourceTree = "<group>"; };
+		C36F0D881508F3F600A96F84 /* NSBoxProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBoxProcessor.m; sourceTree = "<group>"; };
+		C36F0D891508F3F600A96F84 /* NSButtonCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSButtonCellProcessor.h; sourceTree = "<group>"; };
+		C36F0D8A1508F3F600A96F84 /* NSButtonCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSButtonCellProcessor.m; sourceTree = "<group>"; };
+		C36F0D8B1508F3F600A96F84 /* NSButtonProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSButtonProcessor.h; sourceTree = "<group>"; };
+		C36F0D8C1508F3F600A96F84 /* NSButtonProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSButtonProcessor.m; sourceTree = "<group>"; };
+		C36F0D8D1508F3F600A96F84 /* NSCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCellProcessor.h; sourceTree = "<group>"; };
+		C36F0D8E1508F3F600A96F84 /* NSCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCellProcessor.m; sourceTree = "<group>"; };
+		C36F0D8F1508F3F600A96F84 /* NSCollectionViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCollectionViewProcessor.h; sourceTree = "<group>"; };
+		C36F0D901508F3F600A96F84 /* NSCollectionViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCollectionViewProcessor.m; sourceTree = "<group>"; };
+		C36F0D911508F3F600A96F84 /* NSCustomViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCustomViewProcessor.h; sourceTree = "<group>"; };
+		C36F0D921508F3F600A96F84 /* NSCustomViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCustomViewProcessor.m; sourceTree = "<group>"; };
+		C36F0D931508F3F600A96F84 /* NSImageCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImageCellProcessor.h; sourceTree = "<group>"; };
+		C36F0D941508F3F600A96F84 /* NSImageCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSImageCellProcessor.m; sourceTree = "<group>"; };
+		C36F0D951508F3F600A96F84 /* NSImageViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImageViewProcessor.h; sourceTree = "<group>"; };
+		C36F0D961508F3F600A96F84 /* NSImageViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSImageViewProcessor.m; sourceTree = "<group>"; };
+		C36F0D971508F3F600A96F84 /* NSPopUpButtonCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPopUpButtonCellProcessor.h; sourceTree = "<group>"; };
+		C36F0D981508F3F600A96F84 /* NSPopUpButtonCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPopUpButtonCellProcessor.m; sourceTree = "<group>"; };
+		C36F0D991508F3F600A96F84 /* NSPopUpButtonProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPopUpButtonProcessor.h; sourceTree = "<group>"; };
+		C36F0D9A1508F3F600A96F84 /* NSPopUpButtonProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPopUpButtonProcessor.m; sourceTree = "<group>"; };
+		C36F0D9B1508F3F600A96F84 /* NSScrollerProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScrollerProcessor.h; sourceTree = "<group>"; };
+		C36F0D9C1508F3F600A96F84 /* NSScrollerProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScrollerProcessor.m; sourceTree = "<group>"; };
+		C36F0D9D1508F3F600A96F84 /* NSScrollViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScrollViewProcessor.h; sourceTree = "<group>"; };
+		C36F0D9E1508F3F600A96F84 /* NSScrollViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScrollViewProcessor.m; sourceTree = "<group>"; };
+		C36F0D9F1508F3F600A96F84 /* NSSearchFieldCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSearchFieldCellProcessor.h; sourceTree = "<group>"; };
+		C36F0DA01508F3F600A96F84 /* NSSearchFieldCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSearchFieldCellProcessor.m; sourceTree = "<group>"; };
+		C36F0DA11508F3F600A96F84 /* NSSearchFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSearchFieldProcessor.h; sourceTree = "<group>"; };
+		C36F0DA21508F3F600A96F84 /* NSSearchFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSearchFieldProcessor.m; sourceTree = "<group>"; };
+		C36F0DA31508F3F600A96F84 /* NSTextFieldCellProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTextFieldCellProcessor.h; sourceTree = "<group>"; };
+		C36F0DA41508F3F600A96F84 /* NSTextFieldCellProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTextFieldCellProcessor.m; sourceTree = "<group>"; };
+		C36F0DA51508F3F600A96F84 /* NSTextFieldProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTextFieldProcessor.h; sourceTree = "<group>"; };
+		C36F0DA61508F3F600A96F84 /* NSTextFieldProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTextFieldProcessor.m; sourceTree = "<group>"; };
+		C36F0DA71508F3F600A96F84 /* NSViewProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSViewProcessor.h; sourceTree = "<group>"; };
+		C36F0DA81508F3F600A96F84 /* NSViewProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSViewProcessor.m; sourceTree = "<group>"; };
+		C36F0DA91508F3F600A96F84 /* NSWindowTemplateProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWindowTemplateProcessor.h; sourceTree = "<group>"; };
+		C36F0DAA1508F3F600A96F84 /* NSWindowTemplateProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWindowTemplateProcessor.m; sourceTree = "<group>"; };
+		C36F0E041508F8BA00A96F84 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1CCED614684E1200E639D4 /* Foundation.framework in Frameworks */,
+				C36F0E051508F8BA00A96F84 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +260,7 @@
 		3A1CCED414684E1200E639D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C36F0E041508F8BA00A96F84 /* AppKit.framework */,
 				3A1CCED514684E1200E639D4 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -251,6 +312,7 @@
 		3A1CCEF814684EFA00E639D4 /* Processors */ = {
 			isa = PBXGroup;
 			children = (
+				C36F0D841508F3F600A96F84 /* AppKit */,
 				3A1CCEF914684EFA00E639D4 /* GLKViewControllerProcessor.h */,
 				3A1CCEFA14684EFA00E639D4 /* GLKViewControllerProcessor.m */,
 				3A1CCEFB14684EFA00E639D4 /* GLKViewProcessor.h */,
@@ -339,6 +401,51 @@
 			path = Processors;
 			sourceTree = "<group>";
 		};
+		C36F0D841508F3F600A96F84 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				C36F0D851508F3F600A96F84 /* NSArrayControllerProcessor.h */,
+				C36F0D861508F3F600A96F84 /* NSArrayControllerProcessor.m */,
+				C36F0D871508F3F600A96F84 /* NSBoxProcessor.h */,
+				C36F0D881508F3F600A96F84 /* NSBoxProcessor.m */,
+				C36F0D891508F3F600A96F84 /* NSButtonCellProcessor.h */,
+				C36F0D8A1508F3F600A96F84 /* NSButtonCellProcessor.m */,
+				C36F0D8B1508F3F600A96F84 /* NSButtonProcessor.h */,
+				C36F0D8C1508F3F600A96F84 /* NSButtonProcessor.m */,
+				C36F0D8D1508F3F600A96F84 /* NSCellProcessor.h */,
+				C36F0D8E1508F3F600A96F84 /* NSCellProcessor.m */,
+				C36F0D8F1508F3F600A96F84 /* NSCollectionViewProcessor.h */,
+				C36F0D901508F3F600A96F84 /* NSCollectionViewProcessor.m */,
+				C36F0D911508F3F600A96F84 /* NSCustomViewProcessor.h */,
+				C36F0D921508F3F600A96F84 /* NSCustomViewProcessor.m */,
+				C36F0D931508F3F600A96F84 /* NSImageCellProcessor.h */,
+				C36F0D941508F3F600A96F84 /* NSImageCellProcessor.m */,
+				C36F0D951508F3F600A96F84 /* NSImageViewProcessor.h */,
+				C36F0D961508F3F600A96F84 /* NSImageViewProcessor.m */,
+				C36F0D971508F3F600A96F84 /* NSPopUpButtonCellProcessor.h */,
+				C36F0D981508F3F600A96F84 /* NSPopUpButtonCellProcessor.m */,
+				C36F0D991508F3F600A96F84 /* NSPopUpButtonProcessor.h */,
+				C36F0D9A1508F3F600A96F84 /* NSPopUpButtonProcessor.m */,
+				C36F0D9B1508F3F600A96F84 /* NSScrollerProcessor.h */,
+				C36F0D9C1508F3F600A96F84 /* NSScrollerProcessor.m */,
+				C36F0D9D1508F3F600A96F84 /* NSScrollViewProcessor.h */,
+				C36F0D9E1508F3F600A96F84 /* NSScrollViewProcessor.m */,
+				C36F0D9F1508F3F600A96F84 /* NSSearchFieldCellProcessor.h */,
+				C36F0DA01508F3F600A96F84 /* NSSearchFieldCellProcessor.m */,
+				C36F0DA11508F3F600A96F84 /* NSSearchFieldProcessor.h */,
+				C36F0DA21508F3F600A96F84 /* NSSearchFieldProcessor.m */,
+				C36F0DA31508F3F600A96F84 /* NSTextFieldCellProcessor.h */,
+				C36F0DA41508F3F600A96F84 /* NSTextFieldCellProcessor.m */,
+				C36F0DA51508F3F600A96F84 /* NSTextFieldProcessor.h */,
+				C36F0DA61508F3F600A96F84 /* NSTextFieldProcessor.m */,
+				C36F0DA71508F3F600A96F84 /* NSViewProcessor.h */,
+				C36F0DA81508F3F600A96F84 /* NSViewProcessor.m */,
+				C36F0DA91508F3F600A96F84 /* NSWindowTemplateProcessor.h */,
+				C36F0DAA1508F3F600A96F84 /* NSWindowTemplateProcessor.m */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,8 +475,7 @@
 				LastUpgradeCheck = 0420;
 			};
 			buildConfigurationList = 3A1CCECB14684E1200E639D4 /* Build configuration list for PBXProject "Command Line" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -436,6 +542,25 @@
 				3A1CCF7814684EFA00E639D4 /* UIViewControllerProcessor.m in Sources */,
 				3A1CCF7914684EFA00E639D4 /* UIViewProcessor.m in Sources */,
 				3A1CCF7A14684EFA00E639D4 /* UIWebViewProcessor.m in Sources */,
+				C36F0DAB1508F3F600A96F84 /* NSArrayControllerProcessor.m in Sources */,
+				C36F0DAC1508F3F600A96F84 /* NSBoxProcessor.m in Sources */,
+				C36F0DAD1508F3F600A96F84 /* NSButtonCellProcessor.m in Sources */,
+				C36F0DAE1508F3F600A96F84 /* NSButtonProcessor.m in Sources */,
+				C36F0DAF1508F3F600A96F84 /* NSCellProcessor.m in Sources */,
+				C36F0DB01508F3F600A96F84 /* NSCollectionViewProcessor.m in Sources */,
+				C36F0DB11508F3F600A96F84 /* NSCustomViewProcessor.m in Sources */,
+				C36F0DB21508F3F600A96F84 /* NSImageCellProcessor.m in Sources */,
+				C36F0DB31508F3F600A96F84 /* NSImageViewProcessor.m in Sources */,
+				C36F0DB41508F3F600A96F84 /* NSPopUpButtonCellProcessor.m in Sources */,
+				C36F0DB51508F3F600A96F84 /* NSPopUpButtonProcessor.m in Sources */,
+				C36F0DB61508F3F600A96F84 /* NSScrollerProcessor.m in Sources */,
+				C36F0DB71508F3F600A96F84 /* NSScrollViewProcessor.m in Sources */,
+				C36F0DB81508F3F600A96F84 /* NSSearchFieldCellProcessor.m in Sources */,
+				C36F0DB91508F3F600A96F84 /* NSSearchFieldProcessor.m in Sources */,
+				C36F0DBA1508F3F600A96F84 /* NSTextFieldCellProcessor.m in Sources */,
+				C36F0DBB1508F3F600A96F84 /* NSTextFieldProcessor.m in Sources */,
+				C36F0DBC1508F3F600A96F84 /* NSViewProcessor.m in Sources */,
+				C36F0DBD1508F3F600A96F84 /* NSWindowTemplateProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,14 +582,14 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -477,13 +602,13 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
